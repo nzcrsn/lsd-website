@@ -895,7 +895,7 @@ stylesheet: home.css
     <div>
       <div class="company-photo">
         <img
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=75"
+          src="./assets/images/company-2.jpeg"
           alt="Façade du bureau Lift Service Déménagement à Forest, Bruxelles"
           loading="lazy"
           width="900"
@@ -1065,107 +1065,297 @@ stylesheet: home.css
 <!-- Start contact section -->
 <section id="contact" class="contact-section">
   <div class="eyebrow">Contact</div>
-  <h2>Commencez votre déménagement.</h2>
-  <div class="contact-information">
-    <div>
-      <img src="assets/images/icons/phone.svg" alt="icône du téléphone" />
-      <a
-        class="detail"
-        href="https://wa.link/c4viwy"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p>Téléphone</p>
-        <p>(+32) 479482771</p>
-      </a>
-    </div>
-    <div>
-      <img src="assets/images/icons/mail.svg" alt="icône google" />
-      <a class="detail" href="mailto:liftservice@gmail.com">
-        <p>Email</p>
-        <p>liftservicebel@gmail.com</p>
-      </a>
-    </div>
-    <div>
-      <img src="assets/images/icons/location.svg" alt="icône de localisation" />
-      <a
-        class="detail"
-        href="https://rb.gy/q6apwy"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p>Adresse</p>
-        <p>Av. Wielemans Ceuppens 158-1190 Forest</p>
-      </a>
-    </div>
-  </div>
-  <div class="social-networks">
-    <p>Suivez-nous sur</p>
-    <div>
-      <!--             <a
-              href="https://www.facebook.com/lliftservicedemenagement"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><img src="./images/icons/facebook2.svg" alt="icône facebook"
-            /></a> -->
-      <a
-        href="https://www.tiktok.com/@nunezassocies"
-        rel="noopener noreferrer"
-        target="_blank"
-        ><img src="assets/images/icons/tiktok.svg" alt="icône tiktok"
-      /></a>
-      <a
-        href="https://www.instagram.com/ivanliftservice/?utm_source=qr&igsh=bTQwaTBnYnBiZXY5"
-        rel="noopener noreferrer"
-        target="_blank"
-        ><img src="assets/images/icons/instagram4.svg" alt="icône instagram"
-      /></a>
-    </div>
-  </div>
-  <!-- contact Form -->
-  <!-- 
-        <form
-          action="https://formsubmit.co/liftservicebel@gmail.com"
-          method="POST"
-          class="contact-form"
+  <h2>Commencez votre <em>déménagement .</em></h2>
+  <div class="contact-layout">
+    <div class="contact-left">
+      <div class="contact-items">
+        <a
+          class="contact-item"
+          href="https://wa.link/c4viwy"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Appeler par téléphone"
         >
-          <p>Envoyez nous un message</p>
-          <label for="sender_name">Votre nom</label>
-          <input
-            type="text"
-            name="sender_name"
-            id="sender_name"
-            aria-label="sender name"
-            required
-            autocomplete="off"
-          />
-          <label for="sender_email">Votre email</label>
-          <input
-            type="email"
-            name="sender_email"
-            id="sender_email"
-            aria-label="sender email"
-            required
-            autocomplete="off"
-          />
-          <label for="message">Votre message</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            aria-label="message"
-            required
-          ></textarea>
-          <button type="submit" class="submit-btn">Envoyer un message</button>
-          <input
-            type="hidden"
-            name="_next"
-            value="https://www.liftservicebel.com"
-          />
-          <input type="hidden" name="_captcha" value="false" />
-        </form>
+          <svg
+            class="contact-item__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 11.8 19.79 19.79 0 0 1 1.08 3.1 2 2 0 0 1 3.06 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92Z"
+            />
+          </svg>
+          <div class="contact-item__body">
+            <span class="contact-item__label">Téléphone</span>
+            <span class="contact-item__value">(+32) 479 482 771</span>
+          </div>
+        </a>
+
+        <a
+          class="contact-item"
+          href="mailto:liftservicebel@gmail.com"
+          aria-label="Envoyer un email"
+        >
+          <svg
+            class="contact-item__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <div class="contact-item__body">
+            <span class="contact-item__label">Email</span>
+            <span class="contact-item__value">liftservicebel@gmail.com</span>
+          </div>
+        </a>
+
+        <a
+          class="contact-item"
+          href="https://rb.gy/q6apwy"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Voir l'adresse sur la carte"
+        >
+          <svg
+            class="contact-item__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <div class="contact-item__body">
+            <span class="contact-item__label">Adresse</span>
+            <span class="contact-item__value"
+              >Av. Wielemans Ceuppens 158<br />1190 Forest, Bruxelles</span
+            >
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-social">
+        <p class="contact-social__label">Suivez-nous sur</p>
+        <div class="contact-social__links">
+          <a
+            class="social-link"
+            href="https://www.tiktok.com/@nunezassocies"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08Z"
+              />
+            </svg>
+          </a>
+          <a
+            class="social-link"
+            href="https://www.instagram.com/ivanliftservice/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <!-- Loading state -->
+      <div
+        class="form-loading"
+        id="formLoading"
+        aria-live="polite"
+        aria-label="Envoi en cours"
+      >
+        <div class="spinner"></div>
+        <p>Envoi en cours…</p>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess" aria-live="polite">
+        <div class="success-icon">
+          <svg
+            viewBox="0 0 52 52"
+            fill="none"
+            aria-hidden="true"
+            id="successSvg"
+          >
+            <circle
+              class="success-circle"
+              cx="26"
+              cy="26"
+              r="24"
+              stroke="#27334b"
+              stroke-width="1.8"
+              fill="none"
+            />
+            <polyline
+              class="success-check"
+              points="14,26 22,34 38,18"
+              stroke="#27334b"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <p class="form-success__title">Message envoyé !</p>
+        <p class="form-success__sub">
+          Merci pour votre message. Nous vous recontacterons dans les plus brefs
+          délais.
+        </p>
+        <button class="form-success__reset" id="formReset" type="button">
+          Envoyer un autre message
+        </button>
+      </div>
+
+      <!-- The form -->
+      <div class="contact-form-wrap" id="formWrap">
+        <!--
+          Netlify form attributes:
+          - name="contact" → Netlify identifies this form
+          - netlify → enables Netlify Forms
+          - netlify-honeypot="bot-field" → spam protection
         -->
-  <!-- End of contact Form -->
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          id="contactForm"
+          novalidate
+        >
+          <!-- Honeypot (hidden from real users) -->
+          <p hidden>
+            <label>Ne pas remplir : <input name="bot-field" /></label>
+          </p>
+
+          <!-- Row: name + email -->
+          <div class="form-row">
+            <div class="form-field">
+              <label for="sender_name">Votre nom</label>
+              <input
+                type="text"
+                id="sender_name"
+                name="sender_name"
+                placeholder="Jean Dupont"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="sender_email">Votre email</label>
+              <input
+                type="email"
+                id="sender_email"
+                name="sender_email"
+                placeholder="jean@exemple.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Service selector as pills -->
+          <div class="form-field">
+            <label>Type de service</label>
+            <div
+              class="service-pills"
+              role="group"
+              aria-label="Choisissez un service"
+            >
+              <label class="pill-label">
+                <input
+                  type="radio"
+                  name="service"
+                  value="monte-meubles"
+                  required
+                />
+                <span class="pill">Monte-meubles</span>
+              </label>
+
+              <label class="pill-label">
+                <input type="radio" name="service" value="camion-chauffeur" />
+                <span class="pill">Camion + chauffeur</span>
+              </label>
+
+              <label class="pill-label">
+                <input
+                  type="radio"
+                  name="service"
+                  value="demenagement-mesure"
+                />
+                <span class="pill">Sur mesure</span>
+              </label>
+
+              <label class="pill-label">
+                <input type="radio" name="service" value="fournitures" />
+                <span class="pill">Fournitures</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-field">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Décrivez votre déménagement — adresses, étages, date souhaitée…"
+              required
+            ></textarea>
+          </div>
+
+          <button class="form-submit" type="submit">
+            Envoyer le message
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M7 17L17 7M17 7H8M17 7V16" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- End contact section -->

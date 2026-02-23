@@ -116,6 +116,8 @@ h5,
 h6 {
   font-family: "Cormorant Garamond", Times, serif;
   color: var(--color-heading);
+  font-weight: 300;
+  font-style: normal;
   /* letter-spacing: -0.02em; */
 }
 
