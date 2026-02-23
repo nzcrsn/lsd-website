@@ -9,13 +9,14 @@ initLoader();
 
 window.addEventListener("load", async () => {
   await document.fonts.ready;
-  await waitForLoader();
 
-  exitLoader();
   // setHeaderHeight();
   initMenu();
   // initHero();
   initFaq();
   initFaqReveal();
   initContact();
+
+  await waitForLoader();
+  exitLoader();
 });
