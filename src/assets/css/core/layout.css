@@ -20,6 +20,7 @@ Layout of sections
 .testimonials-section,
 .contact-section,
 .galery-section,
+.faq-section,
 .company-section {
   display: flex;
   flex-direction: column;

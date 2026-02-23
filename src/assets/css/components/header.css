@@ -5,16 +5,15 @@ Styles of header
 */
 header {
   position: fixed;
-  top: 0;
+  top: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 48px var(--padding-sm);
+  padding: 1.4rem var(--padding-sm);
   z-index: 2;
-  height: 80px;
-  /* border: 1px solid black; */
-  /* backdrop-filter: blur(4px); */
+
+  background-color: var(--bg-body);
 }
 
 header .logo {
@@ -48,7 +47,7 @@ Media queries
 ====================================================== 
 */
 @media screen and (min-width: 768px) {
-  header .nav-bar,
+  header .nav-bar ul,
   header .cta-header {
     display: flex;
   }

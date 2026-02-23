@@ -9,57 +9,18 @@ stylesheet: home.css
 
 <!-- Start Hero section -->
 <section id="hero" class="hero-section">
-  <!-- <div class="networks">
-    <div class="language">
-      <a>FR</a>
-      <a class="opt-lang" href="/es">ES</a>
-      <a class="opt-lang" href="/en">EN</a>
-    </div>
-    <div class="links">
-      <svg class="vertical-line" viewBox="0 0 1 100" preserveAspectRatio="none">
-        <line
-          x1="0.5"
-          y1="0"
-          x2="0.5"
-          y2="100"
-          stroke="currentColor"
-          stroke-width="1"
-        />
-      </svg>
-      <div class="social">
-        <a
-          href="https://www.tiktok.com/@nunezassocies"
-          rel="noopener noreferrer"
-          target="_blank"
-          >Tik Tok</a
-        >
-        <a
-          href="https://wa.link/c4viwy"
-          rel="noopener noreferrer"
-          target="_blank"
-          >Whatsapp</a
-        >
-        <a
-          href="https://www.instagram.com/nunezassocies/"
-          rel="noopener noreferrer"
-          target="_blank"
-          >Instagram</a
-        >
-      </div>
-    </div>
-  </div> -->
-  <!-- <div class="container-hero-img"></div> -->
-  <div class="t1 copy">
-    <h1 class="heading">
-      <span>Nous <span class="highlight">élevons</span></span>
-      <br />
-      <span>vos meubles<span class="comma">,</span></span>
-
-      <span>{{ t.section.hero.highlight}}<span class="comma">.</span></span>
+  <div class="copy">
+    <h1 class="reveal heading">
+      Des équipements hautement performants, un personnel engagé<span
+        class="comma"
+        >.</span
+      >
     </h1>
-    <!-- <h2 class="sub-heading">{{ t.section.hero.highlight}}</h2> -->
+    <p class="reveal sub-heading">
+      Offrez-vous un déménagement fluide, sans stress, et en toute confiance.
+    </p>
     <a class="cta-btn-alt cta-heading">
-      <p>{{ t.section.hero.cta}}</p>
+      <p>Voir les services</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"
@@ -76,6 +37,7 @@ stylesheet: home.css
       </svg>
     </a>
   </div>
+  <!--
   <div class="t1 hero-bottom">
     <div class="language">
       <p>ES</p>
@@ -88,12 +50,6 @@ stylesheet: home.css
     </div>
     <div class="hero-networks">
       <div>
-        <!--             <a
-              href="https://www.facebook.com/lliftservicedemenagement"
-              rel="noopener noreferrer"
-              target="_blank"
-              ><img src="./images/icons/facebook2.svg" alt="icône facebook"
-            /></a> -->
         <a
           href="https://www.tiktok.com/@nunezassocies"
           rel="noopener noreferrer"
@@ -109,19 +65,86 @@ stylesheet: home.css
       </div>
     </div>
   </div>
-  <h2 class="reveal-time">{{ t.section.company.heading }}</h2>
-  <div id="galery-grid" class="reveal-grid grid">
+-->
+  <div class="grid">
+    <div class="item video tall">
+      <video
+        src="/assets/videos/v1-lg.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+      ></video>
+    </div>
     <div class="item small">
-      <img src="../assets/images/bg-h.jpg" alt="" />
+      <img src="/assets/images/img-1.webp" alt="" />
     </div>
     <div class="item">
-      <img src="../assets/images/img-15.webp" alt="" />
+      <img src="/assets/images/img-2.webp" alt="" />
     </div>
-    <div class="item last-item">
-      <img src="../assets/images/serv1.png" alt="" />
+
+    <div class="item wide">
+      <img src="/assets/images/img-3.webp" alt="" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-4.webp" alt="" />
+    </div>
+
+    <div class="item video tall">
+      <video
+        src="/assets/videos/v4-lg.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+      ></video>
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-5.webp" alt="" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-6.webp" alt="" />
+    </div>
+
+    <div class="item">
+      <img src="/assets/images/img-7.webp" alt="" />
+    </div>
+    <div class="item wide">
+      <img src="/assets/images/img-8.jpg" alt="" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-9.jpg" alt="" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-10.jpg" alt="" />
+    </div>
+
+    <div class="item">
+      <img src="/assets/images/img-11.jpg" alt="" />
+    </div>
+    <div class="item video tall">
+      <video
+        src="/assets/videos/v3-lg.mp4"
+        autoplay
+        loop
+        playsinline
+        muted
+      ></video>
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-12.jpg" alt="" />
+    </div>
+    <div class="item wide">
+      <img src="/assets/images/img-13.webp" alt="" />
+    </div>
+
+    <div class="item small">
+      <img src="/assets/images/img-14.webp" alt="" />
+    </div>
+    <div class="item small">
+      <img src="/assets/images/img-15.jpg" alt="" />
     </div>
   </div>
-  <img src="./assets/images/heading-11.png" class="t1 hero-bg" alt="" />
 </section>
 <!-- End of hero section -->
 
@@ -129,27 +152,358 @@ stylesheet: home.css
 <section id="services" class="services-section">
   <div class="eyebrow">Nos services</div>
   <h2>Adaptés à vous, conçus pour vous.</h2>
-  <div id="services-cards" class="services-cards">
-    <div id="first-service" class="service-card">
-      <p class="service-card__title">Location de monte-meubles.</p>
+  <div class="services-cards">
+    <!-- 01 — Monte-meubles -->
+    <article class="service-card" id="first-service">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- Building outline -->
+        <rect
+          x="8"
+          y="28"
+          width="14"
+          height="18"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Window on building -->
+        <rect
+          x="12"
+          y="32"
+          width="4"
+          height="4"
+          rx="0.5"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Elevator mast vertical -->
+        <line
+          x1="26"
+          y1="8"
+          x2="26"
+          y2="46"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Mast support arm -->
+        <line
+          x1="26"
+          y1="10"
+          x2="36"
+          y2="10"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Pulley circle -->
+        <circle
+          cx="36"
+          cy="10"
+          r="2.5"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Cable going down -->
+        <line
+          x1="36"
+          y1="12.5"
+          x2="36"
+          y2="30"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-dasharray="2 2"
+        />
+        <!-- Platform / load box -->
+        <rect
+          x="30"
+          y="30"
+          width="12"
+          height="9"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Box lines suggesting furniture -->
+        <line
+          x1="30"
+          y1="34"
+          x2="42"
+          y2="34"
+          stroke="currentColor"
+          stroke-width="1.2"
+        />
+      </svg>
+      <p class="service-card__title">Location de monte-meubles</p>
       <p class="service-card__desc">
-        La solution efficace pour charges lourdes.
+        Location d'élévateurs motorisés pour meubles et matériaux lourds ou
+        encombrants, sans effort et en toute sécurité.
       </p>
-    </div>
-    <div id="second-service" class="service-card">
+    </article>
+
+    <!-- 02 — Camions -->
+    <article class="service-card" id="second-service">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- Truck body -->
+        <rect
+          x="4"
+          y="20"
+          width="28"
+          height="18"
+          rx="1.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Truck cab -->
+        <path
+          d="M32 30 L32 22 L44 22 L46 27 L46 38 L32 38"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <!-- Cab window -->
+        <path
+          d="M34 22 L34 28 L44 28"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linejoin="round"
+        />
+        <!-- Front wheel -->
+        <circle
+          cx="38"
+          cy="40"
+          r="4"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <circle cx="38" cy="40" r="1.5" fill="currentColor" opacity="0.4" />
+        <!-- Rear wheel -->
+        <circle
+          cx="14"
+          cy="40"
+          r="4"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <circle cx="14" cy="40" r="1.5" fill="currentColor" opacity="0.4" />
+        <!-- Cargo lines -->
+        <line
+          x1="10"
+          y1="26"
+          x2="10"
+          y2="36"
+          stroke="currentColor"
+          stroke-width="1.2"
+          opacity="0.5"
+        />
+        <line
+          x1="18"
+          y1="26"
+          x2="18"
+          y2="36"
+          stroke="currentColor"
+          stroke-width="1.2"
+          opacity="0.5"
+        />
+        <line
+          x1="26"
+          y1="26"
+          x2="26"
+          y2="36"
+          stroke="currentColor"
+          stroke-width="1.2"
+          opacity="0.5"
+        />
+      </svg>
       <p class="service-card__title">Camions équipés + chauffeur</p>
-      <p class="service-card__desc">Pour un transport sûr et pratique.</p>
-    </div>
-    <div id="third-service" class="service-card">
-      <p class="service-card__title">Déménagement sur mesure.</p>
-      <p class="service-card__desc">Conçu pour s’adapter à votre situation.</p>
-    </div>
-    <div class="service-card">
+      <p class="service-card__desc">
+        Camions équipés avec chauffeur expérimenté pour un transport sûr,
+        pratique et professionnel.
+      </p>
+    </article>
+
+    <!-- 03 — Déménagement sur mesure (featured) -->
+    <article class="service-card" id="third-service">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- House outline -->
+        <path
+          d="M8 24 L26 10 L44 24"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <!-- House body -->
+        <rect
+          x="12"
+          y="24"
+          width="28"
+          height="20"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Door -->
+        <rect
+          x="21"
+          y="34"
+          width="10"
+          height="10"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Door knob -->
+        <circle cx="29" cy="39" r="1" fill="currentColor" opacity="0.6" />
+        <!-- Window -->
+        <rect
+          x="15"
+          y="28"
+          width="7"
+          height="6"
+          rx="0.5"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+        <!-- Window cross -->
+        <line
+          x1="18.5"
+          y1="28"
+          x2="18.5"
+          y2="34"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <line
+          x1="15"
+          y1="31"
+          x2="22"
+          y2="31"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <!-- Checkmark badge top-right -->
+        <circle cx="40" cy="14" r="6" fill="currentColor" opacity="0.12" />
+        <path
+          d="M37 14 L39.5 16.5 L43 12"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <p class="service-card__title">Déménagement sur mesure</p>
+      <p class="service-card__desc">
+        Un accompagnement de A à Z conçu pour s'adapter à votre situation, sans
+        stress ni surprise.
+      </p>
+    </article>
+
+    <!-- 04 — Fournitures -->
+    <article class="service-card">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- Main box -->
+        <rect
+          x="10"
+          y="22"
+          width="32"
+          height="24"
+          rx="1.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Box top flaps open -->
+        <path
+          d="M10 22 L18 14 L34 14 L42 22"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <!-- Left flap -->
+        <line
+          x1="10"
+          y1="22"
+          x2="18"
+          y2="14"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Right flap -->
+        <line
+          x1="42"
+          y1="22"
+          x2="34"
+          y2="14"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Center flap divider -->
+        <line
+          x1="26"
+          y1="14"
+          x2="26"
+          y2="22"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Tape strip on front -->
+        <line
+          x1="26"
+          y1="22"
+          x2="26"
+          y2="46"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-dasharray="3 2"
+          opacity="0.5"
+        />
+        <!-- Horizontal tape -->
+        <line
+          x1="10"
+          y1="34"
+          x2="42"
+          y2="34"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-dasharray="3 2"
+          opacity="0.5"
+        />
+        <!-- Bubble wrap dots suggestion -->
+        <circle cx="17" cy="28" r="1.2" fill="currentColor" opacity="0.3" />
+        <circle cx="22" cy="28" r="1.2" fill="currentColor" opacity="0.3" />
+        <circle cx="17" cy="33" r="1.2" fill="currentColor" opacity="0.3" />
+      </svg>
       <p class="service-card__title">Fournitures de déménagement</p>
       <p class="service-card__desc">
-        Boîtes, sangles et protections à domicile.
+        Boîtes, sangles, bulles et protections livrées à domicile pour emballer
+        vos biens en toute sécurité.
       </p>
-    </div>
+    </article>
   </div>
 </section>
 <!-- End services section -->
@@ -157,73 +511,557 @@ stylesheet: home.css
 <section class="testimonials-section" id="testimonials">
   <div class="eyebrow">Témoignages</div>
   <h2>Votre satisfaction est notre mission</h2>
-  <div class="testimonials__pin">
-    <!-- Track horizontal (cards) -->
-    <div class="t-track-wrap">
-      <div class="t-track" id="tTrack">
-        <!-- Card 1 -->
-        <article class="t-card">
-          <div class="t-card__brand">Barclays — Rise</div>
-          <p class="t-card__quote">
-            Entreprise très sérieuse. Personnel professionnel, attentif,
-            ponctuel et courtois. Communication facile via WhatsApp et e-mail.
-            Je recommande!
-          </p>
-          <div class="t-card__person">
-            <img
-              class="t-card__avatar"
-              src="https://i.pravatar.cc/80?img=12"
-              alt=""
-            />
-            <div>
-              <strong>Moni Di Bratto</strong><br /><span
-                >Utilisateur Google</span
-              >
-            </div>
-          </div>
-        </article>
-        <!-- Card 2 -->
-        <article class="t-card">
-          <div class="t-card__brand">Argyle</div>
-          <p class="t-card__quote">
-            Ponctuel, organisé, efficace et, en prime, sympathique et souriant !
-            Que demander de plus ? Professionnalisme, convivialité et
-            efficacité. A recommander!
-          </p>
-          <div class="t-card__person">
-            <img
-              class="t-card__avatar"
-              src="https://i.pravatar.cc/80?img=21"
-              alt=""
-            />
-            <div>
-              <strong>Giovanna Rollo</strong><br /><span
-                >Utilisateur Pagesd'or</span
-              >
-            </div>
-          </div>
-        </article>
+  <div class="rating-badges" aria-label="Résumé des avis">
+    <div class="rating-badge">
+      <img
+        class="rating-badge__icon"
+        src="assets/images/icons/google-logo.svg"
+        alt=""
+      />
+      <div class="rating-badge__body">
+        <div class="rating-badge__stars" aria-hidden="true">
+          <span class="star">★</span><span class="star">★</span>
+          <span class="star">★</span><span class="star">★</span
+          ><span class="star">★</span>
+        </div>
+        <span class="rating-badge__score">5.0</span>
+        <span class="rating-badge__label">Google (27 avis)</span>
       </div>
     </div>
+    <div class="rating-badge">
+      <img
+        class="rating-badge__icon pagesor"
+        src="assets/images/icons/pagedor.svg"
+        alt=""
+      />
 
-    <!-- Outro centrado (aparece cuando ya pasaron las cards) -->
-    <!--           <div class="t-outro" id="tOutro">
-            <div class="t-outro__box">
-              <div class="t-outro__text">
+      <div class="rating-badge__body">
+        <div class="rating-badge__stars" aria-hidden="true">
+          <span class="star">★</span><span class="star">★</span>
+          <span class="star">★</span><span class="star">★</span>
+          <span class="star" style="opacity: 0.3">★</span>
+        </div>
+        <span class="rating-badge__score">4.5</span>
+        <span class="rating-badge__label">Pagesd'or (8 avis)</span>
+      </div>
+    </div>
+  </div>
+  <!-- Testimonials -->
+  <div class="testimonials-cards">
+    <!-- Card 1 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Entreprise très sérieuse. Personnel professionnel, attentif, ponctuel et
+        courtois. Communication facile via WhatsApp et e-mail. Je recommande !
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__avatar" aria-hidden="true">MD</div>
+        <div class="t-card__meta">
+          <strong class="t-card__name">Moni Di Bratto</strong>
+          <span class="t-card__source">Utilisateur Google</span>
+        </div>
+      </figcaption>
+    </figure>
 
-                <h3>¿Listo para crear algo que hable por ti?</h3>
-                <p>
-                  Hablemos de tu próximo proyecto y cómo podemos impulsarlo.
-                </p>
-              </div>
+    <!-- Card 2 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Ponctuel, organisé, efficace et, en prime, sympathique et souriant !
+        Professionnalisme, convivialité et efficacité. À recommander !
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__avatar" aria-hidden="true">GR</div>
+        <div class="t-card__meta">
+          <strong class="t-card__name">Giovanna Rollo</strong>
+          <span class="t-card__source">Utilisateur Pagesd'or</span>
+        </div>
+      </figcaption>
+    </figure>
 
-              <a class="cta" href="#contacto">Book a spot →</a>
-            </div>
-          </div> -->
+    <!-- Card 3 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Ces déménageurs nous avaient été recommandés par des amis. Tout s'est
+        très bien passé. Communication parfaite, efficacité et sympathie au
+        rendez-vous. À recommander !
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__avatar" aria-hidden="true">VJ</div>
+        <div class="t-card__meta">
+          <strong class="t-card__name">Violaine Jadoul</strong>
+          <span class="t-card__source">Utilisateur Google</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- Card 4 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Divin, magnifique, créatif, intelligent. Des saveurs subtiles, cuissons
+        parfaites, un service très agréable. Comptez sur un accueil chaleureux.
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__avatar" aria-hidden="true">CL</div>
+        <div class="t-card__meta">
+          <strong class="t-card__name">Caroline Levavasseur</strong>
+          <span class="t-card__source">Utilisateur Google</span>
+        </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 <!-- End testimonials section-->
 
+<section class="company-section" id="testimonials">
+  <div class="eyebrow">À propos de nous</div>
+  <h2>Depuis plus de <em>dix ans</em>, nous facilitons votre déménagement.</h2>
+  <p class="company-intro">
+    Lift Service Déménagement, c'est une équipe engagée, des équipements de
+    pointe et une promesse simple — chaque déménagement traité avec soin,
+    ponctualité et transparence totale.
+  </p>
+  <div class="company-layout">
+    <div class="company-right">
+      <ul class="values-grid" aria-label="Nos engagements">
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="2"
+              y="14"
+              width="18"
+              height="12"
+              rx="1"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <path
+              d="M20 18 L20 14 L28 14 L30 18 L30 26 L20 26"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="24"
+              cy="27"
+              r="3"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <circle
+              cx="9"
+              cy="27"
+              r="3"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <line
+              x1="2"
+              y1="10"
+              x2="8"
+              y2="10"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              opacity="0.45"
+            />
+            <line
+              x1="2"
+              y1="7"
+              x2="5"
+              y2="7"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              opacity="0.25"
+            />
+          </svg>
+          <p class="value-item__title">Équipements performants</p>
+          <p class="value-item__desc">
+            Camionnettes modernes et lifts puissants pour un service sans
+            compromis.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="16"
+              cy="9"
+              r="5"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <path
+              d="M6 28 C6 22 10 18 16 18 C22 18 26 22 26 28"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+            <path
+              d="M23 3 L24 6 L27 6 L24.8 7.8 L25.6 11 L23 9.2 L20.4 11 L21.2 7.8 L19 6 L22 6 Z"
+              stroke="currentColor"
+              stroke-width="1.1"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Personnel qualifié</p>
+          <p class="value-item__desc">
+            Des déménageurs expérimentés, ponctuels et respectueux, à votre
+            service.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 21 C16 21 10 17 10 13 C10 11 12 10 14 11 C15 11.5 16 12.5 16 12.5 C16 12.5 17 11.5 18 11 C20 10 22 11 22 13 C22 17 16 21 16 21 Z"
+              stroke="currentColor"
+              stroke-width="1.3"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Soin extrême des biens</p>
+          <p class="value-item__desc">
+            Vos objets sont protégés et manipulés avec le plus grand soin.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="12"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <line
+              x1="16"
+              y1="9"
+              x2="16"
+              y2="16"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <line
+              x1="16"
+              y1="16"
+              x2="21"
+              y2="20"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+            <circle cx="16" cy="16" r="1.5" fill="currentColor" />
+          </svg>
+          <p class="value-item__title">Ponctualité & rigueur</p>
+          <p class="value-item__desc">
+            Nous respectons les délais et garantissons un déroulement sans
+            retard.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="6"
+              y="3"
+              width="20"
+              height="26"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <line
+              x1="11"
+              y1="10"
+              x2="21"
+              y2="10"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+            <line
+              x1="11"
+              y1="15"
+              x2="21"
+              y2="15"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+            <polyline
+              points="11,21 14,24 21,18"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Devis clair & transparent</p>
+          <p class="value-item__desc">
+            Une tarification honnête et détaillée, sans frais cachés.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <polyline
+              points="11,16 14.5,20 21,12"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Assurance professionnelle</p>
+          <p class="value-item__desc">
+            Vos biens sont couverts — sécurité garantie du début à la fin.
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="company-photo">
+        <img
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=75"
+          alt="Façade du bureau Lift Service Déménagement à Forest, Bruxelles"
+          loading="lazy"
+          width="900"
+          height="675"
+        />
+        <div class="company-badge" aria-label="Plus de 10 ans d'expérience">
+          <span class="company-badge__number">10+</span>
+          <span class="company-badge__label">ans</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Start faq section -->
+<section class="faq-section">
+  <div class="eyebrow">FAQs</div>
+  <h2>Questions fréquemment posées.</h2>
+  <ul class="faq__list">
+    <li class="faq__item">
+      <h3>
+        <button
+          class="faq__trigger"
+          aria-expanded="false"
+          aria-controls="faq-panel-01"
+          id="faq-trigger-01"
+        >
+          <div class="faq__question-wrap">
+            <span class="faq__index">01</span>
+            <span class="faq__question"
+              >Faut-il un permis pour un lift ou une camionnette ?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div
+        class="faq__panel"
+        role="region"
+        id="faq-panel-01"
+        aria-labelledby="faq-trigger-01"
+      >
+        <p class="faq__answer">
+          Oui, explication permis etc à écrire avec Ivan.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">02</span>
+            <span class="faq__question"
+              >Puis-je réserver pour un samedi ou un jour férié ?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">Oui, 7j/7 sur demande.</p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">03</span>
+            <span class="faq__question"
+              >Quels types de services proposez-vous ?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Nous proposons un service complet de déménagement incluant la location
+          de camionnettes, l’utilisation de lifts motorisés pour les étages
+          élevés, ainsi que l’intervention de déménageurs qualifiés pour
+          charger, transporter et décharger vos biens en toute sécurité.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">04</span>
+            <span class="faq__question"
+              >Puis-je réserver uniquement un lift ou une camionnette sans
+              personnel ?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Non, nous ne proposons pad de la location seule de matériel,
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">05</span>
+            <span class="faq__question">Vos déménageurs sont-ils formés ?</span>
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Absolument. Nos déménageurs sont sélectionnés avec rigueur et formés
+          aux techniques de manutention, à la protection des biens fragiles, et
+          à l’utilisation sécurisée de nos équipements.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">06</span>
+            <span class="faq__question"
+              >Proposez-vous des prestations sur mesure ?
+            </span>
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Oui. Chaque déménagement est différent, c’est pourquoi nous proposons
+          des solutions personnalisées : horaires flexibles, matériel adapté,
+          nombre d’intervenants ajusté, options de protection, etc.
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+<!-- End faq section-->
 <!-- Start contact section -->
 <section id="contact" class="contact-section">
   <div class="eyebrow">Contact</div>
