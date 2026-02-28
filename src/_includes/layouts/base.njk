@@ -3,8 +3,9 @@
 <html lang="{{ lang }}" translate="no">
   {% include "partials/head.njk" %}
   <body data-page="{{ pageKey }}">
-    {% include "partials/loader.njk" %} {% include "partials/header.njk" %} {%
-    include "partials/menu.njk" %}
+    <!-- {% include "partials/loader.njk" %}  -->
+
+    {% include "partials/header.njk" %} {% include "partials/menu.njk" %}
 
     <main id="page">{{ content | safe }}</main>
 

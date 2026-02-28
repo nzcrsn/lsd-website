@@ -12,6 +12,7 @@ export default {
     company: "Company",
     our_work: "Our Work",
     faq: "FAQs",
+    contact: "Contact",
   },
   pages: {
     home: {

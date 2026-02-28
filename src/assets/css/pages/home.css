@@ -5,35 +5,28 @@ Styles of hero section
 */
 
 .hero-section {
-  position: relative;
   gap: 2rem;
   min-height: 100svh;
-  margin-top: 80px;
+  margin-top: 0.4rem;
 }
 
-/* Copy */
 .hero-section .copy {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 87%;
-  /* border: 1px solid green; */
+  margin-top: var(--height-header);
 }
 
 .hero-section .copy .heading {
-  font-size: clamp(1.6rem, 0.8rem + 2vw, 2rem);
-  /* font-size: clamp(1.8rem, 5cqw, 4rem); */
   font-family: "Cormorant Garamond", Times, serif;
-  font-weight: 300;
+  font-weight: 700;
   font-style: normal;
-
-  /* letter-spacing: 0.02em; */
+  font-size: clamp(1.8rem, 5cqw, 4rem);
+  letter-spacing: 0.02em;
   hyphens: auto;
-  line-height: 1.2;
+  line-height: 1.1;
   margin: 0; /*re-write h1*/
-  padding: 0;
-  /* border: 1px solid red; */
+
   /* visibility: hidden; */
 }
 
@@ -42,14 +35,13 @@ Styles of hero section
 }
 
 .copy .sub-heading {
-  font-size: 1em;
-  width: 100%;
-  margin: 0; /*re-write h2*/
-  margin-top: 0.8rem;
   font-family: "Manrope", serif;
   font-size: clamp(1rem, 1.6vw, 1.15rem);
+  width: 100%;
   font-weight: 300;
   line-height: 1.28;
+  margin: 0; /*re-write h2*/
+  margin-top: 0.8rem;
   /* visibility: hidden; */
 }
 
@@ -113,12 +105,6 @@ Styles of hero section
   display: none;
 }
 
-/*
-====================================================== 
-Galery of hero section
-====================================================== 
-*/
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -161,14 +147,148 @@ Galery of hero section
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  /* aspect-ratio: 4 / 3; */
   display: block;
   max-width: none;
   max-height: none;
-  object-position: center;
+  object-position: bottom;
   transform: translateZ(0);
 }
 
 /* End styles of galery section*/
+
+/*
+====================================================== 
+Styles of services section
+====================================================== 
+*/
+
+.services-section {
+  width: 100%;
+}
+
+.services-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.service-card {
+  background: var(--card-bg);
+
+  padding: 2rem 0rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: default;
+  border-bottom: 0.5px solid var(--primary-color);
+}
+
+/* ── Icon ── */
+.service-card__icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 1.6rem;
+  color: var(--primary-color);
+  opacity: 0.85;
+  flex-shrink: 0;
+  transition:
+    color 0.3s,
+    opacity 0.3s,
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .service-card__icon {
+  color: var(--accent);
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* ── Title ── */
+.service-card__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 2vw, 1.5rem);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-heading);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.8rem;
+  /* remove default p margin */
+  margin-top: 0;
+}
+
+/* ── Description ── */
+.service-card__desc {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--color-paragraph);
+  line-height: 1.65;
+  opacity: 0.8;
+  flex: 1; /* pushes link to bottom */
+  margin: 0;
+  margin-bottom: 1.6rem;
+}
+
+/* ── Link ── */
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition:
+    color 0.3s,
+    gap 0.3s;
+  margin-top: auto;
+}
+
+.service-card__link svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* .service-card:hover .service-card__link {
+  color: var(--accent);
+  gap: 0.65rem;
+} */
+
+.service-card:hover .service-card__link svg {
+  transform: translate(2px, -2px);
+}
+
+.cta-services {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cta-services > p {
+  font-family: var(--font-primary);
+}
+
+.cta-services .cta-btn-alt {
+  margin-top: 0;
+}
+
+/* End of styles of services section */
 
 /*
 ====================================================== 
@@ -182,15 +302,16 @@ Styles of testimonials section
 }
 
 .testimonials-cards {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 4rem;
   margin-top: 42px;
+  gap: 0;
 }
 
 .rating-badges {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   gap: 0.75rem;
   margin-top: 2rem;
 }
@@ -202,8 +323,7 @@ Styles of testimonials section
   padding: 0.9rem 1.2rem;
   border: 0.5px solid var(--primary-color);
   border-radius: 2px;
-
-  /* background: rgba(255, 255, 255, 0.35); */
+  background: rgba(255, 255, 255, 0.35);
 }
 
 .rating-badge__icon {
@@ -249,36 +369,16 @@ Styles of testimonials section
   margin-left: 0.3rem;
 }
 
-.testimonials-cards {
-  display: flex;
-  flex-direction: column;
-  gap: 0; /* borders handle spacing */
-  /* border-top: 0.5px solid var(--color-heading); */
-}
-
 .t-card {
   display: grid;
   grid-template-rows: auto auto;
-  gap: 1.5rem;
+  gap: 0rem;
   padding: 2.2rem 0;
   border-bottom: 0.5px solid var(--color-heading);
   position: relative;
 }
 
 /* Large decorative quote mark */
-.t-card__quote::before {
-  content: "\201C";
-  font-family: "Cormorant Garamond", serif;
-  font-size: 5rem;
-  line-height: 1;
-  color: var(--accent);
-  opacity: 0.2;
-  position: absolute;
-  top: 4rem;
-  left: -1rem;
-  pointer-events: none;
-  user-select: none;
-}
 
 .t-card__quote {
   font-family: "Cormorant Garamond", serif;
@@ -298,22 +398,7 @@ Styles of testimonials section
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-/* Avatar initials */
-.t-card__avatar {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  color: var(--bg-body);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  margin-top: 1.4rem;
 }
 
 .t-card__meta {
@@ -352,7 +437,7 @@ Styles of testimonials section
 
 /*
 ====================================================== 
-Styles of services section
+Styles of FAQs section
 ====================================================== 
 */
 .faq-section {
@@ -362,6 +447,9 @@ Styles of services section
 
 /* ── Items ── */
 .faq-section .faq__list {
+  max-width: 1150px;
+  margin-top: 1rem;
+  align-self: center;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -447,15 +535,15 @@ Styles of services section
 }
 
 .faq__answer {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  font-family: var(--font-secondary);
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
   font-weight: 300;
   font-style: italic;
   line-height: 1.75;
-  color: var(--muted);
+  color: var(--color-heading);
   padding-bottom: 2rem;
-  padding-right: 3rem;
-  max-width: 680px;
+  padding-left: 3.4rem;
+  max-width: 100%;
 }
 
 .faq__answer strong {
@@ -484,218 +572,34 @@ Styles of services section
 
 /*
 ====================================================== 
-Styles of services section
-====================================================== 
-*/
-
-.services-section {
-  width: 100%;
-}
-
-.services-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.service-card {
-  background: var(--card-bg);
-  /* border: 0.5px solid var(--primary-color); */
-
-  padding: 2rem 0rem 1.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  position: relative;
-  overflow: hidden;
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-  cursor: default;
-  border-bottom: 0.5px solid var(--primary-color);
-}
-
-/* .service-card:hover {
-  border-color: rgba(39, 51, 75, 0.3);
-  box-shadow: 0 8px 32px rgba(39, 51, 75, 0.08);
-} */
-
-/* Featured card (3rd) gets a subtle accent top border */
-/* .service-card.is-featured {
-  border-top: 2px solid var(--accent);
-} */
-
-/* Hover line that draws from left on the top border */
-.service-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: var(--primary-color);
-  transition: width 0.5s cubic-bezier(0.77, 0, 0.18, 1);
-}
-
-.service-card:not(.is-featured):hover::after {
-  width: 100%;
-}
-
-/* ── Icon ── */
-.service-card__icon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 1.6rem;
-  color: var(--primary-color);
-  opacity: 0.85;
-  flex-shrink: 0;
-  transition:
-    color 0.3s,
-    opacity 0.3s,
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.service-card:hover .service-card__icon {
-  color: var(--accent);
-  opacity: 1;
-  transform: translateY(-3px);
-}
-
-/* ── Title ── */
-.service-card__title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  font-weight: 400;
-  color: var(--color-heading);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.8rem;
-  /* remove default p margin */
-  margin-top: 0;
-}
-
-/* ── Description ── */
-.service-card__desc {
-  font-size: 0.83rem;
-  font-weight: 300;
-  color: var(--color-paragraph);
-  line-height: 1.65;
-  opacity: 0.8;
-  flex: 1; /* pushes link to bottom */
-  margin: 0;
-  margin-bottom: 1.6rem;
-}
-
-/* ── Link ── */
-.service-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition:
-    color 0.3s,
-    gap 0.3s;
-  margin-top: auto;
-}
-
-.service-card__link svg {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.service-card:hover .service-card__link {
-  color: var(--accent);
-  gap: 0.65rem;
-}
-
-.service-card:hover .service-card__link svg {
-  transform: translate(2px, -2px);
-}
-
-/* End of styles of services section */
-
-/*
-====================================================== 
 Styles of company section
 ====================================================== 
 */
-/* ═══════════════════════════════════════
-       SECTION
-    ═══════════════════════════════════════ */
+
 .company-section {
   width: 100%;
 }
 
-.company-intro {
-  margin-top: 1rem;
-  font-size: 1rem;
+.company-section .company-intro {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
   font-family: "Manrope", serif;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
   font-weight: 300;
-  line-height: 1.28;
-  margin-bottom: 1rem;
+  line-height: 1.58;
+  color: var(--color-heading);
+  width: 100%;
+  font-size: 0.9rem;
   text-align: justify;
+  hyphens: auto;
+  color: var(--muted);
 }
 
-/* ═══════════════════════════════════════
-       LAYOUT
-       mobile: stacked
-       ≥1024px: two equal columns
-    ═══════════════════════════════════════ */
 .company-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 3.5rem;
 }
 
-@media (min-width: 1024px) {
-  .company-layout {
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
-  }
-}
-
-/* ═══════════════════════════════════════
-       LEFT COLUMN
-    ═══════════════════════════════════════ */
-.company-left {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-}
-
-.company-left h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 300;
-  color: var(--color-heading);
-  line-height: 1.06;
-  letter-spacing: -0.025em;
-}
-
-.company-left h2 em {
-  font-style: italic;
-  color: var(--accent);
-}
-
-.company-intro {
-  font-size: clamp(0.9rem, 1.1vw, 1rem);
-  font-weight: 300;
-  color: var(--color-paragraph);
-  line-height: 1.8;
-  max-width: 44ch;
-}
-
-/* ── Photo ── */
 .company-photo {
   position: relative;
   width: 100%;
@@ -760,16 +664,12 @@ Styles of company section
   opacity: 0.65;
 }
 
-/* ═══════════════════════════════════════
-       RIGHT COLUMN — values grid
-═══════════════════════════════════════ */
 .company-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* 2 cols mobile, 3 cols ≥600px */
 .values-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -777,12 +677,6 @@ Styles of company section
   border-top: 0.5px solid var(--border);
   border-left: 0.5px solid var(--border);
   list-style: none;
-}
-
-@media (min-width: 600px) {
-  .values-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
 
 /* ── Single value cell ── */
@@ -890,9 +784,6 @@ Styles of contact section
   }
 }
 
-/* ═══════════════════════════════════════
-       LEFT — info
-    ═══════════════════════════════════════ */
 .contact-left {
   display: flex;
   flex-direction: column;
@@ -1389,56 +1280,31 @@ Media Queries
 
   .hero-section {
     position: relative;
-    width: 100%;
-    height: 100vh;
-    margin-top: 0;
-    /* border: 1px solid red; */
-    /* justify-content: flex-end; */
-    gap: 3rem;
-    padding-bottom: 5rem;
+    min-height: 100vh;
   }
 
   .hero-section .copy {
-    width: 100%;
+    align-items: center;
+    text-align: center;
+    /* border: 1px solid red; */
   }
 
   .hero-section .copy .heading {
-    height: auto;
-    width: 100%;
-    margin: 0;
-    text-align: center;
-    font-size: clamp(3rem, 3.8rem + 4vw, 4rem);
-  }
-
-  .heading .highlight {
-    font-size: 6rem;
+    font-size: clamp(2.8rem, 5cqw, 4rem);
+    margin-top: 1rem;
+    /* border: 1px solid green; */
   }
 
   .hero-section .copy .sub-heading {
-    margin-top: 0;
-    font-size: 2.2em;
-    text-align: center;
-    height: auto;
-    font-family: "Cormorant Garamond", Times, serif;
-    width: 100%;
-    font-weight: 600;
-    font-style: italic;
+    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+    width: 80%;
+    margin-top: 1rem;
+    /* border: 1px solid green; */
   }
 
-  .cta-heading {
-    display: none;
-  }
-
-  .hero-bg {
-    width: 100%;
-    max-width: 420px;
-    object-fit: cover;
-    object-position: center;
-    height: 38vh;
-    /* border: 1px solid red; */
-    /* aspect-ratio: 21 / 8.4; */
-    aspect-ratio: 4 / 3;
-    /* filter: blur(0.4px); */
+  .grid {
+    margin-top: 1.2rem;
+    grid-auto-rows: 260px;
   }
 
   /* End styles of hero section*/
@@ -1454,11 +1320,14 @@ Media Queries
 
   .services-section .services-cards {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
   }
 
   .services-cards .service-card {
     width: 100%;
     cursor: pointer;
+    border: 0.5px solid rgba(39, 51, 75, 0.45);
+    padding: 2rem 2rem 1.8rem;
   }
 
   .service-card .icon {
@@ -1496,7 +1365,7 @@ Media Queries
   }
 
   .service-card .service-card__desc {
-    width: 80%;
+    width: 90%;
   }
   /* End of styles of services section*/
 
@@ -1508,6 +1377,19 @@ Media Queries
     color: #5a6066;
   }
   /* End of styles of company section*/
+
+  .testimonials-cards {
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 2rem;
+  }
+
+  .t-card {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0rem;
+    padding: 2.2rem;
+    border-bottom: none;
+  }
 
   /* Styles of contact section */
 
@@ -1532,12 +1414,19 @@ Media Queries
   }
 
   /* End of styles of contact section*/
+
+  /* Start of styles of company section*/
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (min-width: 992px) {
   .grid {
-    flex-direction: row;
+    margin-top: 2rem;
+    grid-auto-rows: 400px;
   }
+
   /* Styles of service section */
   .services-section .services-cards {
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
@@ -1547,24 +1436,10 @@ Media Queries
     width: 70%;
   }
 
-  .service-card .first_service_icon {
-    background-image: url("../images/icons/lifting.svg");
-    background-size: 90px;
-  }
-
-  .service-card .second_service_icon {
-    background-image: url("../images/icons/truck.svg");
-    background-size: 140px;
-  }
-
-  .service-card .third_service_icon {
-    background-image: url("../images/icons/packt.svg");
-    background-size: 90px;
-  }
-
-  .service-card .fourth_service_icon {
-    background-image: url("../images/icons/chair.svg");
-    background-size: 80px;
+  .company-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
   }
 }
 
@@ -1592,40 +1467,5 @@ Media Queries
     hyphens: auto;
     text-align: justify;
     font-size: var(--fs-p-lg);
-  }
-
-  .galery {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-
-  .galery .first-img {
-    background-image: url("../images/left-one.webp");
-  }
-
-  .galery .second-img {
-    background-image: url("../images/left-two.webp");
-  }
-
-  .galery .third-img {
-    background-image: url("../images/top-one.webp");
-  }
-
-  .galery .fourth-img {
-    background-image: url("../images/center.webp");
-  }
-
-  .galery .fifth-img {
-    background-image: url("../images/top-two.webp");
-  }
-
-  .galery .sixth-img {
-    background-image: url("../images/buttom-one.webp");
-  }
-
-  .galery .seventh-img {
-    background-image: url("../images/buttom-two.webp");
   }
 }

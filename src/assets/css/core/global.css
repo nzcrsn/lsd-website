@@ -5,61 +5,60 @@ Variables
 */
 
 :root {
-  --primary-color: #27334b;
-  --white-color: #ffffff;
-  --black-color: #000;
-  --primary-bg: #dce0df;
-  --border-radius-xs: 8px;
+  /* Fonts */
+  --font-primary:
+    "Cormorant Garamond", -apple-system, BlinkMacSystemFont, serif, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+
+  --font-secondary:
+    "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  /* Colors */
+  --color-primary: #27334b;
+  --black-color-black: #000;
+
+  --primary-bg: --bg-body: #f5f3e5;
+
+  --color-bg-main: #f5f3e5;
+  --color-bg-secondary: #dce0df;
+
+  --color-heading: #4c3c2c;
+  --color-paragraph: #4e4e4e;
+
+  /* Margin */
   --margin-xs: 8px;
   --margin-sm: 32px;
   --margin-md: 48px;
-  --header-height: 48px;
-  --color-heading: #4c3c2c;
-  --color-paragraph: #4e4e4e;
-  --bg-body: #f5f3e5;
-  --top-bar-height: 34px;
+
+  /* Padding */
   --padding-sm: 24px;
 
+  /* Border-radius */
+  --border-radius-xs: 8px;
+
+  --height-header: 80px;
+
+  /* Font-Size */
   --fs-h1-sm: clamp(1.2rem, 0.03vi + 1.19rem, 1.22rem);
   --fs-h1-base: clamp(1.5rem, 0.23vi + 1.44rem, 1.63rem);
   --fs-h1-md: clamp(1.88rem, 0.53vi + 1.74rem, 2.17rem);
   --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
-  --fs-h1-xl: clamp(2.93rem, 1.67vi + 2.51rem, 3.85rem);
-  --fs-h1-xxl: clamp(3.66rem, 2.67vi + 2.99rem, 5.13rem);
-  --fs-h1-xxxl: clamp(4.58rem, 4.11vi + 3.55rem, 6.84rem);
 
   --fs-h2-sm: clamp(1rem, 0.23vi + 0.94rem, 1.13rem);
   --fs-h2-base: clamp(1.25rem, 0.45vi + 1.14rem, 1.5rem);
   --fs-h2-md: clamp(1.56rem, 0.79vi + 1.36rem, 2rem);
   --fs-h2-lg: clamp(1.95rem, 1.29vi + 1.63rem, 2.67rem);
-  --fs-h2-xl: clamp(2.44rem, 2.02vi + 1.94rem, 3.55rem);
-  --fs-h2-xxl: clamp(3.05rem, 3.06vi + 2.29rem, 4.74rem);
-  --fs-h2-xxxl: clamp(3.81rem, 4.54vi + 2.68rem, 6.31rem);
 
   --fs-h4-sm: clamp(0.14rem, 0.97vi + -0.1rem, 0.75rem);
   --fs-h4-base: clamp(0.75rem, 0.4vi + 0.65rem, 1rem);
   --fs-h4-md: clamp(3.94rem, -4.17vi + 4.98rem, 1.33rem);
   --fs-h4-lg: clamp(20.67rem, -30.23vi + 28.23rem, 1.78rem);
-  --fs-h4-xl: clamp(108.53rem, -169.85vi + 150.99rem, 2.37rem);
-  --fs-h4-xxl: clamp(569.77rem, -906.58vi + 796.41rem, 3.16rem);
-  --fs-h4-xxxl: clamp(2991.28rem, -4779.32vi + 4186.12rem, 4.21rem);
 
   --fs-p-sm: clamp(0.8rem, -0.04vi + 0.81rem, 0.77rem);
   --fs-p-base: clamp(1rem, 0.05vi + 0.99rem, 1.03rem);
   --fs-p-md: clamp(1.25rem, 0.2vi + 1.2rem, 1.37rem);
   --fs-p-lg: clamp(1.56rem, 0.43vi + 1.45rem, 1.83rem);
-  --fs-p-xl: clamp(1.95rem, 0.78vi + 1.76rem, 2.44rem);
-  --fs-p-xxl: clamp(2.44rem, 1.3vi + 2.12rem, 3.26rem);
-  --fs-p-xxxl: clamp(3.05rem, 2.06vi + 2.54rem, 4.34rem);
-
-  /*
-  --fs-h1: clamp(1.2rem, 4vw, 6.84rem);
-  --fs-h2: clamp(1.8rem, 3vw, 3rem);
-  --fs-h3: clamp(1.4rem, 2vw, 2.2rem);
-  --fs-h4: clamp(0.875rem, 0.9vw + 0.6rem, 1.25rem);
-  --fs-p: clamp(1rem, 0.5vw + 0.9rem, 1.2rem);
-
-  */
 }
 
 /*
@@ -69,19 +68,9 @@ Global Styles
 */
 
 body {
-  font-family:
-    "Manrope",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
-  background: var(--bg-body);
+  font-family: var(--font-secondary);
+  background: var(--color-bg-main);
+
   padding-top: env(safe-area-inset-top);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
@@ -99,7 +88,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary-color);
 }
 
 /*
@@ -114,10 +102,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cormorant Garamond", Times, serif;
+  font-family: var(--font-primary);
   color: var(--color-heading);
-  font-weight: 300;
-  font-style: normal;
+  /* font-weight: 300;
+  font-style: normal; */
   /* letter-spacing: -0.02em; */
 }
 
@@ -128,18 +116,7 @@ Paragraph of sections
 */
 
 p {
-  font-family:
-    "Manrope",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-secondary);
   font-weight: 400;
   font-style: normal;
   color: var(--color-paragraph);
@@ -220,14 +197,16 @@ Opacity Class
 Button Class
 ====================================================== 
 */
+
+.cta-btn-alt,
 .cta-btn {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   justify-content: space-between;
   width: fit-content;
-  padding: 0.6rem 0.5rem 0.6rem;
-  background-color: #4a4a4a;
+  padding: 0.6rem 1.2rem 0.6rem;
+  /* background-color: #4a4a4a; */
   height: min-content;
   text-align: left;
   font-size: 0.8rem;
@@ -236,20 +215,16 @@ Button Class
   cursor: pointer;
 }
 
+.cta-btn {
+  background-color: #4a4a4a;
+}
+
 .cta-btn-alt {
-  display: flex;
-  align-items: center;
   gap: 1rem;
-  justify-content: space-between;
-  width: fit-content;
-  padding: 0.6rem 0.5rem 0.6rem;
   border: 1px solid #4a4a4a;
-  height: min-content;
-  text-align: left;
-  font-size: 0.8rem;
-  border-radius: 2px;
-  font-weight: 400;
-  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .cta-btn .arrow,
@@ -257,14 +232,11 @@ Button Class
   height: 18px;
   width: 18px;
   color: var(--bg-body);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .cta-btn-alt .arrow {
   color: var(--primary-color);
-}
-
-.cta-btn-alt p {
-  padding-left: 8px;
 }
 
 .cta-btn img {
@@ -279,6 +251,24 @@ Button Class
   color: #f5f3e5;
 }
 
+.cta-btn:hover {
+  background: var(--color-primary);
+  color: var(--primary-color);
+}
+
+.cta-btn-alt:hover {
+  background: var(--color-primary);
+}
+
+.cta-btn-alt:hover p,
+.cta-btn-alt:hover svg {
+  color: var(--color-bg-main);
+}
+
+.cta-btn-alt:hover svg,
+.cta-btn:hover svg {
+  transform: rotate(45deg);
+}
 /*
 ====================================================== 
 Block Scroll

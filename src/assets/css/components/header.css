@@ -9,11 +9,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   padding: 1.4rem var(--padding-sm);
   z-index: 2;
-
-  height: 80px;
+  width: 100%;
+  height: var(--height-header);
   background-color: var(--bg-body);
 }
 
@@ -64,16 +63,12 @@ Media queries
     font-weight: 300;
 
     /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
-    backdrop-filter: blur(4px);
+    /* backdrop-filter: blur(4px);*/
+    color: var(--color-primary);
   }
 
   header .nav-bar .cta-header {
     margin-right: 0;
-  }
-
-  header .nav-bar.is-outside-image a {
-    color: var(--primary-color);
-    backdrop-filter: none;
   }
 
   .networks a:last-child,

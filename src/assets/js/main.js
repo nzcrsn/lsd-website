@@ -5,7 +5,7 @@ import { initFaq, initFaqReveal } from "./animations/faq.js";
 import { initLoader, exitLoader, waitForLoader } from "./animations/loader.js";
 import { initContact } from "./animations/contact.js";
 
-initLoader();
+// initLoader();
 
 window.addEventListener("load", async () => {
   await document.fonts.ready;
@@ -17,6 +17,6 @@ window.addEventListener("load", async () => {
   initFaqReveal();
   initContact();
 
-  await waitForLoader();
-  exitLoader();
+  // await waitForLoader();
+  // exitLoader();
 });
