@@ -9,16 +9,480 @@ stylesheet: home.css
 
 <!-- Start Hero section -->
 <section id="hero" class="hero-section">
-  <div class="t1 copy">
+  <div class="copy">
     <h1 class="heading">
-      <span>Nosotros <span class="highlight">elevamos</span></span>
-      <br />
-      <span>tus muebles<span class="comma">,</span></span>
-
-      <span>{{ t.section.hero.highlight}}<span class="comma">.</span></span>
+      Equipos de alto rendimiento y personal comprometido<span class="comma"
+        >.</span
+      >
     </h1>
-    <a class="cta-btn-alt cta-heading">
-      <p>{{ t.section.hero.cta}}</p>
+    <p class="sub-heading">
+      Disfrute de una mudanza fluida, sin estrés y con total confianza.
+    </p>
+    <a class="cta-btn cta-heading">
+      <p>Solicitar un presupuesto</p>
+      <svg
+        class="arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 17L17 7M17 7H8M17 7V16"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+
+    <div class="hero-bottom">
+      <div class="down">
+        <div class="nav_spacer"></div>
+        <p>desliza para descubrir</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="item video tall">
+      <video
+        src="/assets/videos/v1.mp4"
+        autoplay
+        loop
+        playsinline
+        muted
+      ></video>
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-1.webp" alt="" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-15.webp" alt="" />
+    </div>
+
+    <div class="item wide">
+      <img src="/assets/images/img-3.webp" alt="" />
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-4.webp" alt="" />
+    </div>
+
+    <div class="item">
+      <img src="/assets/images/img-5.webp" alt="" />
+    </div>
+    <div class="item video tall">
+      <video
+        src="/assets/videos/v4.mp4"
+        autoplay
+        muted
+        playsinline
+        loop
+      ></video>
+    </div>
+    <div class="item">
+      <img src="/assets/images/lift-employee.webp" alt="" />
+    </div>
+
+    <div class="item">
+      <img src="/assets/images/img-12.webp" alt="" />
+    </div>
+
+    <!-- <div class="item wide">
+      <img src="/assets/images/img-8.webp" alt="" />
+    </div>
+    <div class="item video tall">
+      <video
+        src="/assets/videos/v3.mp4"
+        autoplay
+        loop
+        playsinline
+        muted
+      ></video>
+    </div>
+    <div class="item">
+      <img src="/assets/images/img-9.webp" alt="" />
+    </div>
+
+    <div class="item">
+      <img src="/assets/images/img-10.webp" alt="" />
+    </div> -->
+
+    <!-- <div class="item">
+      <img src="/assets/images/img-11.webp" alt="" />
+    </div> -->
+
+    <!-- <div class="item small">
+      <img src="/assets/images/img-13.webp" alt="" />
+    </div>
+    <div class="item small">
+      <img src="/assets/images/img-12.webp" alt="" />
+    </div> -->
+  </div>
+</section>
+<!-- End of hero section -->
+
+<!-- Start services section -->
+<section id="services" class="services-section">
+  <div class="eyebrow">Nuestros servicios</div>
+  <h2>Adaptados a usted, diseñados para usted.</h2>
+  <div class="services-cards">
+    <!-- 01 — Monte-meubles -->
+    <article class="service-card" id="first-service">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- Building outline -->
+        <rect
+          x="8"
+          y="28"
+          width="14"
+          height="18"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Window on building -->
+        <rect
+          x="12"
+          y="32"
+          width="4"
+          height="4"
+          rx="0.5"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Elevator mast vertical -->
+        <line
+          x1="26"
+          y1="8"
+          x2="26"
+          y2="46"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Mast support arm -->
+        <line
+          x1="26"
+          y1="10"
+          x2="36"
+          y2="10"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Pulley circle -->
+        <circle
+          cx="36"
+          cy="10"
+          r="2.5"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Cable going down -->
+        <line
+          x1="36"
+          y1="12.5"
+          x2="36"
+          y2="30"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-dasharray="2 2"
+        />
+        <!-- Platform / load box -->
+        <rect
+          x="30"
+          y="30"
+          width="12"
+          height="9"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Box lines suggesting furniture -->
+        <line
+          x1="30"
+          y1="34"
+          x2="42"
+          y2="34"
+          stroke="currentColor"
+          stroke-width="1.2"
+        />
+      </svg>
+      <p class="service-card__title">Alquiler de elevadores de muebles</p>
+      <p class="service-card__desc">
+        Alquiler de elevadores motorizados para muebles y materiales pesados o
+        voluminosos.
+      </p>
+    </article>
+
+    <!-- 02 — Camions -->
+    <article class="service-card" id="second-service">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- Truck body -->
+        <rect
+          x="4"
+          y="20"
+          width="28"
+          height="18"
+          rx="1.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Truck cab -->
+        <path
+          d="M32 30 L32 22 L44 22 L46 27 L46 38 L32 38"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <!-- Cab window -->
+        <path
+          d="M34 22 L34 28 L44 28"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linejoin="round"
+        />
+        <!-- Front wheel -->
+        <circle
+          cx="38"
+          cy="40"
+          r="4"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <circle cx="38" cy="40" r="1.5" fill="currentColor" opacity="0.4" />
+        <!-- Rear wheel -->
+        <circle
+          cx="14"
+          cy="40"
+          r="4"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <circle cx="14" cy="40" r="1.5" fill="currentColor" opacity="0.4" />
+        <!-- Cargo lines -->
+        <line
+          x1="10"
+          y1="26"
+          x2="10"
+          y2="36"
+          stroke="currentColor"
+          stroke-width="1.2"
+          opacity="0.5"
+        />
+        <line
+          x1="18"
+          y1="26"
+          x2="18"
+          y2="36"
+          stroke="currentColor"
+          stroke-width="1.2"
+          opacity="0.5"
+        />
+        <line
+          x1="26"
+          y1="26"
+          x2="26"
+          y2="36"
+          stroke="currentColor"
+          stroke-width="1.2"
+          opacity="0.5"
+        />
+      </svg>
+      <p class="service-card__title">Camiones equipados + conductor</p>
+      <p class="service-card__desc">
+        Camiones equipados con conductores experimentados para un transporte
+        seguro, práctico y profesional.
+      </p>
+    </article>
+
+    <!-- 03 — Déménagement sur mesure (featured) -->
+    <article class="service-card" id="third-service">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- House outline -->
+        <path
+          d="M8 24 L26 10 L44 24"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <!-- House body -->
+        <rect
+          x="12"
+          y="24"
+          width="28"
+          height="20"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Door -->
+        <rect
+          x="21"
+          y="34"
+          width="10"
+          height="10"
+          rx="1"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Door knob -->
+        <circle cx="29" cy="39" r="1" fill="currentColor" opacity="0.6" />
+        <!-- Window -->
+        <rect
+          x="15"
+          y="28"
+          width="7"
+          height="6"
+          rx="0.5"
+          stroke="currentColor"
+          stroke-width="1.4"
+        />
+        <!-- Window cross -->
+        <line
+          x1="18.5"
+          y1="28"
+          x2="18.5"
+          y2="34"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <line
+          x1="15"
+          y1="31"
+          x2="22"
+          y2="31"
+          stroke="currentColor"
+          stroke-width="1"
+        />
+        <!-- Checkmark badge top-right -->
+        <circle cx="40" cy="14" r="6" fill="currentColor" opacity="0.12" />
+        <path
+          d="M37 14 L39.5 16.5 L43 12"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <p class="service-card__title">Mudanzas a medida</p>
+      <p class="service-card__desc">
+        Un acompañamiento de principio a fin diseñado para adaptarse a su
+        situación, sin estrés ni sorpresas.
+      </p>
+    </article>
+
+    <!-- 04 — Fournitures -->
+    <article class="service-card">
+      <svg
+        class="service-card__icon"
+        viewBox="0 0 52 52"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <!-- Main box -->
+        <rect
+          x="10"
+          y="22"
+          width="32"
+          height="24"
+          rx="1.5"
+          stroke="currentColor"
+          stroke-width="1.8"
+        />
+        <!-- Box top flaps open -->
+        <path
+          d="M10 22 L18 14 L34 14 L42 22"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linejoin="round"
+        />
+        <!-- Left flap -->
+        <line
+          x1="10"
+          y1="22"
+          x2="18"
+          y2="14"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Right flap -->
+        <line
+          x1="42"
+          y1="22"
+          x2="34"
+          y2="14"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+        <!-- Center flap divider -->
+        <line
+          x1="26"
+          y1="14"
+          x2="26"
+          y2="22"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+        <!-- Tape strip on front -->
+        <line
+          x1="26"
+          y1="22"
+          x2="26"
+          y2="46"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-dasharray="3 2"
+          opacity="0.5"
+        />
+        <!-- Horizontal tape -->
+        <line
+          x1="10"
+          y1="34"
+          x2="42"
+          y2="34"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-dasharray="3 2"
+          opacity="0.5"
+        />
+        <!-- Bubble wrap dots suggestion -->
+        <circle cx="17" cy="28" r="1.2" fill="currentColor" opacity="0.3" />
+        <circle cx="22" cy="28" r="1.2" fill="currentColor" opacity="0.3" />
+        <circle cx="17" cy="33" r="1.2" fill="currentColor" opacity="0.3" />
+      </svg>
+      <p class="service-card__title">Materiales para mudanzas</p>
+      <p class="service-card__desc">
+        Cajas, correas, plástico de burbujas y protecciones entregadas a
+        domicilio para embalar sus pertenencias con total seguridad.
+      </p>
+    </article>
+  </div>
+
+  <div class="cta-services">
+    <p>¿Listo para mudarte?</p>
+    <a class="cta-btn">
+      <p>Solicitar un presupuesto</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"
@@ -35,229 +499,858 @@ stylesheet: home.css
       </svg>
     </a>
   </div>
-  <div class="t1 scroll">
-    <p>{{t.section.hero.scroll}}</p>
-    <div class="nav_spacer"></div>
-  </div>
-  <h2 class="reveal-time">
-    {{ t.section.company.heading }}<span class="comma">.</span>
-  </h2>
-  <div id="galery-grid" class="reveal-grid grid">
-    <div class="item small">
-      <img src="../assets/images/bg-h.jpg" alt="" />
-    </div>
-    <div class="item">
-      <img src="../assets/images/img-15.webp" alt="" />
-    </div>
-    <div class="item">
-      <img src="../assets/images/serv1.png" alt="" />
-    </div>
-  </div>
-  <img src="../assets/images/heading-11.png" class="t1 hero-bg" alt="" />
-</section>
-<!-- End of hero section -->
-
-<!-- Start company section -->
-<!-- <section id="company" class="company-section">
-  <div class="eyebrow reveal-type">{{ t.section.company.label }}</div>
-  <h2 class="reveal-type">{{ t.section.company.heading }}</h2>
-  <p class="reveal-type">{{ t.section.company.goalone }}</p>
-  <br />
-  <a class="cta-btn cta-company reveal-type">
-    <p>{{t.section.company.cta}}</p>
-    <svg
-      class="arrow"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M7 17L17 7M17 7H8M17 7V16"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </a>
-</section> -->
-<!-- End company section -->
-
-<!-- End of hero section -->
-<!--
-<section id="galery" class="galery-section">
-  <div class="eyebrow">{{ t.section.galery.label }}</div>
-  <h2>{{ t.section.galery.heading }}</h2>
-  <div id="galery-grid" class="grid">
-    <div class="item small">
-      <img src="assets/images/img-1.webp" alt="" />
-    </div>
-    <div class="item">
-      <img src="assets/images/img-2.webp" alt="" />
-    </div>
-
-    <div class="item">
-      <img src="assets/images/img-4.webp" alt="" />
-    </div>
-  </div>
-</section>
--->
-<!-- End company section -->
-
-<!-- Start services section -->
-<section id="services" class="services-section">
-  <div class="eyebrow">{{ t.section.services.label }}</div>
-  <h2>{{ t.section.services.heading }}</h2>
-  <div id="services-cards" class="services-cards">
-    <div id="first-service" class="service-card">
-      <p class="service-card__title">Alquiler de elevadores de muebles.</p>
-      <p class="service-card__desc">La solución eficaz para cargas pesadas.</p>
-    </div>
-    <div id="second-service" class="service-card">
-      <p class="service-card__title">Camiones equipados + conductor</p>
-      <p class="service-card__desc">Para un transporte seguro y cómodo.</p>
-    </div>
-    <div id="third-service" class="service-card">
-      <p class="service-card__title">Mudanzas personalizadas.</p>
-      <p class="service-card__desc">Diseñado para adaptarse a tu situación.</p>
-    </div>
-    <div class="service-card">
-      <p class="service-card__title">Materiales de mudanza</p>
-      <p class="service-card__desc">
-        Cajas, correas y fundas protectoras para uso doméstico.
-      </p>
-      <!-- <div class="icon fourth_service_icon"></div> -->
-    </div>
-  </div>
 </section>
 <!-- End services section -->
-
 <!-- Start testimonial section -->
 <section class="testimonials-section" id="testimonials">
-  <div class="eyebrow">{{t.section.testimonials.label}}</div>
-  <h2>{{t.section.testimonials.heading}}</h2>
-  <div class="testimonials__pin">
-    <!-- Track horizontal (cards) -->
-    <div class="t-track-wrap">
-      <div class="t-track" id="tTrack">
-        <!-- Card 1 -->
-        <article class="t-card">
-          <div class="t-card__brand">Barclays — Rise</div>
-          <p class="t-card__quote">
-            Empresa muy seria. Personal profesional, atento, puntual y cortés.
-            Fácil comunicación a través de WhatsApp y correo electrónico. ¡Lo
-            recomiendo!
-          </p>
-          <div class="t-card__person">
-            <img
-              class="t-card__avatar"
-              src="https://i.pravatar.cc/80?img=12"
-              alt=""
-            />
-            <div>
-              <strong>Moni Di Bratto</strong><br /><span
-                >Utilisateur Google</span
-              >
-            </div>
-          </div>
-        </article>
-        <!-- Card 2 -->
-        <article class="t-card">
-          <div class="t-card__brand">Argyle</div>
-          <p class="t-card__quote">
-            Puntual, organizado, eficaz y, además, simpático y sonriente. ¿Qué
-            más se puede pedir? Profesionalidad, amabilidad y eficacia.
-            ¡Recomendable!
-          </p>
-          <div class="t-card__person">
-            <img
-              class="t-card__avatar"
-              src="https://i.pravatar.cc/80?img=21"
-              alt=""
-            />
-            <div>
-              <strong>Giovanna Rollo</strong><br /><span
-                >Utilisateur Pagesd'or</span
-              >
-            </div>
-          </div>
-        </article>
+  <div class="eyebrow">Testimonios</div>
+  <h2>Su satisfacción es nuestra misión.</h2>
+  <!-- <div class="rating-badges" aria-label="Résumé des avis">
+    <div class="rating-badge">
+      <img
+        class="rating-badge__icon"
+        src="assets/images/icons/google-logo.svg"
+        alt=""
+      />
+      <div class="rating-badge__body">
+        <div class="rating-badge__stars" aria-hidden="true">
+          <span class="star">★</span><span class="star">★</span>
+          <span class="star">★</span><span class="star">★</span
+          ><span class="star">★</span>
+        </div>
+        <span class="rating-badge__score">5.0</span>
+        <span class="rating-badge__label">Google (27 avis)</span>
       </div>
     </div>
+    <div class="rating-badge">
+      <img
+        class="rating-badge__icon pagesor"
+        src="assets/images/icons/pagedor.svg"
+        alt=""
+      />
 
-    <!-- Outro centrado (aparece cuando ya pasaron las cards) -->
-    <!--           <div class="t-outro" id="tOutro">
-            <div class="t-outro__box">
-              <div class="t-outro__text">
+      <div class="rating-badge__body">
+        <div class="rating-badge__stars" aria-hidden="true">
+          <span class="star">★</span><span class="star">★</span>
+          <span class="star">★</span><span class="star">★</span>
+          <span class="star" style="opacity: 0.3">★</span>
+        </div>
+        <span class="rating-badge__score">4.5</span>
+        <span class="rating-badge__label">Pagesd'or (8 avis)</span>
+      </div>
+    </div>
+  </div> -->
+  <!-- Testimonials -->
+  <div class="testimonials-cards">
+    <!-- Card 1 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Empresa muy seria. Personal profesional, atento, puntual y cortés. Fácil
+        comunicación a través de WhatsApp y correo electrónico. ¡Lo recomiendo!
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__meta">
+          <strong class="t-card__name">Moni Di Bratto</strong>
+          <span class="t-card__source">Usuario de Google</span>
+        </div>
+      </figcaption>
+    </figure>
 
-                <h3>¿Listo para crear algo que hable por ti?</h3>
-                <p>
-                  Hablemos de tu próximo proyecto y cómo podemos impulsarlo.
-                </p>
-              </div>
+    <!-- Card 2 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Puntual, organizado, eficaz y, además, simpático y sonriente.
+        Profesionalidad, amabilidad y eficacia. ¡Recomendable!
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__meta">
+          <strong class="t-card__name">Giovanna Rollo</strong>
+          <span class="t-card__source">Usuario de Pagesd'or</span>
+        </div>
+      </figcaption>
+    </figure>
 
-              <a class="cta" href="#contacto">Book a spot →</a>
-            </div>
-          </div> -->
+    <!-- Card 3 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Estos transportistas nos los recomendaron unos amigos. Todo salió muy
+        bien. Comunicación perfecta, eficacia y simpatía garantizadas.
+        ¡Recomendables!
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__meta">
+          <strong class="t-card__name">Violaine Jadoul</strong>
+          <span class="t-card__source">Usuario de Google</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <!-- Card 4 -->
+    <figure class="t-card">
+      <div class="t-card__stars" aria-label="5 étoiles">
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+        <span class="star" aria-hidden="true">★</span>
+      </div>
+      <blockquote class="t-card__quote">
+        Divino, magnífico, creativo, inteligente. Sabores sutiles, cocción
+        perfecta, servicio muy agradable. Cuente con una cálida bienvenida.
+      </blockquote>
+      <figcaption class="t-card__person">
+        <div class="t-card__meta">
+          <strong class="t-card__name">Caroline Levavasseur</strong>
+          <span class="t-card__source">Usuario de Google</span>
+        </div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 <!-- End testimonials section-->
-<!-- Start contact section -->
-<section id="contact" class="contact-section">
-  <div class="eyebrow">{{ t.section.contact.label }}</div>
-  <h2>{{ t.section.contact.heading }}</h2>
-  <div class="contact-information">
-    <div>
-      <img src="../assets/images/icons/phone.svg" alt="icône du téléphone" />
-      <a
-        class="detail"
-        href="https://wa.link/c4viwy"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p>Teléfono</p>
-        <p>(+32) 479482771</p>
-      </a>
+
+<section class="company-section" id="testimonials">
+  <div class="eyebrow">À propos de nous</div>
+  <h2>Depuis plus de <em>dix ans</em>, nous facilitons votre déménagement.</h2>
+  <!-- <p class="company-intro">
+    Lift Service Déménagement, c'est une équipe engagée, des équipements de
+    pointe et une promesse simple — chaque déménagement traité avec soin,
+    ponctualité et transparence totale.
+  </p> -->
+  <div class="company-layout">
+    <div class="company-right">
+      <ul class="values-grid" aria-label="Nos engagements">
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="2"
+              y="14"
+              width="18"
+              height="12"
+              rx="1"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <path
+              d="M20 18 L20 14 L28 14 L30 18 L30 26 L20 26"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <circle
+              cx="24"
+              cy="27"
+              r="3"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <circle
+              cx="9"
+              cy="27"
+              r="3"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <line
+              x1="2"
+              y1="10"
+              x2="8"
+              y2="10"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              opacity="0.45"
+            />
+            <line
+              x1="2"
+              y1="7"
+              x2="5"
+              y2="7"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              opacity="0.25"
+            />
+          </svg>
+          <p class="value-item__title">Equipos de alto rendimiento</p>
+          <p class="value-item__desc">
+            Furgonetas modernas y elevadores potentes para un servicio sin
+            compromisos.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="16"
+              cy="9"
+              r="5"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <path
+              d="M6 28 C6 22 10 18 16 18 C22 18 26 22 26 28"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+            <path
+              d="M23 3 L24 6 L27 6 L24.8 7.8 L25.6 11 L23 9.2 L20.4 11 L21.2 7.8 L19 6 L22 6 Z"
+              stroke="currentColor"
+              stroke-width="1.1"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Personal cualificado</p>
+          <p class="value-item__desc">
+            Mudanzas realizadas por personal experimentado, puntual y
+            respetuoso, a su servicio.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M16 21 C16 21 10 17 10 13 C10 11 12 10 14 11 C15 11.5 16 12.5 16 12.5 C16 12.5 17 11.5 18 11 C20 10 22 11 22 13 C22 17 16 21 16 21 Z"
+              stroke="currentColor"
+              stroke-width="1.3"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Cuidado extremo de los bienes</p>
+          <p class="value-item__desc">
+            Sus objetos están protegidos y se manipulan con el mayor cuidado.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              r="12"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <line
+              x1="16"
+              y1="9"
+              x2="16"
+              y2="16"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+            <line
+              x1="16"
+              y1="16"
+              x2="21"
+              y2="20"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+            <circle cx="16" cy="16" r="1.5" fill="currentColor" />
+          </svg>
+          <p class="value-item__title">Puntualidad y rigor</p>
+          <p class="value-item__desc">
+            Respetamos los plazos y garantizamos un desarrollo sin retrasos.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="6"
+              y="3"
+              width="20"
+              height="26"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.6"
+            />
+            <line
+              x1="11"
+              y1="10"
+              x2="21"
+              y2="10"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+            <line
+              x1="11"
+              y1="15"
+              x2="21"
+              y2="15"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+            />
+            <polyline
+              points="11,21 14,24 21,18"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Presupuesto claro y transparente</p>
+          <p class="value-item__desc">
+            Tarifas honestas y detalladas, sin costes ocultos.
+          </p>
+        </li>
+
+        <li class="value-item">
+          <svg
+            class="value-item__icon"
+            viewBox="0 0 32 32"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linejoin="round"
+            />
+            <polyline
+              points="11,16 14.5,20 21,12"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="value-item__title">Seguro profesional</p>
+          <p class="value-item__desc">
+            Sus bienes están cubiertos: seguridad garantizada de principio a
+            fin.
+          </p>
+        </li>
+      </ul>
     </div>
-    <div>
-      <img src="../assets/images/icons/mail.svg" alt="icône google" />
-      <a class="detail" href="mailto:liftservice@gmail.com">
-        <p>Email</p>
-        <p>liftservicebel@gmail.com</p>
-      </a>
-    </div>
-    <div>
-      <img
-        src="../assets/images/icons/location.svg"
-        alt="icône de localisation"
-      />
-      <a
-        class="detail"
-        href="https://rb.gy/q6apwy"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <p>Dirección</p>
-        <p>Av. Wielemans Ceuppens 158-1190 Forest</p>
-      </a>
-    </div>
-  </div>
-  <div class="social-networks">
-    <p>Síguenos en</p>
-    <div>
-      <a
-        href="https://www.tiktok.com/@nunezassocies"
-        rel="noopener noreferrer"
-        target="_blank"
-        ><img src="../assets/images/icons/tiktok.svg" alt="icône tiktok"
-      /></a>
-      <a
-        href="https://www.instagram.com/ivanliftservice/?utm_source=qr&igsh=bTQwaTBnYnBiZXY5"
-        rel="noopener noreferrer"
-        target="_blank"
-        ><img src="../assets/images/icons/instagram4.svg" alt="icône instagram"
-      /></a>
+    <div class="company-left">
+      <div class="company-photo">
+        <img
+          src="./assets/images/company-2.webp"
+          alt="Façade du bureau Lift Service Déménagement à Forest, Bruxelles"
+          loading="lazy"
+          width="900"
+          height="675"
+        />
+        <div class="company-badge" aria-label="Plus de 10 ans d'expérience">
+          <span class="company-badge__number">10+</span>
+          <span class="company-badge__label">ans</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<!-- Start faq section -->
+<section class="faq-section">
+  <div class="eyebrow">FAQs</div>
+  <h2>Preguntas frecuentes.</h2>
+  <ul class="faq__list">
+    <li class="faq__item">
+      <h3>
+        <button
+          class="faq__trigger"
+          aria-expanded="false"
+          aria-controls="faq-panel-01"
+          id="faq-trigger-01"
+        >
+          <div class="faq__question-wrap">
+            <span class="faq__index">01</span>
+            <span class="faq__question"
+              >¿Se necesita permiso para conducir un remolque o una
+              furgoneta?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div
+        class="faq__panel"
+        role="region"
+        id="faq-panel-01"
+        aria-labelledby="faq-trigger-01"
+      >
+        <p class="faq__answer">
+          Sí, explicación del permiso, etc., para escribir con Iván.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">02</span>
+            <span class="faq__question"
+              >¿Puedo reservar para un sábado o un día festivo?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">Sí, los 7 días de la semana bajo petición.</p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">03</span>
+            <span class="faq__question">¿Qué tipo de servicios ofrecen?</span>
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Ofrecemos un servicio completo de mudanzas que incluye el alquiler de
+          furgonetas, el uso de elevadores motorizados para pisos altos, así
+          como la intervención de mudanzas cualificados para cargar, transportar
+          y descargar sus pertenencias de forma segura.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">04</span>
+            <span class="faq__question">
+              ¿Puedo reservar solo un ascensor o una furgoneta sin
+              personal?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          No, no ofrecemos solo el alquiler de material.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">05</span>
+            <span class="faq__question"
+              >¿Están capacitados sus trabajadores?</span
+            >
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Por supuesto. Nuestros transportistas son seleccionados rigurosamente
+          y formados en técnicas de manipulación, protección de objetos frágiles
+          y uso seguro de nuestros equipos.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">06</span>
+            <span class="faq__question"
+              >¿Ofrecen servicios personalizados?
+            </span>
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Sí. Cada mudanza es diferente, por eso ofrecemos soluciones
+          personalizadas: horarios flexibles, material adaptado, número de
+          trabajadores ajustado, opciones de protección, etc.
+        </p>
+      </div>
+    </li>
+  </ul>
+</section>
+<!-- End faq section-->
+<!-- Start contact section -->
+<section id="contact" class="contact-section">
+  <div class="eyebrow">Contacto</div>
+  <h2>Comienza tu <em>mudanza.</em></h2>
+  <div class="contact-layout">
+    <div class="contact-left">
+      <div class="contact-items">
+        <a
+          class="contact-item"
+          href="https://wa.link/c4viwy"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Appeler par téléphone"
+        >
+          <svg
+            class="contact-item__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.1 11.8 19.79 19.79 0 0 1 1.08 3.1 2 2 0 0 1 3.06 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16l.92.92Z"
+            />
+          </svg>
+          <div class="contact-item__body">
+            <span class="contact-item__label">Telefono</span>
+            <span class="contact-item__value">(+32) 479 482 771</span>
+          </div>
+        </a>
+
+        <a
+          class="contact-item"
+          href="mailto:liftservicebel@gmail.com"
+          aria-label="Envoyer un email"
+        >
+          <svg
+            class="contact-item__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          <div class="contact-item__body">
+            <span class="contact-item__label">Email</span>
+            <span class="contact-item__value">liftservicebel@gmail.com</span>
+          </div>
+        </a>
+
+        <a
+          class="contact-item"
+          href="https://rb.gy/q6apwy"
+          rel="noopener noreferrer"
+          target="_blank"
+          aria-label="Voir l'adresse sur la carte"
+        >
+          <svg
+            class="contact-item__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <div class="contact-item__body">
+            <span class="contact-item__label">Dirección</span>
+            <span class="contact-item__value"
+              >Av. Wielemans Ceuppens 158<br />1190 Forest, Bruxelles</span
+            >
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-social">
+        <p class="contact-social__label">Síguenos en</p>
+        <div class="contact-social__links">
+          <a
+            class="social-link"
+            href="https://www.tiktok.com/@nunezassocies"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.3 6.3 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.77a4.85 4.85 0 0 1-1.01-.08Z"
+              />
+            </svg>
+          </a>
+          <a
+            class="social-link"
+            href="https://www.instagram.com/ivanliftservice/"
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <!-- Loading state -->
+      <div
+        class="form-loading"
+        id="formLoading"
+        aria-live="polite"
+        aria-label="Envoi en cours"
+      >
+        <div class="spinner"></div>
+        <p>Envíando…</p>
+      </div>
+
+      <!-- Success state -->
+      <div class="form-success" id="formSuccess" aria-live="polite">
+        <div class="success-icon">
+          <svg
+            viewBox="0 0 52 52"
+            fill="none"
+            aria-hidden="true"
+            id="successSvg"
+          >
+            <circle
+              class="success-circle"
+              cx="26"
+              cy="26"
+              r="24"
+              stroke="#27334b"
+              stroke-width="1.8"
+              fill="none"
+            />
+            <polyline
+              class="success-check"
+              points="14,26 22,34 38,18"
+              stroke="#27334b"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <p class="form-success__title">¡Mensaje enviado!</p>
+        <p class="form-success__sub">
+          Gracias por su mensaje. Nos pondremos en contacto con usted lo antes
+          posible.
+        </p>
+        <button class="form-success__reset" id="formReset" type="button">
+          Enviar otro mensaje
+        </button>
+      </div>
+
+      <!-- The form -->
+      <div class="contact-form-wrap" id="formWrap">
+        <!--
+          Netlify form attributes:
+          - name="contact" → Netlify identifies this form
+          - netlify → enables Netlify Forms
+          - netlify-honeypot="bot-field" → spam protection
+        -->
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          id="contactForm"
+          novalidate
+        >
+          <!-- Honeypot (hidden from real users) -->
+          <p hidden>
+            <label>Ne pas remplir : <input name="bot-field" /></label>
+          </p>
+
+          <!-- Row: name + email -->
+          <div class="form-row">
+            <div class="form-field">
+              <label for="sender_name">Tu Nombre</label>
+              <input
+                type="text"
+                id="sender_name"
+                name="sender_name"
+                placeholder="Jean Dupont"
+                autocomplete="name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="sender_email">Tu Email</label>
+              <input
+                type="email"
+                id="sender_email"
+                name="sender_email"
+                placeholder="jean@exemple.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Service selector as pills -->
+          <div class="form-field">
+            <label>Tipo de servicio</label>
+            <div
+              class="service-pills"
+              role="group"
+              aria-label="Choisissez un service"
+            >
+              <label class="pill-label">
+                <input
+                  type="radio"
+                  name="service"
+                  value="monte-meubles"
+                  required
+                />
+                <span class="pill">Elevador de muebles</span>
+              </label>
+
+              <label class="pill-label">
+                <input type="radio" name="service" value="camion-chauffeur" />
+                <span class="pill">Camión + conductor</span>
+              </label>
+
+              <label class="pill-label">
+                <input
+                  type="radio"
+                  name="service"
+                  value="demenagement-mesure"
+                />
+                <span class="pill">Mudanza a medida</span>
+              </label>
+
+              <label class="pill-label">
+                <input type="radio" name="service" value="fournitures" />
+                <span class="pill">Material de mudanza</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-field">
+            <label for="message">Tu mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Décrivez votre déménagement — adresses, étages, date souhaitée…"
+              required
+            ></textarea>
+          </div>
+
+          <button class="cta-btn" type="submit">
+            Envíar mensaje
+            <svg
+              class="arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 17L17 7M17 7H8M17 7V16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- End contact section -->
