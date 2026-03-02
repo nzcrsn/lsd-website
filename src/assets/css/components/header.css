@@ -13,7 +13,7 @@ header {
   z-index: 2;
   width: 100%;
   height: var(--height-header);
-  background-color: var(--bg-body);
+  background-color: var(--color-bg-main);
 }
 
 header .logo {
@@ -24,7 +24,7 @@ header .logo {
 }
 
 header .logo .brand {
-  color: var(--primary-color);
+  color: var(--color-primary);
   font-weight: 700;
 }
 
@@ -38,6 +38,26 @@ header .cta-header {
   height: 32px;
   cursor: pointer;
   transform: translateX(5px);
+}
+
+.left {
+  display: flex;
+}
+
+.language {
+  display: none;
+  gap: 0.4rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.language p {
+  margin-bottom: 0;
+  font-size: 0.7rem;
+  font-weight: 300;
+  font-style: normal;
+  font-family: var(--font-secondary);
 }
 /* End of styles of header */
 
@@ -57,13 +77,14 @@ Media queries
     align-items: center;
   }
 
+  .language {
+    display: flex;
+  }
+
   header .nav-bar a {
     font-size: var(--fs-p-sm);
     margin-right: 1.4rem;
     font-weight: 300;
-
-    /* text-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2); */
-    /* backdrop-filter: blur(4px);*/
     color: var(--color-primary);
   }
 
@@ -96,13 +117,13 @@ Media queries
   }
 
   .nav_spacer {
-    background-color: var(--primary-color);
+    background-color: var(--color-primary);
     opacity: 0.2;
     width: 1px;
     margin: 0 1.4rem;
     align-self: center;
     height: 1.2rem;
-    color: var(--primary-color);
+    color: var(--color-primary);
   }
 
   header .networks a {

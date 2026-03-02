@@ -7,27 +7,26 @@ Styles of hero section
 .hero-section {
   gap: 2rem;
   min-height: 100svh;
-  margin-top: 0.4rem;
+  margin-top: var(--height-header);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .hero-section .copy {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: var(--height-header);
 }
 
 .hero-section .copy .heading {
-  font-family: "Cormorant Garamond", Times, serif;
-  font-weight: 700;
+  font-family: var(--font-primary);
+  font-weight: 600;
   font-style: normal;
-  font-size: clamp(1.8rem, 5cqw, 4rem);
+  font-size: var(--fs-h1-md);
   letter-spacing: 0.02em;
   hyphens: auto;
   line-height: 1.1;
   margin: 0; /*re-write h1*/
-
-  /* visibility: hidden; */
 }
 
 .heading .comma {
@@ -36,86 +35,28 @@ Styles of hero section
 
 .copy .sub-heading {
   font-family: "Manrope", serif;
-  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  /* font-size: clamp(1rem, 1.6vw, 1.15rem); */
   width: 100%;
   font-weight: 300;
   line-height: 1.28;
   margin: 0; /*re-write h2*/
   margin-top: 0.8rem;
-  /* visibility: hidden; */
 }
 
 .cta-heading {
   margin-top: 2rem;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
   justify-content: end;
-}
-
-.hero-bottom {
-  bottom: 2rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  /* justify-content: space-between; */
-  width: calc(100% - 48px);
-}
-
-.hero-bottom p {
-  font-family: "Cormorant Garamond", Times, serif;
-  font-style: italic;
-  opacity: 0.5;
-  margin-bottom: 1rem;
-  letter-spacing: 0.02em;
-  font-size: clamp(0.85rem, 0.8rem + 0.4vw, 1rem);
-}
-
-.nav_spacer {
-  background-color: var(--primary-color);
-  opacity: 0.2;
-  width: 1px;
-  align-self: center;
-  height: 1.2rem;
-  color: var(--primary-color);
-}
-
-.language {
-  display: none;
-  gap: 0.4rem;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.language p {
-  margin-bottom: 0;
-  font-size: 0.8rem;
-}
-
-.down {
-  bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-networks {
-  display: none;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.5rem;
-  grid-auto-rows: var(--row, 160px);
+  /* grid-auto-rows: var(--row, 160px); */
+  grid-template-rows: repeat(3, 1fr);
   grid-auto-flow: dense;
-
-  /* border: 1px solid red; */
 }
 
-/* Tarjeta base: NADA de aspect-ratio */
 .item {
   display: grid; /* clave */
   grid-column: span 1;
@@ -124,7 +65,6 @@ Styles of hero section
   background: #ccc;
 }
 
-/* Tamaños */
 .item.wide {
   grid-column: span 2;
   grid-row: span 1;
@@ -135,28 +75,51 @@ Styles of hero section
   grid-row: span 2;
 }
 
-.item.big {
-  grid-column: span 2;
-  grid-row: span 2;
-} /* si la usas */
-
-/* Media ocupa toda la celda (¡solo este bloque!) */
 .item > img,
 .item > video {
   grid-area: 1 / 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   /* aspect-ratio: 4 / 3; */
   display: block;
   max-width: none;
   max-height: none;
   object-position: bottom;
-  transform: translateZ(0);
 }
 
-/* End styles of galery section*/
+.hero-bottom {
+  display: none;
+  position: absolute;
+  bottom: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: fit-content;
+  /* justify-content: space-between; */
+}
+
+.hero-bottom p {
+  font-family: "Cormorant Garamond", Times, serif;
+  font-style: italic;
+  opacity: 0.5;
+  margin-top: 1rem;
+  letter-spacing: 0.02em;
+  font-size: clamp(0.85rem, 0.8rem + 0.4vw, 1rem);
+}
+
+.down {
+  bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.down p {
+  font-size: 0.8rem;
+  writing-mode: vertical-rl;
+}
 
 /*
 ====================================================== 
@@ -177,8 +140,6 @@ Styles of services section
 }
 
 .service-card {
-  background: var(--card-bg);
-
   padding: 2rem 0rem 1.8rem;
   display: flex;
   flex-direction: column;
@@ -189,7 +150,7 @@ Styles of services section
     border-color 0.3s ease,
     box-shadow 0.3s ease;
   cursor: default;
-  border-bottom: 0.5px solid var(--primary-color);
+  border-bottom: 0.5px solid var(--color-primary);
 }
 
 /* ── Icon ── */
@@ -215,7 +176,8 @@ Styles of services section
 /* ── Title ── */
 .service-card__title {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.4rem, 2vw, 1.5rem);
+  font-size: var(--fs-p-md);
+  font-size: var(--fs-p-lg);
   font-weight: 400;
   font-style: normal;
   color: var(--color-heading);
@@ -228,9 +190,6 @@ Styles of services section
 
 /* ── Description ── */
 .service-card__desc {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--color-paragraph);
   line-height: 1.65;
   opacity: 0.8;
   flex: 1; /* pushes link to bottom */
@@ -282,6 +241,7 @@ Styles of services section
 
 .cta-services > p {
   font-family: var(--font-primary);
+  font-size: var(--fs-p-md);
 }
 
 .cta-services .cta-btn-alt {
@@ -305,7 +265,7 @@ Styles of testimonials section
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
-  margin-top: 42px;
+  margin-top: 2rem;
   gap: 0;
 }
 
@@ -350,7 +310,7 @@ Styles of testimonials section
 }
 
 .star {
-  color: var(--accent);
+  color: var(--color-accent);
   font-size: 0.75rem;
   line-height: 1;
 }
@@ -358,7 +318,7 @@ Styles of testimonials section
 .rating-badge__score {
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--color-primary);
   letter-spacing: 0.02em;
 }
 
@@ -381,13 +341,12 @@ Styles of testimonials section
 /* Large decorative quote mark */
 
 .t-card__quote {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: clamp(1.1rem, 2.2vw, 1.4rem);
   font-weight: 300;
-  font-style: italic;
+
   line-height: 1.65;
   color: var(--color-heading);
-
   padding-left: 0; /* decorative quote is absolute */
   /* reset blockquote */
   margin: 0;
@@ -410,14 +369,14 @@ Styles of testimonials section
 .t-card__name {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--color-primary);
   letter-spacing: 0.01em;
 }
 
 .t-card__source {
   font-size: 0.72rem;
   font-weight: 300;
-  color: var(--muted);
+
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -437,6 +396,168 @@ Styles of testimonials section
 
 /*
 ====================================================== 
+Styles of company section
+====================================================== 
+*/
+
+.company-section {
+  width: 100%;
+}
+
+.company-section .company-intro {
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  font-family: "Manrope", serif;
+  font-weight: 300;
+  line-height: 1.58;
+  color: var(--color-heading);
+  width: 100%;
+  font-size: 0.9rem;
+  text-align: justify;
+  hyphens: auto;
+  color: var(--muted);
+}
+
+.company-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  margin-top: 2rem;
+}
+
+.company-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.company-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.company-photo:hover img {
+  transform: scale(1.04);
+}
+
+/* Accent corner line */
+.company-photo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3.5rem;
+  height: 3px;
+  background: var(--accent);
+  z-index: 1;
+}
+
+/* Experience badge */
+.company-badge {
+  position: absolute;
+  bottom: 1.2rem;
+  right: 1.2rem;
+  background: var(--color-primary);
+  color: var(--color-bg-main);
+  padding: 0.8rem 1.1rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+  z-index: 2;
+}
+
+.company-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 0.5px solid var(--color-border);
+  border-left: 0.5px solid var(--color-border);
+  list-style: none;
+}
+
+/* ── Single value cell ── */
+.value-item {
+  padding: 1.6rem 1.2rem;
+  border-right: 0.5px solid var(--color-border);
+  border-bottom: 0.5px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.value-item:hover {
+  background: rgba(39, 51, 75, 0.03);
+}
+
+/* Top accent line draws in on hover */
+.value-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width 0.45s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.value-item:hover::before {
+  width: 100%;
+}
+
+.value-item__icon {
+  width: 30px;
+  height: 30px;
+  color: var(--color-primary);
+  opacity: 0.75;
+  flex-shrink: 0;
+  transition:
+    color 0.3s,
+    opacity 0.3s,
+    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.value-item:hover .value-item__icon {
+  color: var(--color-accent);
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+.value-item__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--fs-p-base);
+  font-weight: 400;
+  color: var(--color-heading);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.value-item__desc {
+  font-size: 0.76rem;
+  font-weight: 300;
+  /* color: var(--color-muted); */
+  line-height: 1.6;
+}
+
+/*
+====================================================== 
 Styles of FAQs section
 ====================================================== 
 */
@@ -453,11 +574,11 @@ Styles of FAQs section
   display: flex;
   flex-direction: column;
   list-style: none;
-  border-bottom: 0.5px solid var(--primary-color);
+  border-bottom: 0.5px solid var(--color-primary);
 }
 
 .faq-section .faq__item:not(:first-child) {
-  border-top: 0.5px solid var(--primary-color);
+  border-top: 0.5px solid var(--color-primary);
   overflow: hidden;
 }
 
@@ -490,7 +611,7 @@ Styles of FAQs section
 }
 
 .faq__item.is-open .faq__question {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 /* ── Icon ── */
@@ -538,7 +659,6 @@ Styles of FAQs section
   font-family: var(--font-secondary);
   font-size: clamp(0.8rem, 1.6vw, 1rem);
   font-weight: 300;
-  font-style: italic;
   line-height: 1.75;
   color: var(--color-heading);
   padding-bottom: 2rem;
@@ -547,7 +667,7 @@ Styles of FAQs section
 }
 
 .faq__answer strong {
-  color: var(--fg);
+  /* color: var(--fg); */
   font-style: normal;
   font-weight: 400;
 }
@@ -557,7 +677,7 @@ Styles of FAQs section
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   font-size: 0.75rem;
-  color: var(--muted);
+  /* color: var(--muted); */
   letter-spacing: 0.1em;
   min-width: 2rem;
 }
@@ -572,201 +692,12 @@ Styles of FAQs section
 
 /*
 ====================================================== 
-Styles of company section
-====================================================== 
-*/
-
-.company-section {
-  width: 100%;
-}
-
-.company-section .company-intro {
-  margin-top: 1.4rem;
-  margin-bottom: 1.4rem;
-  font-family: "Manrope", serif;
-  font-weight: 300;
-  line-height: 1.58;
-  color: var(--color-heading);
-  width: 100%;
-  font-size: 0.9rem;
-  text-align: justify;
-  hyphens: auto;
-  color: var(--muted);
-}
-
-.company-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3.5rem;
-}
-
-.company-photo {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  border-radius: 4px;
-}
-
-.company-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  transition: transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.company-photo:hover img {
-  transform: scale(1.04);
-}
-
-/* Accent corner line */
-.company-photo::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 3.5rem;
-  height: 3px;
-  background: var(--accent);
-  z-index: 1;
-}
-
-/* Experience badge */
-.company-badge {
-  position: absolute;
-  bottom: 1.2rem;
-  right: 1.2rem;
-  background: var(--primary-color);
-  color: var(--bg-body);
-  padding: 0.8rem 1.1rem;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.1;
-  z-index: 2;
-}
-
-.company-badge__number {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem;
-  font-weight: 300;
-  letter-spacing: -0.03em;
-}
-
-.company-badge__label {
-  font-size: 0.58rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  opacity: 0.65;
-}
-
-.company-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  border-top: 0.5px solid var(--border);
-  border-left: 0.5px solid var(--border);
-  list-style: none;
-}
-
-/* ── Single value cell ── */
-.value-item {
-  padding: 1.6rem 1.2rem;
-  border-right: 0.5px solid var(--border);
-  border-bottom: 0.5px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  position: relative;
-  overflow: hidden;
-  transition: background 0.3s ease;
-}
-
-.value-item:hover {
-  background: rgba(39, 51, 75, 0.03);
-}
-
-/* Top accent line draws in on hover */
-.value-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: var(--accent);
-  transition: width 0.45s cubic-bezier(0.77, 0, 0.18, 1);
-}
-
-.value-item:hover::before {
-  width: 100%;
-}
-
-.value-item__icon {
-  width: 30px;
-  height: 30px;
-  color: var(--primary-color);
-  opacity: 0.75;
-  flex-shrink: 0;
-  transition:
-    color 0.3s,
-    opacity 0.3s,
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.value-item:hover .value-item__icon {
-  color: var(--accent);
-  opacity: 1;
-  transform: translateY(-3px);
-}
-
-.value-item__title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(0.9rem, 1.3vw, 1.1rem);
-  font-weight: 400;
-  color: var(--color-heading);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-}
-
-.value-item__desc {
-  font-size: 0.76rem;
-  font-weight: 300;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-/*
-====================================================== 
 Styles of contact section
 ====================================================== 
 */
 
 .contact-section {
   margin-bottom: 4rem;
-  padding-top: 4rem;
-}
-
-:root {
-  --primary-color: #27334b;
-  --bg-body: #f5f3e5;
-  --color-heading: #4c3c2c;
-  --color-paragraph: #4e4e4e;
-  --border: rgba(39, 51, 75, 0.15);
-  --accent: #b8904a;
-  --muted: rgba(39, 51, 75, 0.4);
-  --padding-sm: 24px;
-  --input-bg: rgba(255, 255, 255, 0.6);
 }
 
 .contact-layout {
@@ -801,7 +732,7 @@ Styles of contact section
 
 .contact-left h2 em {
   font-style: italic;
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 /* Contact items */
@@ -809,7 +740,7 @@ Styles of contact section
   display: flex;
   flex-direction: column;
   gap: 0;
-  border-top: 0.5px solid var(--border);
+  border-top: 0.5px solid var(--color-border);
 }
 
 .contact-item {
@@ -817,7 +748,7 @@ Styles of contact section
   align-items: flex-start;
   gap: 1.2rem;
   padding: 1.4rem 0;
-  border-bottom: 0.5px solid var(--border);
+  border-bottom: 0.5px solid var(--color-border);
   text-decoration: none;
   color: inherit;
   position: relative;
@@ -832,7 +763,7 @@ Styles of contact section
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--accent);
+  background: var(--color-primary);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.35s cubic-bezier(0.77, 0, 0.18, 1);
@@ -848,14 +779,14 @@ Styles of contact section
 .contact-item__icon {
   width: 20px;
   height: 20px;
-  color: var(--primary-color);
+  color: var(--color-primary);
   flex-shrink: 0;
   margin-top: 2px;
   transition: color 0.3s;
 }
 
 .contact-item:hover .contact-item__icon {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 .contact-item__body {
@@ -869,7 +800,7 @@ Styles of contact section
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 .contact-item__value {
@@ -890,7 +821,7 @@ Styles of contact section
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--muted);
+  /* color: var(--muted); */
 }
 
 .contact-social__links {
@@ -901,12 +832,12 @@ Styles of contact section
 .social-link {
   width: 40px;
   height: 40px;
-  border: 0.5px solid var(--border);
+  border: 0.5px solid var(--color-border);
   border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-color);
+  color: var(--color-primary);
   text-decoration: none;
   transition:
     background 0.3s,
@@ -915,9 +846,9 @@ Styles of contact section
 }
 
 .social-link:hover {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--bg-body);
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 .social-link svg {
@@ -925,20 +856,15 @@ Styles of contact section
   height: 18px;
 }
 
-/* ═══════════════════════════════════════
-       RIGHT — FORM
-    ═══════════════════════════════════════ */
 .contact-right {
   position: relative;
   min-height: 500px;
 }
 
-/* ── Form wrapper (shown by default) ── */
 .contact-form-wrap {
   width: 100%;
 }
 
-/* ── Loading overlay ── */
 .form-loading {
   display: none;
   position: absolute;
@@ -947,7 +873,7 @@ Styles of contact section
   justify-content: center;
   flex-direction: column;
   gap: 1.2rem;
-  background: var(--bg-body);
+  background: var(--color-bg-main);
   z-index: 10;
 }
 
@@ -958,8 +884,8 @@ Styles of contact section
 .spinner {
   width: 36px;
   height: 36px;
-  border: 2px solid var(--border);
-  border-top-color: var(--primary-color);
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -973,7 +899,7 @@ Styles of contact section
 .form-loading p {
   font-size: 0.8rem;
   font-weight: 300;
-  color: var(--muted);
+  color: var(--color-muted);
   letter-spacing: 0.05em;
 }
 
@@ -987,7 +913,7 @@ Styles of contact section
   flex-direction: column;
   gap: 1.5rem;
   text-align: center;
-  background: var(--bg-body);
+  background: var(--color-bg-main);
   z-index: 10;
   padding: 2rem;
 }
@@ -1000,11 +926,11 @@ Styles of contact section
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary-color);
+  color: var(--color-primary);
   flex-shrink: 0;
 }
 
@@ -1035,7 +961,7 @@ Styles of contact section
 .form-success__sub {
   font-size: 0.88rem;
   font-weight: 300;
-  color: var(--muted);
+  color: var(--color-muted);
   max-width: 32ch;
   line-height: 1.7;
 }
@@ -1045,11 +971,11 @@ Styles of contact section
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--color-primary);
   background: none;
   border: none;
   cursor: pointer;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 2px;
   transition:
     color 0.3s,
@@ -1057,8 +983,8 @@ Styles of contact section
 }
 
 .form-success__reset:hover {
-  color: var(--accent);
-  border-color: var(--accent);
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* ═══════════════════════════════════════
@@ -1093,7 +1019,7 @@ Styles of contact section
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--color-primary);
   opacity: 0.7;
 }
 
@@ -1101,8 +1027,8 @@ Styles of contact section
 .form-field textarea,
 .form-field select {
   width: 100%;
-  background: var(--input-bg);
-  border: 0.5px solid var(--border);
+  background: var(--color-input-bg);
+  border: 0.5px solid var(--color-border);
   border-radius: 3px;
   padding: 0.85rem 1rem;
   font-family: "Manrope", sans-serif;
@@ -1120,14 +1046,14 @@ Styles of contact section
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-  color: var(--muted);
+  color: var(--color-muted);
   font-weight: 300;
 }
 
 .form-field input:focus,
 .form-field textarea:focus,
 .form-field select:focus {
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
   background: rgba(255, 255, 255, 0.85);
   box-shadow: 0 0 0 3px rgba(39, 51, 75, 0.06);
 }
@@ -1152,7 +1078,7 @@ Styles of contact section
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 5px solid var(--primary-color);
+  border-top: 5px solid var(--color-primary);
   pointer-events: none;
   opacity: 0.5;
 }
@@ -1185,7 +1111,7 @@ Styles of contact section
 .pill {
   display: inline-block;
   padding: 0.45rem 0.9rem;
-  border: 0.5px solid var(--border);
+  border: 0.5px solid var(--color-border);
   border-radius: 100px;
   font-size: 0.72rem;
   font-weight: 600;
@@ -1193,7 +1119,7 @@ Styles of contact section
   text-transform: uppercase;
   color: var(--primary-color);
   cursor: pointer;
-  background: var(--input-bg);
+  background: var(--color-input-bg);
   transition:
     background 0.25s,
     color 0.25s,
@@ -1202,55 +1128,19 @@ Styles of contact section
 }
 
 .pill-label input[type="radio"]:checked + .pill {
-  background: var(--primary-color);
+  background: var(--color-primary);
   color: var(--bg-body);
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 .pill-label input[type="radio"]:focus-visible + .pill {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
 
 /* Submit button */
-.form-submit {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: var(--primary-color);
-  color: var(--bg-body);
-  font-family: "Manrope", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 1rem 2.2rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 3px;
-  cursor: pointer;
-  transition:
-    background 0.3s,
-    color 0.3s,
-    gap 0.3s;
-  align-self: flex-start;
-}
 
-.form-submit:hover {
-  background: transparent;
-  color: var(--primary-color);
-}
-
-.form-submit svg {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.form-submit:hover svg {
-  transform: translate(2px, -2px);
-}
-
-.form-submit:disabled {
+.cta-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -1277,36 +1167,10 @@ Media Queries
   Styles of hero section
   ====================================================== 
   */
-
   .hero-section {
-    position: relative;
-    min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
-
-  .hero-section .copy {
-    align-items: center;
-    text-align: center;
-    /* border: 1px solid red; */
-  }
-
-  .hero-section .copy .heading {
-    font-size: clamp(2.8rem, 5cqw, 4rem);
-    margin-top: 1rem;
-    /* border: 1px solid green; */
-  }
-
-  .hero-section .copy .sub-heading {
-    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
-    width: 80%;
-    margin-top: 1rem;
-    /* border: 1px solid green; */
-  }
-
-  .grid {
-    margin-top: 1.2rem;
-    grid-auto-rows: 260px;
-  }
-
   /* End styles of hero section*/
 
   /*
@@ -1422,9 +1286,30 @@ Media Queries
 }
 
 @media screen and (min-width: 992px) {
+  .hero-section {
+    min-height: unset;
+    height: calc(100vh - var(--height-header));
+    flex-direction: row;
+    gap: 4rem;
+  }
+
+  .hero-section .copy .heading {
+    font-size: clamp(1.8rem, 5cqw, 3rem);
+    /* border: 1px solid green; */
+  }
+
+  .hero-section .copy .sub-heading {
+    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+    margin-top: 1rem;
+    /* border: 1px solid green; */
+  }
+
   .grid {
-    margin-top: 2rem;
-    grid-auto-rows: 400px;
+    max-width: 40%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, minmax(110px, 1fr));
+    gap: 0.5rem;
+    /* grid-auto-rows: var(--row, 120px); */
   }
 
   /* Styles of service section */

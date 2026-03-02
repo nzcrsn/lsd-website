@@ -16,15 +16,21 @@ Variables
 
   /* Colors */
   --color-primary: #27334b;
-  --black-color-black: #000;
+  --color-secondary: #4a4a4a;
 
-  --primary-bg: --bg-body: #f5f3e5;
+  --color-black: #000;
+  --color-border: rgba(39, 51, 75, 0.15);
 
   --color-bg-main: #f5f3e5;
   --color-bg-secondary: #dce0df;
 
   --color-heading: #4c3c2c;
   --color-paragraph: #4e4e4e;
+
+  --color-accent: #b8904a;
+  /* --color-muted: rgba(39, 51, 75, 0.4); */
+  --color-padding-sm: 24px;
+  --color-input-bg: rgba(255, 255, 255, 0.6);
 
   /* Margin */
   --margin-xs: 8px;
@@ -35,7 +41,7 @@ Variables
   --padding-sm: 24px;
 
   /* Border-radius */
-  --border-radius-xs: 8px;
+  --border-radius: 2px;
 
   --height-header: 80px;
 
@@ -70,7 +76,6 @@ Global Styles
 body {
   font-family: var(--font-secondary);
   background: var(--color-bg-main);
-
   padding-top: env(safe-area-inset-top);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
@@ -104,9 +109,8 @@ h5,
 h6 {
   font-family: var(--font-primary);
   color: var(--color-heading);
-  /* font-weight: 300;
-  font-style: normal; */
-  /* letter-spacing: -0.02em; */
+  font-style: normal;
+  letter-spacing: -0.02em;
 }
 
 /*
@@ -116,6 +120,7 @@ Paragraph of sections
 */
 
 p {
+  font-size: var(--fs-p-base);
   font-family: var(--font-secondary);
   font-weight: 400;
   font-style: normal;
@@ -128,25 +133,14 @@ Eyebrow of sections
 ====================================================== 
 */
 .eyebrow {
-  color: var(--primary-color);
+  color: var(--color-primary);
   text-transform: uppercase;
-  font-family:
-    "Manrope",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
-    sans-serif;
+  font-family: var(--font-secondary);
   margin-bottom: 12px;
   font-weight: 300;
   letter-spacing: 0.2em;
-  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
   white-space: nowrap;
+  font-size: var(--fs-p-sm);
 }
 
 /*
@@ -155,7 +149,7 @@ H2 heading sections
 ====================================================== 
 */
 h2 {
-  font-size: var(--fs-h2-md);
+  font-size: var(--fs-h2-lg);
   font-weight: 300;
 }
 
@@ -192,6 +186,16 @@ Opacity Class
   pointer-events: none;
 }
 
+.nav_spacer {
+  display: none;
+  background-color: var(--color-primary);
+  opacity: 0.2;
+  width: 1px;
+  align-self: center;
+  height: 1.2rem;
+  color: var(---color-primary);
+}
+
 /*
 ====================================================== 
 Button Class
@@ -202,49 +206,51 @@ Button Class
 .cta-btn {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 1rem;
   justify-content: space-between;
   width: fit-content;
   padding: 0.6rem 1.2rem 0.6rem;
-  /* background-color: #4a4a4a; */
   height: min-content;
   text-align: left;
-  font-size: 0.8rem;
-  border-radius: 2px;
+
+  border-radius: var(--border-radius);
   font-weight: 400;
   cursor: pointer;
-}
-
-.cta-btn {
-  background-color: #4a4a4a;
-}
-
-.cta-btn-alt {
-  gap: 1rem;
-  border: 1px solid #4a4a4a;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
+  transition: all 0.3s;
+  border: 1px solid var(--color-secondary);
+  /* background-color 0.3s,
+    color 0.3s; */
 }
 
 .cta-btn .arrow,
 .cta-btn-alt .arrow {
   height: 18px;
   width: 18px;
-  color: var(--bg-body);
   transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.cta-btn-alt .arrow {
-  color: var(--primary-color);
+.cta-btn {
+  background-color: var(--color-secondary);
+  color: var(--color-bg-main);
 }
 
-.cta-btn img {
-  margin-left: 0.4rem;
-  height: 0.7rem;
-  width: 0.7rem;
-  font-weight: 700;
-  text-align: center;
+.cta-btn-alt > p,
+.cta-btn > p {
+  font-size: clamp(0.6rem, -0.04vi + 0.81rem, 0.65rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.cta-btn-alt {
+  border: 1px solid var(--color-secondary);
+}
+
+.cta-btn-alt .arrow {
+  color: var(--color-primary);
+}
+
+.cta-btn .arrow {
+  color: var(--color-bg-main);
 }
 
 .cta-btn p {
@@ -252,8 +258,14 @@ Button Class
 }
 
 .cta-btn:hover {
-  background: var(--color-primary);
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-secondary);
   color: var(--primary-color);
+}
+
+.cta-btn:hover p,
+.cta-btn:hover svg {
+  color: var(--color-primary);
 }
 
 .cta-btn-alt:hover {
@@ -285,6 +297,9 @@ Media Queries
 */
 
 @media screen and (min-width: 768px) {
+  .nav_spacer {
+    display: block;
+  }
   /*
   ====================================================== 
   Font size of h2 heading sections

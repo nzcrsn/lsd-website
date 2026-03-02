@@ -19,7 +19,7 @@ stylesheet: home.css
     <p class="sub-heading">
       Offrez-vous un déménagement fluide, sans stress, et en toute confiance.
     </p>
-    <a class="cta-btn-alt cta-heading">
+    <a class="cta-btn cta-heading">
       <p>Request a quote</p>
       <svg
         class="arrow"
@@ -36,36 +36,14 @@ stylesheet: home.css
         />
       </svg>
     </a>
-  </div>
-  <!--
-  <div class="t1 hero-bottom">
-    <div class="language">
-      <p>ES</p>
-      <div class="nav_spacer"></div>
-      <p>EN</p>
-    </div>
-    <div class="down">
-      <p>glisser pour découvrir</p>
-      <div class="nav_spacer"></div>
-    </div>
-    <div class="hero-networks">
-      <div>
-        <a
-          href="https://www.tiktok.com/@nunezassocies"
-          rel="noopener noreferrer"
-          target="_blank"
-          ><img src="assets/images/icons/tiktok.svg" alt="icône tiktok"
-        /></a>
-        <a
-          href="https://www.instagram.com/ivanliftservice/?utm_source=qr&igsh=bTQwaTBnYnBiZXY5"
-          rel="noopener noreferrer"
-          target="_blank"
-          ><img src="assets/images/icons/instagram4.svg" alt="icône instagram"
-        /></a>
+
+    <div class="hero-bottom">
+      <div class="down">
+        <div class="nav_spacer"></div>
+        <p>glisser pour découvrir</p>
       </div>
     </div>
   </div>
--->
   <div class="grid">
     <div class="item video tall">
       <video
@@ -76,7 +54,7 @@ stylesheet: home.css
         muted
       ></video>
     </div>
-    <div class="item small">
+    <div class="item">
       <img src="/assets/images/img-1.webp" alt="" />
     </div>
     <div class="item">
@@ -90,6 +68,9 @@ stylesheet: home.css
       <img src="/assets/images/img-4.webp" alt="" />
     </div>
 
+    <div class="item">
+      <img src="/assets/images/img-5.webp" alt="" />
+    </div>
     <div class="item video tall">
       <video
         src="/assets/videos/v4.mp4"
@@ -100,16 +81,14 @@ stylesheet: home.css
       ></video>
     </div>
     <div class="item">
-      <img src="/assets/images/img-5.webp" alt="" />
-    </div>
-    <div class="item">
-      <img src="/assets/images/img-6.webp" alt="" />
+      <img src="/assets/images/lift-employee.webp" alt="" />
     </div>
 
     <div class="item">
       <img src="/assets/images/img-12.webp" alt="" />
     </div>
-    <div class="item wide">
+
+    <!-- <div class="item wide">
       <img src="/assets/images/img-8.webp" alt="" />
     </div>
     <div class="item video tall">
@@ -127,7 +106,7 @@ stylesheet: home.css
 
     <div class="item">
       <img src="/assets/images/img-10.webp" alt="" />
-    </div>
+    </div> -->
 
     <!-- <div class="item">
       <img src="/assets/images/img-11.webp" alt="" />
@@ -502,8 +481,8 @@ stylesheet: home.css
   </div>
 
   <div class="cta-services">
-    <p>¿Listo para mudarte?</p>
-    <a class="cta-btn-alt cta-heading">
+    <p>Prêt à déménager ?</p>
+    <a class="cta-btn">
       <p>Request a quote</p>
       <svg
         class="arrow"
@@ -527,7 +506,7 @@ stylesheet: home.css
 <section class="testimonials-section" id="testimonials">
   <div class="eyebrow">Témoignages</div>
   <h2>Votre satisfaction est notre mission</h2>
-  <div class="rating-badges" aria-label="Résumé des avis">
+  <!-- <div class="rating-badges" aria-label="Résumé des avis">
     <div class="rating-badge">
       <img
         class="rating-badge__icon"
@@ -561,7 +540,7 @@ stylesheet: home.css
         <span class="rating-badge__label">Pagesd'or (8 avis)</span>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- Testimonials -->
   <div class="testimonials-cards">
     <!-- Card 1 -->
@@ -655,11 +634,11 @@ stylesheet: home.css
 <section class="company-section" id="testimonials">
   <div class="eyebrow">À propos de nous</div>
   <h2>Depuis plus de <em>dix ans</em>, nous facilitons votre déménagement.</h2>
-  <p class="company-intro">
+  <!-- <p class="company-intro">
     Lift Service Déménagement, c'est une équipe engagée, des équipements de
     pointe et une promesse simple — chaque déménagement traité avec soin,
     ponctualité et transparence totale.
-  </p>
+  </p> -->
   <div class="company-layout">
     <div class="company-right">
       <ul class="values-grid" aria-label="Nos engagements">
@@ -1351,18 +1330,21 @@ stylesheet: home.css
             ></textarea>
           </div>
 
-          <button class="form-submit" type="submit">
+          <button class="cta-btn" type="submit">
             Envoyer le message
             <svg
+              class="arrow"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M7 17L17 7M17 7H8M17 7V16" />
+              <path
+                d="M7 17L17 7M17 7H8M17 7V16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
         </form>
@@ -1370,4 +1352,5 @@ stylesheet: home.css
     </div>
   </div>
 </section>
+
 <!-- End contact section -->
