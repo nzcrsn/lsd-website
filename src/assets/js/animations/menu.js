@@ -41,7 +41,6 @@ export function initMenu() {
   let scrollY = 0;
 
   function openMenu() {
-    smoothWrapper.classList.add("scroll-locked");
     scrollY = window.scrollY;
     document.body.style.top = `-${scrollY}px`;
   }

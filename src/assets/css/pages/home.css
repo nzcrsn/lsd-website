@@ -22,9 +22,9 @@ Styles of hero section
   font-family: var(--font-primary);
   font-weight: 600;
   font-style: normal;
-  font-size: var(--fs-h1-md);
+  font-size: var(--fs-h1-lg);
   letter-spacing: 0.02em;
-  hyphens: auto;
+  /* hyphens: auto; */
   line-height: 1.1;
   margin: 0; /*re-write h1*/
 }
@@ -34,7 +34,7 @@ Styles of hero section
 }
 
 .copy .sub-heading {
-  font-family: "Manrope", serif;
+  font-family: var(--font-secondary);
   /* font-size: clamp(1rem, 1.6vw, 1.15rem); */
   width: 100%;
   font-weight: 300;
@@ -191,7 +191,6 @@ Styles of services section
 /* ── Description ── */
 .service-card__desc {
   line-height: 1.65;
-  opacity: 0.8;
   flex: 1; /* pushes link to bottom */
   margin: 0;
   margin-bottom: 1.6rem;
@@ -1145,8 +1144,22 @@ Styles of contact section
   cursor: not-allowed;
 }
 
+.form__title {
+  font-family: var(--font-primary);
+  font-size: var(--fs-p-md);
+  margin-bottom: 2rem;
+  /* text-align: center; */
+  width: 100%;
+}
+
 /* End of styles of Contact*/
 
+.end {
+  margin-top: 4rem;
+  aspect-ratio: 4/3;
+  width: 50%;
+  align-self: center;
+}
 /*
 ====================================================== 
 Media Queries

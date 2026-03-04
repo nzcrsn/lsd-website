@@ -2,61 +2,74 @@
 <section id="menu-section" class="menu-section hidden">
   <ul class="menu-list">
     <li>
-      <a class="menu-link" href="{{ t.routes.services }}"
-        >{{ t.nav.services }}</a
+      <a class="menu-link" href="{{ t.routes.services }}">
+        <span>01</span>{{ t.nav.services }}</a
       >
     </li>
     <li>
-      <a class="menu-link" href="{{ t.routes.company }}">{{ t.nav.company }}</a>
+      <a class="menu-link" href="{{ t.routes.company }}"
+        ><span>02</span>{{ t.nav.company }}</a
+      >
     </li>
     <li>
       <a class="menu-link" href="{{ t.routes.our_work }}"
-        >{{ t.nav.our_work }}</a
+        ><span>03</span>{{ t.nav.our_work }}</a
       >
     </li>
   </ul>
-
-  <div class="contacts">
-    <ul class="social-net-links">
-      <li>
-        <a class="menu-link" href="https://www.instagram.com/nunezassocies/"
-          >Instagram</a
+  <div class="menu-bottom">
+    <div class="lang">
+      <p class="title-section">Language</p>
+      <div class="opt-lang">
+        {% if currentLang != "fr" %}
+        <a
+          class="menu-link"
+          hreflang="fr-be"
+          href="{{ i18n.fr.routes[currentPage] }}"
         >
-      </li>
-      <li>
-        <a class="menu-link" href="https://www.tiktok.com/@nunezassocies"
-          >Tiktok</a
+          FR
+        </a>
+        {% endif %} {% if currentLang != "es" %}
+        <a
+          class="menu-link"
+          hreflang="es-es"
+          href="{{ i18n.es.routes[currentPage] }}"
         >
-      </li>
-    </ul>
-    <a class="menu-link" href="{{ link.contact }}">Contact</a>
-  </div>
+          ES
+        </a>
+        {% endif %} {% if currentLang != "en" %}
+        <a
+          class="menu-link"
+          hreflang="en-gb"
+          href="{{ i18n.en.routes[currentPage] }}"
+        >
+          EN
+        </a>
+        {% endif %}
+      </div>
+    </div>
 
-  <div class="opt-lang">
-    {% if currentLang != "fr" %}
-    <a
-      class="menu-link"
-      hreflang="fr-be"
-      href="{{ i18n.fr.routes[currentPage] }}"
-    >
-      FR
-    </a>
-    {% endif %} {% if currentLang != "es" %}
-    <a
-      class="menu-link"
-      hreflang="es-es"
-      href="{{ i18n.es.routes[currentPage] }}"
-    >
-      ES
-    </a>
-    {% endif %} {% if currentLang != "en" %}
-    <a
-      class="menu-link"
-      hreflang="en-gb"
-      href="{{ i18n.en.routes[currentPage] }}"
-    >
-      EN
-    </a>
-    {% endif %}
+    <div class="social-net">
+      <p class="title-section">Follow us</p>
+      <ul class="social-net-links">
+        <li>
+          <a class="menu-link" href="https://www.instagram.com/nunezassocies/"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a class="menu-link" href="https://www.tiktok.com/@nunezassocies"
+            >Tiktok</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="contact-menu">
+      <p class="title-section">Let's connect</p>
+      <a class="menu-link" href="{{ link.contact }}"
+        >liftservicebel@gmail.com</a
+      >
+    </div>
   </div>
 </section>
