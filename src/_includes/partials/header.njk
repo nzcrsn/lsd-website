@@ -71,37 +71,39 @@
     </div>
   </div>
 
-  <nav class="nav-bar normal">
+  <nav class="nav-bar">
     <ul>
       <li>
-        <a href="{{ t.routes.services }}">{{ t.nav.services }}</a>
+        <a href="#services">{{ t.nav.services }}</a>
       </li>
       <li>
-        <a href="{{ t.routes.company }}">{{ t.nav.company }}</a>
+        <a href="#company">{{ t.nav.company }}</a>
       </li>
       <li>
-        <a href="{{ t.routes.our_work }}">{{ t.nav.our_work }}</a>
+        <a href="#testimonials">{{ t.nav.testimonials }}</a>
       </li>
+      <!-- <li>
+        <a href="#contact">{{ t.nav.contact }}</a>
+      </li> -->
       <li>
-        <a href="{{ t.routes.contact }}">{{ t.nav.contact }}</a>
+        <a href="#contact" class="cta-btn cta-header">
+          <p>{{ t.nav.contact}}</p>
+          <!-- <svg
+            class="arrow"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7 17L17 7M17 7H8M17 7V16"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg> -->
+        </a>
       </li>
-      <!-- <a class="cta-btn cta-header">
-      <p>{{ t.section.hero.cta}}</p>
-      <svg
-        class="arrow"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M7 17L17 7M17 7H8M17 7V16"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </a> -->
     </ul>
 
     <div class="nav_spacer"></div>
@@ -136,6 +138,7 @@
             /></a>
           -->
     </div>
+
     <!-- <a class="cta-btn cta-header">
       <p>{{ t.section.hero.cta}}</p>
       <svg

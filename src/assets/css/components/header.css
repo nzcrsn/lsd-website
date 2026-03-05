@@ -60,7 +60,6 @@ header .cta-header {
   font-family: var(--font-secondary);
 }
 /* End of styles of header */
-
 /*
 ====================================================== 
 Media queries 
@@ -74,6 +73,10 @@ Media queries
 
   header .nav-bar {
     display: flex;
+    align-items: center;
+  }
+
+  .nav-bar ul {
     align-items: center;
   }
 

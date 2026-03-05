@@ -9,10 +9,11 @@ export default {
   },
   nav: {
     services: "Services",
-    company: "Company",
+    company: "About",
     our_work: "Our Work",
     faq: "FAQs",
     contact: "Contact",
+    testimonials: "Testimonials",
   },
   pages: {
     home: {

@@ -300,6 +300,36 @@ Block Scroll
   overflow: hidden;
   height: 100vh;
 }
+
+/**/
+
+.back-to-top {
+  position: fixed;
+  right: var(--padding-sm);
+  bottom: 32px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: var(--border-radius);
+  border: none;
+
+  background: var(--color-primary);
+  color: white;
+
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+
+  transition: none;
+}
+/**/
 /*
 ====================================================== 
 Media Queries

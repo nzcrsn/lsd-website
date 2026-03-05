@@ -1,11 +1,11 @@
 import { initMenu } from "./animations/menu.js";
-import { initHero } from "./animations/hero.js";
-import { setHeaderHeight } from "./utils/config.js";
+// import { initHero } from "./animations/hero.js";
+// import { setHeaderHeight } from "./utils/config.js";
 import { initFaq, initFaqReveal } from "./animations/faq.js";
-import { initLoader, exitLoader, waitForLoader } from "./animations/loader.js";
+// import { initLoader, exitLoader, waitForLoader } from "./animations/loader.js";
 import { initContact } from "./animations/contact.js";
-import { initOptLang } from "./animations/lang.js";
-
+import { initOptLang, initSmoothScroll } from "./animations/header.js";
+import { initBackToTop } from "./animations/to-top-button.js";
 // initLoader();
 
 window.addEventListener("load", async () => {
@@ -18,6 +18,8 @@ window.addEventListener("load", async () => {
   initFaqReveal();
   initContact();
   initOptLang();
+  initSmoothScroll();
+  initBackToTop();
   // await waitForLoader();
   // exitLoader();
 });

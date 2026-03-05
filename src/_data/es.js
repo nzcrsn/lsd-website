@@ -9,10 +9,11 @@ export default {
   },
   nav: {
     services: "Servicios",
-    company: "Compania",
+    company: "Sobre nosotros",
     our_work: "Nuestro Trabajo",
     faq: "FAQs",
     contact: "Contacto",
+    testimonials: "Testimonios",
   },
   pages: {
     home: {

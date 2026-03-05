@@ -9,6 +9,7 @@
 
     <main id="page">{{ content | safe }}</main>
 
-    {% include "partials/footer.njk" %} {% vite "assets/js/main.js" %}
+    {% include "partials/footer.njk" %} {% include "partials/to-top-button.njk"
+    %} {% vite "assets/js/main.js" %}
   </body>
 </html>
