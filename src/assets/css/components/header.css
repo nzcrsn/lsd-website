@@ -81,6 +81,33 @@ Media queries
     display: flex;
   }
 
+  .lang-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .language .current-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .label-lang {
+    font-size: var(--fs-p-sm);
+    font-weight: 300;
+  }
+
+  .opts-lang {
+    display: flex;
+    margin-left: 0.4rem;
+    gap: 0.8rem;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   header .nav-bar a {
     font-size: var(--fs-p-sm);
     margin-right: 1.4rem;

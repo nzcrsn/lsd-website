@@ -27,28 +27,28 @@ export function initMenu() {
     {
       opacity: 1,
       visibility: "visible",
-      pointerEvents: "visible",
+      pointerEvents: "auto",
       ease: "power2.inOut",
     },
     0,
-  );
-  tl.to(
-    ".menu-link",
-    { opacity: 1, stagger: 0.05, ease: "power2.inOut" },
-    0.05,
   );
 
   let scrollY = 0;
 
   function openMenu() {
     scrollY = window.scrollY;
+
     document.body.style.top = `-${scrollY}px`;
+    document.body.classList.add("scroll-locked");
   }
 
   function closeMenu() {
-    smoothWrapper.classList.remove("scroll-locked");
+    document.body.classList.remove("scroll-locked");
+
+    const storedScrollY = scrollY;
     document.body.style.top = "";
-    window.scrollTo(0, scrollY);
+
+    window.scrollTo(0, storedScrollY);
   }
 
   menuBtn.addEventListener("click", () => {

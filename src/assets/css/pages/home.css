@@ -470,7 +470,7 @@ Styles of company section
   flex-direction: column;
   align-items: center;
   line-height: 1.1;
-  z-index: 2;
+  z-index: 0;
 }
 
 .company-right {
@@ -846,7 +846,7 @@ Styles of contact section
 
 .social-link:hover {
   background: var(--color-primary);
-  color: var(--bg-body);
+  color: var(--color-bg-main);
   border-color: var(--color-primary);
 }
 
@@ -986,9 +986,6 @@ Styles of contact section
   border-color: var(--color-accent);
 }
 
-/* ═══════════════════════════════════════
-       FORM FIELDS
-    ═══════════════════════════════════════ */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1116,7 +1113,7 @@ Styles of contact section
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: var(--color-primary);
   cursor: pointer;
   background: var(--color-input-bg);
   transition:
@@ -1128,7 +1125,7 @@ Styles of contact section
 
 .pill-label input[type="radio"]:checked + .pill {
   background: var(--color-primary);
-  color: var(--bg-body);
+  color: var(--color-bg-main);
   border-color: var(--color-primary);
 }
 
@@ -1264,7 +1261,7 @@ Media Queries
     display: grid;
     grid-template-rows: auto auto;
     gap: 0rem;
-    padding: 2.2rem;
+
     border-bottom: none;
   }
 
@@ -1365,5 +1362,10 @@ Media Queries
     hyphens: auto;
     text-align: justify;
     font-size: var(--fs-p-lg);
+  }
+
+  .services-section .services-cards {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 2rem;
   }
 }

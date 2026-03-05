@@ -46,7 +46,8 @@ Space top between top sections and h2
   .testimonials-section,
   .contact-section,
   .galery-section,
-  .company-section {
+  .company-section,
+  .faq-section {
     padding-right: 24px;
     padding-left: 24px;
   }
@@ -63,7 +64,8 @@ Space top between top sections and h2
   .services-section,
   .contact-section,
   .galery-section,
-  .company-section {
+  .company-section,
+  .faq-section {
     padding-right: 48px;
     padding-left: 48px;
   }

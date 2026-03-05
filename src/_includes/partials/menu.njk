@@ -18,47 +18,18 @@
     </li>
   </ul>
   <div class="menu-bottom">
-    <div class="lang">
-      <p class="title-section">Language</p>
-      <div class="opt-lang">
-        {% if currentLang != "fr" %}
-        <a
-          class="menu-link"
-          hreflang="fr-be"
-          href="{{ i18n.fr.routes[currentPage] }}"
-        >
-          FR
-        </a>
-        {% endif %} {% if currentLang != "es" %}
-        <a
-          class="menu-link"
-          hreflang="es-es"
-          href="{{ i18n.es.routes[currentPage] }}"
-        >
-          ES
-        </a>
-        {% endif %} {% if currentLang != "en" %}
-        <a
-          class="menu-link"
-          hreflang="en-gb"
-          href="{{ i18n.en.routes[currentPage] }}"
-        >
-          EN
-        </a>
-        {% endif %}
-      </div>
-    </div>
-
     <div class="social-net">
       <p class="title-section">Follow us</p>
       <ul class="social-net-links">
         <li>
-          <a class="menu-link" href="https://www.instagram.com/nunezassocies/"
+          <a
+            class="menu-link link"
+            href="https://www.instagram.com/nunezassocies/"
             >Instagram</a
           >
         </li>
         <li>
-          <a class="menu-link" href="https://www.tiktok.com/@nunezassocies"
+          <a class="menu-link link" href="https://www.tiktok.com/@nunezassocies"
             >Tiktok</a
           >
         </li>
@@ -67,9 +38,36 @@
 
     <div class="contact-menu">
       <p class="title-section">Let's connect</p>
-      <a class="menu-link" href="{{ link.contact }}"
+      <a class="menu-link link" href="mailto:liftservicebel@gmail.com"
         >liftservicebel@gmail.com</a
       >
+    </div>
+
+    <div class="lang">
+      <p class="title-section">Language</p>
+      <div class="opt-lang">
+        <a
+          class="menu-link {% if currentLang == 'fr' %}current{% endif %}"
+          hreflang="fr-be"
+          href="{{ i18n.fr.routes[currentPage] }}"
+        >
+          FR
+        </a>
+        <a
+          class="menu-link {% if currentLang == 'es' %}current{% endif %}"
+          hreflang="es-es"
+          href="{{ i18n.es.routes[currentPage] }}"
+        >
+          ES
+        </a>
+        <a
+          class="menu-link {% if currentLang == 'en' %}current{% endif %}"
+          hreflang="en-gb"
+          href="{{ i18n.en.routes[currentPage] }}"
+        >
+          EN
+        </a>
+      </div>
     </div>
   </div>
 </section>
