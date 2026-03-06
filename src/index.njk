@@ -57,9 +57,9 @@ stylesheet: home.css
       <!-- Social proof -->
       <div class="hero-social-proof">
         <div class="avatars">
-          <span class="avatar">KS</span>
-          <span class="avatar">BR</span>
-          <span class="avatar">ML</span>
+          <span class="avatar">MB</span>
+          <span class="avatar">VJ</span>
+          <span class="avatar">CL</span>
           <span class="avatar avatar-more">+</span>
         </div>
 
@@ -156,364 +156,74 @@ stylesheet: home.css
 <section id="services" class="services-section">
   <div class="eyebrow">Nos services</div>
   <h2>Adaptés à vous, conçus pour vous.</h2>
-  <div class="services-cards">
-    <!-- 01 — Monte-meubles -->
-    <article class="service-card" id="first-service">
-      <svg
-        class="service-card__icon"
-        viewBox="0 0 52 52"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <!-- Building outline -->
-        <rect
-          x="8"
-          y="28"
-          width="14"
-          height="18"
-          rx="1"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <!-- Window on building -->
-        <rect
-          x="12"
-          y="32"
-          width="4"
-          height="4"
-          rx="0.5"
-          stroke="currentColor"
-          stroke-width="1.5"
-        />
-        <!-- Elevator mast vertical -->
-        <line
-          x1="26"
-          y1="8"
-          x2="26"
-          y2="46"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-        <!-- Mast support arm -->
-        <line
-          x1="26"
-          y1="10"
-          x2="36"
-          y2="10"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-        <!-- Pulley circle -->
-        <circle
-          cx="36"
-          cy="10"
-          r="2.5"
-          stroke="currentColor"
-          stroke-width="1.5"
-        />
-        <!-- Cable going down -->
-        <line
-          x1="36"
-          y1="12.5"
-          x2="36"
-          y2="30"
-          stroke="currentColor"
-          stroke-width="1.4"
-          stroke-dasharray="2 2"
-        />
-        <!-- Platform / load box -->
-        <rect
-          x="30"
-          y="30"
-          width="12"
-          height="9"
-          rx="1"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <!-- Box lines suggesting furniture -->
-        <line
-          x1="30"
-          y1="34"
-          x2="42"
-          y2="34"
-          stroke="currentColor"
-          stroke-width="1.2"
-        />
-      </svg>
-      <p class="service-card__title">Location de monte-meubles</p>
-      <p class="service-card__desc">
-        Location d'élévateurs motorisés pour meubles et matériaux lourds ou
-        encombrants.
-      </p>
-    </article>
+
+  <div class="services-bento__layout">
+    <!-- 01 — Monte-meubles (hero) -->
+    <div class="svc-tile svc-tile--lift">
+      <div class="svc-tile__photo"></div>
+      <div class="svc-tile__overlay"></div>
+      <span class="svc-tile__num">01</span>
+      <div class="svc-tile__bracket"></div>
+      <div class="svc-tile__content">
+        <h3 class="svc-tile__title">Location de<br />monte-meubles</h3>
+        <div class="svc-tile__divider"></div>
+        <p class="svc-tile__desc">
+          Élévateurs motorisés pour meubles et matériaux lourds — discrets,
+          efficaces, livrés chez vous.
+        </p>
+      </div>
+    </div>
 
     <!-- 02 — Camions -->
-    <article class="service-card" id="second-service">
-      <svg
-        class="service-card__icon"
-        viewBox="0 0 52 52"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <!-- Truck body -->
-        <rect
-          x="4"
-          y="20"
-          width="28"
-          height="18"
-          rx="1.5"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <!-- Truck cab -->
-        <path
-          d="M32 30 L32 22 L44 22 L46 27 L46 38 L32 38"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linejoin="round"
-        />
-        <!-- Cab window -->
-        <path
-          d="M34 22 L34 28 L44 28"
-          stroke="currentColor"
-          stroke-width="1.4"
-          stroke-linejoin="round"
-        />
-        <!-- Front wheel -->
-        <circle
-          cx="38"
-          cy="40"
-          r="4"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <circle cx="38" cy="40" r="1.5" fill="currentColor" opacity="0.4" />
-        <!-- Rear wheel -->
-        <circle
-          cx="14"
-          cy="40"
-          r="4"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <circle cx="14" cy="40" r="1.5" fill="currentColor" opacity="0.4" />
-        <!-- Cargo lines -->
-        <line
-          x1="10"
-          y1="26"
-          x2="10"
-          y2="36"
-          stroke="currentColor"
-          stroke-width="1.2"
-          opacity="0.5"
-        />
-        <line
-          x1="18"
-          y1="26"
-          x2="18"
-          y2="36"
-          stroke="currentColor"
-          stroke-width="1.2"
-          opacity="0.5"
-        />
-        <line
-          x1="26"
-          y1="26"
-          x2="26"
-          y2="36"
-          stroke="currentColor"
-          stroke-width="1.2"
-          opacity="0.5"
-        />
-      </svg>
-      <p class="service-card__title">Camions équipés + chauffeur</p>
-      <p class="service-card__desc">
-        Camions équipés avec chauffeur expérimenté pour un transport sûr,
-        pratique et professionnel.
-      </p>
-    </article>
+    <div class="svc-tile svc-tile--trucks">
+      <div class="svc-tile__photo"></div>
+      <div class="svc-tile__overlay"></div>
+      <span class="svc-tile__num">02</span>
+      <div class="svc-tile__bracket"></div>
+      <div class="svc-tile__content">
+        <h3 class="svc-tile__title">Camions + chauffeur</h3>
+        <div class="svc-tile__divider"></div>
+        <p class="svc-tile__desc">
+          Véhicules avec chauffeur expérimenté — sûr, pratique, ponctuel.
+        </p>
+      </div>
+    </div>
 
-    <!-- 03 — Déménagement sur mesure (featured) -->
-    <article class="service-card" id="third-service">
-      <svg
-        class="service-card__icon"
-        viewBox="0 0 52 52"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <!-- House outline -->
-        <path
-          d="M8 24 L26 10 L44 24"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linejoin="round"
-        />
-        <!-- House body -->
-        <rect
-          x="12"
-          y="24"
-          width="28"
-          height="20"
-          rx="1"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <!-- Door -->
-        <rect
-          x="21"
-          y="34"
-          width="10"
-          height="10"
-          rx="1"
-          stroke="currentColor"
-          stroke-width="1.5"
-        />
-        <!-- Door knob -->
-        <circle cx="29" cy="39" r="1" fill="currentColor" opacity="0.6" />
-        <!-- Window -->
-        <rect
-          x="15"
-          y="28"
-          width="7"
-          height="6"
-          rx="0.5"
-          stroke="currentColor"
-          stroke-width="1.4"
-        />
-        <!-- Window cross -->
-        <line
-          x1="18.5"
-          y1="28"
-          x2="18.5"
-          y2="34"
-          stroke="currentColor"
-          stroke-width="1"
-        />
-        <line
-          x1="15"
-          y1="31"
-          x2="22"
-          y2="31"
-          stroke="currentColor"
-          stroke-width="1"
-        />
-        <!-- Checkmark badge top-right -->
-        <circle cx="40" cy="14" r="6" fill="currentColor" opacity="0.12" />
-        <path
-          d="M37 14 L39.5 16.5 L43 12"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <p class="service-card__title">Déménagement sur mesure</p>
-      <p class="service-card__desc">
-        Un accompagnement de A à Z conçu pour s'adapter à votre situation, sans
-        stress ni surprise.
-      </p>
-    </article>
+    <!-- 03 — Déménagement -->
+    <div class="svc-tile svc-tile--move">
+      <div class="svc-tile__photo"></div>
+      <div class="svc-tile__overlay"></div>
+      <span class="svc-tile__num">03</span>
+      <div class="svc-tile__bracket"></div>
+      <div class="svc-tile__content">
+        <h3 class="svc-tile__title">Déménagement<br />sur mesure</h3>
+        <div class="svc-tile__divider"></div>
+        <p class="svc-tile__desc">
+          De A à Z, adapté à votre situation — sans surprise.
+        </p>
+      </div>
+    </div>
 
-    <!-- 04 — Fournitures -->
-    <article class="service-card">
-      <svg
-        class="service-card__icon"
-        viewBox="0 0 52 52"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-        <!-- Main box -->
-        <rect
-          x="10"
-          y="22"
-          width="32"
-          height="24"
-          rx="1.5"
-          stroke="currentColor"
-          stroke-width="1.8"
-        />
-        <!-- Box top flaps open -->
-        <path
-          d="M10 22 L18 14 L34 14 L42 22"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linejoin="round"
-        />
-        <!-- Left flap -->
-        <line
-          x1="10"
-          y1="22"
-          x2="18"
-          y2="14"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-        <!-- Right flap -->
-        <line
-          x1="42"
-          y1="22"
-          x2="34"
-          y2="14"
-          stroke="currentColor"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-        <!-- Center flap divider -->
-        <line
-          x1="26"
-          y1="14"
-          x2="26"
-          y2="22"
-          stroke="currentColor"
-          stroke-width="1.5"
-        />
-        <!-- Tape strip on front -->
-        <line
-          x1="26"
-          y1="22"
-          x2="26"
-          y2="46"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-dasharray="3 2"
-          opacity="0.5"
-        />
-        <!-- Horizontal tape -->
-        <line
-          x1="10"
-          y1="34"
-          x2="42"
-          y2="34"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-dasharray="3 2"
-          opacity="0.5"
-        />
-        <!-- Bubble wrap dots suggestion -->
-        <circle cx="17" cy="28" r="1.2" fill="currentColor" opacity="0.3" />
-        <circle cx="22" cy="28" r="1.2" fill="currentColor" opacity="0.3" />
-        <circle cx="17" cy="33" r="1.2" fill="currentColor" opacity="0.3" />
-      </svg>
-      <p class="service-card__title">Fournitures de déménagement</p>
-      <p class="service-card__desc">
-        Boîtes, sangles, bulles et protections livrées à domicile pour emballer
-        vos biens en toute sécurité.
-      </p>
-    </article>
+    <!-- 04 — Fournitures (wide) -->
+    <div class="svc-tile svc-tile--supply">
+      <div class="svc-tile__photo"></div>
+      <div class="svc-tile__overlay"></div>
+      <span class="svc-tile__num">04</span>
+      <div class="svc-tile__bracket"></div>
+      <div class="svc-tile__content">
+        <h3 class="svc-tile__title">Matériaux d' emballage</h3>
+        <div class="svc-tile__divider"></div>
+        <p class="svc-tile__desc">
+          Boîtes, sangles, bulles et protections livrées à domicile.
+        </p>
+      </div>
+    </div>
   </div>
 
   <div class="cta-services">
     <p>Prêt à déménager ?</p>
     <a class="cta-btn">
-      <p>Request a quote</p>
+      <p>Demander un devis</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"

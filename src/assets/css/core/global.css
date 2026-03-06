@@ -403,6 +403,10 @@ Media Queries
   .contact-section > p {
     font-size: var(--fs-p-lg);
   }
+
+  .back-to-top {
+    right: 48px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -415,7 +419,7 @@ Media Queries
   .services-section > h2,
   .testimonials-section > h2,
   .contact-section > h2 {
-    font-size: clamp(28px, 5vw, 64px);
+    font-size: var(--fs-h2-md); /* ojito*/
   }
 
   .company-section > p {

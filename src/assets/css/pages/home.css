@@ -52,8 +52,7 @@ Styles of hero section
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.5rem;
-  /* grid-auto-rows: var(--row, 160px); */
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(120px, 180px));
   grid-auto-flow: dense;
 }
 
@@ -88,49 +87,12 @@ Styles of hero section
   object-position: bottom;
 }
 
-.hero-bottom {
-  display: none;
-  position: absolute;
-  bottom: 2rem;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: fit-content;
-  /* justify-content: space-between; */
-}
-
-.hero-bottom p {
-  font-family: "Cormorant Garamond", Times, serif;
-  font-style: italic;
-  opacity: 0.5;
-  margin-top: 1rem;
-  letter-spacing: 0.02em;
-  font-size: clamp(0.85rem, 0.8rem + 0.4vw, 1rem);
-}
-
-.down {
-  bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.down p {
-  font-size: 0.8rem;
-  writing-mode: vertical-rl;
-}
-
-/* HERO TRUST BLOCK */
-
 .hero-trust {
-  margin-top: 6rem;
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.4rem;
 }
-
-/* Stats */
 
 .hero-stats {
   display: flex;
@@ -156,8 +118,6 @@ Styles of hero section
   color: var(--muted);
 }
 
-/* Social proof */
-
 .hero-social-proof {
   display: flex;
   align-items: center;
@@ -168,8 +128,6 @@ Styles of hero section
   font-size: 0.8rem;
   color: var(--color-muted);
 }
-
-/* Avatars */
 
 .avatars {
   display: flex;
@@ -197,42 +155,6 @@ Styles of hero section
   background: #999;
 }
 
-/* Scroll indicator */
-
-.hero-scroll-indicator {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-  color: var(--color-muted);
-}
-
-.scroll-arrow {
-  width: 14px;
-  height: 14px;
-  border-right: 2px solid var(--color-heading);
-  border-bottom: 2px solid var(--color-heading);
-  transform: rotate(45deg);
-  animation: scrollBounce 1.8s infinite;
-}
-
-@keyframes scrollBounce {
-  0% {
-    transform: rotate(45deg) translateY(0);
-  }
-
-  50% {
-    transform: rotate(45deg) translateY(6px);
-  }
-
-  100% {
-    transform: rotate(45deg) translateY(0);
-  }
-}
-
 /*
 ====================================================== 
 Styles of services section
@@ -243,120 +165,225 @@ Styles of services section
   width: 100%;
 }
 
-.services-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+/**/
+:root {
+  --cream: #f0ede6;
+  --ink: #1c1a17;
+  --ink-light: #6b6760;
+  --accent: #b8a98a;
+  --accent-dark: #8c7b60;
+}
+
+.services-bento__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: auto;
   margin-top: 2rem;
+}
+
+/* ── Service tile ── */
+.svc-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  cursor: default;
+  min-height: 260px;
+}
+
+/* ── Photo background ── */
+.svc-tile__photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.svc-tile--lift .svc-tile__photo {
+  background-image: url("../../images/img-15.webp");
+}
+.svc-tile--trucks .svc-tile__photo {
+  background-image: url("../../images/chofe.jpg");
+}
+.svc-tile--move .svc-tile__photo {
+  background-image: url("../../images/level.jpg");
+}
+.svc-tile--supply .svc-tile__photo {
+  background-image: url("../../images/boxes.jpg");
+  background-position: center 40%;
+}
+
+/* ── Dark overlay ── */
+.svc-tile__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 6, 0.95) 0%,
+    rgba(10, 8, 6, 0.4) 45%,
+    rgba(10, 8, 6, 0.08) 100%
+  );
+  transition: opacity 0.5s;
+}
+.svc-tile:hover .svc-tile__overlay {
+  opacity: 0.92;
+}
+
+/* ── Number badge ── */
+.svc-tile__num {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: var(--fs-p-base);
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  color: var(--color-bg-main);
+}
+
+.svc-tile--lift .svc-tile__num {
+  font-size: var(--fs-p-md);
+  top: 26px;
+  right: 26px;
+}
+
+/* ── Corner bracket ── */
+.svc-tile__bracket {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 14px;
+  height: 14px;
+  border-left: 1px solid var(--color-bg-main);
+  border-top: 1px solid var(--color-bg-main);
+  transition:
+    width 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.svc-tile--lift .svc-tile__bracket {
+  width: 20px;
+  height: 20px;
+  top: 24px;
+  left: 24px;
+}
+.svc-tile:hover .svc-tile__bracket {
+  width: 36px;
+  height: 36px;
+}
+.svc-tile--lift:hover .svc-tile__bracket {
+  width: 44px;
+  height: 44px;
+}
+
+/* ── Content ── */
+.svc-tile__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px 22px;
+  z-index: 2;
+}
+.svc-tile--lift .svc-tile__content {
+  padding: 28px 32px;
+}
+.svc-tile--supply .svc-tile__content {
+  padding: 22px 26px;
+}
+
+/* title */
+.svc-tile__title {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  color: #f0ede6;
+  font-size: clamp(18px, 1.6vw, 24px);
+  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.svc-tile--lift .svc-tile__title {
+  font-size: clamp(26px, 2.6vw, 40px);
+}
+.svc-tile--supply .svc-tile__title {
+  font-size: clamp(20px, 1.8vw, 26px);
+}
+.svc-tile:hover .svc-tile__title {
+  transform: translateY(-2px);
+}
+@media (max-width: 599px) {
+  .svc-tile__title {
+    font-size: 22px !important;
+  }
+  .svc-tile--lift .svc-tile__title {
+    font-size: 28px !important;
+  }
+}
+
+/* divider */
+.svc-tile__divider {
+  width: 0;
+  height: 1px;
+  background: rgba(240, 237, 230, 0.15);
+  margin: 10px 0;
+  transition: width 0.5s 0.02s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.svc-tile:hover .svc-tile__divider {
   width: 100%;
 }
 
-.service-card {
-  padding: 2rem 0rem 1.8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  position: relative;
+@media (max-width: 599px) {
+  .svc-tile__divider {
+    width: 36px;
+  }
+}
+
+/* description */
+.svc-tile__desc {
+  font-size: 11px;
+  line-height: 1.8;
+  color: rgba(240, 237, 230, 0.8);
+  max-height: 0;
   overflow: hidden;
+  opacity: 0;
   transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-  cursor: default;
-  border-bottom: 0.5px solid var(--color-primary);
+    max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.38s 0.05s;
 }
-
-/* ── Icon ── */
-.service-card__icon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: 1.6rem;
-  color: var(--primary-color);
-  opacity: 0.85;
-  flex-shrink: 0;
-  transition:
-    color 0.3s,
-    opacity 0.3s,
-    transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+.svc-tile--lift .svc-tile__desc {
+  font-size: 12px;
 }
-
-.service-card:hover .service-card__icon {
-  color: var(--accent);
+.svc-tile:hover .svc-tile__desc {
+  max-height: 60px;
   opacity: 1;
-  transform: translateY(-3px);
+}
+@media (max-width: 599px) {
+  .svc-tile__desc {
+    max-height: 60px;
+    opacity: 1;
+  }
 }
 
-/* ── Title ── */
-.service-card__title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: var(--fs-p-md);
-  font-size: var(--fs-p-lg);
-  font-weight: 400;
-  font-style: normal;
-  color: var(--color-heading);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.8rem;
-  /* remove default p margin */
-  margin-top: 0;
-}
-
-/* ── Description ── */
-.service-card__desc {
-  line-height: 1.65;
-  flex: 1; /* pushes link to bottom */
-  margin: 0;
-  margin-bottom: 1.6rem;
-}
-
-/* ── Link ── */
-.service-card__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition:
-    color 0.3s,
-    gap 0.3s;
-  margin-top: auto;
-}
-
-.service-card__link svg {
-  width: 14px;
-  height: 14px;
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-/* .service-card:hover .service-card__link {
-  color: var(--accent);
-  gap: 0.65rem;
+/* init hidden for animation */
+/* .svc-tile {
+  opacity: 0;
 } */
-
-.service-card:hover .service-card__link svg {
-  transform: translate(2px, -2px);
-}
+/**/
 
 .cta-services {
-  margin-top: 4rem;
+  margin-top: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 1rem;
 }
 
 .cta-services > p {
   font-family: var(--font-primary);
   font-size: var(--fs-p-md);
-}
-
-.cta-services .cta-btn-alt {
-  margin-top: 0;
 }
 
 /* End of styles of services section */
@@ -1306,59 +1333,33 @@ Media Queries
   Styles of service section
   ====================================================== 
   */
-  .services-section .services-cards {
-    margin-top: 48px;
+  .services-bento__layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    /* height: 62vh; */
+    min-height: 450px;
+    /* max-height: 220px; */
   }
 
-  .services-section .services-cards {
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
+  .svc-tile--lift {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .svc-tile--trucks {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .svc-tile--move {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .svc-tile--supply {
+    grid-column: 2;
+    grid-row: 2;
   }
 
-  .services-cards .service-card {
-    width: 100%;
-    cursor: pointer;
-    border: 0.5px solid rgba(39, 51, 75, 0.45);
-    padding: 2rem 2rem 1.8rem;
-  }
-
-  .service-card .icon {
-    grid-area: icon;
-    display: block;
-    align-self: center;
-    width: 120px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 40px;
-    position: absolute;
-    top: -60px;
-    right: 0;
-  }
-
-  .service-card .first_service_icon {
-    background-image: url("../images/icons/lifting.svg");
-    background-size: 60px;
-  }
-
-  .service-card .second_service_icon {
-    background-image: url("../images/icons/truck.svg");
-    background-size: 80px;
-  }
-
-  .service-card .third_service_icon {
-    background-image: url("../images/icons/packt.svg");
-    background-size: 50px;
-  }
-
-  .service-card .fourth_service_icon {
-    background-image: url("../images/icons/chair.svg");
-    background-size: 50px;
-  }
-
-  .service-card .service-card__desc {
-    width: 90%;
-  }
   /* End of styles of services section*/
 
   /* Styles of company section */
@@ -1379,7 +1380,6 @@ Media Queries
     display: grid;
     grid-template-rows: auto auto;
     gap: 0rem;
-
     border-bottom: none;
   }
 
@@ -1432,6 +1432,10 @@ Media Queries
     /* border: 1px solid green; */
   }
 
+  .hero-trust {
+    margin-top: 6rem;
+  }
+
   .grid {
     max-width: 40%;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1441,13 +1445,43 @@ Media Queries
   }
 
   /* Styles of service section */
-  .services-section .services-cards {
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+
+  .services-bento__layout {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    /* height: 62vh;
+    min-height: 450px; */
+    /* max-height: 220px; */
   }
 
-  .service-card {
-    width: 70%;
+  /* Desktop placement */
+  .svc-tile--lift {
+    grid-column: 1;
+    grid-row: 1 / 3;
   }
+  .svc-tile--trucks {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .svc-tile--move {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .svc-tile--supply {
+    grid-column: 2 / 4;
+    grid-row: 2;
+  }
+
+  .svc-tile__photo {
+    transform: scale(1.04);
+  }
+
+  .svc-tile:hover .svc-tile__photo {
+    transform: scale(1);
+  }
+  /* End styles of service section */
 
   .company-layout {
     grid-template-columns: 1fr 1fr;
