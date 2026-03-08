@@ -40,7 +40,7 @@ header .cta-header {
   transform: translateX(5px);
 }
 
-.left {
+.left-header {
   display: flex;
 }
 

@@ -246,164 +246,475 @@ stylesheet: home.css
 <section id="testimonials" class="testimonials-section">
   <div class="eyebrow">Témoignages</div>
   <h2>Votre satisfaction est notre mission</h2>
-  <!-- <div class="rating-badges" aria-label="Résumé des avis">
-    <div class="rating-badge">
-      <img
-        class="rating-badge__icon"
-        src="assets/images/icons/google-logo.svg"
-        alt=""
-      />
-      <div class="rating-badge__body">
-        <div class="rating-badge__stars" aria-hidden="true">
-          <span class="star">★</span><span class="star">★</span>
-          <span class="star">★</span><span class="star">★</span
-          ><span class="star">★</span>
-        </div>
-        <span class="rating-badge__score">5.0</span>
-        <span class="rating-badge__label">Google (27 avis)</span>
+  <!-- Masonry -->
+  <div class="testimonials__masonry" id="masonry">
+    <!-- Col 1 -->
+    <div class="review-card review-card--lg review-card--featured">
+      <span class="review-card__quote-mark">"</span>
+      <div class="review-card__stars">
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
       </div>
-    </div>
-    <div class="rating-badge">
-      <img
-        class="rating-badge__icon pagesor"
-        src="assets/images/icons/pagedor.svg"
-        alt=""
-      />
-
-      <div class="rating-badge__body">
-        <div class="rating-badge__stars" aria-hidden="true">
-          <span class="star">★</span><span class="star">★</span>
-          <span class="star">★</span><span class="star">★</span>
-          <span class="star" style="opacity: 0.3">★</span>
-        </div>
-        <span class="rating-badge__score">4.5</span>
-        <span class="rating-badge__label">Pagesd'or (8 avis)</span>
-      </div>
-    </div>
-  </div> -->
-  <!-- Testimonials -->
-  <div class="testimonials-cards">
-    <!-- Card 1 -->
-    <figure class="t-card">
-      <div class="t-card__stars" aria-label="5 étoiles">
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-      </div>
-      <blockquote class="t-card__quote">
+      <p class="review-card__text">
         Entreprise très sérieuse. Personnel professionnel, attentif, ponctuel et
         courtois. Communication facile via WhatsApp et e-mail. Je recommande !
-      </blockquote>
-      <figcaption class="t-card__person">
-        <div class="t-card__meta">
-          <strong class="t-card__name">Moni Di Bratto</strong>
-          <span class="t-card__source">Utilisateur Google</span>
+      </p>
+      <div class="review-card__author">
+        <div>
+          <p class="review-card__name">Moni Di Bratto</p>
+          <p class="review-card__source">Utilisateur Google</p>
         </div>
-      </figcaption>
-    </figure>
-
-    <!-- Card 2 -->
-    <figure class="t-card">
-      <div class="t-card__stars" aria-label="5 étoiles">
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-      </div>
-      <blockquote class="t-card__quote">
-        Ponctuel, organisé, efficace et, en prime, sympathique et souriant !
-        Professionnalisme, convivialité et efficacité. À recommander !
-      </blockquote>
-      <figcaption class="t-card__person">
-        <div class="t-card__meta">
-          <strong class="t-card__name">Giovanna Rollo</strong>
-          <span class="t-card__source">Utilisateur Pagesd'or</span>
+        <div class="review-card__badge">
+          <!-- Google G -->
+          <svg viewBox="0 0 18 18" fill="none">
+            <path
+              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+              fill="#4285F4"
+            />
+            <path
+              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+              fill="#34A853"
+            />
+            <path
+              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+              fill="#EA4335"
+            />
+          </svg>
+          Google
         </div>
-      </figcaption>
-    </figure>
-
-    <!-- Card 3 -->
-    <figure class="t-card">
-      <div class="t-card__stars" aria-label="5 étoiles">
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
       </div>
-      <blockquote class="t-card__quote">
+    </div>
+
+    <div class="review-card">
+      <span class="review-card__quote-mark">"</span>
+      <div class="review-card__stars">
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+      </div>
+      <p class="review-card__text">
         Ces déménageurs nous avaient été recommandés par des amis. Tout s'est
         très bien passé. Communication parfaite, efficacité et sympathie au
         rendez-vous. À recommander !
-      </blockquote>
-      <figcaption class="t-card__person">
-        <div class="t-card__meta">
-          <strong class="t-card__name">Violaine Jadoul</strong>
-          <span class="t-card__source">Utilisateur Google</span>
+      </p>
+      <div class="review-card__author">
+        <div>
+          <p class="review-card__name">Violaine Jadoul</p>
+          <p class="review-card__source">Utilisateur Google</p>
         </div>
-      </figcaption>
-    </figure>
-
-    <!-- Card 4 -->
-    <figure class="t-card">
-      <div class="t-card__stars" aria-label="5 étoiles">
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
-        <span class="star" aria-hidden="true">★</span>
+        <div class="review-card__badge">
+          <svg viewBox="0 0 18 18" fill="none">
+            <path
+              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+              fill="#4285F4"
+            />
+            <path
+              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+              fill="#34A853"
+            />
+            <path
+              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+              fill="#EA4335"
+            />
+          </svg>
+          Google
+        </div>
       </div>
-      <blockquote class="t-card__quote">
+    </div>
+
+    <!-- Col 2 -->
+    <div class="review-card">
+      <span class="review-card__quote-mark">"</span>
+      <div class="review-card__stars">
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+      </div>
+      <p class="review-card__text">
+        Ponctuel, organisé, efficace et, en prime, sympathique et souriant !
+        Professionnalisme, convivialité et efficacité. À recommander !
+      </p>
+      <div class="review-card__author">
+        <div>
+          <p class="review-card__name">Giovanna Rollo</p>
+          <p class="review-card__source">Utilisateur Pages d'Or</p>
+        </div>
+        <div class="review-card__badge">
+          <!-- Pages d'Or simple dot -->
+          <svg viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="8" fill="#F5C400" />
+            <text
+              x="9"
+              y="13"
+              text-anchor="middle"
+              font-size="10"
+              font-weight="bold"
+              fill="#1C1A17"
+            >
+              P
+            </text>
+          </svg>
+          Pages d'Or
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card review-card--lg">
+      <span class="review-card__quote-mark">"</span>
+      <div class="review-card__stars">
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+      </div>
+      <p class="review-card__text">
+        Un service irréprochable du début à la fin. L'équipe est arrivée à
+        l'heure, a pris soin de chaque meuble, et tout est arrivé intact. Un
+        vrai soulagement dans un moment stressant.
+      </p>
+      <div class="review-card__author">
+        <div>
+          <p class="review-card__name">Thomas Renard</p>
+          <p class="review-card__source">Utilisateur Google</p>
+        </div>
+        <div class="review-card__badge">
+          <svg viewBox="0 0 18 18" fill="none">
+            <path
+              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+              fill="#4285F4"
+            />
+            <path
+              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+              fill="#34A853"
+            />
+            <path
+              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+              fill="#EA4335"
+            />
+          </svg>
+          Google
+        </div>
+      </div>
+    </div>
+
+    <!-- Col 3 -->
+    <div class="review-card">
+      <span class="review-card__quote-mark">"</span>
+      <div class="review-card__stars">
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+      </div>
+      <p class="review-card__text">
         Divin, magnifique, créatif, intelligent. Des saveurs subtiles, cuissons
         parfaites, un service très agréable. Comptez sur un accueil chaleureux.
-      </blockquote>
-      <figcaption class="t-card__person">
-        <div class="t-card__meta">
-          <strong class="t-card__name">Caroline Levavasseur</strong>
-          <span class="t-card__source">Utilisateur Google</span>
+      </p>
+      <div class="review-card__author">
+        <div>
+          <p class="review-card__name">Caroline Levavasseur</p>
+          <p class="review-card__source">Utilisateur Google</p>
         </div>
-      </figcaption>
-    </figure>
-  </div>
-  <div class="testimonials-links">
-    <p>Découvrez encore plus d’avis de nos clients sur Google et Pages d'Or.</p>
-    <div class="rating-badges" aria-label="Résumé des avis">
-      <div class="rating-badge">
-        <img
-          class="rating-badge__icon"
-          src="assets/images/icons/google-logo.svg"
-          alt=""
-        />
-        <div class="rating-badge__body">
-          <div class="rating-badge__stars" aria-hidden="true">
-            <span class="star">★</span><span class="star">★</span>
-            <span class="star">★</span><span class="star">★</span
-            ><span class="star">★</span>
-          </div>
-          <span class="rating-badge__score">5.0</span>
-          <span class="rating-badge__label">Google (27 avis)</span>
+        <div class="review-card__badge">
+          <svg viewBox="0 0 18 18" fill="none">
+            <path
+              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+              fill="#4285F4"
+            />
+            <path
+              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+              fill="#34A853"
+            />
+            <path
+              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+              fill="#FBBC05"
+            />
+            <path
+              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+              fill="#EA4335"
+            />
+          </svg>
+          Google
         </div>
       </div>
-      <div class="rating-badge">
-        <img
-          class="rating-badge__icon pagesor"
-          src="assets/images/icons/pagedor.svg"
-          alt=""
-        />
+    </div>
 
-        <div class="rating-badge__body">
-          <div class="rating-badge__stars" aria-hidden="true">
-            <span class="star">★</span><span class="star">★</span>
-            <span class="star">★</span><span class="star">★</span>
-            <span class="star" style="opacity: 0.3">★</span>
-          </div>
-          <span class="rating-badge__score">4.5</span>
-          <span class="rating-badge__label">Pagesd'or (8 avis)</span>
+    <div class="review-card review-card--featured">
+      <span class="review-card__quote-mark">"</span>
+      <div class="review-card__stars">
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+        <svg viewBox="0 0 12 12">
+          <polygon
+            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+            fill="#C9A84C"
+          />
+        </svg>
+      </div>
+      <p class="review-card__text">
+        Rapide, soigneux et souriant. Le monte-meubles a sauvé notre
+        déménagement au 4ème sans ascenseur. On recommande sans hésiter.
+      </p>
+      <div class="review-card__author">
+        <div>
+          <p class="review-card__name">Marc Fontaine</p>
+          <p class="review-card__source">Utilisateur Pages d'Or</p>
+        </div>
+        <div class="review-card__badge">
+          <svg viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="8" fill="#F5C400" />
+            <text
+              x="9"
+              y="13"
+              text-anchor="middle"
+              font-size="10"
+              font-weight="bold"
+              fill="#1C1A17"
+            >
+              P
+            </text>
+          </svg>
+          Pages d'Or
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="testimonials__footer">
+    <p class="testimonials__footer-text">
+      Découvrez encore plus d'avis de nos clients sur Google et Pages d'Or.
+    </p>
+    <div class="testimonials__platforms">
+      <!-- Google pill -->
+      <a href="#" class="platform-pill">
+        <svg class="platform-pill__logo" viewBox="0 0 18 18" fill="none">
+          <path
+            d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+            fill="#4285F4"
+          />
+          <path
+            d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+            fill="#34A853"
+          />
+          <path
+            d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+            fill="#FBBC05"
+          />
+          <path
+            d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+            fill="#EA4335"
+          />
+        </svg>
+        <div class="platform-pill__info">
+          <span class="platform-pill__score">
+            5.0
+            <svg viewBox="0 0 12 12">
+              <polygon
+                points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+                fill="#C9A84C"
+              />
+            </svg>
+          </span>
+          <span class="platform-pill__name">Google · 27 avis</span>
+        </div>
+      </a>
+      <!-- Pages d'Or pill -->
+      <a href="#" class="platform-pill">
+        <svg class="platform-pill__logo" viewBox="0 0 18 18" fill="none">
+          <circle cx="9" cy="9" r="8" fill="#F5C400" />
+          <text
+            x="9"
+            y="13"
+            text-anchor="middle"
+            font-size="10"
+            font-weight="bold"
+            fill="#1C1A17"
+          >
+            P
+          </text>
+        </svg>
+        <div class="platform-pill__info">
+          <span class="platform-pill__score">
+            4.5
+            <svg viewBox="0 0 12 12">
+              <polygon
+                points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+                fill="#C9A84C"
+              />
+            </svg>
+          </span>
+          <span class="platform-pill__name">Pages d'Or · 8 avis</span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -417,262 +728,68 @@ stylesheet: home.css
     pointe et une promesse simple — chaque déménagement traité avec soin,
     ponctualité et transparence totale.
   </p> -->
-  <div class="company-layout">
-    <div class="company-right">
-      <ul class="values-grid" aria-label="Nos engagements">
-        <li class="value-item">
-          <svg
-            class="value-item__icon"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-hidden="true"
-          >
-            <rect
-              x="2"
-              y="14"
-              width="18"
-              height="12"
-              rx="1"
-              stroke="currentColor"
-              stroke-width="1.6"
-            />
-            <path
-              d="M20 18 L20 14 L28 14 L30 18 L30 26 L20 26"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linejoin="round"
-            />
-            <circle
-              cx="24"
-              cy="27"
-              r="3"
-              stroke="currentColor"
-              stroke-width="1.6"
-            />
-            <circle
-              cx="9"
-              cy="27"
-              r="3"
-              stroke="currentColor"
-              stroke-width="1.6"
-            />
-            <line
-              x1="2"
-              y1="10"
-              x2="8"
-              y2="10"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              opacity="0.45"
-            />
-            <line
-              x1="2"
-              y1="7"
-              x2="5"
-              y2="7"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-              opacity="0.25"
-            />
-          </svg>
-          <p class="value-item__title">Équipements performants</p>
-          <p class="value-item__desc">
-            Camionnettes modernes et lifts puissants pour un service sans
-            compromis.
-          </p>
-        </li>
-
-        <li class="value-item">
-          <svg
-            class="value-item__icon"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-hidden="true"
-          >
-            <circle
-              cx="16"
-              cy="9"
-              r="5"
-              stroke="currentColor"
-              stroke-width="1.6"
-            />
-            <path
-              d="M6 28 C6 22 10 18 16 18 C22 18 26 22 26 28"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-            />
-            <path
-              d="M23 3 L24 6 L27 6 L24.8 7.8 L25.6 11 L23 9.2 L20.4 11 L21.2 7.8 L19 6 L22 6 Z"
-              stroke="currentColor"
-              stroke-width="1.1"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="value-item__title">Personnel qualifié</p>
-          <p class="value-item__desc">
-            Des déménageurs expérimentés, ponctuels et respectueux, à votre
-            service.
-          </p>
-        </li>
-
-        <li class="value-item">
-          <svg
-            class="value-item__icon"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M16 21 C16 21 10 17 10 13 C10 11 12 10 14 11 C15 11.5 16 12.5 16 12.5 C16 12.5 17 11.5 18 11 C20 10 22 11 22 13 C22 17 16 21 16 21 Z"
-              stroke="currentColor"
-              stroke-width="1.3"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="value-item__title">Soin extrême des biens</p>
-          <p class="value-item__desc">
-            Vos objets sont protégés et manipulés avec le plus grand soin.
-          </p>
-        </li>
-
-        <li class="value-item">
-          <svg
-            class="value-item__icon"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-hidden="true"
-          >
-            <circle
-              cx="16"
-              cy="16"
-              r="12"
-              stroke="currentColor"
-              stroke-width="1.6"
-            />
-            <line
-              x1="16"
-              y1="9"
-              x2="16"
-              y2="16"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-            />
-            <line
-              x1="16"
-              y1="16"
-              x2="21"
-              y2="20"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-            />
-            <circle cx="16" cy="16" r="1.5" fill="currentColor" />
-          </svg>
-          <p class="value-item__title">Ponctualité & rigueur</p>
-          <p class="value-item__desc">
-            Nous respectons les délais et garantissons un déroulement sans
-            retard.
-          </p>
-        </li>
-
-        <li class="value-item">
-          <svg
-            class="value-item__icon"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-hidden="true"
-          >
-            <rect
-              x="6"
-              y="3"
-              width="20"
-              height="26"
-              rx="2"
-              stroke="currentColor"
-              stroke-width="1.6"
-            />
-            <line
-              x1="11"
-              y1="10"
-              x2="21"
-              y2="10"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-            />
-            <line
-              x1="11"
-              y1="15"
-              x2="21"
-              y2="15"
-              stroke="currentColor"
-              stroke-width="1.4"
-              stroke-linecap="round"
-            />
-            <polyline
-              points="11,21 14,24 21,18"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="value-item__title">Devis clair & transparent</p>
-          <p class="value-item__desc">
-            Une tarification honnête et détaillée, sans frais cachés.
-          </p>
-        </li>
-
-        <li class="value-item">
-          <svg
-            class="value-item__icon"
-            viewBox="0 0 32 32"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M16 3 L28 8 L28 18 C28 24 22 29 16 31 C10 29 4 24 4 18 L4 8 Z"
-              stroke="currentColor"
-              stroke-width="1.6"
-              stroke-linejoin="round"
-            />
-            <polyline
-              points="11,16 14.5,20 21,12"
-              stroke="currentColor"
-              stroke-width="1.8"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="value-item__title">Assurance professionnelle</p>
-          <p class="value-item__desc">
-            Vos biens sont couverts — sécurité garantie du début à la fin.
-          </p>
-        </li>
-      </ul>
-    </div>
-    <div class="company-left">
-      <div class="company-photo">
+  <div class="body">
+    <!-- LEFT: image + stats -->
+    <div class="left">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat__n" data-val="500" data-suf="+">0<em>+</em></span>
+          <span class="stat__l">Déménagements</span>
+        </div>
+        <div class="stat">
+          <span class="stat__n" data-val="98" data-suf="%">0<em>%</em></span>
+          <span class="stat__l">Satisfaction</span>
+        </div>
+        <div class="stat">
+          <span class="stat__n" data-val="10" data-suf="+">0<em>+</em></span>
+          <span class="stat__l">Années</span>
+        </div>
+      </div>
+      <div class="img-frame">
         <img
           src="./assets/images/company-2.webp"
-          alt="Façade du bureau Lift Service Déménagement à Forest, Bruxelles"
-          loading="lazy"
-          width="900"
-          height="675"
+          alt="Lift Service — Bruxelles"
         />
-        <div class="company-badge" aria-label="Plus de 10 ans d'expérience">
-          <span class="company-badge__number">10+</span>
-          <span class="company-badge__label">ans</span>
+        <div class="img-strip">
+          <span>Nunez Associés SRL — Bruxelles</span>
+          <em>Est. 2014</em>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: 2×3 values grid -->
+    <div class="right">
+      <p class="values__label">Nos valeurs</p>
+      <div class="vgrid">
+        <div class="vitem">
+          <span class="vnum">01</span>
+          <p class="vname">Équipements performants</p>
+          <p class="vdesc">Camionnettes modernes et lifts puissants.</p>
+        </div>
+        <div class="vitem">
+          <span class="vnum">02</span>
+          <p class="vname">Personnel qualifié</p>
+          <p class="vdesc">Expérimentés, ponctuels et respectueux.</p>
+        </div>
+        <div class="vitem">
+          <span class="vnum">03</span>
+          <p class="vname">Soin extrême des biens</p>
+          <p class="vdesc">Vos objets manipulés avec le plus grand soin.</p>
+        </div>
+        <div class="vitem">
+          <span class="vnum">04</span>
+          <p class="vname">Ponctualité & rigueur</p>
+          <p class="vdesc">Zéro retard, zéro mauvaise surprise.</p>
+        </div>
+        <div class="vitem">
+          <span class="vnum">05</span>
+          <p class="vname">Devis clair & transparent</p>
+          <p class="vdesc">Tarification honnête, sans frais cachés.</p>
+        </div>
+        <div class="vitem">
+          <span class="vnum">06</span>
+          <p class="vname">Assurance professionnelle</p>
+          <p class="vdesc">Vos biens couverts du début à la fin.</p>
         </div>
       </div>
     </div>

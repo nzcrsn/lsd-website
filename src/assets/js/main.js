@@ -6,6 +6,8 @@ import { initFaq, initFaqReveal } from "./animations/faq.js";
 import { initContact } from "./animations/contact.js";
 import { initOptLang, initSmoothScroll } from "./animations/header.js";
 import { initBackToTop } from "./animations/to-top-button.js";
+import { initMouse } from "./animations/mouse.js";
+
 // initLoader();
 
 window.addEventListener("load", async () => {
@@ -22,4 +24,5 @@ window.addEventListener("load", async () => {
   initBackToTop();
   // await waitForLoader();
   // exitLoader();
+  initMouse();
 });
