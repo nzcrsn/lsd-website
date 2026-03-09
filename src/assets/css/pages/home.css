@@ -52,7 +52,7 @@ Styles of hero section
 
 .hero-stats {
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -1693,6 +1693,9 @@ Media Queries
     margin-top: 2rem;
   }
 
+  .hero-stats {
+    gap: 2rem;
+  }
   .hero-stat__number {
     font-size: 1.3rem;
   }
@@ -1780,9 +1783,9 @@ Media Queries
     text-align: justify;
     font-size: var(--fs-p-lg);
   }
+}
 
-  .services-section .services-cards {
-    grid-template-columns: repeat(4, minmax(220px, 1fr));
-    gap: 2rem;
-  }
+.services-section .services-cards {
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 2rem;
 }
