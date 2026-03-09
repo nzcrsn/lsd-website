@@ -62,18 +62,22 @@ Styles of hero section
 }
 
 .hero-stat__number {
-  /* font-size: 1.3rem; */
+  font-size: 1.3rem;
   font-size: var(--fs-p-base);
   font-weight: 600;
   color: var(--color-heading);
 }
 
 .hero-stat__label {
-  /* font-size: 0.72rem; */
-  font-size: clamp(0.6rem, 0.4rem + 0.5vh, 1rem);
+  font-size: 0.72rem;
+  /* font-size: clamp(0.6rem, 0.4rem + 0.5vh, 1rem); */
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--muted);
+
+  width: 50%;
+  margin-top: 0.4rem;
+  /* border: 1px solid red; */
 }
 
 .cta-heading {
@@ -1694,6 +1698,8 @@ Media Queries
   }
 
   .hero-stat__label {
+    width: 100%;
+    margin-top: 0;
     font-size: 0.72rem;
   }
 
