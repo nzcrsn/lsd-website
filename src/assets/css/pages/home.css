@@ -52,8 +52,8 @@ Styles of hero section
 
 .hero-stats {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  gap: 2rem;
+  /* flex-wrap: wrap; */
 }
 
 .hero-stat {
@@ -75,7 +75,6 @@ Styles of hero section
   letter-spacing: 0.06em;
   color: var(--muted);
 
-  width: 50%;
   margin-top: 0.4rem;
   /* border: 1px solid red; */
 }
