@@ -20,7 +20,7 @@ Styles of hero section
 
 .hero-section .copy .heading {
   font-family: var(--font-primary);
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   font-size: var(--fs-h1-lg);
   letter-spacing: 0.02em;
@@ -44,13 +44,13 @@ Styles of hero section
 }
 
 .cta-heading {
-  margin-top: 2rem;
+  margin-top: 2.6rem;
   justify-content: end;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   grid-template-rows: repeat(3, minmax(120px, 180px));
   grid-auto-flow: dense;
@@ -67,9 +67,15 @@ Styles of hero section
 .item.wide {
   grid-column: span 2;
   grid-row: span 1;
+  aspect-ratio: 4/3;
 }
 
 .item.tall {
+  grid-column: span 1;
+  grid-row: span 3;
+}
+
+.item.medium {
   grid-column: span 1;
   grid-row: span 2;
 }
@@ -80,7 +86,7 @@ Styles of hero section
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* aspect-ratio: 4 / 3; */
+
   display: block;
   max-width: none;
   max-height: none;
@@ -118,41 +124,107 @@ Styles of hero section
   color: var(--muted);
 }
 
-.hero-social-proof {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
 .hero-social-proof__text {
   font-size: 0.8rem;
   color: var(--color-muted);
 }
 
-.avatars {
-  display: flex;
+.proof-cta {
+  margin-top: 0.8rem;
 }
 
-.avatar {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--color-heading);
-  color: white;
-  font-size: 0.65rem;
+.proof {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 20px;
+  margin-top: 1rem;
+}
+
+/* Google rating row */
+.proof__rating {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: -6px;
-  border: 2px solid var(--color-bg-main);
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-.avatar:first-child {
-  margin-left: 0;
+.proof__stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.proof__stars svg {
+  color: #b8860b;
+}
+.proof__score {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1;
+}
+.proof__count {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ink-light);
+  border-left: 1px solid var(--line);
+  padding-left: 0.8rem;
+}
+.proof__source {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  /* border-left: 1px solid var(--line); */
+  padding-left: 0.1rem;
 }
 
-.avatar-more {
-  background: #999;
+/* Quote */
+.proof__quote {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(14px, 1.3vw, 17px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--ink-light);
+  padding-left: 14px;
+  border-left: 1.5px solid var(--accent);
+}
+.proof__quote cite {
+  display: block;
+  font-style: normal;
+  font-family: "Manrope", sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  margin-top: 6px;
+}
+
+/* Trust badges */
+.proof__badges {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+.proof__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+.proof__badge svg {
+  color: var(--accent-dark);
+  flex-shrink: 0;
 }
 
 /*
@@ -1599,26 +1671,26 @@ Media Queries
   }
 
   .hero-section .copy .heading {
-    font-size: clamp(1.8rem, 5cqw, 3rem);
+    font-size: clamp(2rem, 5cqw, 3.2rem);
     /* border: 1px solid green; */
   }
 
   .hero-section .copy .sub-heading {
-    font-size: clamp(1.4rem, 1.6vw, 1.8rem);
+    font-size: clamp(1.2rem, 1.6vw, 1.4rem);
     margin-top: 1rem;
     /* border: 1px solid green; */
+    max-width: 80%;
+    opacity: 0.8;
   }
 
   .hero-trust {
-    margin-top: 6rem;
+    margin-top: 2rem;
   }
 
   .grid {
     max-width: 40%;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(3, minmax(110px, 1fr));
+    grid-template-columns: repeat(2, minmax(120px, 1fr));
     gap: 0.5rem;
-    /* grid-auto-rows: var(--row, 120px); */
   }
 
   /* Styles of service section */

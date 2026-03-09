@@ -226,7 +226,7 @@ Button Class
 
   border-radius: var(--border-radius);
   font-weight: 400;
-  cursor: pointer;
+  /* cursor: pointer; */
   transition: all 0.3s;
   border: 1px solid var(--color-secondary);
   /* background-color 0.3s,
@@ -322,7 +322,7 @@ Block Scroll
   background: var(--color-primary);
   color: white;
 
-  cursor: pointer;
+  /* cursor: pointer; */
 
   opacity: 0;
   visibility: hidden;

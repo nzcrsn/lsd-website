@@ -19,7 +19,7 @@ header {
 header .logo {
   font-size: var(--fs-p-sm);
   font-weight: 400;
-  cursor: pointer;
+  /* cursor: pointer; */
   color: var(--color-heading);
 }
 
@@ -36,7 +36,7 @@ header .cta-header {
 #menu-icon {
   width: 32px;
   height: 32px;
-  cursor: pointer;
+  /* cursor: pointer; */
   transform: translateX(5px);
 }
 
@@ -94,7 +94,7 @@ Media queries
     align-items: center;
     gap: 0.4rem;
     border: none;
-    cursor: pointer;
+    /* cursor: pointer; */
     background: transparent;
   }
 
