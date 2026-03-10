@@ -111,8 +111,9 @@ body.scroll-locked {
   width: 100%;
 }
 
-html.js-loading #page {
-  opacity: 0 !important;
+html.js-loading #page,
+header {
+  opacity: 0;
 }
 
 ul {

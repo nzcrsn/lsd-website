@@ -1,5 +1,6 @@
 // Hide page immediately — before any paint
 document.getElementById("page").style.opacity = "0";
+document.getElementById("header").style.opacity = "0";
 import { gsap } from "./base.js";
 import { initMenu } from "./animations/menu.js";
 import { initHero } from "./animations/hero.js";
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Remove the class BEFORE fonts/images load
   document.documentElement.classList.remove("js-loading");
 
-  gsap.to("#page", {
+  gsap.to(["#page", "header"], {
     opacity: 1,
     duration: 0.5,
     ease: "power2.out",
