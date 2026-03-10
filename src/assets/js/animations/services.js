@@ -1,4 +1,4 @@
-import { gsap } from "../base.js";
+import { gsap, ScrollTrigger } from "../base.js";
 import { guardMotion } from "../motion.js";
 
 export function initServices() {

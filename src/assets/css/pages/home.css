@@ -203,7 +203,7 @@ Styles of services section
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: auto;
+  /* height: auto; */
   margin-top: 2rem;
 }
 
@@ -212,7 +212,7 @@ Styles of services section
   position: relative;
   overflow: hidden;
   border-radius: 2px;
-  /* min-height: 260px; */
+  min-height: 260px;
 }
 
 /* ── Photo background ── */
@@ -251,6 +251,7 @@ Styles of services section
   );
   transition: opacity 0.5s;
 }
+
 .svc-tile:hover .svc-tile__overlay {
   opacity: 0.92;
 }
@@ -933,7 +934,6 @@ Styles of FAQs section
 
 /* ── Items ── */
 .faq-section .faq__list {
-  max-width: 1150px;
   margin-top: 1rem;
   align-self: center;
   display: flex;
@@ -1692,6 +1692,9 @@ Media Queries
     /* max-height: 220px; */
   }
 
+  .svc-tile {
+    min-height: 0px;
+  }
   /* Desktop placement */
   .svc-tile--lift {
     grid-column: 1;

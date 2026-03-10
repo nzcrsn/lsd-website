@@ -198,21 +198,5 @@ export function initHero() {
         { passive: true },
       );
     }
-
-    // ── 8. Scroll progress bar ──
-    const progressBar = document.getElementById("progress-bar");
-    if (progressBar) {
-      window.addEventListener(
-        "scroll",
-        () => {
-          const scrollTop = window.scrollY;
-          const docHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-          const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-          progressBar.style.height = pct + "%";
-        },
-        { passive: true },
-      );
-    }
   });
 }
