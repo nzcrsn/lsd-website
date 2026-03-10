@@ -17,8 +17,6 @@ function _animateLeft() {
   });
 
   tl.from([".contact-section .eyebrow", ".contact-left h2"], {
-    opacity: 0,
-    y: 20,
     duration: 0.8,
     stagger: 0.12,
     ease: "power3.out",

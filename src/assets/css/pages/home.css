@@ -951,7 +951,7 @@ Styles of FAQs section
   width: 100%;
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: none;
   padding: 2rem 0;
   display: flex;
   align-items: center;
@@ -1339,7 +1339,7 @@ Styles of contact section
   color: var(--color-primary);
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: none;
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 2px;
   transition:
@@ -1447,7 +1447,7 @@ Styles of contact section
 
 .select-wrap select {
   padding-right: 2.5rem;
-  cursor: pointer;
+  cursor: none;
 }
 
 /* Service pills — radio button group styled as chips */
@@ -1480,7 +1480,7 @@ Styles of contact section
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-primary);
-  cursor: pointer;
+  cursor: none;
   background: var(--color-input-bg);
   transition:
     background 0.25s,
@@ -1517,12 +1517,6 @@ Styles of contact section
 
 /* End of styles of Contact*/
 
-.end {
-  margin-top: 4rem;
-  aspect-ratio: 4/3;
-  width: 50%;
-  align-self: center;
-}
 /*
 ====================================================== 
 Media Queries

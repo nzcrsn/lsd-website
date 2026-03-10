@@ -32,8 +32,9 @@ export function initMouse() {
   interactives.forEach((el) => {
     el.addEventListener("mouseenter", () => {
       gsap.to(cr, {
-        scale: 2.4,
-        opacity: 0.45,
+        scale: 1.4,
+        opacity: 0.8,
+        borderColor: "#b8904a",
         duration: 0.35,
         ease: "power2.out",
       });
