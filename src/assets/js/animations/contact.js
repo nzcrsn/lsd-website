@@ -1,4 +1,4 @@
-import { gsap } from "../base.js";
+import { gsap, ScrollTrigger } from "../base.js";
 
 export function initContact() {
   const section = document.querySelector(".contact-section");
@@ -9,8 +9,7 @@ export function initContact() {
   _handleSubmit();
 }
 
-/* ── Section entrance animations ── */
-
+// ── Left column: eyebrow → heading → contact items → socials ──
 function _animateLeft() {
   const tl = gsap.timeline({
     scrollTrigger: { trigger: ".contact-left", start: "top 82%" },
@@ -22,55 +21,65 @@ function _animateLeft() {
     duration: 0.8,
     stagger: 0.12,
     ease: "power3.out",
-  })
-    .from(
-      ".contact-item",
-      {
-        opacity: 0,
-        x: -16,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: "power2.out",
-      },
-      "-=0.4",
-    )
-    .from(
-      ".contact-social",
-      {
-        opacity: 0,
-        y: 12,
-        duration: 0.5,
-        ease: "power2.out",
-      },
-      "-=0.2",
-    );
+  });
+
+  // Contact items slide in with a left-edge reveal
+  tl.from(
+    ".contact-item",
+    { opacity: 0, x: -20, stagger: 0.1, duration: 0.6, ease: "power3.out" },
+    "-=0.4",
+  );
+
+  tl.from(
+    ".contact-social",
+    { opacity: 0, y: 12, duration: 0.5, ease: "power2.out" },
+    "-=0.2",
+  );
 }
 
+// ── Right column: clip-path wipe upward per field ──
 function _animateForm() {
   const tl = gsap.timeline({
     scrollTrigger: { trigger: ".contact-right", start: "top 82%" },
   });
 
-  tl.from(".form-field", {
+  // Form title
+  tl.from(".form__title", {
     opacity: 0,
-    y: 20,
+    y: 14,
     duration: 0.55,
-    stagger: 0.09,
     ease: "power3.out",
-  }).from(
-    ".form-submit",
+  });
+
+  // Fields clip-wipe from bottom
+  tl.from(
+    ".form-field",
     {
+      clipPath: "inset(0 0 100% 0)",
       opacity: 0,
-      y: 12,
-      duration: 0.45,
-      ease: "power2.out",
+      stagger: 0.07,
+      duration: 0.55,
+      ease: "power3.out",
     },
+    "-=0.3",
+  );
+
+  // Service pills
+  tl.from(
+    ".service-pills",
+    { opacity: 0, y: 10, duration: 0.45, ease: "power2.out" },
     "-=0.2",
+  );
+
+  // Submit button
+  tl.from(
+    ".form-submit, .cta-btn[type='submit']",
+    { opacity: 0, y: 12, duration: 0.45, ease: "power2.out" },
+    "-=0.15",
   );
 }
 
-/* ── Form submission ── */
-
+// ── Form submission — loading + success states ──
 function _handleSubmit() {
   const form = document.getElementById("contactForm");
   const formWrap = document.getElementById("formWrap");
@@ -80,11 +89,8 @@ function _handleSubmit() {
 
   if (!form) return;
 
-  // contact.js — _handleSubmit
-
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     if (!form.checkValidity()) {
       form.reportValidity();
       return;
@@ -103,7 +109,6 @@ function _handleSubmit() {
       },
     });
 
-    // Wait for BOTH: minimum spinner time AND fetch to complete
     const minDelay = new Promise((resolve) => setTimeout(resolve, 1200));
 
     try {
@@ -113,25 +118,17 @@ function _handleSubmit() {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(data).toString(),
       });
-
-      // Waits for whichever takes longer
       await Promise.all([fetchPromise, minDelay]);
-
-      loading.classList.remove("is-active");
-      success.classList.add("is-active");
-      _animateSuccess();
-    } catch (err) {
-      // Network error — still show success on Netlify
-      // since Netlify often processes async
+    } catch (_) {
       await minDelay;
-      loading.classList.remove("is-active");
-      success.classList.add("is-active");
-      _animateSuccess();
     }
+
+    loading.classList.remove("is-active");
+    success.classList.add("is-active");
+    _animateSuccess();
   });
 
-  // Reset back to form
-  resetBtn.addEventListener("click", () => {
+  resetBtn?.addEventListener("click", () => {
     gsap.to(success, {
       opacity: 0,
       scale: 0.96,
@@ -141,7 +138,6 @@ function _handleSubmit() {
         success.classList.remove("is-active");
         formWrap.style.visibility = "visible";
         form.reset();
-
         gsap.fromTo(
           formWrap,
           { opacity: 0, y: 12 },
@@ -152,8 +148,7 @@ function _handleSubmit() {
   });
 }
 
-/* ── Success checkmark draw animation ── */
-
+// ── Success checkmark draw ──
 function _animateSuccess() {
   const circle = document.querySelector(".success-circle");
   const check = document.querySelector(".success-check");
@@ -163,45 +158,26 @@ function _animateSuccess() {
 
   const tl = gsap.timeline();
 
-  // Circle draws itself
-  tl.to(circle, {
-    strokeDashoffset: 0,
-    duration: 0.7,
-    ease: "power2.out",
-  });
-
-  // Checkmark draws itself
-  tl.to(
-    check,
-    {
-      strokeDashoffset: 0,
-      duration: 0.45,
-      ease: "power2.out",
-    },
-    "-=0.2",
-  );
-
-  // Icon bounces slightly
-  tl.from(
-    ".success-icon",
-    {
-      scale: 0.8,
-      duration: 0.5,
-      ease: "back.out(2)",
-    },
-    0,
-  );
-
-  // Text cascades in
-  tl.from(
-    [title, sub, reset],
-    {
-      opacity: 0,
-      y: 12,
-      duration: 0.5,
-      stagger: 0.1,
-      ease: "power2.out",
-    },
-    "-=0.1",
-  );
+  tl.to(circle, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" })
+    .to(
+      check,
+      { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" },
+      "-=0.2",
+    )
+    .from(
+      ".success-icon",
+      { scale: 0.8, duration: 0.5, ease: "back.out(2)" },
+      0,
+    )
+    .from(
+      [title, sub, reset],
+      {
+        opacity: 0,
+        y: 12,
+        duration: 0.5,
+        stagger: 0.1,
+        ease: "power2.out",
+      },
+      "-=0.1",
+    );
 }

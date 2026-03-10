@@ -32,6 +32,19 @@ Variables
   --color-padding-sm: 24px;
   --color-input-bg: rgba(255, 255, 255, 0.6);
 
+  --cream: #f0ede6;
+  --ink: #1c1a17;
+  --ink-light: #6b6760;
+  --accent: #b8a98a;
+  --accent-dark: #8c7b60;
+
+  --cream-dark: #e8e4db;
+  --gold: #c9a84c;
+  --line: rgba(28, 26, 23, 0.08);
+
+  --mid: #565248;
+  --soft: #9a9690;
+
   /* Margin */
   --margin-xs: 8px;
   --margin-sm: 32px;
@@ -243,6 +256,7 @@ Button Class
 .cta-btn {
   background-color: var(--color-secondary);
   color: var(--color-bg-main);
+  border: 1px solid var(--line);
 }
 
 .cta-btn-alt > p,
@@ -283,10 +297,10 @@ Button Class
   background: var(--color-primary);
 }
 
-.cta-btn-alt:hover p,
+/* .cta-btn-alt:hover p,
 .cta-btn-alt:hover svg {
   color: var(--color-bg-main);
-}
+} */
 
 .cta-btn-alt:hover svg,
 .cta-btn:hover svg {

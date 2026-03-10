@@ -10,7 +10,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem var(--padding-sm);
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: var(--height-header);
   background-color: var(--color-bg-main);
