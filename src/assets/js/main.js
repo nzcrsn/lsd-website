@@ -1,8 +1,11 @@
+// Hide page immediately — before any paint
+document.getElementById("page").style.opacity = "0";
+import { gsap } from "./base.js";
 import { initMenu } from "./animations/menu.js";
 import { initHero } from "./animations/hero.js";
 // import { setHeaderHeight } from "./utils/config.js";
 import { initFaq, initFaqReveal } from "./animations/faq.js";
-import { initLoader, waitForLoader } from "./animations/loader.js";
+
 import { initContact } from "./animations/contact.js";
 import {
   initHeader,
@@ -16,18 +19,17 @@ import { initServices } from "./animations/services.js";
 import { initTestimonials } from "./animations/testimonials.js";
 import { initCompany } from "./animations/company.js";
 
-// initLoader();
+document.addEventListener("DOMContentLoaded", () => {
+  // Remove the class BEFORE fonts/images load
+  document.documentElement.classList.remove("js-loading");
 
-window.addEventListener("load", async () => {
-  await document.fonts.ready;
+  gsap.to("#page", {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out",
+  });
 
-  // await waitForLoader();
-  // setHeaderHeight();
-
-  // 1. Header — slides down first
   initHeader();
-
-  // 2. Hero — first thing the user sees
   initHero();
 
   // 3. Cursor hover states — touches every interaction site-wide

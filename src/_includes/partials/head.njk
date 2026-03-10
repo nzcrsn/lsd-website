@@ -60,7 +60,15 @@
     sizes="32x32"
     href="assets/images/favicon/favicon-32x32.png"
   />
-
+  <!-- !! Inline — fires before first paint, no flash !! -->
+  <style>
+    #page {
+      opacity: 0;
+    }
+  </style>
+  <script>
+    document.documentElement.className += " js-loading";
+  </script>
   <!-- Core CSS -->
   <link rel="stylesheet" href="/assets/css/core/font-family.css" />
   <link rel="stylesheet" href="/assets/css/core/normalize.css" />

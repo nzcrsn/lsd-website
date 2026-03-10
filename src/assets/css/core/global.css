@@ -111,6 +111,10 @@ body.scroll-locked {
   width: 100%;
 }
 
+html.js-loading #page {
+  opacity: 0 !important;
+}
+
 ul {
   list-style: none;
 }
