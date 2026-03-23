@@ -330,6 +330,9 @@ Styles of services section
   letter-spacing: -0.01em;
   color: #f0ede6;
   font-size: clamp(18px, 1.6vw, 24px);
+  background-color: rgba(21, 21, 21, 0.8);
+  width: fit-content;
+  padding: 0.8rem 1.2rem;
   /* font-size: var(--fs-p-sm); */
   transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -338,9 +341,9 @@ Styles of services section
   font-size: clamp(26px, 2.6vw, 40px);
 } */
 
-.svc-tile--supply .svc-tile__title {
+/* .svc-tile--supply .svc-tile__title {
   font-size: clamp(20px, 1.8vw, 26px);
-}
+} */
 
 .svc-tile:hover .svc-tile__title {
   transform: translateY(-2px);
@@ -656,16 +659,10 @@ Styles of company section
 
 .company-content {
   display: grid;
-  grid-template-columns: 1fr 42%;
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 2rem;
   min-height: calc(100vh - var(--height-header) - 10rem);
-}
-
-@media (max-width: 860px) {
-  .company-content {
-    grid-template-columns: 1fr;
-  }
 }
 
 .left {
@@ -796,7 +793,6 @@ Styles of company section
   color: var(--color-heading);
   width: 100%;
   font-size: 0.9rem;
-  text-align: justify;
   hyphens: auto;
 }
 
@@ -821,8 +817,8 @@ Styles of company section
 
 .vitem {
   padding: 20px 24px 20px 0;
-  border-top: 1px solid var(--line);
-  border-right: 1px solid var(--line);
+  /* border-top: 1px solid var(--line); */
+  /* border-right: 1px solid var(--line); */
 
   transform: translateY(10px);
   position: relative;
@@ -832,14 +828,14 @@ Styles of company section
 .vitem:nth-child(even) {
   padding-left: 24px;
   padding-right: 0;
-  border-right: none;
+  /* border-right: none; */
 }
 
 .vitem {
   padding-left: 24px;
 }
 /* bottom row */
-.vitem:nth-last-child(-n + 2) {
+.vitem {
   border-bottom: 1px solid var(--line);
 }
 
@@ -910,7 +906,7 @@ Styles of company section
 }
 
 .qtext {
-  margin-top: 3rem;
+  margin-top: 1rem;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(15px, 1.6vw, 20px);
   font-weight: 200;
@@ -919,7 +915,7 @@ Styles of company section
   color: var(--ink);
   border-left: 1.5px solid var(--accent);
   padding-left: 18px;
-  flex: 1;
+  /* flex: 1; */
 }
 
 /*
@@ -1622,8 +1618,18 @@ Media Queries
   /* End of styles of contact section*/
 
   /* Start of styles of company section*/
-  .values-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .company-content {
+    grid-template-columns: 1fr 42%;
+  }
+
+  .right,
+  .left {
+    grid-column: span 1;
+  }
+
+  .vgrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: span 2;
   }
 }
 
