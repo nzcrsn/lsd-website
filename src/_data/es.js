@@ -2,33 +2,37 @@ export default {
   locale: "es-es",
   routes: {
     services: "/es/servicios",
-    company: "/es/compania",
     our_work: "/es/nuestro-trabajo",
-    faq: "/es/faq",
     home: "/es/",
   },
   nav: {
     services: "Servicios",
     company: "Sobre nosotros",
     our_work: "Nuestro Trabajo",
-    faq: "FAQs",
     contact: "Contacto",
     testimonials: "Testimonios",
   },
   pages: {
     home: {
       title: "Lift Service Déménagement",
-      description: "Tu aliado para mudanzas sin estrés",
+      description:
+        "Disfruta de una mudanza sin complicaciones, sin estrés y con total confianza",
+    },
+    company: {
+      title: "Compania | Lift Service Demenagement",
+      description:
+        "Disfruta de una mudanza sin complicaciones, sin estrés y con total confianza",
     },
   },
   section: {
     hero: {
-      heading: "Elevamos tus muebles",
-      highlight: "no tu estrés",
-      subtitle: "Hacemos de tu mudanza una experiencia placentera",
-      cta: "Contáctanos",
-      cta_heading: "Solicitar presupuesto",
-      scroll: "Desliza para descubrir",
+      heading:
+        "Disfruta de una mudanza sin complicaciones, sin estrés y con total confianza",
+      subheading: "Hacemos de tu mudanza una experiencia placentera",
+      cta: "Request a quoteo",
+      year_experiencie_lbl: "años de experiencia",
+      clientes_satisf_lbl: "clientes satisfechos",
+      countries_cover_lbl: "paises cubiertos",
     },
     company: {
       label: "Acerca de nosotros",

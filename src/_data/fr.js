@@ -2,9 +2,7 @@ export default {
   locale: "fr-be",
   routes: {
     services: "/services",
-    company: "/compagnie",
     our_work: "/notre-travail",
-    faq: "/faq",
     home: "/",
   },
   nav: {
@@ -18,21 +16,24 @@ export default {
     home: {
       title: "Lift Service Déménagement",
       description:
-        "Votre partenaire idéal pour des déménagements en toute tranquillité.",
+        "Offrez-vous un déménagement fuide, sans stress, et en toute confiance.",
     },
     company: {
-      title: "Compagnie | Lift Service Demenagement",
+      title: "Company | Lift Service Demenagement",
       description:
-        "Votre partenaire idéal pour des déménagements en toute tranquillité.",
+        "Offrez-vous un déménagement fuide, sans stress, et en toute confiance.",
     },
   },
   section: {
     hero: {
-      heading: "Nous élevons vos meubles",
-      highlight: "pas votre stress",
-      subtitle:
-        "Depuis plus de 10 ans, nous faisons de votre déménagement une expérience agréable.",
-      cta: "Contactez-nous",
+      heading:
+        "Offrez-vous un déménagement fuide, sans stress, et en toute confiance.",
+      subheading:
+        " Monte-meubles, camions équipés et personnel qualifié pour vous faciliter la tâche.",
+      cta: "Demander un devis",
+      year_experiencie_lbl: "ans d'expérience",
+      clientes_satisf_lbl: "clients satisfaits",
+      countries_cover_lbl: "pays d’opération",
     },
     company: {
       label: "À propos de nous",

@@ -10,7 +10,7 @@ stylesheet: home.css
 <!-- Start Hero section -->
 <section id="hero" class="hero-section">
   <div class="copy">
-    <h1 class="heading">Mudarte debería ser emocionante, no estresante</h1>
+    <h1 class="heading">{{ t.section.hero.heading}}</h1>
     <p class="sub-heading">
       Elevadores de muebles, camiones equipados y personal cualificado para que
       todo sea más fácil.
@@ -19,18 +19,24 @@ stylesheet: home.css
     <div class="hero-trust">
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="hero-stat__number">10+</span>
-          <span class="hero-stat__label">años de experiencia</span>
+          <span class="hero-stat__number">+10</span>
+          <span class="hero-stat__label"
+            >{{t.section.hero.year_experiencie_lbl}}</span
+          >
         </div>
 
         <div class="hero-stat">
-          <span class="hero-stat__number">5,000+</span>
-          <span class="hero-stat__label">clientes satisfechos</span>
+          <span class="hero-stat__number">+5 000</span>
+          <span class="hero-stat__label"
+            >{{t.section.hero.clientes_satisf_lbl}}</span
+          >
         </div>
 
         <div class="hero-stat">
-          <span class="hero-stat__number">6 </span>
-          <span class="hero-stat__label">paises cubiertos</span>
+          <span class="hero-stat__number">+6 </span>
+          <span class="hero-stat__label"
+            >{{t.section.hero.countries_cover_lbl}}</span
+          >
         </div>
       </div>
     </div>

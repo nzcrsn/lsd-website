@@ -2,16 +2,13 @@ export default {
   locale: "en-gb",
   routes: {
     services: "/en/services",
-    company: "/en/company",
     our_work: "/en/our-work",
-    faq: "/en/faq",
     home: "/en/",
   },
   nav: {
     services: "Services",
     company: "About",
     our_work: "Our Work",
-    faq: "FAQs",
     contact: "Contact",
     testimonials: "Testimonials",
   },
@@ -19,21 +16,23 @@ export default {
     home: {
       title: "Lift Service Déménagement",
       description:
-        "Votre partenaire idéal pour des déménagements en toute tranquillité.",
+        "Treat yourself to a smooth, stress-free move, with complete peace of mind.",
     },
     company: {
-      title: "Compagnie | Lift Service Demenagement",
+      title: "Company | Lift Service Demenagement",
       description:
-        "Votre partenaire idéal pour des déménagements en toute tranquillité.",
+        "Treat yourself to a smooth, stress-free move, with complete peace of mind.",
     },
   },
   section: {
     hero: {
-      highlight: "not your stress",
-      heading: "We elevate your furniture",
-      subtitle: "We make your move a pleasant experience",
+      heading:
+        "Treat yourself to a smooth, stress-free move, with complete peace of mind.",
+      subheading: "We make your move a pleasant experience",
       cta: "Contact us",
-      scroll: "Scroll to discover",
+      year_experiencie_lbl: "years of experience",
+      clientes_satisf_lbl: "satisfied customers",
+      countries_cover_lbl: "countries covered",
     },
     company: {
       label: "About us",
