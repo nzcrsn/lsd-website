@@ -44,17 +44,23 @@ export function initHeader() {
 // ── Language dropdown ──
 export function initOptLang() {
   const menuBtn = document.querySelector(".current-lang");
+  const langWrap = document.querySelector(".language");
+  const opts = document.querySelector(".opts-lang");
   if (!menuBtn) return;
 
   let open = false;
+  const setExpandedState = (isExpanded) => {
+    menuBtn.setAttribute("aria-expanded", String(isExpanded));
+  };
 
   menuBtn.addEventListener("click", () => {
     open = !open;
+    setExpandedState(open);
 
     if (open) {
-      gsap.set(".opts-lang", { visibility: "visible", pointerEvents: "auto" });
+      gsap.set(opts, { visibility: "visible", pointerEvents: "auto" });
       gsap.fromTo(
-        ".opts-lang",
+        opts,
         { opacity: 0, y: -6, scale: 0.97 },
         { opacity: 1, y: 0, scale: 1, duration: 0.25, ease: "power2.out" },
       );
@@ -64,14 +70,14 @@ export function initOptLang() {
         ease: "power2.out",
       });
     } else {
-      gsap.to(".opts-lang", {
+      gsap.to(opts, {
         opacity: 0,
         y: -4,
         scale: 0.97,
         duration: 0.18,
         ease: "power2.in",
         onComplete: () => {
-          gsap.set(".opts-lang", {
+          gsap.set(opts, {
             visibility: "hidden",
             pointerEvents: "none",
           });
@@ -87,16 +93,17 @@ export function initOptLang() {
 
   // Close on outside click
   document.addEventListener("click", (e) => {
-    if (open && !menuBtn.closest(".language").contains(e.target)) {
+    if (open && langWrap && !langWrap.contains(e.target)) {
       open = false;
-      gsap.to(".opts-lang", {
+      setExpandedState(false);
+      gsap.to(opts, {
         opacity: 0,
         y: -4,
         scale: 0.97,
         duration: 0.18,
         ease: "power2.in",
         onComplete: () =>
-          gsap.set(".opts-lang", {
+          gsap.set(opts, {
             visibility: "hidden",
             pointerEvents: "none",
           }),

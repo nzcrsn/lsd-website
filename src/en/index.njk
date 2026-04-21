@@ -121,14 +121,26 @@ stylesheet: home.css
         playsinline
         loop
         preload="metadata"
+        aria-hidden="true"
       ></video>
     </div>
     <div class="item">
-      <img src="/assets/images/img-8.webp" alt="" />
+      <img
+        src="/assets/images/img-8.webp"
+        alt=""
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
     </div>
 
     <div class="item medium">
-      <img src="../assets/images/lift-employee.webp" alt="" />
+      <img
+        src="../assets/images/lift-employee.webp"
+        alt=""
+        loading="lazy"
+        decoding="async"
+      />
     </div>
   </div>
 </section>

@@ -65,7 +65,7 @@ Styles of hero section
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--muted);
+  color: var(--color-muted);
   margin-top: 0.4rem;
 }
 
@@ -960,7 +960,7 @@ Styles of FAQs section
 }
 
 .faq__trigger:focus-visible {
-  outline: 1px solid var(--primary-color);
+  outline: 1px solid var(--color-primary);
   outline-offset: 4px;
 }
 

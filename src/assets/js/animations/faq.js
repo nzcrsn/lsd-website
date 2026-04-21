@@ -8,6 +8,18 @@ export function initFaq() {
     const panel = item.querySelector(".faq__panel");
     const vBar = item.querySelector(".v-bar");
     const answer = item.querySelector(".faq__answer");
+    if (!trigger || !panel || !vBar || !answer) return;
+
+    const index = String(Array.from(items).indexOf(item) + 1).padStart(2, "0");
+    const panelId = panel.id || `faq-panel-${index}`;
+    const triggerId = trigger.id || `faq-trigger-${index}`;
+
+    panel.id = panelId;
+    panel.setAttribute("role", "region");
+    panel.setAttribute("aria-labelledby", triggerId);
+    trigger.id = triggerId;
+    trigger.setAttribute("aria-controls", panelId);
+    trigger.setAttribute("aria-expanded", "false");
 
     // Set initial state
     gsap.set(panel, { height: 0 });
