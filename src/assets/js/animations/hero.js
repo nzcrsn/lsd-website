@@ -1,4 +1,4 @@
-import { gsap, SplitText, ScrollTrigger } from "../base.js";
+import { gsap, SplitText } from "../base.js";
 import { guardMotion } from "../motion.js";
 
 export function initHero() {
@@ -15,7 +15,13 @@ export function initHero() {
 
     if (!heading) return;
 
-    // ── 1. Headline — clip reveal per line ──
+    // ── Shared easing tokens ─────────────────────────────────────────────────
+    // One easing language across the whole section so everything
+    // feels like it belongs to the same breath.
+    const EASE_MAIN = "power3.out";
+    const EASE_DRIFT = "power2.out";
+
+    // ── 1. Headline — soft clip reveal per line ──────────────────────────────
     const splitParent = new SplitText(heading, {
       type: "lines",
       linesClass: "line-parent",
@@ -27,152 +33,157 @@ export function initHero() {
     gsap.set(".line-parent", { overflow: "hidden" });
     gsap.set(heading, { visibility: "visible" });
 
-    const tl = gsap.timeline({ delay: 0.15 });
+    const tl = gsap.timeline({ delay: 0.2 });
 
     tl.from(".line-child", {
-      yPercent: 110,
-      stagger: 0.09,
-      duration: 1.05,
-      ease: "power4.out",
+      yPercent: 105,
+      filter: "blur(3px)", // lines sharpen as they rise
+      stagger: 0.12,
+      duration: 1.1,
+      ease: "expo.out",
     });
+    // ── 2. Grid images — fade up from below ──────────────────────────────────────
+    // Simple and clean — lets the text entrance be the hero moment.
+    if (gridItems.length) {
+      tl.from(
+        gridItems,
+        {
+          opacity: 0,
+          y: 28,
+          stagger: {
+            each: 0.15,
+            ease: "power1.inOut",
+          },
+          duration: 1.2,
+          ease: "power3.out",
+        },
+        0.1, // slight delay behind the headline — text leads, images follow
+      );
+    }
 
-    // ── 2. Subheading words fade + rise ──
+    // ── 3. Subheading — blur-to-sharp, one composed breath ───────────────────
     if (subHeading) {
-      const splitSub = new SplitText(subHeading, {
-        type: "words",
-        wordsClass: "sub-word",
-      });
       gsap.set(subHeading, { visibility: "visible" });
 
       tl.from(
-        ".sub-word",
+        subHeading,
         {
           opacity: 0,
           y: 14,
-          stagger: 0.025,
-          duration: 0.65,
-          ease: "power3.out",
+          filter: "blur(5px)",
+          duration: 1.2,
+          ease: EASE_MAIN,
         },
         "-=0.55",
       );
     }
 
-    // ── 3. Stats stagger up ──
+    // ── 4. Stats — soft expansion, each number breathes in ───────────────────
     if (stats.length) {
       tl.from(
         stats,
         {
           opacity: 0,
-          y: 14,
-          stagger: 0.08,
-          duration: 0.6,
-          ease: "power2.out",
+          y: 10,
+          scale: 0.92,
+          filter: "blur(3px)",
+          transformOrigin: "center bottom",
+          stagger: 0.13,
+          duration: 1.0,
+          ease: EASE_MAIN,
         },
-        "-=0.45",
+        "-=0.55",
       );
     }
 
-    // ── 4. CTA button — wipe in from left edge, arrow pops ──
+    // ── 5. CTA button — scale + blur in, no wipe ─────────────────────────────
     if (ctaBtn) {
-      // Start clipped from left
-      gsap.set(ctaBtn, { clipPath: "inset(0 100% 0 0)", opacity: 1 });
+      gsap.set(ctaBtn, { opacity: 0, scale: 0.94, filter: "blur(4px)", y: 8 });
 
       tl.to(
         ctaBtn,
         {
-          clipPath: "inset(0 0% 0 0)",
-          duration: 0.65,
-          ease: "power3.inOut",
+          opacity: 1,
+          scale: 1,
+          filter: "blur(0px)",
+          y: 0,
+          duration: 1.1,
+          ease: EASE_MAIN,
+          onComplete() {
+            // Release GPU compositing after animation settles
+            ctaBtn.style.willChange = "auto";
+          },
         },
-        "-=0.3",
+        "-=0.4",
       );
 
-      // Arrow bounces in after the button reveals
       if (ctaArrow) {
-        gsap.set(ctaArrow, { x: -6, opacity: 0 });
+        gsap.set(ctaArrow, { x: -12, opacity: 0 });
         tl.to(
           ctaArrow,
           {
             x: 0,
             opacity: 1,
-            duration: 0.5,
-            ease: "back.out(2)",
+            duration: 0.9,
+            ease: EASE_DRIFT,
           },
-          "-=0.2",
+          "-=0.7",
         );
       }
 
-      // Hover: arrow nudges diagonally (CSS already handles rotate on hover,
-      // GSAP adds the extra nudge on mouseenter/leave)
+      // Hover — arrow floats, asymmetric timing feels organic
       ctaBtn.addEventListener("mouseenter", () => {
-        if (ctaArrow) {
-          gsap.to(ctaArrow, {
-            x: 2,
-            y: -2,
-            duration: 0.25,
-            ease: "power2.out",
-          });
-        }
+        if (ctaArrow)
+          gsap.to(ctaArrow, { x: 3, y: -3, duration: 0.4, ease: EASE_DRIFT });
       });
       ctaBtn.addEventListener("mouseleave", () => {
-        if (ctaArrow) {
-          gsap.to(ctaArrow, { x: 0, y: 0, duration: 0.3, ease: "power2.out" });
-        }
+        if (ctaArrow)
+          gsap.to(ctaArrow, { x: 0, y: 0, duration: 0.65, ease: EASE_DRIFT });
       });
     }
 
-    // ── 5. Proof badges (response-time badge) ──
+    // ── 6. Proof badges — floats up softly ───────────────────────────────────
     if (badges) {
       tl.from(
         badges,
-        { opacity: 0, y: 8, duration: 0.45, ease: "power2.out" },
-        "-=0.3",
+        {
+          opacity: 0,
+          y: 10,
+          filter: "blur(3px)",
+          duration: 0.9,
+          ease: EASE_MAIN,
+        },
+        "-=0.35",
       );
     }
 
-    // ── 6. Google proof block ──
+    // ── 7. Google proof block — same language as badges ───────────────────────
     if (proof) {
       tl.from(
         proof,
         {
           opacity: 0,
           y: 10,
-          duration: 0.55,
-          ease: "power2.out",
+          filter: "blur(3px)",
+          duration: 0.9,
+          ease: EASE_MAIN,
         },
-        "-=0.3",
+        "-=0.5", // overlaps badges slightly — they arrive together
       );
     }
 
-    // ── 6. Photo grid items stagger in from slight right + scale ──
-    if (gridItems.length) {
-      tl.from(
-        gridItems,
-        {
-          opacity: 0,
-          x: 18,
-          scale: 0.97,
-          stagger: 0.07,
-          duration: 0.75,
-          ease: "power3.out",
-        },
-        "-=0.6",
-      );
-    }
-
-    // ── 7. Scroll hint fades in last ──
+    // ── 8. Scroll hint — last to arrive, lingers ─────────────────────────────
     if (scrollHint) {
       tl.to(
         scrollHint,
         {
           opacity: 1,
-          duration: 0.7,
-          ease: "power2.out",
+          duration: 1.0,
+          ease: EASE_DRIFT,
         },
-        "-=0.1",
+        "+=0.15", // deliberate pause — feels like the page exhales
       );
 
-      // Hide scroll hint once user starts scrolling
       let hintHidden = false;
       window.addEventListener(
         "scroll",
@@ -182,7 +193,8 @@ export function initHero() {
             gsap.to(scrollHint, {
               opacity: 0,
               y: 8,
-              duration: 0.45,
+              filter: "blur(3px)",
+              duration: 0.55,
               ease: "expo.out",
             });
           } else if (window.scrollY <= 60 && hintHidden) {
@@ -190,7 +202,8 @@ export function initHero() {
             gsap.to(scrollHint, {
               opacity: 1,
               y: 0,
-              duration: 0.45,
+              filter: "blur(0px)",
+              duration: 0.55,
               ease: "expo.out",
             });
           }
