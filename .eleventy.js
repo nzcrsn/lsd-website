@@ -2,30 +2,26 @@ import fs from "fs";
 import path from "path";
 
 export default function (eleventyConfig) {
-  // Copiar assets NO-JS (imágenes, fuentes, etc.)
   eleventyConfig.addPassthroughCopy("src/assets", {
     filter: (p) => !p.includes("js"),
   });
 
-  // Copiar SOLO los assets procesados por Vite
   eleventyConfig.addPassthroughCopy({
     "dist/assets": "assets",
   });
 
-  // Shortcode Vite
   eleventyConfig.addShortcode("vite", function (entry) {
     const isDev = process.env.NODE_ENV !== "production";
+    if (isDev) {
+      return `<script type="module" src="http://localhost:5173/${entry}"></script>`;
+    }
+
     const manifestPath = path.join(
       process.cwd(),
       "dist",
       ".vite",
       "manifest.json",
     );
-
-    if (isDev) {
-      return `<script type="module" src="http://localhost:5173/${entry}"></script>`;
-    }
-
     if (!fs.existsSync(manifestPath)) {
       throw new Error("❌ dist/.vite/manifest.json not found");
     }
