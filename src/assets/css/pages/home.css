@@ -123,7 +123,7 @@ Styles of hero section
 }
 
 .proof__score {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: 1.2rem;
   font-weight: 300;
   color: var(--ink);
@@ -261,7 +261,8 @@ Styles of services section
   position: absolute;
   top: 18px;
   right: 18px;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
+
   font-size: var(--fs-p-base);
   font-weight: 300;
   letter-spacing: 0.12em;
@@ -324,7 +325,7 @@ Styles of services section
 
 /* title */
 .svc-tile__title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-weight: 300;
   line-height: 1.08;
   letter-spacing: -0.01em;
@@ -500,7 +501,7 @@ Styles of testimonials section
 
 /* text */
 .review-card__text {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.55;
@@ -726,7 +727,7 @@ Styles of company section
 }
 
 .img-strip em {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: 12px;
   font-style: italic;
   color: var(--gold);
@@ -752,9 +753,10 @@ Styles of company section
 }
 
 .stat__n {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
+
   font-size: clamp(32px, 3.5vw, 48px);
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1;
   display: block;
   margin-bottom: 5px;
@@ -787,7 +789,7 @@ Styles of company section
 }
 
 .company-intro {
-  font-family: "Manrope", serif;
+  font-family: var(--font-secondary);
   font-weight: 300;
   line-height: 1.58;
   color: var(--color-heading);
@@ -882,7 +884,7 @@ Styles of company section
 }
 
 .vnum {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: 10px;
   font-weight: 200;
   letter-spacing: 0.1em;
@@ -891,7 +893,7 @@ Styles of company section
   margin-bottom: 8px;
 }
 .vname {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: clamp(17px, 1.6vw, 22px);
   font-weight: 300;
   line-height: 1.1;
@@ -907,7 +909,7 @@ Styles of company section
 
 .qtext {
   margin-top: 1rem;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: clamp(15px, 1.6vw, 20px);
   font-weight: 200;
   font-style: italic;
@@ -963,7 +965,7 @@ Styles of FAQs section
 }
 
 .faq__question {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: clamp(1.1rem, 2.2vw, 1.5rem);
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -1035,7 +1037,7 @@ Styles of FAQs section
 
 /* ── Index number ── */
 .faq__index {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-style: italic;
   font-size: 0.75rem;
   /* color: var(--muted); */
@@ -1083,7 +1085,7 @@ Styles of contact section
 }
 
 .contact-left h2 {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
   font-size: clamp(2.2rem, 4.5vw, 3.6rem);
   font-weight: 300;
   color: var(--color-heading);
@@ -1312,7 +1314,8 @@ Styles of contact section
 }
 
 .form-success__title {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-primary);
+
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 300;
   color: var(--color-heading);
@@ -1389,7 +1392,7 @@ Styles of contact section
   border: 0.5px solid var(--color-border);
   border-radius: 3px;
   padding: 0.85rem 1rem;
-  font-family: "Manrope", sans-serif;
+  font-family: var(--font-secondary);
   font-size: 0.88rem;
   font-weight: 300;
   color: var(--color-heading);
