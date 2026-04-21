@@ -111,7 +111,7 @@ body.scroll-locked {
 }
 
 html.js-loading #page,
-header {
+html.js-loading header {
   opacity: 0;
 }
 
@@ -221,7 +221,7 @@ Opacity Class
   width: 1px;
   align-self: center;
   height: 1.2rem;
-  color: var(---color-primary);
+  color: var(--color-primary);
 }
 
 /*
@@ -289,7 +289,7 @@ Button Class
 .cta-btn:hover {
   background: var(--color-bg-main);
   border: 1px solid var(--color-secondary);
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 .cta-btn:hover p,

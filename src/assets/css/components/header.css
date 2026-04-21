@@ -40,6 +40,12 @@ header .cta-header {
   transform: translateX(5px);
 }
 
+.menu-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
 .left-header {
   display: flex;
 }

@@ -1,6 +1,3 @@
-// Hide page immediately — before any paint
-document.getElementById("page").style.opacity = "0";
-document.getElementById("header").style.opacity = "0";
 import { gsap } from "./base.js";
 import { initMenu } from "./animations/menu.js";
 import { initHero } from "./animations/hero.js";
@@ -19,6 +16,14 @@ import { initSectionHeadings } from "./animations/headings.js";
 import { initServices } from "./animations/services.js";
 import { initTestimonials } from "./animations/testimonials.js";
 import { initCompany } from "./animations/company.js";
+
+const scheduleNonCritical = (callback) => {
+  if ("requestIdleCallback" in window) {
+    window.requestIdleCallback(callback, { timeout: 1200 });
+    return;
+  }
+  window.setTimeout(callback, 1);
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   // Remove the class BEFORE fonts/images load
@@ -42,23 +47,18 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5. Services bento tile entrance
   initServices();
 
-  // 6. Testimonials — masonry card stagger
-  initTestimonials();
-
-  // 7. Company — image, stats count-up, values grid
-  initCompany();
-
-  // 8. FAQ — SplitText questions + parallax index numbers
-  initFaq();
-  initFaqReveal();
-
-  // 9. Contact — clip-path form reveal + left-column entrance
-  initContact();
-
   // ── Utilities ──
   initMenu();
   initOptLang();
   initSmoothScroll();
-  initMouse();
   initBackToTop();
+
+  // Defer below-the-fold work until browser is idle.
+  scheduleNonCritical(() => {
+    initTestimonials();
+    initCompany();
+    initFaq();
+    initFaqReveal();
+    initContact();
+  });
 });

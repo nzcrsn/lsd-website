@@ -3,6 +3,7 @@ import { guardMotion } from "../motion.js";
 
 export function initMenu() {
   const menuBtn = document.querySelector(".menu-btn");
+  if (!menuBtn) return;
 
   const tl = gsap.timeline({
     paused: true,
@@ -40,6 +41,8 @@ export function initMenu() {
 
     document.body.style.top = `-${scrollY}px`;
     document.body.classList.add("scroll-locked");
+    menuBtn.setAttribute("aria-expanded", "true");
+    menuBtn.setAttribute("aria-label", "Close menu");
   }
 
   function closeMenu() {
@@ -49,6 +52,8 @@ export function initMenu() {
     document.body.style.top = "";
 
     window.scrollTo(0, storedScrollY);
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open menu");
   }
 
   menuBtn.addEventListener("click", () => {
