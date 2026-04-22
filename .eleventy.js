@@ -3,8 +3,8 @@ import fs from "fs";
 const isDev = process.env.NODE_ENV !== "production";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "dist/assets/*.css": "assets" });
-  eleventyConfig.addPassthroughCopy({ "dist/assets/*.js": "assets" });
+  eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.js": "assets" });
+  eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.css": "assets" });
   eleventyConfig.addPassthroughCopy("src/assets/favicon");
   eleventyConfig.addPassthroughCopy("src/assets/fonts");
   eleventyConfig.addPassthroughCopy("src/assets/icons");
