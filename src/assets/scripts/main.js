@@ -16,6 +16,8 @@ import { initSectionHeadings } from "./animations/headings.js";
 import { initServices } from "./animations/services.js";
 import { initTestimonials } from "./animations/testimonials.js";
 import { initCompany } from "./animations/company.js";
+// src/assets/js/main.js
+import "/assets/styles/main.css";
 
 const scheduleNonCritical = (callback) => {
   if ("requestIdleCallback" in window) {

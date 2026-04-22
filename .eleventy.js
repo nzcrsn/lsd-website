@@ -1,39 +1,28 @@
 import fs from "fs";
-import path from "path";
+
+const isDev = process.env.NODE_ENV !== "production";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/assets", {
-    filter: (p) => !p.includes("js"),
-  });
+  eleventyConfig.addPassthroughCopy({ "dist/assets/*.css": "assets" });
+  eleventyConfig.addPassthroughCopy({ "dist/assets/*.js": "assets" });
+  eleventyConfig.addPassthroughCopy("src/assets/favicon");
+  eleventyConfig.addPassthroughCopy("src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("src/assets/icons");
+  eleventyConfig.addPassthroughCopy("src/assets/media");
 
-  eleventyConfig.addPassthroughCopy({
-    "dist/assets": "assets",
-  });
+  const manifest = !isDev
+    ? JSON.parse(fs.readFileSync("dist/.vite/manifest.json", "utf-8"))
+    : null;
 
-  eleventyConfig.addShortcode("vite", function (entry) {
-    const isDev = process.env.NODE_ENV !== "production";
+  eleventyConfig.addShortcode("vite", function (route) {
     if (isDev) {
-      return `<script type="module" src="http://localhost:5173/${entry}"></script>`;
+      return `<script type="module" src="http://localhost:5173/${route}"></script>`;
     }
+    const { file, css = [] } = manifest[route];
+    const script = `<script type="module" src="/assets/${entry.file}"></script>`;
+    const style = `<link rel="stylesheet" href="/assets/${entry.css[0]}">`;
 
-    const manifestPath = path.join(
-      process.cwd(),
-      "dist",
-      ".vite",
-      "manifest.json",
-    );
-    if (!fs.existsSync(manifestPath)) {
-      throw new Error("❌ dist/.vite/manifest.json not found");
-    }
-
-    const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
-    const file = manifest[entry];
-
-    if (!file) {
-      throw new Error(`❌ Entry "${entry}" not found in Vite manifest`);
-    }
-
-    return `<script type="module" src="/${file.file}"></script>`;
+    return `${script}\n${style}`;
   });
 
   return {

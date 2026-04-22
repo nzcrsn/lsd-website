@@ -226,16 +226,16 @@ Styles of services section
 }
 
 .svc-tile--lift .svc-tile__photo {
-  background-image: url("../../images/img-15.webp");
+  background-image: url("/assets/media/images/img-15.webp");
 }
 .svc-tile--trucks .svc-tile__photo {
-  background-image: url("../../images/chofe.webp");
+  background-image: url("/assets/media/images/chofe.webp");
 }
 .svc-tile--move .svc-tile__photo {
-  background-image: url("../../images/level.webp");
+  background-image: url("/assets/media/images/level.webp");
 }
 .svc-tile--supply .svc-tile__photo {
-  background-image: url("../../images/boxes.webp");
+  background-image: url("/assets/media/images/boxes.webp");
   background-position: center 40%;
 }
 

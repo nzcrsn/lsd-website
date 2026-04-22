@@ -1,0 +1,16 @@
+/* Normalize first */
+@import "./core/normalize.css";
+
+/* Core styles */
+@import "./core/font-family.css";
+@import "./core/global.css";
+@import "./core/layout.css";
+@import "./core/lenis.css";
+
+/* Components */
+@import "./components/header.css";
+@import "./components/footer.css";
+@import "./components/menu.css";
+
+/* Pages */
+@import "./pages/home.css";
