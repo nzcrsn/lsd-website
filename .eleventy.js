@@ -19,8 +19,8 @@ export default function (eleventyConfig) {
       return `<script type="module" src="http://localhost:5173/${route}"></script>`;
     }
     const { file, css = [] } = manifest[route];
-    const script = `<script type="module" src="/assets/${file}"></script>`;
-    const style = `<link rel="stylesheet" href="/assets/${css[0]}">`;
+    const script = `<script type="module" src="/${file}"></script>`;
+    const style = `<link rel="stylesheet" href="/${css[0]}">`;
 
     return `${script}\n${style}`;
   });
