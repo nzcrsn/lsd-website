@@ -1,0 +1,24 @@
+// utils/resize-images.js
+import sharp from "sharp";
+
+const images = [
+  {
+    input: "src/assets/media/images/lift-employee.webp",
+    name: "lift-employee",
+    sizes: [400, 800, 1027],
+  },
+  {
+    input: "src/assets/media/images/company-2.webp",
+    name: "company-2",
+    sizes: [400, 800, 1200],
+  },
+];
+
+for (const { input, name, sizes } of images) {
+  for (const size of sizes) {
+    await sharp(input)
+      .resize(size)
+      .webp({ quality: 80 })
+      .toFile(`src/assets/media/images/${name}-${size}.webp`);
+  }
+}

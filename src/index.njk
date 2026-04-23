@@ -89,7 +89,15 @@ pageKey: home
     <div class="item">
       <img
         src="/assets/media/images/img-8.webp"
-        alt=""
+        srcset="
+          /assets/media/images/img-8-400.webp   400w,
+          /assets/media/images/img-8-800.webp   800w,
+          /assets/media/images/img-8-1200.webp 1200w
+        "
+        sizes="(max-width: 768px) 100vw, 637px"
+        width="637"
+        height="643"
+        alt="Lift Service local"
         loading="eager"
         decoding="async"
         fetchpriority="high"
@@ -99,9 +107,18 @@ pageKey: home
     <div class="item medium">
       <img
         src="/assets/media/images/lift-employee.webp"
-        alt=""
-        loading="lazy"
+        srcset="
+          /assets/media/images/lift-employee-400.webp   400w,
+          /assets/media/images/lift-employee-800.webp   800w,
+          /assets/media/images/lift-employee-1027.webp 1027w
+        "
+        sizes="(max-width: 768px) 100vw, 362px"
+        width="362"
+        height="644"
+        alt="Lift Service employee"
+        loading="eager"
         decoding="async"
+        fetchpriority="high"
       />
     </div>
   </div>
@@ -837,7 +854,16 @@ pageKey: home
       <div class="img-frame">
         <img
           src="/assets/media/images/company-2.webp"
-          alt="Lift Service — Bruxelles"
+          srcset="
+            /assets/media/images/company-2-400.webp   400w,
+            /assets/media/images/company-2-800.webp   800w,
+            /assets/media/images/company-2-1200.webp 1200w
+          "
+          sizes="(max-width: 768px) 100vw, 637px"
+          width="637"
+          height="643"
+          alt="Lift Service local"
+          loading="lazy"
         />
         <div class="img-strip">
           <span>Nunez Associés SRL — Bruxelles</span>
