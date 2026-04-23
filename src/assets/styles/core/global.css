@@ -242,7 +242,7 @@ Button Class
   text-align: left;
 
   border-radius: var(--border-radius);
-  font-weight: 400;
+  font-weight: 300;
   /* cursor: pointer; */
   transition: all 0.3s;
   border: 1px solid var(--color-secondary);

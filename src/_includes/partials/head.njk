@@ -65,6 +65,16 @@
   <script>
     document.documentElement.className += " js-loading";
   </script>
-  <link rel="stylesheet" href="/assets/main.css" />
+
+  <link
+    rel="preload"
+    href="/assets/main.css"
+    as="style"
+    onload="
+      this.onload = null;
+      this.rel = 'stylesheet';
+    "
+  />
+  <noscript><link rel="stylesheet" href="/assets/main.css" /></noscript>
   {% vite "assets/scripts/main.js" %}
 </head>

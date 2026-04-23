@@ -33,7 +33,7 @@ Styles of hero section
   width: 100%;
   font-weight: 300;
   line-height: 1.28;
-  margin: 0; /*re-write h2*/
+  margin: 0;
   margin-top: 1rem;
 }
 
@@ -57,7 +57,7 @@ Styles of hero section
 
 .hero-stat__number {
   font-size: var(--fs-p-base);
-  font-weight: 600;
+  font-weight: bolder;
   color: var(--color-heading);
 }
 
@@ -729,7 +729,6 @@ Styles of company section
 .img-strip em {
   font-family: var(--font-primary);
   font-size: 12px;
-  font-style: italic;
   color: var(--gold);
 }
 
@@ -911,9 +910,8 @@ Styles of company section
   margin-top: 1rem;
   font-family: var(--font-primary);
   font-size: clamp(15px, 1.6vw, 20px);
-  font-weight: 200;
+  font-weight: 300;
   font-style: italic;
-  line-height: 1.35;
   color: var(--ink);
   border-left: 1.5px solid var(--accent);
   padding-left: 18px;
