@@ -14,7 +14,9 @@ export default function (eleventyConfig) {
     });
   } else {
     sharedAssets.forEach((dir) =>
-      eleventyConfig.addPassthroughCopy({ [`src/assets/${dir}`]: "assets" }),
+      eleventyConfig.addPassthroughCopy({
+        [`src/assets/${dir}`]: `assets/${dir}`,
+      }),
     );
     eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.js": "assets" });
     eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.css": "assets" });
