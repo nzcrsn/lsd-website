@@ -24,7 +24,9 @@ export default function (eleventyConfig) {
     if (isDev) {
       return `<script type="module" src="http://localhost:5173/${route}"></script>`;
     }
-    const manifest = fs.readFileSync("dist/.vite/manifest.json");
+    const manifest = JSON.parse(
+      fs.readFileSync("dist/.vite/manifest.json", "utf-8"),
+    );
     const { file } = manifest[route];
     const script = `<script type="module" src="/${file}"></script>`;
 
