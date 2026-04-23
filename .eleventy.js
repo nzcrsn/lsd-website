@@ -1,26 +1,19 @@
 import fs from "fs";
+import { buildCSS } from "./utils/build-css.js";
 
 const isDev = process.env.NODE_ENV !== "production";
 
 export default function (eleventyConfig) {
-  const sharedAssets = ["fonts", "media", "favicon", "icons"];
+  eleventyConfig.addWatchTarget("src/assets/styles");
+  eleventyConfig.on("eleventy.before", async () => {
+    buildCSS(!isDev);
+  });
 
-  if (isDev) {
-    sharedAssets.forEach((dir) =>
-      eleventyConfig.addPassthroughCopy(`src/assets/${dir}`),
-    );
+  ["fonts", "media", "favicon", "icons"].forEach((dir) =>
     eleventyConfig.addPassthroughCopy({
-      "dist/assets/main.css": "assets/main.css",
-    });
-  } else {
-    sharedAssets.forEach((dir) =>
-      eleventyConfig.addPassthroughCopy({
-        [`src/assets/${dir}`]: `assets/${dir}`,
-      }),
-    );
-    eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.js": "assets" });
-    eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.css": "assets" });
-  }
+      [`src/assets/${dir}`]: `assets/${dir}`,
+    }),
+  );
 
   eleventyConfig.addShortcode("vite", function (route) {
     if (isDev) {
@@ -34,6 +27,15 @@ export default function (eleventyConfig) {
 
     return `${script}`;
   });
+
+  if (isDev) {
+    eleventyConfig.addPassthroughCopy({
+      "dist/assets/main.css": "assets/main.css",
+    });
+  } else {
+    eleventyConfig.addPassthroughCopy({ "dist/assets/*.js": "assets" });
+    eleventyConfig.addPassthroughCopy({ "dist/assets/main.css": "assets" });
+  }
 
   return {
     dir: {

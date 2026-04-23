@@ -5,8 +5,8 @@
   "scripts": {
     "eleventy": "eleventy --serve",
     "vite": "vite",
-    "dev": "concurrently \"eleventy --serve\" \"vite\" \"node utils/watch-css.js\"",
-    "build": "vite build && node utils/build-css.js && eleventy"
+    "dev": "concurrently \"eleventy --serve\" \"vite\"",
+    "build": "vite build && eleventy"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,6 @@
     "vite": "^8.0.9"
   },
   "devDependencies": {
-    "chokidar": "^3.6.0",
     "concurrently": "^9.2.1",
     "lightningcss": "^1.32.0",
     "sharp": "^0.34.5"
