@@ -12,6 +12,11 @@ const images = [
     name: "company-2",
     sizes: [400, 800, 1200],
   },
+  {
+    input: "src/assets/media/images/img-8.webp",
+    name: "img-8",
+    sizes: [300, 600, 1200],
+  },
 ];
 
 for (const { input, name, sizes } of images) {
