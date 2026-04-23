@@ -55,16 +55,7 @@ function _animateForm() {
     duration: 0.55,
     stagger: 0.09,
     ease: "power3.out",
-  }).from(
-    ".form-submit",
-    {
-      opacity: 0,
-      y: 12,
-      duration: 0.45,
-      ease: "power2.out",
-    },
-    "-=0.2",
-  );
+  });
 }
 
 /* ── Form submission ── */

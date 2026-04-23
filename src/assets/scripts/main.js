@@ -1,7 +1,7 @@
 import { gsap } from "./base.js";
 import { initMenu } from "./animations/menu.js";
 import { initHero } from "./animations/hero.js";
-// import { setHeaderHeight } from "./utils/config.js";
+
 import { initFaq, initFaqReveal } from "./animations/faq.js";
 
 import { initContact } from "./animations/contact.js";

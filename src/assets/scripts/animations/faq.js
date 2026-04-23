@@ -141,11 +141,4 @@ export function initFaqReveal() {
       start: "top 85%",
     },
   });
-
-  gsap.from(".faq__header", {
-    opacity: 0,
-    y: 20,
-    duration: 0.9,
-    ease: "power3.out",
-  });
 }

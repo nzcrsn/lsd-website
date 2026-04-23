@@ -3,26 +3,32 @@ import fs from "fs";
 const isDev = process.env.NODE_ENV !== "production";
 
 export default function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.js": "assets" });
-  eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.css": "assets" });
-  eleventyConfig.addPassthroughCopy("src/assets/favicon");
-  eleventyConfig.addPassthroughCopy("src/assets/fonts");
-  eleventyConfig.addPassthroughCopy("src/assets/icons");
-  eleventyConfig.addPassthroughCopy("src/assets/media");
+  const sharedAssets = ["fonts", "media", "favicon", "icons"];
 
-  const manifest = !isDev
-    ? JSON.parse(fs.readFileSync("dist/.vite/manifest.json", "utf-8"))
-    : null;
+  if (isDev) {
+    sharedAssets.forEach((dir) =>
+      eleventyConfig.addPassthroughCopy(`src/assets/${dir}`),
+    );
+    eleventyConfig.addPassthroughCopy({
+      "dist/assets/main.css": "assets/main.css",
+    });
+  } else {
+    sharedAssets.forEach((dir) =>
+      eleventyConfig.addPassthroughCopy({ [`src/assets/${dir}`]: "assets" }),
+    );
+    eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.js": "assets" });
+    eleventyConfig.addPassthroughCopy({ "dist/assets/**/*.css": "assets" });
+  }
 
   eleventyConfig.addShortcode("vite", function (route) {
     if (isDev) {
       return `<script type="module" src="http://localhost:5173/${route}"></script>`;
     }
-    const { file, css = [] } = manifest[route];
+    const manifest = fs.readFileSync("dist/.vite/manifest.json");
+    const { file } = manifest[route];
     const script = `<script type="module" src="/${file}"></script>`;
-    const style = `<link rel="stylesheet" href="/${css[0]}">`;
 
-    return `${script}\n${style}`;
+    return `${script}`;
   });
 
   return {
