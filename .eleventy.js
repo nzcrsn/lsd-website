@@ -8,13 +8,6 @@ export default function (eleventyConfig) {
   eleventyConfig.on("eleventy.before", async () => {
     buildCSS(!isDev);
   });
-
-  ["fonts", "media", "favicon", "icons"].forEach((dir) =>
-    eleventyConfig.addPassthroughCopy({
-      [`src/assets/${dir}`]: `assets/${dir}`,
-    }),
-  );
-
   eleventyConfig.addShortcode("vite", function (route) {
     if (isDev) {
       return `<script type="module" src="http://localhost:5173/${route}"></script>`;
@@ -28,13 +21,18 @@ export default function (eleventyConfig) {
     return `${script}`;
   });
 
+  ["fonts", "media", "favicon", "icons"].forEach((dir) =>
+    eleventyConfig.addPassthroughCopy({
+      [`src/assets/${dir}`]: `assets/${dir}`,
+    }),
+  );
+
   if (isDev) {
     eleventyConfig.addPassthroughCopy({
       "dist/assets/main.css": "assets/main.css",
     });
   } else {
-    eleventyConfig.addPassthroughCopy({ "dist/assets/*.js": "assets" });
-    eleventyConfig.addPassthroughCopy({ "dist/assets/main.css": "assets" });
+    eleventyConfig.addPassthroughCopy({ "dist/assets": "assets" });
   }
 
   return {

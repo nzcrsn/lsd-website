@@ -2,7 +2,6 @@ import { bundle } from "lightningcss";
 import { writeFileSync, mkdirSync } from "fs";
 
 export function buildCSS(minify = true) {
-  console.log("change");
   const { code } = bundle({
     filename: "src/assets/styles/main.css",
     minify: minify,
