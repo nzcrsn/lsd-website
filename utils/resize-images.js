@@ -15,7 +15,7 @@ const images = [
   {
     input: "src/assets/media/images/img-8.webp",
     name: "img-8",
-    sizes: [400, 600, 800],
+    sizes: [200, 400, 900, 1200],
   },
 ];
 
