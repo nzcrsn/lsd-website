@@ -11,7 +11,6 @@ import {
   initSmoothScroll,
 } from "./animations/header.js";
 import { initBackToTop } from "./animations/to-top-button.js";
-import { initMouse } from "./animations/mouse.js";
 import { initSectionHeadings } from "./animations/headings.js";
 import { initServices } from "./animations/services.js";
 import { initTestimonials } from "./animations/testimonials.js";
@@ -37,9 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initHeader();
   initHero();
-
-  // 3. Cursor hover states — touches every interaction site-wide
-  initMouse();
 
   // 4. Section h2 + eyebrow reveals — unifies feel across all sections
   initSectionHeadings();
