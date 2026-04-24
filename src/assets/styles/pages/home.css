@@ -215,28 +215,22 @@ Styles of services section
   min-height: 260px;
 }
 
-/* ── Photo background ── */
+/* Update the base rule: */
 .svc-tile__photo {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center;
-  transform: scale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.04);
   transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 
-.svc-tile--lift .svc-tile__photo {
-  background-image: url("/assets/media/images/img-15.webp");
-}
-.svc-tile--trucks .svc-tile__photo {
-  background-image: url("/assets/media/images/chofe.webp");
-}
-.svc-tile--move .svc-tile__photo {
-  background-image: url("/assets/media/images/level.webp");
-}
+/* The supply tile had a custom position — replicate it: */
 .svc-tile--supply .svc-tile__photo {
-  background-image: url("/assets/media/images/boxes.webp");
-  background-position: center 40%;
+  object-position: center 40%;
 }
 
 /* ── Dark overlay ── */
@@ -288,24 +282,11 @@ Styles of services section
     height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* .svc-tile--lift .svc-tile__bracket {
-  width: 20px;
-  height: 20px;
-  top: 24px;
-  left: 24px;
-} */
-
 .svc-tile:hover .svc-tile__bracket {
   width: 36px;
   height: 36px;
 }
 
-/* .svc-tile--lift:hover .svc-tile__bracket {
-  width: 44px;
-  height: 44px;
-} */
-
-/* ── Content ── */
 .svc-tile__content {
   position: absolute;
   inset: 0;
@@ -315,13 +296,6 @@ Styles of services section
   padding: 20px 22px;
   z-index: 2;
 }
-
-/* .svc-tile--lift .svc-tile__content {
-  padding: 28px 32px;
-}
-.svc-tile--supply .svc-tile__content {
-  padding: 22px 26px;
-} */
 
 /* title */
 .svc-tile__title {
@@ -338,28 +312,10 @@ Styles of services section
   transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* .svc-tile--lift .svc-tile__title {
-  font-size: clamp(26px, 2.6vw, 40px);
-} */
-
-/* .svc-tile--supply .svc-tile__title {
-  font-size: clamp(20px, 1.8vw, 26px);
-} */
-
 .svc-tile:hover .svc-tile__title {
   transform: translateY(-2px);
 }
 
-/* @media (max-width: 599px) {
-  .svc-tile__title {
-    font-size: 22px !important;
-  }
-  .svc-tile--lift .svc-tile__title {
-    font-size: 28px !important;
-  }
-} */
-
-/* divider */
 .svc-tile__divider {
   width: 0;
   height: 1px;
@@ -370,12 +326,6 @@ Styles of services section
 .svc-tile:hover .svc-tile__divider {
   width: 100%;
 }
-
-/* @media (max-width: 599px) {
-  .svc-tile__divider {
-    width: 36px;
-  }
-} */
 
 /* description */
 .svc-tile__desc {
@@ -389,26 +339,15 @@ Styles of services section
     max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     opacity 0.38s 0.05s;
 }
+
 .svc-tile--lift .svc-tile__desc {
   font-size: 12px;
 }
+
 .svc-tile:hover .svc-tile__desc {
   max-height: 60px;
   opacity: 1;
 }
-
-/* @media (max-width: 599px) {
-  .svc-tile__desc {
-    max-height: 60px;
-    opacity: 1;
-  }
-} */
-
-/* init hidden for animation */
-/* .svc-tile {
-  opacity: 0;
-} */
-/**/
 
 .cta-services {
   margin-top: 2rem;
@@ -1545,8 +1484,6 @@ Media Queries
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    /* height: 62vh; */
-    /* max-height: 220px; */
   }
 
   .svc-tile--lift {

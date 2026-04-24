@@ -29,7 +29,7 @@ export default function (eleventyConfig) {
 
   if (isDev) {
     eleventyConfig.addPassthroughCopy({
-      "dist/assets/main.css": "assets",
+      "dist/assets": "assets",
     });
   } else {
     eleventyConfig.addPassthroughCopy({ "dist/assets": "assets" });
