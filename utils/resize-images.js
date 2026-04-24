@@ -5,7 +5,7 @@ const images = [
   {
     input: "src/assets/media/images/lift-employee.webp",
     name: "lift-employee",
-    sizes: [400, 800, 1027],
+    sizes: [300, 600, 10200],
   },
   {
     input: "src/assets/media/images/company-2.webp",

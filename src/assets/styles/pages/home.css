@@ -153,7 +153,7 @@ Styles of hero section
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
-  grid-template-rows: repeat(3, minmax(80px, 180px));
+  grid-template-rows: repeat(3, minmax(80px, 25vw));
   grid-auto-flow: dense;
 }
 
@@ -1532,7 +1532,7 @@ Media Queries
   }
 
   .grid {
-    grid-template-rows: repeat(3, minmax(180px, 1fr));
+    grid-template-rows: repeat(3, minmax(180px, 28vw));
   }
   /* End styles of hero section*/
 
@@ -1670,6 +1670,7 @@ Media Queries
   .grid {
     max-width: 40%;
     grid-template-columns: repeat(2, minmax(180px, 1fr));
+
     gap: 0.5rem;
     overflow: hidden;
   }
