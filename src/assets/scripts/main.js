@@ -1,60 +1,60 @@
-import { gsap } from "./base.js";
-import { initMenu } from "./animations/menu.js";
-import { initHero } from "./animations/hero.js";
+// import { gsap } from "./base.js";
+// import { initMenu } from "./animations/menu.js";
+// import { initHero } from "./animations/hero.js";
 
-import { initFaq, initFaqReveal } from "./animations/faq.js";
+// import {
+//   initHeader,
+//   initOptLang,
+//   initSmoothScroll,
+// } from "./animations/header.js";
+// import { initBackToTop } from "./animations/to-top-button.js";
+// import { initSectionHeadings } from "./animations/headings.js";
 
-import { initContact } from "./animations/contact.js";
-import {
-  initHeader,
-  initOptLang,
-  initSmoothScroll,
-} from "./animations/header.js";
-import { initBackToTop } from "./animations/to-top-button.js";
-import { initSectionHeadings } from "./animations/headings.js";
-import { initServices } from "./animations/services.js";
-import { initTestimonials } from "./animations/testimonials.js";
-import { initCompany } from "./animations/company.js";
+// // import { initFaq, initFaqReveal } from "./animations/faq.js";
+// // import { initContact } from "./animations/contact.js";
+// // import { initServices } from "./animations/services.js";
+// // import { initTestimonials } from "./animations/testimonials.js";
+// // import { initCompany } from "./animations/company.js";
 
-const scheduleNonCritical = (callback) => {
-  if ("requestIdleCallback" in window) {
-    window.requestIdleCallback(callback, { timeout: 1200 });
-    return;
-  }
-  window.setTimeout(callback, 1);
-};
+// const scheduleNonCritical = (callback) => {
+//   if ("requestIdleCallback" in window) {
+//     window.requestIdleCallback(callback, { timeout: 1200 });
+//     return;
+//   }
+//   window.setTimeout(callback, 1);
+// };
 
-document.addEventListener("DOMContentLoaded", () => {
-  // Remove the class BEFORE fonts/images load
-  document.documentElement.classList.remove("js-loading");
+// document.addEventListener("DOMContentLoaded", () => {
+//   // Remove the class BEFORE fonts/images load
+//   document.documentElement.classList.remove("js-loading");
 
-  gsap.to(["#page", "header"], {
-    opacity: 1,
-    duration: 0.5,
-    ease: "power2.out",
-  });
+//   gsap.to(["#page", "header"], {
+//     opacity: 1,
+//     duration: 0.5,
+//     // ease: "power2.out",
+//   });
 
-  initHeader();
-  initHero();
+//   initHeader();
+//   initHero();
 
-  // 4. Section h2 + eyebrow reveals — unifies feel across all sections
-  initSectionHeadings();
+//   // 4. Section h2 + eyebrow reveals — unifies feel across all sections
+//   initSectionHeadings();
 
-  // 5. Services bento tile entrance
-  initServices();
+//   // 5. Services bento tile entrance
+//   // initServices();
 
-  // ── Utilities ──
-  initMenu();
-  initOptLang();
-  initSmoothScroll();
-  initBackToTop();
+//   // ── Utilities ──
+//   initMenu();
+//   initOptLang();
+//   initSmoothScroll();
+//   initBackToTop();
 
-  // Defer below-the-fold work until browser is idle.
-  scheduleNonCritical(() => {
-    initTestimonials();
-    initCompany();
-    initFaq();
-    initFaqReveal();
-    initContact();
-  });
-});
+//   // Defer below-the-fold work until browser is idle.
+//   scheduleNonCritical(() => {
+//     // initTestimonials();
+//     // initCompany();
+//     // initFaq();
+//     // initFaqReveal();
+//     // initContact();
+//   });
+// });

@@ -110,11 +110,6 @@ body.scroll-locked {
   width: 100%;
 }
 
-html.js-loading #page,
-html.js-loading header {
-  opacity: 0;
-}
-
 ul {
   list-style: none;
 }
@@ -305,6 +300,7 @@ Button Class
 .cta-btn:hover svg {
   transform: rotate(45deg);
 }
+
 /*
 ====================================================== 
 Block Scroll
@@ -446,10 +442,6 @@ Media Queries
 }
 
 @media screen and (min-width: 1400px) {
-  body {
-    cursor: none;
-  }
-
   .hero-section h1 {
     font-size: var(--fs-h1-xxl);
   }
