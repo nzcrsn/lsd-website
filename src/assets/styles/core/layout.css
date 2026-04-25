@@ -3,13 +3,13 @@
 Layout of main
 ====================================================== 
 */
-main {
+/* main {
   display: flex;
   flex-direction: column;
   gap: 8rem;
   max-width: 1400px;
   margin: 0 auto;
-}
+} */
 
 /*
 ====================================================== 
@@ -17,7 +17,7 @@ Layout of sections
 ====================================================== 
 */
 
-.hero-section,
+/* .hero-section, */
 .services-section,
 .testimonials-section,
 .contact-section,
@@ -27,7 +27,6 @@ Layout of sections
   display: flex;
   flex-direction: column;
   padding: 0 var(--padding-sm) 0;
-  background-color: var(--bg-body);
 }
 
 /*

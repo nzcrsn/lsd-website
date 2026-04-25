@@ -1,18 +1,18 @@
-@font-face {
+/* @font-face {
   font-family: "Manrope";
   src: url("/assets/fonts/Manrope-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: "Manrope";
   src: url("/assets/fonts/Manrope-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* @font-face {
   font-family: "Manrope";
@@ -23,19 +23,53 @@
 } */
 
 /* h2 - h6*/
-@font-face {
+/* @font-face {
   font-family: "Cormorant Garamond";
   src: url("/assets/fonts/CormorantGaramond-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* Titles */
-@font-face {
+/* @font-face {
   font-family: "Cormorant Garamond";
   src: url("/assets/fonts/CormorantGaramond-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-} /*Used*/
+}  */
+/* 
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/Manrope-Font.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+} */
+
+/* @font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/CormorantGaramond-Font.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url(/assets/fonts/CormorantGaramond-Font-subset.woff2) format("woff2");
+  unicode-range:
+    U+A, U+20, U+21, U+25-29, U+2B-3A, U+3F-57, U+5A, U+61-7A, U+A9, U+B7, U+C0,
+    U+C9, U+E0, U+E2, U+E7-EA, U+EE, U+F1, U+FA, U+FB, U+153, U+2014, U+2019,
+    U+2026, U+1F3C6, U+1F44D;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url(/assets/fonts/Manrope-Font-subset.woff2) format("woff2");
+  unicode-range:
+    U+A, U+20, U+21, U+25-29, U+2B-3A, U+3F-57, U+5A, U+61-7A, U+A9, U+B7, U+C0,
+    U+C9, U+E0, U+E2, U+E7-EA, U+EE, U+F1, U+FA, U+FB, U+153, U+2014, U+2019,
+    U+2026, U+1F3C6, U+1F44D;
+}

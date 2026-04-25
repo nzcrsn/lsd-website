@@ -63,6 +63,123 @@
 
   <link
     rel="preload"
+    href="/assets/fonts/CormorantGaramond-Font-subset.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
+  <style>
+    :root {
+      /* Fonts */
+      --font-primary: "Cormorant Garamond", Georgia, serif;
+      --font-secondary: "Manrope", system-ui, sans-serif;
+
+      --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
+
+      --color-bg-main: #f5f3e5;
+      --color-heading: #4c3c2c;
+
+      --height-header: 80px;
+      --padding-sm: 24px;
+
+      --fs-p-sm: clamp(0.8rem, -0.04vi + 0.81rem, 0.77rem);
+    }
+
+    html {
+      box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-secondary);
+      background: var(--color-bg-main);
+    }
+
+    header {
+      position: fixed;
+      top: 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem var(--padding-sm);
+      z-index: 3;
+      width: 100%;
+      height: var(--height-header);
+      background-color: var(--color-bg-main);
+    }
+
+    header .logo {
+      font-size: var(--fs-p-sm);
+      font-weight: 400;
+      color: var(--color-heading);
+    }
+
+    header .logo .brand {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+
+    #menu-icon {
+      width: 32px;
+      height: 32px;
+      /* transform: translateX(-5px); */
+    }
+
+    .left-header {
+      display: flex;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 8rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .hero-section {
+      gap: 3rem;
+      min-height: 100svh;
+      margin-top: var(--height-header);
+      padding: 0 var(--padding-sm) 0;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 100svh;
+    }
+
+    .hero-section .copy {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-family: var(--font-primary);
+      color: var(--color-heading);
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      font-size: var(--fs-h1-lg);
+    }
+
+    .copy .sub-heading {
+      font-family: var(--font-secondary);
+      width: 100%;
+      font-weight: 300;
+      line-height: 1.28;
+      margin: 0;
+      margin-top: 1rem;
+    }
+  </style>
+  <link
+    rel="preload"
     href="/assets/main.css"
     as="style"
     onload="
@@ -70,7 +187,7 @@
       this.rel = 'stylesheet';
     "
   />
-  <script></script>
+
   <link rel="stylesheet" href="/assets/main.css" />
   {% vite "assets/scripts/main.js" %}
 </head>

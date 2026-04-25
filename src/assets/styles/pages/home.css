@@ -4,30 +4,29 @@ Styles of hero section
 ====================================================== 
 */
 
-.hero-section {
+/* .hero-section {
   gap: 3rem;
   min-height: 100svh;
   margin-top: var(--height-header);
   display: flex;
   flex-direction: column;
   position: relative;
-}
+} */
 
-.hero-section .copy {
+/* .hero-section .copy {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.hero-section .copy .heading {
-  font-family: var(--font-primary);
-  font-weight: 700;
+/* .hero-section .copy .heading {
   font-style: normal;
   font-size: var(--fs-h1-lg);
   letter-spacing: 0.02em;
   line-height: 1.1;
-  margin: 0; /*re-write h1*/
-}
+  margin: 0;
+} */
 
+/* 
 .copy .sub-heading {
   font-family: var(--font-secondary);
   width: 100%;
@@ -35,7 +34,7 @@ Styles of hero section
   line-height: 1.28;
   margin: 0;
   margin-top: 1rem;
-}
+} */
 
 .hero-trust {
   margin-top: 2rem;
@@ -74,7 +73,6 @@ Styles of hero section
   justify-content: end;
 }
 
-/* Trust badges */
 .proof__badges {
   display: flex;
   align-items: center;
@@ -104,7 +102,6 @@ Styles of hero section
   margin-top: 1rem;
 }
 
-/* Google rating row */
 .proof__rating {
   display: flex;
   align-items: center;

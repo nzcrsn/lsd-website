@@ -3,42 +3,6 @@
 Styles of header
 ====================================================== 
 */
-header {
-  position: fixed;
-  top: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem var(--padding-sm);
-  z-index: 3;
-  width: 100%;
-  height: var(--height-header);
-  background-color: var(--color-bg-main);
-}
-
-header .logo {
-  font-size: var(--fs-p-sm);
-  font-weight: 400;
-  /* cursor: pointer; */
-  color: var(--color-heading);
-}
-
-header .logo .brand {
-  color: var(--color-primary);
-  font-weight: 700;
-}
-
-header .nav-bar,
-header .cta-header {
-  display: none;
-}
-
-#menu-icon {
-  width: 32px;
-  height: 32px;
-  /* cursor: pointer; */
-  transform: translateX(5px);
-}
 
 .menu-btn {
   border: 0;
@@ -46,8 +10,9 @@ header .cta-header {
   padding: 0;
 }
 
-.left-header {
-  display: flex;
+header .nav-bar,
+header .cta-header {
+  display: none;
 }
 
 .language {
