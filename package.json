@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
-    "glyphhanger": "^5.0.0",
     "lightningcss": "^1.32.0",
     "sharp": "^0.34.5"
   }

@@ -76,27 +76,19 @@ pageKey: home
 
   <div class="grid">
     <div class="item video tall">
-      <video
-        autoplay
-        muted
-        playsinline
-        loop
-        preload="metadata"
-        aria-hidden="true"
-        style="aspect-ratio: 2/3"
-      >
+      <video autoplay muted playsinline loop preload="none">
         <!-- <source src="/assets/media/videos/v4-n.webm" type="video/webm" /> -->
-        <source src="/assets/media/videos/v4-n.mp4" type="video/mp4" />
+        <source src="/assets/media/videos/hero-video.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="item">
       <img
-        src="/assets/media/images/img-8-200.webp"
+        src="/assets/media/images/lift-truck-200.webp"
         srcset="
-          /assets/media/images/img-8-200.webp   200w,
-          /assets/media/images/img-8-400.webp   400w,
-          /assets/media/images/img-8-900.webp   900w,
-          /assets/media/images/img-8-1200.webp 1200w
+          /assets/media/images/lift-truck-200.webp   200w,
+          /assets/media/images/lift-truck-400.webp   400w,
+          /assets/media/images/lift-truck-900.webp   900w,
+          /assets/media/images/lift-truck-1200.webp 1200w
         "
         sizes="
     (max-width: 992px) calc(50vw - 0.25rem),
@@ -112,15 +104,18 @@ pageKey: home
 
     <div class="item medium">
       <img
-        src="/assets/media/images/lift-employee-200.webp"
+        src="/assets/media/images/lift-employee-320.webp"
         srcset="
-          /assets/media/images/lift-employee-200.webp   200w,
-          /assets/media/images/lift-employee-400.webp   400w,
-          /assets/media/images/lift-employee-900.webp   900w,
-          /assets/media/images/lift-employee-1200.webp 1200w
+          /assets/media/images/lift-employee-200.webp 200w,
+          /assets/media/images/lift-employee-320.webp 320w,
+          /assets/media/images/lift-employee-480.webp 480w,
+          /assets/media/images/lift-employee-800.webp 640w
         "
         sizes="
-    (max-width: 992px) calc(50vw - 0.25rem), calc(20vw - 0.25rem)"
+    (max-width: 768px) 50vw,
+    (max-width: 992px) 40vw,
+    20vw
+  "
         width="362"
         height="644"
         alt="Lift Service Employee"
@@ -142,13 +137,16 @@ pageKey: home
     <div class="svc-tile svc-tile--lift">
       <img
         class="svc-tile__photo"
-        src="/assets/media/images/img-15-600.webp"
+        src="/assets/media/images/lifts-600.webp"
         srcset="
-          /assets/media/images/img-15-600.webp  1x,
-          /assets/media/images/img-15-900.webp  2x,
-          /assets/media/images/img-15-1400.webp 3x
+          /assets/media/images/lifts-600.webp   600w,
+          /assets/media/images/lifts-1200.webp 1200w
         "
-        sizes="(max-width: 767px)  100vw, (max-width: 991px)  calc(50vw - 5px),calc(41vw - 8px)"
+        sizes="
+    (max-width: 767px)  100vw,
+    (max-width: 991px)  calc(50vw - 5px),
+    calc(41vw - 8px)
+  "
         width="1400"
         height="933"
         alt="Monte-meubles en action"
@@ -173,15 +171,14 @@ pageKey: home
         class="svc-tile__photo"
         src="/assets/media/images/chofe-600.webp"
         srcset="
-          /assets/media/images/chofe-600.webp  1x,
-          /assets/media/images/chofe-900.webp  2x,
-          /assets/media/images/chofe-1400.webp 3x
+          /assets/media/images/chofe-600.webp   600w,
+          /assets/media/images/chofe-1200.webp 1200w
         "
         sizes="
-      (max-width: 767px)  100vw,
-      (max-width: 991px)  calc(50vw - 5px),
-      calc(29vw - 6px)
-    "
+    (max-width: 767px)  100vw,
+    (max-width: 991px)  calc(50vw - 5px),
+    calc(29vw - 6px)
+  "
         width="1400"
         height="933"
         alt="Camion avec chauffeur expérimenté"
@@ -205,15 +202,17 @@ pageKey: home
         class="svc-tile__photo"
         src="/assets/media/images/level-600.webp"
         srcset="
-          /assets/media/images/level-600.webp  1x,
-          /assets/media/images/level-900.webp  2x,
-          /assets/media/images/level-1400.webp 3x
+          /assets/media/images/level-400.webp   400w,
+          /assets/media/images/level-800.webp   800w,
+          /assets/media/images/level-1200.webp 1200w
         "
         sizes="
-      (max-width: 767px)  100vw,
-      (max-width: 991px)  50vw,
-      30vw
-    "
+    (max-width: 767px)  100vw,
+    (max-width: 991px)  50vw,
+    30vw
+  "
+        width="1400"
+        height="933"
         alt="Monte-meubles en action"
         loading="lazy"
       />
@@ -235,15 +234,15 @@ pageKey: home
         class="svc-tile__photo"
         src="/assets/media/images/boxes-600.webp"
         srcset="
-          /assets/media/images/boxes-600.webp  1x,
-          /assets/media/images/boxes-900.webp  2x,
-          /assets/media/images/boxes-1400.webp 3x
+          /assets/media/images/boxes-500.webp   500w,
+          /assets/media/images/boxes-1200.webp 1200w,
+          /assets/media/images/boxes-1700.webp 1700w
         "
         sizes="
-      (max-width: 767px)  100vw,
-      (max-width: 991px)  calc(50vw - 5px),
-      calc(59vw - 12px)
-    "
+    (max-width: 767px)  100vw,
+    (max-width: 991px)  calc(50vw - 5px),
+    calc(59vw - 12px)
+  "
         width="1400"
         height="700"
         alt="Matériaux d'emballage pour déménagement"

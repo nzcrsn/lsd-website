@@ -5,6 +5,15 @@ Variables
 */
 
 :root {
+  /* Fonts */
+  /* --font-primary:
+    "Cormorant Garamond", -apple-system, BlinkMacSystemFont, serif, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue";
+
+  --font-secondary:
+    "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+
   /* Colors */
   --color-primary: #27334b;
   --color-secondary: #4a4a4a;
@@ -41,8 +50,13 @@ Variables
   --margin-sm: 32px;
   --margin-md: 48px;
 
+  /* Padding */
+  --padding-sm: 24px;
+
   /* Border-radius */
   --border-radius: 2px;
+
+  --height-header: 80px;
 
   /* Font-Size */
   --fs-h1-sm: clamp(1.2rem, 0.03vi + 1.19rem, 1.22rem);
@@ -77,8 +91,8 @@ html {
 }
 
 body {
-  /* font-family: var(--font-secondary);
-  background: var(--color-bg-main); */
+  font-family: var(--font-secondary);
+  background: var(--color-bg-main);
   padding-top: env(safe-area-inset-top);
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-right);
@@ -110,7 +124,7 @@ H1 - H6 Headings
 ====================================================== 
 */
 
-/* h1, */
+h1,
 h2,
 h3,
 h4,

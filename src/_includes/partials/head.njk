@@ -68,11 +68,36 @@
     type="font/woff2"
     crossorigin
   />
+
+  <link
+    rel="preload"
+    href="/assets/fonts/Manrope-Font-subset.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  />
   <style>
+    @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("/assets/fonts/CormorantGaramond-Font-subset.woff2")
+        format("woff2");
+      font-display: swap;
+      size-adjust: 100%;
+    }
+
+    @font-face {
+      font-family: "Manrope";
+      src: url("/assets/fonts/Manrope-Font-subset.woff2") format("woff2");
+      font-display: swap;
+      size-adjust: 100%;
+    }
+
     :root {
       /* Fonts */
       --font-primary: "Cormorant Garamond", Georgia, serif;
-      --font-secondary: "Manrope", system-ui, sans-serif;
+
+      --font-secondary:
+        "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
       --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
 
@@ -83,6 +108,7 @@
       --padding-sm: 24px;
 
       --fs-p-sm: clamp(0.8rem, -0.04vi + 0.81rem, 0.77rem);
+      --fs-p-md: clamp(1.25rem, 0.2vi + 1.2rem, 1.37rem);
     }
 
     html {
@@ -159,7 +185,7 @@
       flex-direction: column;
     }
 
-    h1 {
+    .hero-section .copy .heading {
       font-family: var(--font-primary);
       color: var(--color-heading);
       font-weight: 700;
@@ -170,14 +196,15 @@
     }
 
     .copy .sub-heading {
-      font-family: var(--font-secondary);
       width: 100%;
+      font-family: var(--font-secondary);
       font-weight: 300;
+      font-size: var(--fs-p-md);
       line-height: 1.28;
       margin: 0;
-      margin-top: 1rem;
     }
   </style>
+
   <link
     rel="preload"
     href="/assets/main.css"

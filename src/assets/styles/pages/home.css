@@ -4,29 +4,28 @@ Styles of hero section
 ====================================================== 
 */
 
-/* .hero-section {
+.hero-section {
   gap: 3rem;
   min-height: 100svh;
   margin-top: var(--height-header);
   display: flex;
   flex-direction: column;
   position: relative;
-} */
+}
 
-/* .hero-section .copy {
+.hero-section .copy {
   display: flex;
   flex-direction: column;
-} */
+}
 
-/* .hero-section .copy .heading {
+.hero-section .copy .heading {
   font-style: normal;
   font-size: var(--fs-h1-lg);
   letter-spacing: 0.02em;
   line-height: 1.1;
   margin: 0;
-} */
+}
 
-/* 
 .copy .sub-heading {
   font-family: var(--font-secondary);
   width: 100%;
@@ -34,7 +33,7 @@ Styles of hero section
   line-height: 1.28;
   margin: 0;
   margin-top: 1rem;
-} */
+}
 
 .hero-trust {
   margin-top: 2rem;
@@ -883,7 +882,6 @@ Styles of FAQs section
   width: 100%;
   background: none;
   border: none;
-  cursor: none;
   padding: 2rem 0;
   display: flex;
   align-items: center;
@@ -1272,7 +1270,7 @@ Styles of contact section
   color: var(--color-primary);
   background: none;
   border: none;
-  cursor: none;
+
   border-bottom: 1px solid var(--color-border);
   padding-bottom: 2px;
   transition:
@@ -1380,7 +1378,6 @@ Styles of contact section
 
 .select-wrap select {
   padding-right: 2.5rem;
-  cursor: none;
 }
 
 /* Service pills — radio button group styled as chips */
@@ -1413,7 +1410,7 @@ Styles of contact section
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-primary);
-  cursor: none;
+
   background: var(--color-input-bg);
   transition:
     background 0.25s,
