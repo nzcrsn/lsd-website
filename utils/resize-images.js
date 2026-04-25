@@ -3,8 +3,8 @@ import sharp from "sharp";
 
 const images = [
   {
-    input: "src/assets/media/images/lift-employee.jpeg",
-    name: "lift-employee",
+    input: "src/assets/media/images/lift-truck.jpeg",
+    name: "lift-truck",
     sizes: [200, 320, 480, 640],
   },
   /*
