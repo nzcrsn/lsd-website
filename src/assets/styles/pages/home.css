@@ -10,7 +10,6 @@ Styles of hero section
   margin-top: var(--height-header);
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 .hero-section .copy {
@@ -1461,6 +1460,12 @@ Media Queries
   ====================================================== 
   */
   /* .hero-section {
+    min-height: unset;
+    height: calc(100vh - var(--height-header));
+    flex-direction: row;
+    gap: 4rem;
+  } */
+  /* .hero-section {
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
@@ -1562,12 +1567,12 @@ Media Queries
 }
 
 @media screen and (min-width: 992px) {
-  .hero-section {
+  /* .hero-section {
     min-height: unset;
     height: calc(100vh - var(--height-header));
     flex-direction: row;
     gap: 4rem;
-  }
+  } */
 
   .hero-section .copy .heading {
     font-size: clamp(2rem, 5cqw, 3.2rem);

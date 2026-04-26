@@ -106,6 +106,7 @@
 
       --height-header: 80px;
       --padding-sm: 24px;
+      --border-radius: 2px;
 
       --fs-p-sm: clamp(0.8rem, -0.04vi + 0.81rem, 0.77rem);
       --fs-p-md: clamp(1.25rem, 0.2vi + 1.2rem, 1.37rem);
@@ -212,9 +213,8 @@
     }
 
     .item {
-      grid-row: span 10;
-
-      /* border-radius: var(--border-radius); */
+      grid-row: span 12;
+      border-radius: var(--border-radius);
     }
 
     .item.tall {
@@ -222,7 +222,7 @@
     }
 
     .item.medium {
-      grid-row: span 20;
+      grid-row: span 18;
     }
 
     .item > img,
@@ -251,23 +251,20 @@
         padding-bottom: 4rem;
       }
 
-      .item {
-        grid-row: span 20;
+      .hero-section {
+        height: calc(100vh - var(--height-header));
+        flex-direction: row !important;
+        gap: 4rem;
       }
 
-      .item.tall {
-        grid-row: span 50;
-        /* aspect-ratio: 9 / 16; */
+      .copy {
+        flex: 1;
       }
 
-      .item.medium {
-        grid-row: span 30;
-      }
-    }
-    @media screen and (min-width: 992px) {
       .grid {
+        flex: 1;
         width: 100%;
-        /* background-color: red; */
+        max-width: 100%;
         grid-template-columns: repeat(2, 1fr);
         height: 78vh;
         grid-template-rows: repeat(78, 1vh);
@@ -287,6 +284,9 @@
       .item.medium {
         grid-row: span 48;
       }
+    }
+
+    @media screen and (min-width: 992px) {
     }
   </style>
 
