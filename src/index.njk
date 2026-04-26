@@ -76,9 +76,41 @@ pageKey: home
 
   <div class="grid">
     <div class="item video tall">
-      <video autoplay muted playsinline loop preload="none">
-        <!-- <source src="/assets/media/videos/v4-n.webm" type="video/webm" /> -->
-        <source src="/assets/media/videos/hero-video.mp4" type="video/mp4" />
+      <img
+        class="poster"
+        src="/assets/media/images/hero-poster-480.webp"
+        srcset="
+          /assets/media/images/hero-poster-320.webp 320w,
+          /assets/media/images/hero-poster-480.webp 480w,
+          /assets/media/images/hero-poster-640.webp 640w,
+          /assets/media/images/hero-poster-800.webp 800w
+        "
+        sizes="
+      (max-width: 768px) 50vw,
+      (max-width: 992px) 40vw,
+      20vw
+    "
+        width="830"
+        height="1476"
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+        class="video-poster"
+      />
+
+      <video
+        autoplay
+        muted
+        playsinline
+        loop
+        preload="none"
+        aria-hidden="true"
+        class="video-media"
+        width="830"
+        height="1476"
+      >
+        <source src="/assets/media/videos/output.webm" type="video/webm" />
+        <source src="/assets/media/videos/output.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="item">
@@ -110,7 +142,7 @@ pageKey: home
           /assets/media/images/lift-employee-200.webp 200w,
           /assets/media/images/lift-employee-320.webp 320w,
           /assets/media/images/lift-employee-480.webp 480w,
-          /assets/media/images/lift-employee-800.webp 640w
+          /assets/media/images/lift-employee-640.webp 640w
         "
         sizes="
     (max-width: 768px) 50vw,
@@ -141,7 +173,8 @@ pageKey: home
         src="/assets/media/images/lifts-600.webp"
         srcset="
           /assets/media/images/lifts-600.webp   600w,
-          /assets/media/images/lifts-1200.webp 1200w
+          /assets/media/images/lifts-900.webp   900w,
+          /assets/media/images/lifts-1400.webp 1400w
         "
         sizes="
     (max-width: 767px)  100vw,
@@ -173,7 +206,8 @@ pageKey: home
         src="/assets/media/images/chofe-600.webp"
         srcset="
           /assets/media/images/chofe-600.webp   600w,
-          /assets/media/images/chofe-1200.webp 1200w
+          /assets/media/images/chofe-900.webp   900w,
+          /assets/media/images/chofe-1400.webp 1400w
         "
         sizes="
     (max-width: 767px)  100vw,
@@ -203,9 +237,9 @@ pageKey: home
         class="svc-tile__photo"
         src="/assets/media/images/level-600.webp"
         srcset="
-          /assets/media/images/level-400.webp   400w,
-          /assets/media/images/level-800.webp   800w,
-          /assets/media/images/level-1200.webp 1200w
+          /assets/media/images/level-600.webp   600w,
+          /assets/media/images/level-900.webp   900w,
+          /assets/media/images/level-1400.webp 1400w
         "
         sizes="
     (max-width: 767px)  100vw,
@@ -235,9 +269,9 @@ pageKey: home
         class="svc-tile__photo"
         src="/assets/media/images/boxes-600.webp"
         srcset="
-          /assets/media/images/boxes-500.webp   500w,
-          /assets/media/images/boxes-1200.webp 1200w,
-          /assets/media/images/boxes-1700.webp 1700w
+          /assets/media/images/boxes-600.webp   600w,
+          /assets/media/images/boxes-900.webp   900w,
+          /assets/media/images/boxes-1400.webp 1400w
         "
         sizes="
     (max-width: 767px)  100vw,

@@ -145,6 +145,7 @@ Styles of hero section
   padding-left: 0.8rem;
 }
 
+/*
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -155,8 +156,7 @@ Styles of hero section
 
 .item {
   display: grid;
-  grid-column: span 1;
-  grid-row: span 1;
+
   overflow: hidden;
   background: #ccc;
   border-radius: var(--border-radius);
@@ -185,6 +185,7 @@ Styles of hero section
   object-fit: cover;
 }
 
+*/
 /*
 ====================================================== 
 Styles of services section
@@ -1459,14 +1460,14 @@ Media Queries
   Styles of hero section
   ====================================================== 
   */
-  .hero-section {
+  /* .hero-section {
     padding-top: 2rem;
     padding-bottom: 4rem;
   }
 
   .grid {
     grid-template-rows: repeat(3, minmax(180px, 28vw));
-  }
+  } */
   /* End styles of hero section*/
 
   /*
@@ -1588,6 +1589,7 @@ Media Queries
   .hero-stats {
     gap: 2rem;
   }
+
   .hero-stat__number {
     font-size: 1.3rem;
   }
@@ -1598,13 +1600,12 @@ Media Queries
     font-size: 0.72rem;
   }
 
-  .grid {
+  /* .grid {
     max-width: 40%;
     grid-template-columns: repeat(2, minmax(180px, 1fr));
-
     gap: 0.5rem;
     overflow: hidden;
-  }
+  } */
 
   /* Styles of service section */
 
