@@ -2,64 +2,25 @@
 import sharp from "sharp";
 
 const images = [
-  /*
   {
-    input: "src/assets/media/images/lift-truck.jpeg",
-    name: "lift-truck",
-    sizes: [200, 320, 480, 640],
-  },
-  */
-  /*
-  {
-    input: "src/assets/media/images/company-2.webp",
-    name: "company-2",
-    sizes: [400, 800, 1200],
-  },
-  {
-    input: "src/assets/media/images/img-8.webp",
-    name: "img-8",
-    sizes: [200, 400, 900, 1200],
-  },
-  */
-  // {
-  //   input: "src/assets/media/images/img-15.webp",
-  //   name: "img-15",
-  //   sizes: [600, 900, 1400],
-  // },
-  // {
-  //   input: "src/assets/media/images/chofe.webp",
-  //   name: "chofe",
-  //   sizes: [600, 900, 1400],
-  // },
-  // {
-  //   input: "src/assets/media/images/level.webp",
-  //   name: "level",
-  //   sizes: [600, 900, 1400],
-  // },
-  // {
-  //   input: "src/assets/media/images/boxes.webp",
-  //   name: "boxes",
-  //   sizes: [600, 900, 1400],
-  // },
-  {
-    input: "src/assets/media/images/lifts.jpeg",
+    input: "originals/lifts.jpeg",
     name: "lifts",
-    sizes: [600, 900, 1200],
+    sizes: [600, 900, 1200, 1800],
   },
   {
-    input: "src/assets/media/images/chofe.jpg",
+    input: "originals/chofe.jpg",
     name: "chofe",
-    sizes: [400, 600, 900],
+    sizes: [600, 900, 1200, 1800],
   },
   {
-    input: "src/assets/media/images/level.jpg",
+    input: "originals/level.jpg",
     name: "level",
-    sizes: [400, 600, 900],
+    sizes: [600, 900, 1200, 1800],
   },
   {
-    input: "src/assets/media/images/boxes.jpg",
+    input: "originals/boxes.jpg",
     name: "boxes",
-    sizes: [600, 900, 1400],
+    sizes: [600, 900, 1200, 1800],
   },
 ];
 
@@ -68,6 +29,6 @@ for (const { input, name, sizes } of images) {
     await sharp(input)
       .resize({ width })
       .webp({ quality: 75 })
-      .toFile(`src/assets/media/images/${name}-${width}.webp`);
+      .toFile(`src/assets/media/images/${name}-${width}w.webp`);
   }
 }
