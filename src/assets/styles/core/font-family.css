@@ -73,3 +73,18 @@
     U+C9, U+E0, U+E2, U+E7-EA, U+EE, U+F1, U+FA, U+FB, U+153, U+2014, U+2019,
     U+2026, U+1F3C6, U+1F44D;
 }
+
+/* @font-face {
+      font-family: "Cormorant Garamond";
+      src: url("/assets/fonts/CormorantGaramond-Font-subset.woff2")
+        format("woff2");
+      font-display: swap;
+      size-adjust: 100%;
+    }
+
+    @font-face {
+      font-family: "Manrope";
+      src: url("/assets/fonts/Manrope-Font-subset.woff2") format("woff2");
+      font-display: swap;
+      size-adjust: 100%;
+    } */

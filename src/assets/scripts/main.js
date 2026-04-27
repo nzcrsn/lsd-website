@@ -1,6 +1,6 @@
-// import { gsap } from "./base.js";
-// import { initMenu } from "./animations/menu.js";
-// import { initHero } from "./animations/hero.js";
+import { gsap } from "./base.js";
+import { initMenu } from "./animations/menu.js";
+import { initHero } from "./animations/hero.js";
 
 // import {
 //   initHeader,
@@ -24,40 +24,34 @@
 //   window.setTimeout(callback, 1);
 // };
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Remove the class BEFORE fonts/images load
-//   document.documentElement.classList.remove("js-loading");
-
-//   gsap.to(["#page", "header"], {
-//     opacity: 1,
-//     duration: 0.5,
-//     // ease: "power2.out",
-//   });
-
-//   initHeader();
-//   initHero();
-
-//   // 4. Section h2 + eyebrow reveals — unifies feel across all sections
-//   initSectionHeadings();
-
-//   // 5. Services bento tile entrance
-//   // initServices();
-
-//   // ── Utilities ──
-//   initMenu();
-//   initOptLang();
-//   initSmoothScroll();
-//   initBackToTop();
-
-//   // Defer below-the-fold work until browser is idle.
-//   scheduleNonCritical(() => {
-//     // initTestimonials();
-//     // initCompany();
-//     // initFaq();
-//     // initFaqReveal();
-//     // initContact();
-//   });
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  //   // Remove the class BEFORE fonts/images load
+  //   document.documentElement.classList.remove("js-loading");
+  //   gsap.to(["#page", "header"], {
+  //     opacity: 1,
+  //     duration: 0.5,
+  //     // ease: "power2.out",
+  //   });
+  // initHeader();
+  initHero();
+  //   // 4. Section h2 + eyebrow reveals — unifies feel across all sections
+  //   initSectionHeadings();
+  //   // 5. Services bento tile entrance
+  //   // initServices();
+  //   // ── Utilities ──
+  initMenu();
+  //   initOptLang();
+  //   initSmoothScroll();
+  //   initBackToTop();
+  //   // Defer below-the-fold work until browser is idle.
+  //   scheduleNonCritical(() => {
+  //     // initTestimonials();
+  //     // initCompany();
+  //     // initFaq();
+  //     // initFaqReveal();
+  //     // initContact();
+  //   });
+});
 
 // import gsap from "gsap";
 // import ScrollTrigger from "gsap/ScrollTrigger";
