@@ -63,6 +63,8 @@
     U+A, U+20, U+21, U+25-29, U+2B-3A, U+3F-57, U+5A, U+61-7A, U+A9, U+B7, U+C0,
     U+C9, U+E0, U+E2, U+E7-EA, U+EE, U+F1, U+FA, U+FB, U+153, U+2014, U+2019,
     U+2026, U+1F3C6, U+1F44D;
+  font-display: swap;
+  size-adjust: 100%;
 }
 
 @font-face {
@@ -72,6 +74,8 @@
     U+A, U+20, U+21, U+25-29, U+2B-3A, U+3F-57, U+5A, U+61-7A, U+A9, U+B7, U+C0,
     U+C9, U+E0, U+E2, U+E7-EA, U+EE, U+F1, U+FA, U+FB, U+153, U+2014, U+2019,
     U+2026, U+1F3C6, U+1F44D;
+  font-display: swap;
+  size-adjust: 100%;
 }
 
 /* @font-face {

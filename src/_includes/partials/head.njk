@@ -80,9 +80,7 @@
     :root {
       /* Fonts */
       --font-primary: "Cormorant Garamond", Georgia, serif;
-
-      --font-secondary:
-        "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-secondary: "Manrope", system-ui, sans-serif;
 
       --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
 
@@ -217,17 +215,32 @@
       object-fit: cover;
     }
 
+    .item.video {
+      position: relative;
+    }
+
+    .video-poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Video stacks absolutely on top, starts invisible */
     .video-media {
       position: absolute;
       inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       opacity: 0;
-      transition: opacity 0.4s ease;
+      transition: opacity 0.6s ease;
+      /* No will-change here — opacity transition on video
+     is already GPU composited */
     }
 
-    .video-media.loaded {
+    .video-media.is-playing {
       opacity: 1;
-      width: 100%;
-      position: relative;
     }
 
     @media screen and (min-width: 768px) {
@@ -284,7 +297,8 @@
       this.rel = 'stylesheet';
     "
   />
-
-  <link rel="stylesheet" href="/assets/main.css" />
+  <noscript>
+    <link rel="stylesheet" href="/assets/main.css" />
+  </noscript>
   {% vite "assets/scripts/main.js" %}
 </head>

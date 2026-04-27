@@ -33,7 +33,7 @@ export function initHero() {
     gsap.set(".line-parent", { overflow: "hidden" });
     gsap.set(heading, { visibility: "visible" });
 
-    const tl = gsap.timeline({ delay: 0.2 });
+    const tl = gsap.timeline({ delay: 0.05 });
 
     tl.from(".line-child", {
       yPercent: 105,
@@ -114,7 +114,7 @@ export function initHero() {
             ctaBtn.style.willChange = "auto";
           },
         },
-        "-=0.4",
+        "-=0.2",
       );
 
       if (ctaArrow) {
