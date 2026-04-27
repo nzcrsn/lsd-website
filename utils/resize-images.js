@@ -28,7 +28,7 @@ for (const { input, name, sizes } of images) {
   for (const width of sizes) {
     await sharp(input)
       .resize({ width })
-      .webp({ quality: 75 })
+      .webp({ quality: 50 })
       .toFile(`src/assets/media/images/${name}-${width}w.webp`);
   }
 }
