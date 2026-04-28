@@ -3,13 +3,14 @@
 Layout of main
 ====================================================== 
 */
-/* main {
+
+main {
   display: flex;
   flex-direction: column;
   gap: 8rem;
   max-width: 1400px;
   margin: 0 auto;
-} */
+}
 
 /*
 ====================================================== 
@@ -42,7 +43,7 @@ Space top between top sections and h2
   ====================================================== 
   */
 
-  .hero-section,
+  /* .hero-section, */
   .services-section,
   .testimonials-section,
   .contact-section,
@@ -60,7 +61,7 @@ Space top between top sections and h2
   Layout of sections
   ====================================================== 
   */
-  .hero-section,
+  /* .hero-section, */
   .testimonials-section,
   .services-section,
   .contact-section,

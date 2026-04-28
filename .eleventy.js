@@ -1,12 +1,13 @@
 import fs from "fs";
-import { buildCSS } from "./utils/build-css.js";
+import { buildCSS, writeCssOnAssetsDir } from "./utils/build-css.js";
 
 const isDev = process.env.NODE_ENV !== "production";
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/styles");
   eleventyConfig.on("eleventy.before", async () => {
-    buildCSS(!isDev);
+    const code = buildCSS(!isDev, "src/assets/styles/main.css");
+    writeCssOnAssetsDir(code);
   });
   eleventyConfig.addShortcode("vite", function (route) {
     if (isDev) {
@@ -21,7 +22,18 @@ export default function (eleventyConfig) {
     return `${script}`;
   });
 
-  ["fonts", "media", "favicon", "icons"].forEach((dir) =>
+  eleventyConfig.addShortcode("criticalCss", function () {
+    try {
+      const code = buildCSS(true, "src/assets/styles/core/critical.css");
+      let tag = `<style>${code}</style>`;
+      return tag;
+    } catch (err) {
+      console.error("Critical CSS build failed:", err);
+      return;
+    }
+  });
+
+  [("fonts", "media", "favicon", "icons")].forEach((dir) =>
     eleventyConfig.addPassthroughCopy({
       [`src/assets/${dir}`]: `assets/${dir}`,
     }),

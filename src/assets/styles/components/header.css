@@ -10,11 +10,6 @@ Styles of header
   padding: 0;
 }
 
-header .nav-bar,
-header .cta-header {
-  display: none;
-}
-
 .language {
   display: none;
   gap: 0.4rem;
@@ -129,12 +124,5 @@ Media queries
 
   header .networks a {
     margin-right: 0.4rem;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  header {
-    padding-left: 48px;
-    padding-right: 48px;
   }
 }

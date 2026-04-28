@@ -3,37 +3,6 @@
 Styles of hero section
 ====================================================== 
 */
-
-.hero-section {
-  gap: 3rem;
-  min-height: 100svh;
-  margin-top: var(--height-header);
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-section .copy {
-  display: flex;
-  flex-direction: column;
-}
-
-.hero-section .copy .heading {
-  font-style: normal;
-  font-size: var(--fs-h1-lg);
-  letter-spacing: 0.02em;
-  line-height: 1.1;
-  margin: 0;
-}
-
-.copy .sub-heading {
-  font-family: var(--font-secondary);
-  width: 100%;
-  font-weight: 300;
-  line-height: 1.28;
-  margin: 0;
-  margin-top: 1rem;
-}
-
 .hero-trust {
   margin-top: 2rem;
   display: flex;
@@ -78,6 +47,7 @@ Styles of hero section
   flex-wrap: wrap;
   margin-top: 0.6rem;
 }
+
 .proof__badge {
   display: inline-flex;
   align-items: center;
@@ -87,104 +57,12 @@ Styles of hero section
   text-transform: uppercase;
   color: var(--ink-light);
 }
+
 .proof__badge svg {
   color: var(--accent-dark);
   flex-shrink: 0;
 }
 
-.proof {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding-top: 20px;
-  margin-top: 1rem;
-}
-
-.proof__rating {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.proof__stars {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.proof__stars svg {
-  color: #b8860b;
-}
-
-.proof__score {
-  font-family: var(--font-primary);
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: var(--ink);
-  line-height: 1;
-}
-
-.proof__source {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent-dark);
-  padding-left: 0.1rem;
-}
-
-.proof__count {
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  color: var(--ink-light);
-  border-left: 1px solid var(--line);
-  padding-left: 0.8rem;
-}
-
-/*
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  grid-template-rows: repeat(3, minmax(80px, 25vw));
-  grid-auto-flow: dense;
-}
-
-.item {
-  display: grid;
-
-  overflow: hidden;
-  background: #ccc;
-  border-radius: var(--border-radius);
-}
-
-.item.wide {
-  grid-column: span 2;
-  grid-row: span 1;
-  aspect-ratio: 4/3;
-}
-
-.item.tall {
-  grid-column: span 1;
-  grid-row: span 3;
-}
-
-.item.medium {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.item > img,
-.item > video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-*/
 /*
 ====================================================== 
 Styles of services section

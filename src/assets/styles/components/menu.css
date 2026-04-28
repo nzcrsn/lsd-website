@@ -3,7 +3,6 @@
   display: flex;
   width: 100%;
   flex-direction: column;
-  /* gap: 2.8rem; */
   justify-content: space-between;
   padding: var(--padding-sm);
   margin-top: var(--height-header);
