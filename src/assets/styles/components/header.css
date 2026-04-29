@@ -3,7 +3,6 @@
 Styles of header
 ====================================================== 
 */
-
 .menu-btn {
   border: 0;
   background: transparent;
@@ -26,6 +25,7 @@ Styles of header
   font-family: var(--font-secondary);
 }
 /* End of styles of header */
+
 /*
 ====================================================== 
 Media queries 
@@ -60,7 +60,6 @@ Media queries
     align-items: center;
     gap: 0.4rem;
     border: none;
-    /* cursor: pointer; */
     background: transparent;
   }
 

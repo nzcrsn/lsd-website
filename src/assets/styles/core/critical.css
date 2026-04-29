@@ -3,9 +3,12 @@
   --font-primary: "Cormorant Garamond", Georgia, serif;
   --font-secondary: "Manrope", system-ui, sans-serif;
 
-  --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
+  /* Colors */
   --color-bg-main: #f5f3e5;
   --color-heading: #4c3c2c;
+
+  /* Font Size */
+  --fs-h1-lg: clamp(2.34rem, 0.99vi + 2.1rem, 2.89rem);
 
   --height-header: 80px;
   --padding-sm: 24px;
@@ -29,6 +32,23 @@ body {
   margin: 0;
   font-family: var(--font-secondary);
   background: var(--color-bg-main);
+}
+
+.cta-btn-alt,
+.cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 0.6rem 1.2rem 0.6rem;
+  height: min-content;
+  text-align: left;
+
+  border-radius: var(--border-radius);
+  font-weight: 300;
+  transition: all 0.3s;
+  border: 1px solid var(--color-secondary);
 }
 
 header {

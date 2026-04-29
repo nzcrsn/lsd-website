@@ -33,7 +33,7 @@ export default function (eleventyConfig) {
     }
   });
 
-  [("fonts", "media", "favicon", "icons")].forEach((dir) =>
+  ["fonts", "media", "favicon", "icons"].forEach((dir) =>
     eleventyConfig.addPassthroughCopy({
       [`src/assets/${dir}`]: `assets/${dir}`,
     }),
