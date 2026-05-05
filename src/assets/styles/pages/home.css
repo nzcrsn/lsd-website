@@ -3,17 +3,10 @@
 Styles of hero section
 ====================================================== 
 */
-.hero-trust {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
-}
 
 .hero-stats {
   display: flex;
   gap: 2rem;
-  /* flex-wrap: wrap; */
 }
 
 .hero-stat {
@@ -40,7 +33,7 @@ Styles of hero section
   justify-content: end;
 }
 
-.proof__badges {
+.badges {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -48,7 +41,7 @@ Styles of hero section
   margin-top: 0.6rem;
 }
 
-.proof__badge {
+.badge {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -58,7 +51,7 @@ Styles of hero section
   color: var(--ink-light);
 }
 
-.proof__badge svg {
+.badge svg {
   color: var(--accent-dark);
   flex-shrink: 0;
 }

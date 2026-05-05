@@ -8,10 +8,8 @@ export function initHero() {
     const stats = document.querySelectorAll(".hero-stat");
     const ctaBtn = document.querySelector("a.cta-heading");
     const ctaArrow = ctaBtn?.querySelector(".arrow");
-    const badges = document.querySelector(".proof__badges");
-    const proof = document.querySelector(".proof");
+    const badges = document.querySelector(".badges");
     const gridItems = document.querySelectorAll(".grid .item");
-    const scrollHint = document.getElementById("scroll-hint");
 
     if (!heading) return;
 
