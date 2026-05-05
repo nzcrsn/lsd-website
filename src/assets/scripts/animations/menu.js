@@ -123,10 +123,7 @@ links.forEach((link) => {
       const target = document.querySelector(href);
 
       if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        smoothScrollTo(target);
       }
     });
   });

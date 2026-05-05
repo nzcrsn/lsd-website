@@ -223,7 +223,6 @@ Button Class
   padding: 0.6rem 1.2rem 0.6rem;
   height: min-content;
   text-align: left;
-
   border-radius: var(--border-radius);
   font-weight: 300;
   transition: all 0.3s;

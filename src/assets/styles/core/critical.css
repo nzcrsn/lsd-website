@@ -63,7 +63,6 @@ header .logo .brand {
   height: 32px;
 }
 
-header .language,
 header .nav-bar,
 header .cta-header {
   display: none;
@@ -75,6 +74,7 @@ header .cta-header {
 
 .hero-section {
   gap: 3rem;
+  min-height: 100svh;
   margin-top: var(--height-header);
   display: flex;
   flex-direction: column;
@@ -189,6 +189,7 @@ header .cta-header {
     height: 78vh;
     grid-template-rows: repeat(78, 1vh);
     gap: 0;
+    /* overflow: hidden; */
   }
 
   .item {
