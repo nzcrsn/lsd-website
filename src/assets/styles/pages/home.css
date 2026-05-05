@@ -1445,22 +1445,13 @@ Media Queries
 }
 
 @media screen and (min-width: 992px) {
-  /* .hero-section {
-    min-height: unset;
-    height: calc(100vh - var(--height-header));
-    flex-direction: row;
-    gap: 4rem;
-  } */
-
   .hero-section .copy .heading {
     font-size: clamp(2rem, 5cqw, 3.2rem);
-    /* border: 1px solid green; */
   }
 
   .hero-section .copy .sub-heading {
     font-size: clamp(1.2rem, 1.6vw, 1.4rem);
     margin-top: 1rem;
-    /* border: 1px solid green; */
     max-width: 80%;
   }
 
@@ -1537,6 +1528,11 @@ Media Queries
 @media screen and (min-width: 1200px) {
   .scroll {
     width: calc(100% - 96px);
+  }
+
+  .hero-section {
+    padding-right: 48px;
+    padding-left: 48px;
   }
 
   .hero-section h1 {

@@ -213,6 +213,23 @@ Opacity Class
 Button Class
 ====================================================== 
 */
+.cta-btn-alt,
+.cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 0.6rem 1.2rem 0.6rem;
+  height: min-content;
+  text-align: left;
+
+  border-radius: var(--border-radius);
+  font-weight: 300;
+  transition: all 0.3s;
+  border: 1px solid var(--color-secondary);
+}
+
 .cta-btn .arrow,
 .cta-btn-alt .arrow {
   height: 18px;
@@ -293,13 +310,13 @@ Button Class
 JS c Queries
 ====================================================== 
 */
-.js-loading .hero-section .heading,
+/* .js-loading .hero-section .heading,
 .js-loading .hero-section .sub-heading,
 .js-loading .hero-section .hero-trust,
 .js-loading .hero-section .cta-heading,
 .js-loading .hero-section .proof__badges {
   opacity: 0;
-}
+} */
 
 /* Above the fold elements get CSS transitions as fallback*/
 .hero-section .heading,

@@ -61,9 +61,9 @@ if (video) {
 }
   */
 
-import { gsap } from "./core/gsap.js";
-import { lenis } from "./core/lenis.js";
-import { initHero } from "./animations/hero.js";
+// import { gsap } from "./core/gsap.js";
+// import { lenis } from "./core/lenis.js";
+// import { initHero } from "./animations/hero.js";
 import { initMenu } from "./animations/menu.js";
 import { deferUntilScrollOrIdle } from "./utils/scheduler.js";
 
@@ -91,7 +91,7 @@ if (video) {
 // Above the fold — run immediately
 document.addEventListener("DOMContentLoaded", () => {
   initMenu();
-  initHero();
+  // initHero();
 
   // Below the fold — defer until scroll or idle
   deferUntilScrollOrIdle(() => {

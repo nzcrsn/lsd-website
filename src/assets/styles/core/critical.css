@@ -34,23 +34,6 @@ body {
   background: var(--color-bg-main);
 }
 
-.cta-btn-alt,
-.cta-btn {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  justify-content: space-between;
-  width: fit-content;
-  padding: 0.6rem 1.2rem 0.6rem;
-  height: min-content;
-  text-align: left;
-
-  border-radius: var(--border-radius);
-  font-weight: 300;
-  transition: all 0.3s;
-  border: 1px solid var(--color-secondary);
-}
-
 header {
   position: fixed;
   top: 0px;
@@ -80,6 +63,7 @@ header .logo .brand {
   height: 32px;
 }
 
+header .language,
 header .nav-bar,
 header .cta-header {
   display: none;
@@ -91,7 +75,6 @@ header .cta-header {
 
 .hero-section {
   gap: 3rem;
-  min-height: 100svh;
   margin-top: var(--height-header);
   display: flex;
   flex-direction: column;
@@ -206,7 +189,6 @@ header .cta-header {
     height: 78vh;
     grid-template-rows: repeat(78, 1vh);
     gap: 0;
-    /* overflow: hidden; */
   }
 
   .item {
@@ -227,10 +209,5 @@ header .cta-header {
   header {
     padding-left: 48px;
     padding-right: 48px;
-  }
-
-  .hero-section {
-    padding-right: 48px;
-    padding-left: 48px;
   }
 }

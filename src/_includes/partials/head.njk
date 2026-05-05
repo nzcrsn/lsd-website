@@ -58,6 +58,10 @@
     sizes="32x32"
     href="/favicon/favicon-32x32.png"
   />
+  <meta
+    property="og:url"
+    content="https://www.liftservicebel.com{{ t.routes[pageKey] }}"
+  />
 
   <link
     rel="preload"
@@ -84,8 +88,6 @@
       this.rel = 'stylesheet';
     "
   />
-  <noscript>
-    <link rel="stylesheet" href="/assets/main.css" />
-  </noscript>
+  <link rel="stylesheet" href="/assets/main.css" />
   {% vite "assets/scripts/main.js" %}
 </head>
