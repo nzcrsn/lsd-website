@@ -94,6 +94,11 @@ body {
   height: 100%;
 }
 
+/*
+====================================================== 
+Block Scroll
+====================================================== 
+*/
 body.scroll-locked {
   overflow-y: scroll;
   position: fixed;
@@ -306,7 +311,7 @@ Button Class
 
 /*
 ====================================================== 
-JS c Queries
+JS Queries
 ====================================================== 
 */
 /* .js-loading .hero-section .heading,
@@ -318,10 +323,10 @@ JS c Queries
 } */
 
 /* Above the fold elements get CSS transitions as fallback*/
-.hero-section .heading,
+/* .hero-section .heading,
 .hero-section .sub-heading {
   transition: opacity 0.3s ease 1s;
-}
+} */
 
 /*
 ====================================================== 

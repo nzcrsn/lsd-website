@@ -62,19 +62,17 @@ if (video) {
   */
 
 // import { gsap } from "./core/gsap.js";
-// import { lenis } from "./core/lenis.js";
-// import { initHero } from "./animations/hero.js";
+// import { lenis } from "./core/lenis.js";;
 import { initMenu } from "./animations/menu.js";
 import { deferUntilScrollOrIdle } from "./utils/scheduler.js";
 
 // Remove loading class — reveals content, stops CSS fallback timer
 document.documentElement.classList.remove("js-loading");
 
+const isMobile = window.matchMedia("(max-width: 767px)").matches;
 // Video fade-in
 const video = document.querySelector(".video-media");
 if (video) {
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
   if (isMobile) {
     video.remove(); // Don't load video on mobile
   } else {
@@ -89,14 +87,18 @@ if (video) {
 }
 
 // Above the fold — run immediately
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   initMenu();
-  // initHero();
+
+  if (!isMobile) {
+    const { initHero } = await import("./animations/hero.js");
+    const { initOptLang } = await import("./animations/header.js");
+    initHero();
+    initOptLang();
+  }
 
   // Below the fold — defer until scroll or idle
   deferUntilScrollOrIdle(() => {
-    // import("./deferred.js");
-    // Vite sees this dynamic import and automatically
-    // splits deferred.js into a separate chunk
+    import("./deferred.js");
   });
 });

@@ -20,9 +20,9 @@ connectLenisToScrollTrigger(ScrollTrigger);
 initSectionHeadings(ScrollTrigger);
 initServices(ScrollTrigger);
 // initTestimonials(ScrollTrigger);
-initCompany(ScrollTrigger);
-initFaq(ScrollTrigger);
-initContact(ScrollTrigger);
+// initCompany(ScrollTrigger);
+// initFaq(ScrollTrigger);
+// initContact(ScrollTrigger);
 
 // Recalculate ScrollTrigger positions after everything initialized
 ScrollTrigger.refresh();

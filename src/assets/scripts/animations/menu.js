@@ -15,8 +15,6 @@ function openMenu() {
   menuSection.classList.remove("hidden");
   document.body.style.top = `-${scrollY}px`;
   document.body.classList.add("scroll-locked");
-
-  trapFocus(menuSection);
 }
 
 function closeMenu(onDone) {
@@ -64,45 +62,6 @@ export function initMenu() {
 
 /*
 ====================================================== 
-Focus Trap
-====================================================== 
-*/
-let focusTrapHandler = null;
-
-function trapFocus(container) {
-  const focusable = container.querySelectorAll(
-    "a, button, input, textarea, [tabindex]",
-  );
-
-  const first = focusable[0];
-  const last = focusable[focusable.length - 1];
-
-  focusTrapHandler = (e) => {
-    if (e.key !== "Tab") return;
-
-    if (e.shiftKey && document.activeElement === first) {
-      e.preventDefault();
-      last.focus();
-    }
-
-    if (!e.shiftKey && document.activeElement === last) {
-      e.preventDefault();
-      first.focus();
-    }
-  };
-
-  container.addEventListener("keydown", focusTrapHandler);
-}
-
-function removeTrap(container) {
-  if (focusTrapHandler) {
-    container.removeEventListener("keydown", focusTrapHandler);
-    focusTrapHandler = null;
-  }
-}
-
-/*
-====================================================== 
 Links Class
 ====================================================== 
 */
@@ -134,7 +93,9 @@ links.forEach((link) => {
 NavLinks Class
 ====================================================== 
 */
-const navLinks = document.querySelectorAll(".nav-bar a[href^='#']");
+const navLinks = document.querySelectorAll(
+  ".nav-bar a[href^='#'], .hero-section a[href^='#'], .services-section a[href^='#']",
+);
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (e) => {

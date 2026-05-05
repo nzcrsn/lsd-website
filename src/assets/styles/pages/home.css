@@ -1455,11 +1455,8 @@ Media Queries
     max-width: 80%;
   }
 
-  .hero-trust {
-    margin-top: 2rem;
-  }
-
   .hero-stats {
+    margin-top: 2rem;
     gap: 2rem;
   }
 
