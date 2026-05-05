@@ -105,7 +105,7 @@ header .cta-header {
   flex-direction: column;
 }
 
-.hero-section .copy .heading {
+.copy .heading {
   font-family: var(--font-primary);
   font-style: normal;
   font-size: var(--fs-h1-lg);

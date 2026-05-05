@@ -60,3 +60,43 @@ if (video) {
   );
 }
   */
+
+import { gsap } from "./core/gsap.js";
+import { lenis } from "./core/lenis.js";
+import { initHero } from "./animations/hero.js";
+import { initMenu } from "./animations/menu.js";
+import { deferUntilScrollOrIdle } from "./utils/scheduler.js";
+
+// Remove loading class — reveals content, stops CSS fallback timer
+document.documentElement.classList.remove("js-loading");
+
+// Video fade-in
+const video = document.querySelector(".video-media");
+if (video) {
+  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+  if (isMobile) {
+    video.remove(); // Don't load video on mobile
+  } else {
+    video.addEventListener(
+      "canplay",
+      () => {
+        video.classList.add("is-playing");
+      },
+      { once: true },
+    );
+  }
+}
+
+// Above the fold — run immediately
+document.addEventListener("DOMContentLoaded", () => {
+  initMenu();
+  initHero();
+
+  // Below the fold — defer until scroll or idle
+  deferUntilScrollOrIdle(() => {
+    // import("./deferred.js");
+    // Vite sees this dynamic import and automatically
+    // splits deferred.js into a separate chunk
+  });
+});

@@ -9,8 +9,6 @@ export function initContact() {
   _handleSubmit();
 }
 
-/* ── Section entrance animations ── */
-
 function _animateLeft() {
   const tl = gsap.timeline({
     scrollTrigger: { trigger: ".contact-left", start: "top 82%" },
@@ -57,8 +55,6 @@ function _animateForm() {
     ease: "power3.out",
   });
 }
-
-/* ── Form submission ── */
 
 function _handleSubmit() {
   const form = document.getElementById("contactForm");
@@ -140,8 +136,6 @@ function _handleSubmit() {
     });
   });
 }
-
-/* ── Success checkmark draw animation ── */
 
 function _animateSuccess() {
   const circle = document.querySelector(".success-circle");

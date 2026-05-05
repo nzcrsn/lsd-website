@@ -9,6 +9,13 @@ export default defineConfig({
     assetsDir: "assets",
     rollupOptions: {
       input: "src/assets/scripts/main.js",
+      output: {
+        // Keep vendor chunks separate for better caching
+        manualChunks: {
+          gsap: ["gsap"],
+          lenis: ["lenis"],
+        },
+      },
     },
   },
 });

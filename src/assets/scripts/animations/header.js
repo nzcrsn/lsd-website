@@ -4,16 +4,13 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-// ── Header entrance ──
 export function initHeader() {
   guardMotion(() => {
     const header = document.querySelector("header");
     if (!header) return;
 
-    // Start hidden
     gsap.set(header, { y: -20, opacity: 0 });
 
-    // Slide down on load — after a short delay so hero starts first
     gsap.to(header, {
       y: 0,
       opacity: 1,
@@ -22,7 +19,6 @@ export function initHeader() {
       ease: "power3.out",
     });
 
-    // Individual nav items stagger in after header arrives
     const navItems = header.querySelectorAll(".nav-bar li");
     const logo = header.querySelector(".logo");
     const networks = header.querySelector(".networks");
@@ -41,7 +37,6 @@ export function initHeader() {
   });
 }
 
-// ── Language dropdown ──
 export function initOptLang() {
   const menuBtn = document.querySelector(".current-lang");
   const langWrap = document.querySelector(".language");
@@ -91,7 +86,6 @@ export function initOptLang() {
     }
   });
 
-  // Close on outside click
   document.addEventListener("click", (e) => {
     if (open && langWrap && !langWrap.contains(e.target)) {
       open = false;
@@ -113,7 +107,6 @@ export function initOptLang() {
   });
 }
 
-// ── Smooth scroll ──
 export function initSmoothScroll() {
   const links = document.querySelectorAll('a[href^="#"]');
 

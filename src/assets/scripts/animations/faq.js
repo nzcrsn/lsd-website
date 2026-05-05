@@ -128,7 +128,6 @@ export function initFaq() {
   }
 }
 
-// Scroll-in reveal for each row
 export function initFaqReveal() {
   gsap.from(".faq__item", {
     opacity: 0,

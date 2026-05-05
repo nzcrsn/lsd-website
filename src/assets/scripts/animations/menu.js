@@ -1,68 +1,162 @@
-import { gsap } from "../base.js";
-import { guardMotion } from "../motion.js";
+import { guardMotion } from "../utils/motion.js";
 
-export function initMenu() {
-  const menuBtn = document.querySelector(".menu-btn");
-  if (!menuBtn) return;
+let scrollY = 0;
+const menuBtn = document.querySelector(".menu-btn");
+const menuSection = document.querySelector(".menu-section");
+const links = document.querySelectorAll(".menu-link");
 
-  const tl = gsap.timeline({
-    paused: true,
-    reversed: true,
-    duration: 0.2,
-    ease: "power2.inOut",
-  });
+/*
+====================================================== 
+Open/Close Menu Functions
+====================================================== 
+*/
+function openMenu() {
+  scrollY = window.scrollY;
+  menuSection.classList.remove("hidden");
+  document.body.style.top = `-${scrollY}px`;
+  document.body.classList.add("scroll-locked");
 
-  tl.to(
-    "#line-top",
-    { rotation: -45, transformOrigin: "100% 50%", scaleX: 0.8, x: -2 },
-    0,
-  );
-  tl.to(
-    "#line-bottom",
-    { rotation: -45, scaleX: 0.8, transformOrigin: "0% 0%", x: 2 },
-    0,
-  );
-  tl.to("#line-middle", { rotation: 45, transformOrigin: "50% 50%" }, 0);
-  tl.to(
-    "#menu-section",
-    {
-      opacity: 1,
-      visibility: "visible",
-      pointerEvents: "auto",
-      ease: "power2.inOut",
-    },
-    0,
-  );
+  trapFocus(menuSection);
+}
 
-  let scrollY = 0;
+function closeMenu(onDone) {
+  menuSection.classList.add("hidden");
 
-  function openMenu() {
-    scrollY = window.scrollY;
-
-    document.body.style.top = `-${scrollY}px`;
-    document.body.classList.add("scroll-locked");
-    menuBtn.setAttribute("aria-expanded", "true");
-    menuBtn.setAttribute("aria-label", "Close menu");
-  }
-
-  function closeMenu() {
-    document.body.classList.remove("scroll-locked");
+  const handler = (e) => {
+    if (e.propertyName !== "opacity") return;
 
     const storedScrollY = scrollY;
+    document.body.classList.remove("scroll-locked");
     document.body.style.top = "";
-
     window.scrollTo(0, storedScrollY);
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.setAttribute("aria-label", "Open menu");
-  }
 
-  menuBtn.addEventListener("click", () => {
-    if (tl.reversed()) {
-      guardMotion(() => tl.play());
-      openMenu();
-    } else {
-      guardMotion(() => tl.reverse());
-      closeMenu();
+    if (onDone) onDone();
+  };
+
+  menuSection.addEventListener("transitionend", handler, { once: true });
+}
+
+let isOpen = false;
+
+/*
+====================================================== 
+Button Class
+====================================================== 
+*/
+export function initMenu() {
+  guardMotion(() => {
+    if (!menuBtn) return;
+
+    menuBtn.addEventListener("click", () => {
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+      menuBtn.classList.toggle("expanded", isOpen);
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+    });
+  });
+}
+
+/*
+====================================================== 
+Focus Trap
+====================================================== 
+*/
+let focusTrapHandler = null;
+
+function trapFocus(container) {
+  const focusable = container.querySelectorAll(
+    "a, button, input, textarea, [tabindex]",
+  );
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  focusTrapHandler = (e) => {
+    if (e.key !== "Tab") return;
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
     }
+
+    if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
+  container.addEventListener("keydown", focusTrapHandler);
+}
+
+function removeTrap(container) {
+  if (focusTrapHandler) {
+    container.removeEventListener("keydown", focusTrapHandler);
+    focusTrapHandler = null;
+  }
+}
+
+/*
+====================================================== 
+Links Class
+====================================================== 
+*/
+links.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    const href = link.getAttribute("href");
+
+    // solo para anchors internos (#services)
+    if (!href.startsWith("#")) return;
+
+    e.preventDefault();
+
+    isOpen = false;
+    menuBtn.classList.remove("expanded");
+    menuBtn.setAttribute("aria-expanded", "false");
+
+    closeMenu(() => {
+      const target = document.querySelector(href);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+});
+
+/*
+====================================================== 
+NavLinks Class
+====================================================== 
+*/
+const navLinks = document.querySelectorAll(".nav-bar a[href^='#']");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    const target = document.querySelector(link.getAttribute("href"));
+    if (!target) return;
+
+    smoothScrollTo(target);
+  });
+});
+
+function smoothScrollTo(target) {
+  const headerOffset = 80;
+  const elementPosition = target.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth",
   });
 }
