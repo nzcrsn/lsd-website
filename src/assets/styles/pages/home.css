@@ -70,11 +70,9 @@ Styles of services section
   display: flex;
   flex-direction: column;
   gap: 12px;
-  /* height: auto; */
   margin-top: 2rem;
 }
 
-/* ── Service tile ── */
 .svc-tile {
   position: relative;
   overflow: hidden;
@@ -82,7 +80,6 @@ Styles of services section
   min-height: 260px;
 }
 
-/* Update the base rule: */
 .svc-tile__photo {
   position: absolute;
   inset: 0;
@@ -95,12 +92,6 @@ Styles of services section
   will-change: transform;
 }
 
-/* The supply tile had a custom position — replicate it: */
-.svc-tile--supply .svc-tile__photo {
-  object-position: center 40%;
-}
-
-/* ── Dark overlay ── */
 .svc-tile__overlay {
   position: absolute;
   inset: 0;
@@ -117,23 +108,15 @@ Styles of services section
   opacity: 0.92;
 }
 
-/* ── Number badge ── */
 .svc-tile__num {
   position: absolute;
   top: 18px;
   right: 18px;
   font-family: var(--font-primary);
-
-  font-size: var(--fs-p-base);
   font-weight: 300;
+  font-size: var(--fs-p-md);
   letter-spacing: 0.12em;
   color: var(--color-bg-main);
-}
-
-.svc-tile--lift .svc-tile__num {
-  font-size: var(--fs-p-base);
-  top: 26px;
-  right: 26px;
 }
 
 .svc-tile__bracket {
@@ -164,23 +147,16 @@ Styles of services section
   z-index: 2;
 }
 
-/* title */
 .svc-tile__title {
   font-family: var(--font-primary);
   font-weight: 300;
   line-height: 1.08;
   letter-spacing: -0.01em;
-  color: #f0ede6;
-  font-size: clamp(18px, 1.6vw, 24px);
+  color: var(--color-bg-main);
+  font-size: var(--fs-p-md);
   background-color: rgba(21, 21, 21, 0.8);
   width: fit-content;
   padding: 0.8rem 1.2rem;
-  /* font-size: var(--fs-p-sm); */
-  transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.svc-tile:hover .svc-tile__title {
-  transform: translateY(-2px);
 }
 
 .svc-tile__divider {
@@ -190,15 +166,15 @@ Styles of services section
   margin: 10px 0;
   transition: width 0.5s 0.02s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 .svc-tile:hover .svc-tile__divider {
   width: 100%;
 }
 
-/* description */
 .svc-tile__desc {
-  font-size: 11px;
+  font-size: 0.9rem;
   line-height: 1.8;
-  color: rgba(240, 237, 230, 0.8);
+  color: var(--color-bg-main);
   max-height: 0;
   overflow: hidden;
   opacity: 0;
@@ -207,13 +183,9 @@ Styles of services section
     opacity 0.38s 0.05s;
 }
 
-.svc-tile--lift .svc-tile__desc {
-  font-size: 12px;
-}
-
 .svc-tile:hover .svc-tile__desc {
   max-height: 60px;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .cta-services {
@@ -230,7 +202,6 @@ Styles of services section
   font-family: var(--font-primary);
   font-size: var(--fs-p-md);
 }
-
 /* End of styles of services section */
 
 /*
@@ -239,30 +210,20 @@ Styles of testimonials section
 ====================================================== 
 */
 
-.testimonials-section {
-  height: auto;
-}
-
-/* ── Masonry grid ── */
 .testimonials__masonry {
-  columns: 3;
-  column-gap: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start; /* critical: prevents columns from stretching to equal height */
   margin-top: 1rem;
 }
 
-@media (max-width: 1023px) and (min-width: 600px) {
-  .testimonials__masonry {
-    columns: 2;
-    column-gap: 14px;
-  }
-}
-@media (max-width: 599px) {
-  .testimonials__masonry {
-    columns: 1;
-  }
+.masonry-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* ── Review card ── */
 .review-card {
   break-inside: avoid;
   background: var(--cream-dark);
@@ -270,7 +231,6 @@ Styles of testimonials section
   border-radius: 8px;
   padding: 28px 26px 24px;
   margin-bottom: 16px;
-  position: relative;
   transition:
     border-color 0.3s,
     box-shadow 0.4s;
@@ -283,7 +243,6 @@ Styles of testimonials section
   box-shadow: 0 8px 40px rgba(28, 26, 23, 0.06);
 }
 
-/* featured card — slightly different tone */
 .review-card--featured {
   background: var(--ink);
   border-color: transparent;
@@ -293,7 +252,6 @@ Styles of testimonials section
   box-shadow: 0 8px 40px rgba(28, 26, 23, 0.18);
 }
 
-/* stars */
 .review-card__stars {
   display: flex;
   gap: 3px;
@@ -305,7 +263,6 @@ Styles of testimonials section
   height: 12px;
 }
 
-/* text */
 .review-card__text {
   font-family: var(--font-primary);
   font-size: 1rem;
@@ -319,12 +276,10 @@ Styles of testimonials section
   color: var(--cream);
 }
 
-/* large card gets bigger text */
 .review-card--lg .review-card__text {
   font-size: 1.1rem;
 }
 
-/* author */
 .review-card__author {
   margin-top: 22px;
   padding-top: 16px;
@@ -333,6 +288,7 @@ Styles of testimonials section
   align-items: center;
   justify-content: space-between;
 }
+
 .review-card--featured .review-card__author {
   border-top-color: rgba(240, 237, 230, 0.1);
 }
@@ -354,11 +310,11 @@ Styles of testimonials section
   color: var(--ink-light);
   margin-top: 2px;
 }
+
 .review-card--featured .review-card__source {
   color: rgba(240, 237, 230, 0.4);
 }
 
-/* platform badge */
 .review-card__badge {
   display: flex;
   align-items: center;
@@ -369,16 +325,17 @@ Styles of testimonials section
   color: var(--ink-light);
   flex-shrink: 0;
 }
+
 .review-card--featured .review-card__badge {
   color: rgba(240, 237, 230, 0.35);
 }
+
 .review-card__badge svg {
   width: 14px;
   height: 14px;
   opacity: 0.5;
 }
 
-/* ── Footer ── */
 .testimonials__footer {
   margin-top: 52px;
   padding-top: 28px;
@@ -388,13 +345,6 @@ Styles of testimonials section
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
-}
-
-@media (max-width: 599px) {
-  .testimonials__footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 }
 
 .testimonials__footer-text {
@@ -421,18 +371,22 @@ Styles of testimonials section
     border-color 0.3s,
     box-shadow 0.3s;
 }
+
 .platform-pill:hover {
   border-color: var(--accent);
   box-shadow: 0 4px 20px rgba(28, 26, 23, 0.06);
 }
+
 .platform-pill__logo {
   width: 18px;
   height: 18px;
 }
+
 .platform-pill__info {
   display: flex;
   flex-direction: column;
 }
+
 .platform-pill__score {
   font-size: 12px;
   font-weight: 500;
@@ -442,16 +396,40 @@ Styles of testimonials section
   align-items: center;
   gap: 4px;
 }
+
 .platform-pill__score svg {
   width: 10px;
   height: 10px;
 }
+
 .platform-pill__name {
   font-size: 9px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-light);
 }
+
+@media (max-width: 1023px) and (min-width: 600px) {
+  .testimonials__masonry {
+    gap: 14px;
+  }
+
+  .masonry-col:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .testimonials__masonry {
+    flex-direction: column;
+  }
+
+  .testimonials__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* End of styles of testimonials */
 
 /*
@@ -1302,7 +1280,6 @@ Styles of contact section
 }
 
 /* Submit button */
-
 .cta-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
@@ -1312,7 +1289,6 @@ Styles of contact section
   font-family: var(--font-primary);
   font-size: var(--fs-p-md);
   margin-bottom: 2rem;
-  /* text-align: center; */
   width: 100%;
 }
 
@@ -1325,27 +1301,6 @@ Media Queries
 */
 
 @media screen and (min-width: 768px) {
-  /*
-  ====================================================== 
-  Styles of hero section
-  ====================================================== 
-  */
-  /* .hero-section {
-    min-height: unset;
-    height: calc(100vh - var(--height-header));
-    flex-direction: row;
-    gap: 4rem;
-  } */
-  /* .hero-section {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-  }
-
-  .grid {
-    grid-template-rows: repeat(3, minmax(180px, 28vw));
-  } */
-  /* End styles of hero section*/
-
   /*
   ====================================================== 
   Styles of service section
@@ -1380,7 +1335,6 @@ Media Queries
   .company-section > p {
     text-align: left;
     line-height: 1.25;
-    /* color: #264653; */
     color: #5a6066;
   }
   /* End of styles of company section*/
@@ -1398,7 +1352,6 @@ Media Queries
   }
 
   /* Styles of contact section */
-
   .contact-section > h2 {
     display: flex;
     justify-content: left;
@@ -1418,7 +1371,6 @@ Media Queries
     width: 30px;
     height: 30px;
   }
-
   /* End of styles of contact section*/
 
   /* Start of styles of company section*/
@@ -1463,13 +1415,6 @@ Media Queries
     font-size: 0.72rem;
   }
 
-  /* .grid {
-    max-width: 40%;
-    grid-template-columns: repeat(2, minmax(180px, 1fr));
-    gap: 0.5rem;
-    overflow: hidden;
-  } */
-
   /* Styles of service section */
 
   .services-bento__layout {
@@ -1478,15 +1423,12 @@ Media Queries
     grid-template-rows: 1fr 1fr;
     gap: 10px;
     min-height: calc(100vh - var(--height-header) - 12rem);
-    /* border: 1px solid red; */
-    /* height: 62vh;
-    min-height: 450px; */
-    /* max-height: 220px; */
   }
 
   .svc-tile {
     min-height: 0px;
   }
+
   /* Desktop placement */
   .svc-tile--lift {
     grid-column: 1;
@@ -1516,10 +1458,6 @@ Media Queries
 }
 
 @media screen and (min-width: 1200px) {
-  .scroll {
-    width: calc(100% - 96px);
-  }
-
   .hero-section {
     padding-right: 48px;
     padding-left: 48px;

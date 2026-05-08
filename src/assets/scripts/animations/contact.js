@@ -1,15 +1,18 @@
-import { gsap } from "../base.js";
+import { gsap } from "../core/gsap.js";
+import { guardMotion } from "../utils/motion.js";
 
-export function initContact() {
-  const section = document.querySelector(".contact-section");
-  if (!section) return;
+export function initContact(ScrollTrigger) {
+  guardMotion(() => {
+    const section = document.querySelector(".contact-section");
+    if (!section) return;
 
-  _animateLeft();
-  _animateForm();
-  _handleSubmit();
+    _animateLeft(ScrollTrigger);
+    _animateForm(ScrollTrigger);
+    _handleSubmit(ScrollTrigger);
+  });
 }
 
-function _animateLeft() {
+function _animateLeft(ScrollTrigger) {
   const tl = gsap.timeline({
     scrollTrigger: { trigger: ".contact-left", start: "top 82%" },
   });
@@ -42,7 +45,7 @@ function _animateLeft() {
     );
 }
 
-function _animateForm() {
+function _animateForm(ScrollTrigger) {
   const tl = gsap.timeline({
     scrollTrigger: { trigger: ".contact-right", start: "top 82%" },
   });
@@ -56,7 +59,7 @@ function _animateForm() {
   });
 }
 
-function _handleSubmit() {
+function _handleSubmit(ScrollTrigger) {
   const form = document.getElementById("contactForm");
   const formWrap = document.getElementById("formWrap");
   const loading = document.getElementById("formLoading");
@@ -137,7 +140,7 @@ function _handleSubmit() {
   });
 }
 
-function _animateSuccess() {
+function _animateSuccess(ScrollTrigger) {
   const circle = document.querySelector(".success-circle");
   const check = document.querySelector(".success-check");
   const title = document.querySelector(".form-success__title");

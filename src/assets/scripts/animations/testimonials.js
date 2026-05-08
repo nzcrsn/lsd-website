@@ -1,13 +1,11 @@
-import { gsap } from "../base.js";
-import { guardMotion } from "../motion.js";
+import { gsap } from "../core/gsap.js";
+import { guardMotion } from "../utils/motion.js";
 
-export function initTestimonials() {
+export function initTestimonials(ScrollTrigger) {
   guardMotion(() => {
     const section = document.querySelector(".testimonials-section");
     if (!section) return;
 
-    // ── Cards stagger in column by column ──
-    // CSS masonry is column-based, so stagger reads naturally top→bottom left→right
     gsap.from(".review-card", {
       opacity: 0,
       y: 36,
@@ -24,7 +22,6 @@ export function initTestimonials() {
       },
     });
 
-    // ── Footer: text + platform pills ──
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".testimonials__footer",

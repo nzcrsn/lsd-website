@@ -34,6 +34,11 @@ body {
   background: var(--color-bg-main);
 }
 
+/*
+====================================================== 
+Styles of header section
+====================================================== 
+*/
 header {
   position: fixed;
   top: 0px;
@@ -72,6 +77,11 @@ header .cta-header {
   display: flex;
 }
 
+/*
+====================================================== 
+Styles of hero section
+====================================================== 
+*/
 .hero-section {
   gap: 3rem;
   min-height: 100svh;
@@ -164,9 +174,14 @@ header .cta-header {
 }
 
 @media screen and (min-width: 768px) {
+  /*
+====================================================== 
+Styles of hero section
+====================================================== 
+*/
   .hero-section {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    margin-top: 0;
+    padding-top: calc(2rem + var(--height-header));
     padding-right: 24px;
     padding-left: 24px;
   }

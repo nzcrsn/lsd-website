@@ -1,6 +1,8 @@
-import { gsap } from "../base.js";
+import { gsap } from "../core/gsap.js";
+import { guardMotion } from "../utils/motion.js";
 
 export function initFaq() {
+  guardMotion(() => {});
   const items = document.querySelectorAll(".faq__item");
 
   items.forEach((item) => {
@@ -126,9 +128,7 @@ export function initFaq() {
       }
     });
   }
-}
 
-export function initFaqReveal() {
   gsap.from(".faq__item", {
     opacity: 0,
     y: 30,

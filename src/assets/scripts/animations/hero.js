@@ -17,13 +17,7 @@ export function initHero() {
     const EASE_DRIFT = "power2.out";
 
     // ── 1. Headline — soft clip reveal per line ──────────────────────────────
-    // const splitParent = SplitText.create(heading, {
-    //   type: "lines",
-    //   // linesClass: "line-parent",
-    // });
-
     let split;
-
     const splitContainer = SplitText.create(heading, {
       type: "lines",
       mask: "lines",
@@ -38,7 +32,6 @@ export function initHero() {
         return split;
       },
     });
-
     const tl = gsap.timeline();
     tl.add(split);
 
@@ -128,6 +121,23 @@ export function initHero() {
         },
         "-=0.35",
       );
+    }
+
+    /** Video Animation */
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+    const video = document.querySelector(".video-media");
+    if (video) {
+      if (isMobile) {
+        video.remove();
+      } else {
+        video.addEventListener(
+          "canplay",
+          () => {
+            video.classList.add("is-playing");
+          },
+          { once: true },
+        );
+      }
     }
   });
 }

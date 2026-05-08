@@ -1,17 +1,16 @@
-import { gsap, SplitText, ScrollTrigger } from "../base.js";
-import { guardMotion } from "../motion.js";
+import { gsap, SplitText } from "../core/gsap.js";
+import { guardMotion } from "../utils/motion.js";
 
-export function initCompany() {
+export function initCompany(ScrollTrigger) {
   guardMotion(() => {
     const section = document.querySelector(".company-section");
     if (!section) return;
 
-    _animateLeft();
-    _animateRight();
+    _animateLeft(ScrollTrigger);
+    _animateRight(ScrollTrigger);
   });
 }
 
-// ── LEFT column: intro text → values label → vgrid items ──
 function _animateLeft() {
   const tl = gsap.timeline({
     scrollTrigger: {
@@ -19,28 +18,6 @@ function _animateLeft() {
       start: "top 82%",
     },
   });
-
-  // Intro paragraph word-by-word
-  const intro = document.querySelector(".company-intro");
-  if (intro) {
-    const split = new SplitText(intro, {
-      type: "words",
-      wordsClass: "intro-word",
-    });
-    gsap.set(intro, { visibility: "visible" });
-
-    tl.from(
-      ".intro-word",
-      {
-        opacity: 0,
-        y: 10,
-        stagger: 0.018,
-        duration: 0.5,
-        ease: "power2.out",
-      },
-      0,
-    );
-  }
 
   // Values label
   tl.from(
@@ -64,8 +41,7 @@ function _animateLeft() {
   );
 }
 
-// ── RIGHT column: image frame → stats count-up → quote ──
-function _animateRight() {
+function _animateRight(ScrollTrigger) {
   // Image frame slides in
   gsap.from(".img-frame", {
     opacity: 0,
