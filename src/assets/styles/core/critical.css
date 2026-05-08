@@ -180,10 +180,9 @@ JS Queries
 */
 .js-loading .hero-section .heading,
 .js-loading .hero-section .sub-heading,
-.js-loading .hero-section .hero-trust,
+.js-loading .hero-section .hero-stats,
 .js-loading .hero-section .cta-heading,
-.js-loading .hero-section .proof__badges {
-  border: 1px solid red;
+.js-loading .hero-section .badges {
   opacity: 0;
 }
 
