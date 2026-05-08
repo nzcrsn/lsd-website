@@ -11,7 +11,7 @@ export function initCompany(ScrollTrigger) {
   });
 }
 
-function _animateLeft() {
+function _animateLeft(ScrollTrigger) {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".company-section .left",
@@ -19,14 +19,18 @@ function _animateLeft() {
     },
   });
 
-  // Values label
+  tl.from(
+    ".company-intro",
+    { y: 30, opacity: 0, duration: 0.8, ease: "power3.out", stagger: 0.2 },
+    "-=0",
+  );
+
   tl.from(
     ".values__label",
-    { opacity: 0, x: -10, duration: 0.5, ease: "power2.out" },
+    { opacity: 0, x: -20, duration: 0.5, ease: "power2.out" },
     "-=0.2",
   );
 
-  // Value grid items stagger in
   tl.from(
     ".vitem",
     {

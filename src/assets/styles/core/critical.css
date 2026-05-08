@@ -173,6 +173,20 @@ Styles of hero section
   opacity: 1;
 }
 
+/*
+====================================================== 
+JS Queries
+====================================================== 
+*/
+.js-loading .hero-section .heading,
+.js-loading .hero-section .sub-heading,
+.js-loading .hero-section .hero-trust,
+.js-loading .hero-section .cta-heading,
+.js-loading .hero-section .proof__badges {
+  border: 1px solid red;
+  opacity: 0;
+}
+
 @media screen and (min-width: 768px) {
   /*
 ====================================================== 

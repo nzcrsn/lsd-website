@@ -195,15 +195,9 @@ Flex Class
 
 /*
 ====================================================== 
-Opacity Class
+Nav Spacer
 ====================================================== 
 */
-/* .hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-} */
-
 .nav_spacer {
   display: none;
   background-color: var(--color-primary);
@@ -213,6 +207,7 @@ Opacity Class
   height: 1.2rem;
   color: var(--color-primary);
 }
+
 /*
 ====================================================== 
 Button Class
@@ -308,19 +303,6 @@ Button Class
   transform: translateY(20px);
   transition: none;
 }
-
-/*
-====================================================== 
-JS Queries
-====================================================== 
-*/
-/* .js-loading .hero-section .heading,
-.js-loading .hero-section .sub-heading,
-.js-loading .hero-section .hero-trust,
-.js-loading .hero-section .cta-heading,
-.js-loading .hero-section .proof__badges {
-  opacity: 0;
-} */
 
 /* Above the fold elements get CSS transitions as fallback*/
 /* .hero-section .heading,
