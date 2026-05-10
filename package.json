@@ -16,12 +16,14 @@
   "dependencies": {
     "@11ty/eleventy": "^3.1.5",
     "gsap": "^3.14.2",
-    "lenis": "^1.3.17",
-    "vite": "^8.0.9"
+    "lenis": "^1.3.17"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.36.3",
     "concurrently": "^9.2.1",
     "lightningcss": "^1.32.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.34.5",
+    "vite": "^8.0.11",
+    "wrangler": "^4.90.0"
   }
 }
