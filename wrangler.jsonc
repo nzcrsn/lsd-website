@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "cloudflare-vite-get-started",
+  "name": "lsd-website",
   // Set this to today's date
   "compatibility_date": "2026-05-08",
   "main": "./src/index.js",
