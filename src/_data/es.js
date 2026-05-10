@@ -28,11 +28,32 @@ export default {
     hero: {
       heading:
         "Disfruta de una mudanza sin complicaciones, sin estrés y con total confianza",
-      subheading: "Hacemos de tu mudanza una experiencia placentera",
-      cta: "Request a quoteo",
+      subheading:
+        " Elevadores de muebles, camiones equipados y personal cualificado para que todo sea más fácil.",
       year_experiencie_lbl: "años de experiencia",
       clientes_satisf_lbl: "clientes satisfechos",
       countries_cover_lbl: "paises cubiertos",
+      cta: "Solicitar presupuesto",
+      badge_lbl: "Respuesta en menos de 24 horas",
+    },
+    services: {
+      label: "Nuestros servicios",
+      heading: "A tu medida, diseñado para ti.",
+
+      svc_1_lbl: "Alquiler de elevadores de muebles",
+      svc_1_desc:
+        "Alquiler de elevadores motorizados para muebles y materiales pesados o voluminosos.",
+      svc_2_lbl: "Camiones equipados + conductor",
+      svc_2_desc:
+        "Camiones equipados con conductores experimentados para un transporte seguro, práctico y profesional.",
+      svc_3_lbl: "Mudanzas a tu medida",
+      svc_3_desc:
+        "Un acompañamiento de principio a fin diseñado para adaptarse a tu situación.",
+      svc_4_lbl: "Materiales para mudanzas",
+      svc_4_desc:
+        "Cajas, correas, plástico de burbujas y protecciones entregadas a domicilio para embalar tus pertenencias con total seguridad.",
+      question: "¿Listo para mudarte?",
+      cta: "Solicitar un presupuesto",
     },
     company: {
       label: "Acerca de nosotros",
@@ -49,11 +70,9 @@ export default {
     },
     testimonials: {
       label: "Testimonios",
-      heading: "Tu satisfacción, nuestra misión",
-    },
-    services: {
-      label: "Servicios",
-      heading: "A tu medida, diseñado para ti.",
+      heading: "Tu satisfacción es nuestra misión",
+      suggestion:
+        "Découvrez encore plus d'avis de nos clients sur Google et Pages d'Or.",
     },
     contact: {
       label: "Contacto",

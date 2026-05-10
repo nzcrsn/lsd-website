@@ -11,38 +11,33 @@ stylesheet: home.css
 <section id="hero" class="hero-section">
   <div class="copy">
     <h1 class="heading">{{ t.section.hero.heading}}</h1>
-    <p class="sub-heading">
-      Elevadores de muebles, camiones equipados y personal cualificado para que
-      todo sea más fácil.
-    </p>
+    <p class="sub-heading">{{t.section.hero.subheading}}</p>
 
-    <div class="hero-trust">
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat__number">+10</span>
-          <span class="hero-stat__label"
-            >{{t.section.hero.year_experiencie_lbl}}</span
-          >
-        </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat__number">+10</span>
+        <span class="hero-stat__label"
+          >{{t.section.hero.year_experiencie_lbl}}</span
+        >
+      </div>
 
-        <div class="hero-stat">
-          <span class="hero-stat__number">+5 000</span>
-          <span class="hero-stat__label"
-            >{{t.section.hero.clientes_satisf_lbl}}</span
-          >
-        </div>
+      <div class="hero-stat">
+        <span class="hero-stat__number">+5 000</span>
+        <span class="hero-stat__label"
+          >{{t.section.hero.clientes_satisf_lbl}}</span
+        >
+      </div>
 
-        <div class="hero-stat">
-          <span class="hero-stat__number">+6 </span>
-          <span class="hero-stat__label"
-            >{{t.section.hero.countries_cover_lbl}}</span
-          >
-        </div>
+      <div class="hero-stat">
+        <span class="hero-stat__number">+6</span>
+        <span class="hero-stat__label"
+          >{{t.section.hero.countries_cover_lbl}}</span
+        >
       </div>
     </div>
 
-    <a class="cta-btn cta-heading">
-      <p>Solicitar presupuesto</p>
+    <a class="cta-btn cta-heading" href="#contact">
+      <p>{{t.section.hero.cta}}</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"
@@ -58,8 +53,9 @@ stylesheet: home.css
         />
       </svg>
     </a>
-    <div class="proof__badges">
-      <span class="proof__badge">
+
+    <div class="badges">
+      <span class="badge">
         <svg
           width="12"
           height="12"
@@ -73,74 +69,87 @@ stylesheet: home.css
           <circle cx="12" cy="12" r="10" />
           <polyline points="12 6 12 12 16 14" />
         </svg>
-        Respuesta en menos de 24 horas
+        {{t.section.hero.badge_lbl}}
       </span>
-    </div>
-
-    <div class="proof" id="proof">
-      <div class="proof__rating">
-        <div class="proof__stars">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-            />
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-            />
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-            />
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-            />
-          </svg>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-            />
-          </svg>
-        </div>
-        <span class="proof__score">4.9</span>
-        <span class="proof__source"> en Google </span>
-        <span class="proof__count">81 opiniones verificadas</span>
-      </div>
     </div>
   </div>
 
   <div class="grid">
     <div class="item video tall">
+      <img
+        class="video-poster"
+        src="/assets/media/images/hero-poster-480.webp"
+        srcset="
+          /assets/media/images/hero-poster-320.webp 320w,
+          /assets/media/images/hero-poster-480.webp 480w,
+          /assets/media/images/hero-poster-640.webp 640w,
+          /assets/media/images/hero-poster-800.webp 800w
+        "
+        sizes="
+      (max-width: 768px) 50vw,
+      (max-width: 992px) 40vw,
+      20vw
+    "
+        width="830"
+        height="1476"
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+      />
+
       <video
-        src="/assets/videos/v4-n.mp4"
         autoplay
         muted
         playsinline
         loop
-        preload="metadata"
+        preload="none"
         aria-hidden="true"
-      ></video>
+        class="video-media"
+        width="830"
+        height="1476"
+      >
+        <source src="/assets/media/videos/output.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="item">
       <img
-        src="/assets/images/img-8.webp"
-        alt=""
+        src="/assets/media/images/lift-truck-320.webp"
+        srcset="
+          /assets/media/images/lift-truck-200.webp 200w,
+          /assets/media/images/lift-truck-320.webp 320w,
+          /assets/media/images/lift-truck-480.webp 480w,
+          /assets/media/images/lift-truck-640.webp 640w
+        "
+        sizes="
+    (max-width: 768px) 50vw,
+    25vw
+  "
+        width="420"
+        height="315"
+        alt="Lifts"
         loading="eager"
-        decoding="async"
         fetchpriority="high"
       />
     </div>
 
     <div class="item medium">
       <img
-        src="../assets/images/lift-employee.webp"
-        alt=""
-        loading="lazy"
-        decoding="async"
+        src="/assets/media/images/lift-employee-320.webp"
+        srcset="
+          /assets/media/images/lift-employee-200.webp 200w,
+          /assets/media/images/lift-employee-320.webp 320w,
+          /assets/media/images/lift-employee-480.webp 480w,
+          /assets/media/images/lift-employee-640.webp 640w
+        "
+        sizes="
+    (max-width: 768px) 50vw,
+      25vw
+  "
+        width="362"
+        height="644"
+        alt="Lift Service Employee"
+        loading="eager"
+        fetchpriority="high"
       />
     </div>
   </div>
@@ -149,82 +158,135 @@ stylesheet: home.css
 
 <!-- Start services section -->
 <section id="services" class="services-section">
-  <div class="eyebrow">Nuestros servicios</div>
-  <h2>Adaptados a ti, diseñados para ti.</h2>
+  <div class="eyebrow">{{ t.section.services.label}}</div>
+  <h2>{{ t.section.services.heading}}</h2>
 
   <div class="services-bento__layout">
-    <!-- 01 — Monte-meubles (hero) -->
     <div class="svc-tile svc-tile--lift">
-      <div class="svc-tile__photo"></div>
+      <img
+        class="svc-tile__photo"
+        src="/assets/media/images/lifts-900w.webp"
+        srcset="
+          /assets/media/images/lifts-600w.webp   600w,
+          /assets/media/images/lifts-900w.webp   900w,
+          /assets/media/images/lifts-1200w.webp 1200w,
+          /assets/media/images/lifts-1800w.webp 1800w
+        "
+        sizes="
+      (max-width: 767px)  100vw,
+      (max-width: 991px)  calc(50vw - 5px),
+      calc(41vw - 8px)
+    "
+        width="2048"
+        height="2048"
+        alt="Monte-meubles en action"
+        loading="lazy"
+      />
       <div class="svc-tile__overlay"></div>
       <span class="svc-tile__num">01</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">
-          Alquiler de elevadores<br />
-          de muebles
-        </h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_1_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Alquiler de elevadores motorizados para muebles y materiales pesados o
-          voluminosos.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_1_desc}}</p>
       </div>
     </div>
 
-    <!-- 02 — Camions -->
     <div class="svc-tile svc-tile--trucks">
-      <div class="svc-tile__photo"></div>
+      <img
+        class="svc-tile__photo"
+        src="/assets/media/images/chofe-900w.webp"
+        srcset="
+          /assets/media/images/chofe-600w.webp   600w,
+          /assets/media/images/chofe-900w.webp   900w,
+          /assets/media/images/chofe-1200w.webp 1200w,
+          /assets/media/images/chofe-1800w.webp 1800w
+        "
+        sizes="
+      (max-width: 767px)  100vw,
+      (max-width: 991px)  calc(50vw - 5px),
+      calc(29vw - 6px)
+    "
+        width="1536"
+        height="2048"
+        alt="Camion avec chauffeur expérimenté"
+        loading="lazy"
+      />
       <div class="svc-tile__overlay"></div>
       <span class="svc-tile__num">02</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Camiones equipados + conductor</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_2_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Camiones equipados con conductores experimentados para un transporte
-          seguro, práctico y profesional.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_2_desc}}</p>
       </div>
     </div>
 
-    <!-- 03 — Déménagement -->
     <div class="svc-tile svc-tile--move">
-      <div class="svc-tile__photo"></div>
+      <img
+        class="svc-tile__photo"
+        src="/assets/media/images/level-900w.webp"
+        srcset="
+          /assets/media/images/level-600w.webp   600w,
+          /assets/media/images/level-900w.webp   900w,
+          /assets/media/images/level-1200w.webp 1200w,
+          /assets/media/images/level-1800w.webp 1800w
+        "
+        sizes="
+      (max-width: 767px)  100vw,
+      (max-width: 991px)  calc(50vw - 5px),
+      calc(29vw - 6px)
+    "
+        width="2000"
+        height="924"
+        alt="Déménagement sur mesure"
+        loading="lazy"
+      />
       <div class="svc-tile__overlay"></div>
       <span class="svc-tile__num">03</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Mudanzas<br />a tu medida</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_3_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Un acompañamiento de principio a fin diseñado para adaptarse a su
-          situación, sin estrés ni sorpresas.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_3_desc}}</p>
       </div>
     </div>
 
-    <!-- 04 — Fournitures (wide) -->
     <div class="svc-tile svc-tile--supply">
-      <div class="svc-tile__photo"></div>
+      <img
+        class="svc-tile__photo"
+        src="/assets/media/images/boxes-900w.webp"
+        srcset="
+          /assets/media/images/boxes-600w.webp   600w,
+          /assets/media/images/boxes-900w.webp   900w,
+          /assets/media/images/boxes-1200w.webp 1200w,
+          /assets/media/images/boxes-1800w.webp 1800w
+        "
+        sizes="
+      (max-width: 767px)  100vw,
+      (max-width: 991px)  calc(50vw - 5px),
+      calc(59vw - 2px)
+    "
+        width="2048"
+        height="1536"
+        alt="Matériaux d'emballage pour déménagement"
+        loading="lazy"
+      />
       <div class="svc-tile__overlay"></div>
       <span class="svc-tile__num">04</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Materiales para mudanzas</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_4_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Cajas, correas, plástico de burbujas y protecciones entregadas a
-          domicilio para embalar sus pertenencias con total seguridad.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_4_desc}}</p>
       </div>
     </div>
   </div>
 
   <div class="cta-services">
-    <p>¿Listo para mudarte?</p>
-    <a class="cta-btn">
-      <p>Solicitar un presupuesto</p>
+    <p>{{ t.section.services.question}}</p>
+    <a href="#contact" class="cta-btn">
+      <p>{{ t.section.services.cta}}</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"
@@ -245,532 +307,535 @@ stylesheet: home.css
 <!-- End services section -->
 <!-- Start testimonial section -->
 <section id="testimonials" class="testimonials-section">
-  <div class="eyebrow">Testimonios</div>
-  <h2>Su satisfacción es nuestra misión.</h2>
+  <div class="eyebrow">{{ t.section.testimonials.label}}</div>
+  <h2>{{ t.section.testimonials.heading}}</h2>
   <!-- Masonry -->
   <div class="testimonials__masonry" id="masonry">
-    <!-- Col 1 -->
-    <div class="review-card review-card--lg review-card--featured">
-      <div class="review-card__stars">
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-      </div>
-      <p class="review-card__text">
-        Empresa muy fiable. Personal profesional, atento, puntual y cortés.
-        Fácil comunicación a través de WhatsApp y correo electrónico. ¡Muy
-        recomendable!
-      </p>
-      <div class="review-card__author">
-        <div>
-          <p class="review-card__name">Moni Di Bratto</p>
-          <p class="review-card__source">Usuario de Google</p>
-        </div>
-        <div class="review-card__badge">
-          <!-- Google G -->
-          <svg viewBox="0 0 18 18" fill="none">
-            <path
-              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
-              fill="#4285F4"
-            />
-            <path
-              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
-              fill="#34A853"
-            />
-            <path
-              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
-              fill="#FBBC05"
-            />
-            <path
-              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
-              fill="#EA4335"
+    <div class="masonry-col">
+      <div class="review-card review-card--lg review-card--featured">
+        <div class="review-card__stars">
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
             />
           </svg>
-          Google
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+        </div>
+        <p class="review-card__text">
+          Empresa muy fiable. Personal profesional, atento, puntual y cortés.
+          Fácil comunicación a través de WhatsApp y correo electrónico. ¡Muy
+          recomendable!
+        </p>
+        <div class="review-card__author">
+          <div>
+            <p class="review-card__name">Moni Di Bratto</p>
+            <p class="review-card__source">Usuario de Google</p>
+          </div>
+          <div class="review-card__badge">
+            <!-- Google G -->
+            <svg viewBox="0 0 18 18" fill="none">
+              <path
+                d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+                fill="#4285F4"
+              />
+              <path
+                d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+                fill="#34A853"
+              />
+              <path
+                d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+                fill="#EA4335"
+              />
+            </svg>
+            Google
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card__stars">
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+        </div>
+        <p class="review-card__text">
+          Empresa profesional, servicio de primera categoría, personal
+          disponible y muy puntual. ¡Muy recomendable! 👍🏆
+        </p>
+        <div class="review-card__author">
+          <div>
+            <p class="review-card__name">Jean-Pol ZiK</p>
+            <p class="review-card__source">Usuario Google</p>
+          </div>
+          <div class="review-card__badge">
+            <svg viewBox="0 0 18 18" fill="none">
+              <path
+                d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+                fill="#4285F4"
+              />
+              <path
+                d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+                fill="#34A853"
+              />
+              <path
+                d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+                fill="#EA4335"
+              />
+            </svg>
+            Google
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="review-card">
-      <div class="review-card__stars">
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-      </div>
-      <p class="review-card__text">
-        Empresa profesional, servicio de primera categoría, personal disponible
-        y muy puntual. ¡Muy recomendable! 👍🏆
-      </p>
-      <div class="review-card__author">
-        <div>
-          <p class="review-card__name">Jean-Pol ZiK</p>
-          <p class="review-card__source">Usuario Google</p>
-        </div>
-        <div class="review-card__badge">
-          <svg viewBox="0 0 18 18" fill="none">
-            <path
-              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
-              fill="#4285F4"
-            />
-            <path
-              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
-              fill="#34A853"
-            />
-            <path
-              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
-              fill="#FBBC05"
-            />
-            <path
-              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
-              fill="#EA4335"
+    <div class="masonry-col">
+      <div class="review-card">
+        <div class="review-card__stars">
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
             />
           </svg>
-          Google
-        </div>
-      </div>
-    </div>
-
-    <!-- Col 2 -->
-    <div class="review-card">
-      <div class="review-card__stars">
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-      </div>
-      <p class="review-card__text">
-        Puntual, organizado, eficaz y, además, simpático y sonriente.
-        Profesionalidad, amabilidad y eficacia. ¡Recomendable!
-      </p>
-      <div class="review-card__author">
-        <div>
-          <p class="review-card__name">Giovanna Rollo</p>
-          <p class="review-card__source">Usuario de Pages d'Or</p>
-        </div>
-        <div class="review-card__badge">
-          <svg
-            width="300"
-            height="300"
-            viewBox="250 0 100 300"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_312_60)">
-              <path
-                d="M290 1C297.021 1 304.041 1 311.737 1.35468C318.668 2.59863 324.999 3.1292 331.167 4.43162C408.286 20.715 458.845 90.7145 450.155 169.012C443.113 232.464 394.853 285.377 332.384 298.17C328.237 299.02 324.127 300.052 320 301C268.645 301 217.291 301 165.242 300.74C155.221 296.732 151.07 289.622 151.072 279.791C151.078 250.298 150.986 220.804 151.107 191.31C151.18 173.824 150.75 156.28 151.987 138.864C156.611 73.764 205.197 18.558 269.197 4.92586C276.097 3.45619 283.064 2.30104 290 1ZM269.615 107.978C273.711 106.544 276.207 103.83 275.344 99.3398C274.441 94.6469 271.023 93.122 266.47 93.1343C242.338 93.1998 218.205 93.1921 194.073 93.1398C189.699 93.1303 186.022 94.0424 184.946 98.927C183.829 103.997 186.604 106.716 191.389 108.933C192.605 109.288 193.819 109.949 195.035 109.952C218.254 110.014 241.473 110.028 264.692 109.926C266.118 109.92 267.54 108.872 269.615 107.978ZM410.426 197.507C410.596 197.122 410.765 196.737 410.77 195.884C410.79 195.538 410.92 195.24 411.824 194.724C412.508 192.273 413.193 189.822 413.755 186.765C413.906 186.173 414.056 185.582 414.824 184.731C415.206 182.484 415.589 180.237 415.891 177.315C415.982 176.874 416.072 176.433 416.73 175.808C416.793 174.862 416.857 173.916 416.812 172.175C416.924 171.114 417.036 170.054 417.777 168.747C417.821 167.153 417.865 165.558 417.768 163.119C417.86 161.41 417.952 159.701 418.258 157.787C418.413 157.499 418.358 157.242 417.971 156.231C417.252 150.256 414.882 147.67 410.244 147.798C405.646 147.926 403.611 151.002 403.014 156.702C402.117 165.273 401.59 174.068 399.192 182.266C381.969 241.122 322.451 271.061 264.838 250.224C229.422 237.415 201.873 200.72 200.448 163.708C200.667 163.5 200.851 163.264 201.914 162.776C214.911 162.754 227.909 162.728 240.906 162.713C249.571 162.702 258.238 162.807 266.901 162.672C273.127 162.575 276.905 158.107 275.188 153.104C273.693 148.746 270.219 147.789 266.04 147.799C242.211 147.853 218.381 147.806 194.552 147.835C186.626 147.845 184.49 150.06 184.758 158.106C185.973 194.595 201.126 224.148 229.415 247.005C246.429 260.752 266.189 268.154 288.059 271.875C288.755 271.809 289.451 271.743 291.059 271.538C298.301 271.562 305.543 271.586 313.125 272.022C313.74 271.777 314.355 271.532 315.781 271.011C333.143 268.744 349.222 262.95 363.995 253.528C381.6 242.299 394.887 227.102 405.706 208.743C406.094 207.663 406.481 206.583 406.812 205.22C406.812 205.22 406.999 205 407.701 204.734C408.085 203.602 408.469 202.471 408.81 200.736C409.215 199.822 409.62 198.908 410.426 197.507ZM249.499 135.396C255.161 135.394 260.823 135.451 266.484 135.373C272.15 135.295 275.765 132.187 275.607 127.697C275.455 123.353 271.964 120.436 266.595 120.366C260.435 120.286 254.273 120.345 248.111 120.345C229.959 120.346 211.807 120.306 193.656 120.37C187.272 120.392 183.634 124.265 184.886 129.559C186.028 134.391 189.665 135.422 194.044 135.411C212.195 135.369 230.347 135.395 249.499 135.396Z"
-                fill="#FAD617"
-              />
-              <path
-                d="M418.044 157.993C417.952 159.701 417.86 161.41 417.725 163.886C417.504 166.099 417.326 167.546 417.147 168.993C417.036 170.054 416.924 171.114 416.739 172.86C416.499 174.361 416.331 175.177 416.163 175.992C416.072 176.433 415.982 176.874 415.785 177.979C415.188 180.759 414.697 182.875 414.206 184.99C414.056 185.582 413.906 186.173 413.532 187.329C412.593 190.259 411.877 192.625 411.161 194.991C410.92 195.24 410.79 195.538 410.568 196.301C410.252 197.144 410.138 197.569 410.024 197.994C409.62 198.908 409.215 199.822 408.557 201.263C407.869 202.86 407.434 203.93 406.999 205C406.999 205 406.812 205.22 406.57 205.568C405.893 206.943 405.459 207.97 405.025 208.997C394.888 227.102 381.6 242.299 363.995 253.528C349.222 262.95 333.143 268.744 315.096 271.107C313.868 271.339 313.326 271.474 312.785 271.609C305.543 271.586 298.301 271.562 290.204 271.462C288.784 271.382 288.219 271.377 287.655 271.372C266.189 268.154 246.429 260.752 229.415 247.005C201.126 224.148 185.974 194.595 184.758 158.106C184.49 150.06 186.626 147.845 194.552 147.835C218.381 147.806 242.211 147.853 266.04 147.799C270.219 147.789 273.693 148.746 275.188 153.104C276.905 158.107 273.127 162.575 266.902 162.672C258.238 162.807 249.571 162.702 240.906 162.713C227.909 162.728 214.912 162.754 201.183 162.9C200.331 163.342 200.209 163.66 200.088 163.979C201.873 200.72 229.422 237.415 264.838 250.224C322.452 271.061 381.969 241.122 399.192 182.266C401.59 174.068 402.117 165.273 403.014 156.702C403.611 151.002 405.646 147.926 410.244 147.799C414.882 147.67 417.252 150.256 417.959 156.865C417.979 157.663 418.011 157.828 418.044 157.993Z"
-                fill="#FFFEFA"
-              />
-              <path
-                d="M248.999 135.396C230.348 135.395 212.196 135.369 194.045 135.411C189.666 135.422 186.029 134.391 184.887 129.559C183.635 124.265 187.273 120.392 193.657 120.37C211.808 120.306 229.96 120.346 248.112 120.345C254.273 120.345 260.436 120.286 266.596 120.366C271.965 120.436 275.456 123.354 275.608 127.697C275.765 132.187 272.15 135.295 266.485 135.373C260.824 135.451 255.161 135.394 248.999 135.396Z"
-                fill="#FFFEF8"
-              />
-              <path
-                d="M191.033 108.267C186.604 106.716 183.83 103.997 184.947 98.927C186.023 94.0424 189.699 93.1303 194.074 93.1398C218.206 93.1921 242.339 93.1998 266.471 93.1344C271.024 93.122 274.442 94.647 275.344 99.3398C276.208 103.83 273.711 106.544 268.826 108.1C242.368 108.237 216.701 108.252 191.033 108.267Z"
-                fill="#FFFEFA"
-              />
-              <path
-                d="M191.211 108.6C216.7 108.252 242.368 108.237 268.499 108.265C267.54 108.872 266.119 109.92 264.692 109.926C241.474 110.028 218.254 110.014 195.035 109.952C193.819 109.949 192.605 109.288 191.211 108.6Z"
-                fill="#FAD600"
-              />
-              <path
-                d="M414.516 184.861C414.698 182.875 415.189 180.759 415.826 178.317C415.589 180.237 415.207 182.484 414.516 184.861Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M411.493 194.858C411.878 192.625 412.594 190.259 413.594 187.632C413.193 189.822 412.509 192.273 411.493 194.858Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M417.463 168.87C417.326 167.546 417.504 166.099 417.796 164.308C417.866 165.558 417.822 167.153 417.463 168.87Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M416.447 175.9C416.331 175.177 416.499 174.361 416.794 173.257C416.857 173.916 416.794 174.862 416.447 175.9Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M407.351 204.867C407.435 203.93 407.87 202.86 408.579 201.564C408.47 202.471 408.086 203.602 407.351 204.867Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M405.366 208.87C405.46 207.97 405.894 206.943 406.599 205.709C406.482 206.583 406.094 207.663 405.366 208.87Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M312.955 271.816C313.326 271.474 313.868 271.339 314.69 271.245C314.355 271.532 313.74 271.777 312.955 271.816Z"
-                fill="#FAD501"
-              />
-              <path
-                d="M287.857 271.624C288.22 271.377 288.784 271.382 289.748 271.532C289.452 271.743 288.756 271.809 287.857 271.624Z"
-                fill="#FAD501"
-              />
-              <path
-                d="M418.151 157.89C418.012 157.828 417.98 157.663 418.02 157.257C418.359 157.242 418.414 157.499 418.151 157.89Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M200.269 163.844C200.21 163.66 200.332 163.342 200.727 163.012C200.852 163.264 200.668 163.5 200.269 163.844Z"
-                fill="#FAD400"
-              />
-              <path
-                d="M410.226 197.75C410.139 197.569 410.252 197.144 410.651 196.535C410.766 196.737 410.596 197.122 410.226 197.75Z"
-                fill="#FAD70E"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_312_60">
-                <rect width="600" height="300" fill="white" />
-              </clipPath>
-            </defs>
-          </svg>
-
-          Pages d'Or
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card review-card--lg">
-      <div class="review-card__stars">
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-      </div>
-      <p class="review-card__text">
-        Un equipo muy eficiente, flexible, organizado y amable. Mi mudanza se
-        llevó a cabo sin ningún problema.
-      </p>
-      <div class="review-card__author">
-        <div>
-          <p class="review-card__name">Marine Pascal</p>
-          <p class="review-card__source">Usuario Google</p>
-        </div>
-        <div class="review-card__badge">
-          <svg viewBox="0 0 18 18" fill="none">
-            <path
-              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
-              fill="#4285F4"
-            />
-            <path
-              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
-              fill="#34A853"
-            />
-            <path
-              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
-              fill="#FBBC05"
-            />
-            <path
-              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
-              fill="#EA4335"
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
             />
           </svg>
-          Google
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+        </div>
+        <p class="review-card__text">
+          Puntual, organizado, eficaz y, además, simpático y sonriente.
+          Profesionalidad, amabilidad y eficacia. ¡Recomendable!
+        </p>
+        <div class="review-card__author">
+          <div>
+            <p class="review-card__name">Giovanna Rollo</p>
+            <p class="review-card__source">Usuario de Pages d'Or</p>
+          </div>
+          <div class="review-card__badge">
+            <svg
+              width="300"
+              height="300"
+              viewBox="250 0 100 300"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_312_60)">
+                <path
+                  d="M290 1C297.021 1 304.041 1 311.737 1.35468C318.668 2.59863 324.999 3.1292 331.167 4.43162C408.286 20.715 458.845 90.7145 450.155 169.012C443.113 232.464 394.853 285.377 332.384 298.17C328.237 299.02 324.127 300.052 320 301C268.645 301 217.291 301 165.242 300.74C155.221 296.732 151.07 289.622 151.072 279.791C151.078 250.298 150.986 220.804 151.107 191.31C151.18 173.824 150.75 156.28 151.987 138.864C156.611 73.764 205.197 18.558 269.197 4.92586C276.097 3.45619 283.064 2.30104 290 1ZM269.615 107.978C273.711 106.544 276.207 103.83 275.344 99.3398C274.441 94.6469 271.023 93.122 266.47 93.1343C242.338 93.1998 218.205 93.1921 194.073 93.1398C189.699 93.1303 186.022 94.0424 184.946 98.927C183.829 103.997 186.604 106.716 191.389 108.933C192.605 109.288 193.819 109.949 195.035 109.952C218.254 110.014 241.473 110.028 264.692 109.926C266.118 109.92 267.54 108.872 269.615 107.978ZM410.426 197.507C410.596 197.122 410.765 196.737 410.77 195.884C410.79 195.538 410.92 195.24 411.824 194.724C412.508 192.273 413.193 189.822 413.755 186.765C413.906 186.173 414.056 185.582 414.824 184.731C415.206 182.484 415.589 180.237 415.891 177.315C415.982 176.874 416.072 176.433 416.73 175.808C416.793 174.862 416.857 173.916 416.812 172.175C416.924 171.114 417.036 170.054 417.777 168.747C417.821 167.153 417.865 165.558 417.768 163.119C417.86 161.41 417.952 159.701 418.258 157.787C418.413 157.499 418.358 157.242 417.971 156.231C417.252 150.256 414.882 147.67 410.244 147.798C405.646 147.926 403.611 151.002 403.014 156.702C402.117 165.273 401.59 174.068 399.192 182.266C381.969 241.122 322.451 271.061 264.838 250.224C229.422 237.415 201.873 200.72 200.448 163.708C200.667 163.5 200.851 163.264 201.914 162.776C214.911 162.754 227.909 162.728 240.906 162.713C249.571 162.702 258.238 162.807 266.901 162.672C273.127 162.575 276.905 158.107 275.188 153.104C273.693 148.746 270.219 147.789 266.04 147.799C242.211 147.853 218.381 147.806 194.552 147.835C186.626 147.845 184.49 150.06 184.758 158.106C185.973 194.595 201.126 224.148 229.415 247.005C246.429 260.752 266.189 268.154 288.059 271.875C288.755 271.809 289.451 271.743 291.059 271.538C298.301 271.562 305.543 271.586 313.125 272.022C313.74 271.777 314.355 271.532 315.781 271.011C333.143 268.744 349.222 262.95 363.995 253.528C381.6 242.299 394.887 227.102 405.706 208.743C406.094 207.663 406.481 206.583 406.812 205.22C406.812 205.22 406.999 205 407.701 204.734C408.085 203.602 408.469 202.471 408.81 200.736C409.215 199.822 409.62 198.908 410.426 197.507ZM249.499 135.396C255.161 135.394 260.823 135.451 266.484 135.373C272.15 135.295 275.765 132.187 275.607 127.697C275.455 123.353 271.964 120.436 266.595 120.366C260.435 120.286 254.273 120.345 248.111 120.345C229.959 120.346 211.807 120.306 193.656 120.37C187.272 120.392 183.634 124.265 184.886 129.559C186.028 134.391 189.665 135.422 194.044 135.411C212.195 135.369 230.347 135.395 249.499 135.396Z"
+                  fill="#FAD617"
+                />
+                <path
+                  d="M418.044 157.993C417.952 159.701 417.86 161.41 417.725 163.886C417.504 166.099 417.326 167.546 417.147 168.993C417.036 170.054 416.924 171.114 416.739 172.86C416.499 174.361 416.331 175.177 416.163 175.992C416.072 176.433 415.982 176.874 415.785 177.979C415.188 180.759 414.697 182.875 414.206 184.99C414.056 185.582 413.906 186.173 413.532 187.329C412.593 190.259 411.877 192.625 411.161 194.991C410.92 195.24 410.79 195.538 410.568 196.301C410.252 197.144 410.138 197.569 410.024 197.994C409.62 198.908 409.215 199.822 408.557 201.263C407.869 202.86 407.434 203.93 406.999 205C406.999 205 406.812 205.22 406.57 205.568C405.893 206.943 405.459 207.97 405.025 208.997C394.888 227.102 381.6 242.299 363.995 253.528C349.222 262.95 333.143 268.744 315.096 271.107C313.868 271.339 313.326 271.474 312.785 271.609C305.543 271.586 298.301 271.562 290.204 271.462C288.784 271.382 288.219 271.377 287.655 271.372C266.189 268.154 246.429 260.752 229.415 247.005C201.126 224.148 185.974 194.595 184.758 158.106C184.49 150.06 186.626 147.845 194.552 147.835C218.381 147.806 242.211 147.853 266.04 147.799C270.219 147.789 273.693 148.746 275.188 153.104C276.905 158.107 273.127 162.575 266.902 162.672C258.238 162.807 249.571 162.702 240.906 162.713C227.909 162.728 214.912 162.754 201.183 162.9C200.331 163.342 200.209 163.66 200.088 163.979C201.873 200.72 229.422 237.415 264.838 250.224C322.452 271.061 381.969 241.122 399.192 182.266C401.59 174.068 402.117 165.273 403.014 156.702C403.611 151.002 405.646 147.926 410.244 147.799C414.882 147.67 417.252 150.256 417.959 156.865C417.979 157.663 418.011 157.828 418.044 157.993Z"
+                  fill="#FFFEFA"
+                />
+                <path
+                  d="M248.999 135.396C230.348 135.395 212.196 135.369 194.045 135.411C189.666 135.422 186.029 134.391 184.887 129.559C183.635 124.265 187.273 120.392 193.657 120.37C211.808 120.306 229.96 120.346 248.112 120.345C254.273 120.345 260.436 120.286 266.596 120.366C271.965 120.436 275.456 123.354 275.608 127.697C275.765 132.187 272.15 135.295 266.485 135.373C260.824 135.451 255.161 135.394 248.999 135.396Z"
+                  fill="#FFFEF8"
+                />
+                <path
+                  d="M191.033 108.267C186.604 106.716 183.83 103.997 184.947 98.927C186.023 94.0424 189.699 93.1303 194.074 93.1398C218.206 93.1921 242.339 93.1998 266.471 93.1344C271.024 93.122 274.442 94.647 275.344 99.3398C276.208 103.83 273.711 106.544 268.826 108.1C242.368 108.237 216.701 108.252 191.033 108.267Z"
+                  fill="#FFFEFA"
+                />
+                <path
+                  d="M191.211 108.6C216.7 108.252 242.368 108.237 268.499 108.265C267.54 108.872 266.119 109.92 264.692 109.926C241.474 110.028 218.254 110.014 195.035 109.952C193.819 109.949 192.605 109.288 191.211 108.6Z"
+                  fill="#FAD600"
+                />
+                <path
+                  d="M414.516 184.861C414.698 182.875 415.189 180.759 415.826 178.317C415.589 180.237 415.207 182.484 414.516 184.861Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M411.493 194.858C411.878 192.625 412.594 190.259 413.594 187.632C413.193 189.822 412.509 192.273 411.493 194.858Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M417.463 168.87C417.326 167.546 417.504 166.099 417.796 164.308C417.866 165.558 417.822 167.153 417.463 168.87Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M416.447 175.9C416.331 175.177 416.499 174.361 416.794 173.257C416.857 173.916 416.794 174.862 416.447 175.9Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M407.351 204.867C407.435 203.93 407.87 202.86 408.579 201.564C408.47 202.471 408.086 203.602 407.351 204.867Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M405.366 208.87C405.46 207.97 405.894 206.943 406.599 205.709C406.482 206.583 406.094 207.663 405.366 208.87Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M312.955 271.816C313.326 271.474 313.868 271.339 314.69 271.245C314.355 271.532 313.74 271.777 312.955 271.816Z"
+                  fill="#FAD501"
+                />
+                <path
+                  d="M287.857 271.624C288.22 271.377 288.784 271.382 289.748 271.532C289.452 271.743 288.756 271.809 287.857 271.624Z"
+                  fill="#FAD501"
+                />
+                <path
+                  d="M418.151 157.89C418.012 157.828 417.98 157.663 418.02 157.257C418.359 157.242 418.414 157.499 418.151 157.89Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M200.269 163.844C200.21 163.66 200.332 163.342 200.727 163.012C200.852 163.264 200.668 163.5 200.269 163.844Z"
+                  fill="#FAD400"
+                />
+                <path
+                  d="M410.226 197.75C410.139 197.569 410.252 197.144 410.651 196.535C410.766 196.737 410.596 197.122 410.226 197.75Z"
+                  fill="#FAD70E"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_312_60">
+                  <rect width="600" height="300" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            Pages d'Or
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card review-card--lg">
+        <div class="review-card__stars">
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+        </div>
+        <p class="review-card__text">
+          Un equipo muy eficiente, flexible, organizado y amable. Mi mudanza se
+          llevó a cabo sin ningún problema.
+        </p>
+        <div class="review-card__author">
+          <div>
+            <p class="review-card__name">Marine Pascal</p>
+            <p class="review-card__source">Usuario Google</p>
+          </div>
+          <div class="review-card__badge">
+            <svg viewBox="0 0 18 18" fill="none">
+              <path
+                d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+                fill="#4285F4"
+              />
+              <path
+                d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+                fill="#34A853"
+              />
+              <path
+                d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+                fill="#EA4335"
+              />
+            </svg>
+            Google
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Col 3 -->
-    <div class="review-card">
-      <div class="review-card__stars">
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-      </div>
-      <p class="review-card__text">
-        Excelente servicio, es la tercera vez que me mudo con esta empresa y
-        recomiendo sus servicios a mis amigos y familiares, ya que son
-        puntuales, eficientes, cuidadosos y amables.
-      </p>
-      <div class="review-card__author">
-        <div>
-          <p class="review-card__name">Cécile Barraud de Lagerie</p>
-          <p class="review-card__source">Usuario de Google</p>
-        </div>
-        <div class="review-card__badge">
-          <svg viewBox="0 0 18 18" fill="none">
-            <path
-              d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
-              fill="#4285F4"
-            />
-            <path
-              d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
-              fill="#34A853"
-            />
-            <path
-              d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
-              fill="#FBBC05"
-            />
-            <path
-              d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
-              fill="#EA4335"
+    <div class="masonry-col">
+      <div class="review-card">
+        <div class="review-card__stars">
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
             />
           </svg>
-          Google
-        </div>
-      </div>
-    </div>
-
-    <div class="review-card review-card--featured">
-      <div class="review-card__stars">
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-        <svg viewBox="0 0 12 12">
-          <polygon
-            points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
-            fill="#C9A84C"
-          />
-        </svg>
-      </div>
-      <p class="review-card__text">
-        Rápido, cuidadoso y sonriente. El elevador de muebles nos salvó la
-        mudanza al cuarto piso sin ascensor. Lo recomendamos sin dudarlo.
-      </p>
-      <div class="review-card__author">
-        <div>
-          <p class="review-card__name">Marc Fontaine</p>
-          <p class="review-card__source">Usuario Pages d'Or</p>
-        </div>
-        <div class="review-card__badge">
-          <svg
-            width="300"
-            height="300"
-            viewBox="250 0 100 300"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g clip-path="url(#clip0_312_60)">
-              <path
-                d="M290 1C297.021 1 304.041 1 311.737 1.35468C318.668 2.59863 324.999 3.1292 331.167 4.43162C408.286 20.715 458.845 90.7145 450.155 169.012C443.113 232.464 394.853 285.377 332.384 298.17C328.237 299.02 324.127 300.052 320 301C268.645 301 217.291 301 165.242 300.74C155.221 296.732 151.07 289.622 151.072 279.791C151.078 250.298 150.986 220.804 151.107 191.31C151.18 173.824 150.75 156.28 151.987 138.864C156.611 73.764 205.197 18.558 269.197 4.92586C276.097 3.45619 283.064 2.30104 290 1ZM269.615 107.978C273.711 106.544 276.207 103.83 275.344 99.3398C274.441 94.6469 271.023 93.122 266.47 93.1343C242.338 93.1998 218.205 93.1921 194.073 93.1398C189.699 93.1303 186.022 94.0424 184.946 98.927C183.829 103.997 186.604 106.716 191.389 108.933C192.605 109.288 193.819 109.949 195.035 109.952C218.254 110.014 241.473 110.028 264.692 109.926C266.118 109.92 267.54 108.872 269.615 107.978ZM410.426 197.507C410.596 197.122 410.765 196.737 410.77 195.884C410.79 195.538 410.92 195.24 411.824 194.724C412.508 192.273 413.193 189.822 413.755 186.765C413.906 186.173 414.056 185.582 414.824 184.731C415.206 182.484 415.589 180.237 415.891 177.315C415.982 176.874 416.072 176.433 416.73 175.808C416.793 174.862 416.857 173.916 416.812 172.175C416.924 171.114 417.036 170.054 417.777 168.747C417.821 167.153 417.865 165.558 417.768 163.119C417.86 161.41 417.952 159.701 418.258 157.787C418.413 157.499 418.358 157.242 417.971 156.231C417.252 150.256 414.882 147.67 410.244 147.798C405.646 147.926 403.611 151.002 403.014 156.702C402.117 165.273 401.59 174.068 399.192 182.266C381.969 241.122 322.451 271.061 264.838 250.224C229.422 237.415 201.873 200.72 200.448 163.708C200.667 163.5 200.851 163.264 201.914 162.776C214.911 162.754 227.909 162.728 240.906 162.713C249.571 162.702 258.238 162.807 266.901 162.672C273.127 162.575 276.905 158.107 275.188 153.104C273.693 148.746 270.219 147.789 266.04 147.799C242.211 147.853 218.381 147.806 194.552 147.835C186.626 147.845 184.49 150.06 184.758 158.106C185.973 194.595 201.126 224.148 229.415 247.005C246.429 260.752 266.189 268.154 288.059 271.875C288.755 271.809 289.451 271.743 291.059 271.538C298.301 271.562 305.543 271.586 313.125 272.022C313.74 271.777 314.355 271.532 315.781 271.011C333.143 268.744 349.222 262.95 363.995 253.528C381.6 242.299 394.887 227.102 405.706 208.743C406.094 207.663 406.481 206.583 406.812 205.22C406.812 205.22 406.999 205 407.701 204.734C408.085 203.602 408.469 202.471 408.81 200.736C409.215 199.822 409.62 198.908 410.426 197.507ZM249.499 135.396C255.161 135.394 260.823 135.451 266.484 135.373C272.15 135.295 275.765 132.187 275.607 127.697C275.455 123.353 271.964 120.436 266.595 120.366C260.435 120.286 254.273 120.345 248.111 120.345C229.959 120.346 211.807 120.306 193.656 120.37C187.272 120.392 183.634 124.265 184.886 129.559C186.028 134.391 189.665 135.422 194.044 135.411C212.195 135.369 230.347 135.395 249.499 135.396Z"
-                fill="#FAD617"
-              />
-              <path
-                d="M418.044 157.993C417.952 159.701 417.86 161.41 417.725 163.886C417.504 166.099 417.326 167.546 417.147 168.993C417.036 170.054 416.924 171.114 416.739 172.86C416.499 174.361 416.331 175.177 416.163 175.992C416.072 176.433 415.982 176.874 415.785 177.979C415.188 180.759 414.697 182.875 414.206 184.99C414.056 185.582 413.906 186.173 413.532 187.329C412.593 190.259 411.877 192.625 411.161 194.991C410.92 195.24 410.79 195.538 410.568 196.301C410.252 197.144 410.138 197.569 410.024 197.994C409.62 198.908 409.215 199.822 408.557 201.263C407.869 202.86 407.434 203.93 406.999 205C406.999 205 406.812 205.22 406.57 205.568C405.893 206.943 405.459 207.97 405.025 208.997C394.888 227.102 381.6 242.299 363.995 253.528C349.222 262.95 333.143 268.744 315.096 271.107C313.868 271.339 313.326 271.474 312.785 271.609C305.543 271.586 298.301 271.562 290.204 271.462C288.784 271.382 288.219 271.377 287.655 271.372C266.189 268.154 246.429 260.752 229.415 247.005C201.126 224.148 185.974 194.595 184.758 158.106C184.49 150.06 186.626 147.845 194.552 147.835C218.381 147.806 242.211 147.853 266.04 147.799C270.219 147.789 273.693 148.746 275.188 153.104C276.905 158.107 273.127 162.575 266.902 162.672C258.238 162.807 249.571 162.702 240.906 162.713C227.909 162.728 214.912 162.754 201.183 162.9C200.331 163.342 200.209 163.66 200.088 163.979C201.873 200.72 229.422 237.415 264.838 250.224C322.452 271.061 381.969 241.122 399.192 182.266C401.59 174.068 402.117 165.273 403.014 156.702C403.611 151.002 405.646 147.926 410.244 147.799C414.882 147.67 417.252 150.256 417.959 156.865C417.979 157.663 418.011 157.828 418.044 157.993Z"
-                fill="#FFFEFA"
-              />
-              <path
-                d="M248.999 135.396C230.348 135.395 212.196 135.369 194.045 135.411C189.666 135.422 186.029 134.391 184.887 129.559C183.635 124.265 187.273 120.392 193.657 120.37C211.808 120.306 229.96 120.346 248.112 120.345C254.273 120.345 260.436 120.286 266.596 120.366C271.965 120.436 275.456 123.354 275.608 127.697C275.765 132.187 272.15 135.295 266.485 135.373C260.824 135.451 255.161 135.394 248.999 135.396Z"
-                fill="#FFFEF8"
-              />
-              <path
-                d="M191.033 108.267C186.604 106.716 183.83 103.997 184.947 98.927C186.023 94.0424 189.699 93.1303 194.074 93.1398C218.206 93.1921 242.339 93.1998 266.471 93.1344C271.024 93.122 274.442 94.647 275.344 99.3398C276.208 103.83 273.711 106.544 268.826 108.1C242.368 108.237 216.701 108.252 191.033 108.267Z"
-                fill="#FFFEFA"
-              />
-              <path
-                d="M191.211 108.6C216.7 108.252 242.368 108.237 268.499 108.265C267.54 108.872 266.119 109.92 264.692 109.926C241.474 110.028 218.254 110.014 195.035 109.952C193.819 109.949 192.605 109.288 191.211 108.6Z"
-                fill="#FAD600"
-              />
-              <path
-                d="M414.516 184.861C414.698 182.875 415.189 180.759 415.826 178.317C415.589 180.237 415.207 182.484 414.516 184.861Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M411.493 194.858C411.878 192.625 412.594 190.259 413.594 187.632C413.193 189.822 412.509 192.273 411.493 194.858Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M417.463 168.87C417.326 167.546 417.504 166.099 417.796 164.308C417.866 165.558 417.822 167.153 417.463 168.87Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M416.447 175.9C416.331 175.177 416.499 174.361 416.794 173.257C416.857 173.916 416.794 174.862 416.447 175.9Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M407.351 204.867C407.435 203.93 407.87 202.86 408.579 201.564C408.47 202.471 408.086 203.602 407.351 204.867Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M405.366 208.87C405.46 207.97 405.894 206.943 406.599 205.709C406.482 206.583 406.094 207.663 405.366 208.87Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M312.955 271.816C313.326 271.474 313.868 271.339 314.69 271.245C314.355 271.532 313.74 271.777 312.955 271.816Z"
-                fill="#FAD501"
-              />
-              <path
-                d="M287.857 271.624C288.22 271.377 288.784 271.382 289.748 271.532C289.452 271.743 288.756 271.809 287.857 271.624Z"
-                fill="#FAD501"
-              />
-              <path
-                d="M418.151 157.89C418.012 157.828 417.98 157.663 418.02 157.257C418.359 157.242 418.414 157.499 418.151 157.89Z"
-                fill="#FAD70E"
-              />
-              <path
-                d="M200.269 163.844C200.21 163.66 200.332 163.342 200.727 163.012C200.852 163.264 200.668 163.5 200.269 163.844Z"
-                fill="#FAD400"
-              />
-              <path
-                d="M410.226 197.75C410.139 197.569 410.252 197.144 410.651 196.535C410.766 196.737 410.596 197.122 410.226 197.75Z"
-                fill="#FAD70E"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_312_60">
-                <rect width="600" height="300" fill="white" />
-              </clipPath>
-            </defs>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
           </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+        </div>
+        <p class="review-card__text">
+          Excelente servicio, es la tercera vez que me mudo con esta empresa y
+          recomiendo sus servicios a mis amigos y familiares, ya que son
+          puntuales, eficientes, cuidadosos y amables.
+        </p>
+        <div class="review-card__author">
+          <div>
+            <p class="review-card__name">Cécile Barraud de Lagerie</p>
+            <p class="review-card__source">Usuario de Google</p>
+          </div>
+          <div class="review-card__badge">
+            <svg viewBox="0 0 18 18" fill="none">
+              <path
+                d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
+                fill="#4285F4"
+              />
+              <path
+                d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z"
+                fill="#34A853"
+              />
+              <path
+                d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z"
+                fill="#FBBC05"
+              />
+              <path
+                d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z"
+                fill="#EA4335"
+              />
+            </svg>
+            Google
+          </div>
+        </div>
+      </div>
 
-          Pages d'Or
+      <div class="review-card review-card--featured">
+        <div class="review-card__stars">
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+          <svg viewBox="0 0 12 12">
+            <polygon
+              points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
+              fill="#C9A84C"
+            />
+          </svg>
+        </div>
+        <p class="review-card__text">
+          Rápido, cuidadoso y sonriente. El elevador de muebles nos salvó la
+          mudanza al cuarto piso sin ascensor. Lo recomendamos sin dudarlo.
+        </p>
+        <div class="review-card__author">
+          <div>
+            <p class="review-card__name">Marc Fontaine</p>
+            <p class="review-card__source">Usuario Pages d'Or</p>
+          </div>
+          <div class="review-card__badge">
+            <svg
+              width="300"
+              height="300"
+              viewBox="250 0 100 300"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_312_60)">
+                <path
+                  d="M290 1C297.021 1 304.041 1 311.737 1.35468C318.668 2.59863 324.999 3.1292 331.167 4.43162C408.286 20.715 458.845 90.7145 450.155 169.012C443.113 232.464 394.853 285.377 332.384 298.17C328.237 299.02 324.127 300.052 320 301C268.645 301 217.291 301 165.242 300.74C155.221 296.732 151.07 289.622 151.072 279.791C151.078 250.298 150.986 220.804 151.107 191.31C151.18 173.824 150.75 156.28 151.987 138.864C156.611 73.764 205.197 18.558 269.197 4.92586C276.097 3.45619 283.064 2.30104 290 1ZM269.615 107.978C273.711 106.544 276.207 103.83 275.344 99.3398C274.441 94.6469 271.023 93.122 266.47 93.1343C242.338 93.1998 218.205 93.1921 194.073 93.1398C189.699 93.1303 186.022 94.0424 184.946 98.927C183.829 103.997 186.604 106.716 191.389 108.933C192.605 109.288 193.819 109.949 195.035 109.952C218.254 110.014 241.473 110.028 264.692 109.926C266.118 109.92 267.54 108.872 269.615 107.978ZM410.426 197.507C410.596 197.122 410.765 196.737 410.77 195.884C410.79 195.538 410.92 195.24 411.824 194.724C412.508 192.273 413.193 189.822 413.755 186.765C413.906 186.173 414.056 185.582 414.824 184.731C415.206 182.484 415.589 180.237 415.891 177.315C415.982 176.874 416.072 176.433 416.73 175.808C416.793 174.862 416.857 173.916 416.812 172.175C416.924 171.114 417.036 170.054 417.777 168.747C417.821 167.153 417.865 165.558 417.768 163.119C417.86 161.41 417.952 159.701 418.258 157.787C418.413 157.499 418.358 157.242 417.971 156.231C417.252 150.256 414.882 147.67 410.244 147.798C405.646 147.926 403.611 151.002 403.014 156.702C402.117 165.273 401.59 174.068 399.192 182.266C381.969 241.122 322.451 271.061 264.838 250.224C229.422 237.415 201.873 200.72 200.448 163.708C200.667 163.5 200.851 163.264 201.914 162.776C214.911 162.754 227.909 162.728 240.906 162.713C249.571 162.702 258.238 162.807 266.901 162.672C273.127 162.575 276.905 158.107 275.188 153.104C273.693 148.746 270.219 147.789 266.04 147.799C242.211 147.853 218.381 147.806 194.552 147.835C186.626 147.845 184.49 150.06 184.758 158.106C185.973 194.595 201.126 224.148 229.415 247.005C246.429 260.752 266.189 268.154 288.059 271.875C288.755 271.809 289.451 271.743 291.059 271.538C298.301 271.562 305.543 271.586 313.125 272.022C313.74 271.777 314.355 271.532 315.781 271.011C333.143 268.744 349.222 262.95 363.995 253.528C381.6 242.299 394.887 227.102 405.706 208.743C406.094 207.663 406.481 206.583 406.812 205.22C406.812 205.22 406.999 205 407.701 204.734C408.085 203.602 408.469 202.471 408.81 200.736C409.215 199.822 409.62 198.908 410.426 197.507ZM249.499 135.396C255.161 135.394 260.823 135.451 266.484 135.373C272.15 135.295 275.765 132.187 275.607 127.697C275.455 123.353 271.964 120.436 266.595 120.366C260.435 120.286 254.273 120.345 248.111 120.345C229.959 120.346 211.807 120.306 193.656 120.37C187.272 120.392 183.634 124.265 184.886 129.559C186.028 134.391 189.665 135.422 194.044 135.411C212.195 135.369 230.347 135.395 249.499 135.396Z"
+                  fill="#FAD617"
+                />
+                <path
+                  d="M418.044 157.993C417.952 159.701 417.86 161.41 417.725 163.886C417.504 166.099 417.326 167.546 417.147 168.993C417.036 170.054 416.924 171.114 416.739 172.86C416.499 174.361 416.331 175.177 416.163 175.992C416.072 176.433 415.982 176.874 415.785 177.979C415.188 180.759 414.697 182.875 414.206 184.99C414.056 185.582 413.906 186.173 413.532 187.329C412.593 190.259 411.877 192.625 411.161 194.991C410.92 195.24 410.79 195.538 410.568 196.301C410.252 197.144 410.138 197.569 410.024 197.994C409.62 198.908 409.215 199.822 408.557 201.263C407.869 202.86 407.434 203.93 406.999 205C406.999 205 406.812 205.22 406.57 205.568C405.893 206.943 405.459 207.97 405.025 208.997C394.888 227.102 381.6 242.299 363.995 253.528C349.222 262.95 333.143 268.744 315.096 271.107C313.868 271.339 313.326 271.474 312.785 271.609C305.543 271.586 298.301 271.562 290.204 271.462C288.784 271.382 288.219 271.377 287.655 271.372C266.189 268.154 246.429 260.752 229.415 247.005C201.126 224.148 185.974 194.595 184.758 158.106C184.49 150.06 186.626 147.845 194.552 147.835C218.381 147.806 242.211 147.853 266.04 147.799C270.219 147.789 273.693 148.746 275.188 153.104C276.905 158.107 273.127 162.575 266.902 162.672C258.238 162.807 249.571 162.702 240.906 162.713C227.909 162.728 214.912 162.754 201.183 162.9C200.331 163.342 200.209 163.66 200.088 163.979C201.873 200.72 229.422 237.415 264.838 250.224C322.452 271.061 381.969 241.122 399.192 182.266C401.59 174.068 402.117 165.273 403.014 156.702C403.611 151.002 405.646 147.926 410.244 147.799C414.882 147.67 417.252 150.256 417.959 156.865C417.979 157.663 418.011 157.828 418.044 157.993Z"
+                  fill="#FFFEFA"
+                />
+                <path
+                  d="M248.999 135.396C230.348 135.395 212.196 135.369 194.045 135.411C189.666 135.422 186.029 134.391 184.887 129.559C183.635 124.265 187.273 120.392 193.657 120.37C211.808 120.306 229.96 120.346 248.112 120.345C254.273 120.345 260.436 120.286 266.596 120.366C271.965 120.436 275.456 123.354 275.608 127.697C275.765 132.187 272.15 135.295 266.485 135.373C260.824 135.451 255.161 135.394 248.999 135.396Z"
+                  fill="#FFFEF8"
+                />
+                <path
+                  d="M191.033 108.267C186.604 106.716 183.83 103.997 184.947 98.927C186.023 94.0424 189.699 93.1303 194.074 93.1398C218.206 93.1921 242.339 93.1998 266.471 93.1344C271.024 93.122 274.442 94.647 275.344 99.3398C276.208 103.83 273.711 106.544 268.826 108.1C242.368 108.237 216.701 108.252 191.033 108.267Z"
+                  fill="#FFFEFA"
+                />
+                <path
+                  d="M191.211 108.6C216.7 108.252 242.368 108.237 268.499 108.265C267.54 108.872 266.119 109.92 264.692 109.926C241.474 110.028 218.254 110.014 195.035 109.952C193.819 109.949 192.605 109.288 191.211 108.6Z"
+                  fill="#FAD600"
+                />
+                <path
+                  d="M414.516 184.861C414.698 182.875 415.189 180.759 415.826 178.317C415.589 180.237 415.207 182.484 414.516 184.861Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M411.493 194.858C411.878 192.625 412.594 190.259 413.594 187.632C413.193 189.822 412.509 192.273 411.493 194.858Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M417.463 168.87C417.326 167.546 417.504 166.099 417.796 164.308C417.866 165.558 417.822 167.153 417.463 168.87Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M416.447 175.9C416.331 175.177 416.499 174.361 416.794 173.257C416.857 173.916 416.794 174.862 416.447 175.9Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M407.351 204.867C407.435 203.93 407.87 202.86 408.579 201.564C408.47 202.471 408.086 203.602 407.351 204.867Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M405.366 208.87C405.46 207.97 405.894 206.943 406.599 205.709C406.482 206.583 406.094 207.663 405.366 208.87Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M312.955 271.816C313.326 271.474 313.868 271.339 314.69 271.245C314.355 271.532 313.74 271.777 312.955 271.816Z"
+                  fill="#FAD501"
+                />
+                <path
+                  d="M287.857 271.624C288.22 271.377 288.784 271.382 289.748 271.532C289.452 271.743 288.756 271.809 287.857 271.624Z"
+                  fill="#FAD501"
+                />
+                <path
+                  d="M418.151 157.89C418.012 157.828 417.98 157.663 418.02 157.257C418.359 157.242 418.414 157.499 418.151 157.89Z"
+                  fill="#FAD70E"
+                />
+                <path
+                  d="M200.269 163.844C200.21 163.66 200.332 163.342 200.727 163.012C200.852 163.264 200.668 163.5 200.269 163.844Z"
+                  fill="#FAD400"
+                />
+                <path
+                  d="M410.226 197.75C410.139 197.569 410.252 197.144 410.651 196.535C410.766 196.737 410.596 197.122 410.226 197.75Z"
+                  fill="#FAD70E"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_312_60">
+                  <rect width="600" height="300" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+
+            Pages d'Or
+          </div>
         </div>
       </div>
     </div>
@@ -849,161 +914,63 @@ stylesheet: home.css
 <!-- End testimonials section-->
 
 <section id="company" class="company-section">
-  <div class="eyebrow">Acerca de nosotros</div>
-  <h2>Desde hace más de <em>diez años</em>, facilitamos su mudanza.</h2>
+  <div class="eyebrow">{{ t.section.company.label}}</div>
+  <h2>{{ t.section.company.heading}}</h2>
+
   <div class="company-content">
     <div class="left">
       <p class="company-intro">
-        Lift Service Déménagement es un equipo comprometido, con equipos de
-        última generación y una promesa sencilla: cada mudanza se trata con
-        cuidado, puntualidad y total transparencia.
+        Desde hace más de 10 años, ayudamos a particulares y empresas en sus
+        mudanzas con seriedad, respeto y profesionalidad. Con sede en Bruselas,
+        nuestra empresa se ha labrado una reputación basada en la confianza, la
+        puntualidad y el cuidado que dedicamos a cada caja, cada mueble y cada
+        objeto personal.
       </p>
-      <p class="values__label">Nuestros valores</p>
-      <div class="vgrid">
-        <div class="vitem">
-          <div class="vicon">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <rect x="1" y="3" width="15" height="13" rx=".5" />
-              <path d="M16 8h4l3 5v4h-7V8Z" />
-              <circle cx="5.5" cy="18.5" r="2.5" />
-              <circle cx="18.5" cy="18.5" r="2.5" />
-            </svg>
-          </div>
-          <!-- <span class="vnum">01</span> -->
-          <p class="vname">Equipos de alto rendimiento</p>
-          <p class="vdesc">Furgonetas modernas y elevadores potentes.</p>
-        </div>
-        <div class="vitem">
-          <div class="vicon">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <!-- <span class="vnum">02</span> -->
-          <p class="vname">Personal cualificado</p>
-          <p class="vdesc">Experimentados, puntuales y respetuosos.</p>
-        </div>
-        <div class="vitem">
-          <div class="vicon">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-              />
-            </svg>
-          </div>
-          <!-- <span class="vnum">03</span> -->
-          <p class="vname">Cuidado extremo de los bienes</p>
-          <p class="vdesc">Sus objetos manipulados con el mayor cuidado.</p>
-        </div>
-        <div class="vitem">
-          <div class="vicon">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <polyline points="12 6 12 12 16 14" />
-            </svg>
-          </div>
-          <!-- <span class="vnum">04</span> -->
-          <p class="vname">Puntualidad y rigor</p>
-          <p class="vdesc">Sin retrasos, sin sorpresas desagradables.</p>
-        </div>
-        <div class="vitem">
-          <div class="vicon">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="12" y1="1" x2="12" y2="23" />
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-            </svg>
-          </div>
-          <!-- <span class="vnum">05</span> -->
-          <p class="vname">Presupuesto claro y transparente</p>
-          <p class="vdesc">Precios justos, sin costes ocultos.</p>
-        </div>
-        <div class="vitem">
-          <div class="vicon">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M12 22s8-4.5 8-11.8A8 8 0 0 0 12 2a8 8 0 0 0-8 8.2c0 7.3 8 11.8 8 11.8z"
-              />
-              <polyline points="9 12 11 14 15 10" />
-            </svg>
-          </div>
-          <!-- <span class="vnum">06</span> -->
-          <p class="vname">Seguro profesional incluido</p>
-          <p class="vdesc">Sus bienes cubiertos de principio a fin.</p>
-        </div>
-      </div>
+      <p class="company-intro">
+        A lo largo de los años, hemos desarrollado una amplia experiencia en
+        preparación y embalaje, desmontaje y montaje de muebles, así como en
+        transporte seguro, ofreciendo soluciones adaptadas a cada situación. Ya
+        se trate de una pequeña mudanza local o de un traslado de empresa más
+        complejo, nuestro equipo de profesionales con amplia experiencia hace
+        todo lo posible por ofrecer un servicio a medida, transparente y sin
+        sorpresas desagradables.
+      </p>
+      <p class="company-intro">Nuestra prioridad:</p>
+      <p class="qtext">
+        Tomarnos el tiempo necesario para escuchar tus necesidades, aconsejarte
+        sobre la opción más adecuada y acompañarte en cada paso: desde la
+        primera visita hasta que el último mueble esté colocado.
+      </p>
     </div>
 
     <div class="right">
       <div class="img-frame">
         <img
-          src="../assets/images/company-2.webp"
-          alt="Lift Service — Bruxelles"
+          src="/assets/media/images/company-2-400.webp"
+          srcset="
+            /assets/media/images/company-2-400.webp   400w,
+            /assets/media/images/company-2-800.webp   800w,
+            /assets/media/images/company-2-1200.webp 1200w
+          "
+          sizes="
+    (max-width: 768px) 100vw,
+    42vw
+  "
+          width="637"
+          height="643"
+          alt="Lift Service local"
+          loading="lazy"
         />
         <div class="img-strip">
-          <span>Nunez Associés SRL — Bruxelles</span>
+          <span>Núñez & Asociados SRL — Bruselas</span>
           <em>Est. 2014</em>
         </div>
       </div>
       <div class="stats">
         <div class="stat">
-          <span class="stat__n" data-val="500" data-suf="+">500<em>+</em></span>
+          <span class="stat__n" data-val="500" data-suf="+"
+            ><em>+</em>5 000</span
+          >
           <span class="stat__l">Mudanzas</span>
         </div>
         <div class="stat">
@@ -1011,18 +978,145 @@ stylesheet: home.css
           <span class="stat__l">Satisfacción</span>
         </div>
         <div class="stat">
-          <span class="stat__n" data-val="10" data-suf="+">10<em>+</em></span>
-          <span class="stat__l">Años</span>
+          <span class="stat__n" data-val="10" data-suf="+"><em>+</em>10</span>
+          <span class="stat__l">Años de experiencia</span>
         </div>
       </div>
-      <div class="cell cell--quote">
-        <p class="qtext">
-          Una mudanza tranquila: nuestro compromiso desde el primer día.
-        </p>
+    </div>
+
+    <p class="values__label">Nuestros valores</p>
+    <div class="vgrid">
+      <div class="vitem">
+        <div class="vicon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="1" y="3" width="15" height="13" rx=".5" />
+            <path d="M16 8h4l3 5v4h-7V8Z" />
+            <circle cx="5.5" cy="18.5" r="2.5" />
+            <circle cx="18.5" cy="18.5" r="2.5" />
+          </svg>
+        </div>
+
+        <p class="vname">Equipos de alto rendimiento</p>
+        <p class="vdesc">Furgonetas modernas y elevadores potentes.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+          </svg>
+        </div>
+        <!-- <span class="vnum">02</span> -->
+        <p class="vname">Personal cualificado</p>
+        <p class="vdesc">Con experiencia, puntuales y respetuosos.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+            />
+          </svg>
+        </div>
+        <!-- <span class="vnum">03</span> -->
+        <p class="vname">Máximo cuidado de los bienes</p>
+        <p class="vdesc">Sus objetos se manipulan con el máximo cuidado.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+        </div>
+        <!-- <span class="vnum">04</span> -->
+        <p class="vname">Puntualidad y rigor</p>
+        <p class="vdesc">Sin retrasos, sin sorpresas desagradables.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="1" x2="12" y2="23" />
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+        </div>
+        <!-- <span class="vnum">05</span> -->
+        <p class="vname">Presupuesto claro y transparente</p>
+        <p class="vdesc">Precios transparentes, sin gastos ocultos.</p>
+      </div>
+      <div class="vitem">
+        <div class="vicon">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M12 22s8-4.5 8-11.8A8 8 0 0 0 12 2a8 8 0 0 0-8 8.2c0 7.3 8 11.8 8 11.8z"
+            />
+            <polyline points="9 12 11 14 15 10" />
+          </svg>
+        </div>
+        <!-- <span class="vnum">06</span> -->
+        <p class="vname">Seguro profesional</p>
+        <p class="vdesc">Sus bienes están cubiertos de principio a fin</p>
       </div>
     </div>
   </div>
 </section>
+
 <!-- Start faq section -->
 <section class="faq-section">
   <div class="eyebrow">FAQs</div>
@@ -1055,9 +1149,7 @@ stylesheet: home.css
         id="faq-panel-01"
         aria-labelledby="faq-trigger-01"
       >
-        <p class="faq__answer">
-          Sí, explicación del permiso, etc., para escribir con Iván.
-        </p>
+        <p class="faq__answer">Sí.</p>
       </div>
     </li>
 
@@ -1096,10 +1188,10 @@ stylesheet: home.css
       </h3>
       <div class="faq__panel" role="region">
         <p class="faq__answer">
-          Ofrecemos un servicio completo de mudanzas que incluye el alquiler de
-          furgonetas, el uso de elevadores motorizados para pisos altos, así
-          como la intervención de mudanzas cualificados para cargar, transportar
-          y descargar sus pertenencias de forma segura.
+          Ofrecemos un servicio integral de mudanzas que incluye el alquiler de
+          furgonetas, el uso de elevadores motorizados para pisos altos y la
+          asistencia de profesionales cualificados para cargar, transportar y
+          descargar sus pertenencias con total seguridad.
         </p>
       </div>
     </li>
@@ -1110,7 +1202,7 @@ stylesheet: home.css
           <div class="faq__question-wrap">
             <span class="faq__index">04</span>
             <span class="faq__question">
-              ¿Puedo reservar solo un ascensor o una furgoneta sin
+              ¿Puedo reservar solo un elevador o una furgoneta sin
               personal?</span
             >
           </div>
@@ -1121,9 +1213,7 @@ stylesheet: home.css
         </button>
       </h3>
       <div class="faq__panel" role="region">
-        <p class="faq__answer">
-          No, no ofrecemos solo el alquiler de material.
-        </p>
+        <p class="faq__answer">No, no ofrecemos el alquiler sin personal.</p>
       </div>
     </li>
 
@@ -1171,6 +1261,27 @@ stylesheet: home.css
           Sí. Cada mudanza es diferente, por eso ofrecemos soluciones
           personalizadas: horarios flexibles, material adaptado, número de
           trabajadores ajustado, opciones de protección, etc.
+        </p>
+      </div>
+    </li>
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">07</span>
+            <span class="faq__question"
+              >¿En que paises pueden ofrecer asistencia?
+            </span>
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Ofrecemos asistencia en 6 paises: Bélgica, Francia, España, UK.
         </p>
       </div>
     </li>
@@ -1257,7 +1368,7 @@ stylesheet: home.css
             <circle cx="12" cy="10" r="3" />
           </svg>
           <div class="contact-item__body">
-            <span class="contact-item__label">AdresseDirección</span>
+            <span class="contact-item__label">Dirección</span>
             <span class="contact-item__value"
               >Av. Wielemans Ceuppens 158<br />1190 Forest, Bruxelles</span
             >
@@ -1266,7 +1377,7 @@ stylesheet: home.css
       </div>
 
       <div class="contact-social">
-        <p class="contact-social__label">Síganos en</p>
+        <p class="contact-social__label">Síguenos en</p>
         <div class="contact-social__links">
           <a
             class="social-link"
@@ -1386,7 +1497,7 @@ stylesheet: home.css
           <!-- Row: name + email -->
           <div class="form-row">
             <div class="form-field">
-              <label for="sender_name">Su nombre</label>
+              <label for="sender_name">nombre</label>
               <input
                 type="text"
                 id="sender_name"
@@ -1397,7 +1508,7 @@ stylesheet: home.css
               />
             </div>
             <div class="form-field">
-              <label for="sender_email">Tu correo electrónico</label>
+              <label for="sender_email">correo electrónico</label>
               <input
                 type="email"
                 id="sender_email"
@@ -1450,7 +1561,7 @@ stylesheet: home.css
 
           <!-- Message -->
           <div class="form-field">
-            <label for="message">Tu mensaje</label>
+            <label for="message">mensaje</label>
             <textarea
               id="message"
               name="message"

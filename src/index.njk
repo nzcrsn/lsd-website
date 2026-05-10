@@ -36,7 +36,7 @@ pageKey: home
     </div>
 
     <a class="cta-btn cta-heading" href="#contact">
-      <p>Demander un devis</p>
+      <p>{{t.section.hero.cta}}</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"
@@ -68,7 +68,7 @@ pageKey: home
           <circle cx="12" cy="12" r="10" />
           <polyline points="12 6 12 12 16 14" />
         </svg>
-        Réponse dans les 24 heures
+        {{t.section.hero.badge_lbl}}
       </span>
     </div>
   </div>
@@ -157,8 +157,8 @@ pageKey: home
 
 <!-- Start services section -->
 <section id="services" class="services-section">
-  <div class="eyebrow">Nos services</div>
-  <h2>Adaptés à vous, conçus pour vous.</h2>
+  <div class="eyebrow">{{ t.section.services.label}}</div>
+  <h2>{{ t.section.services.heading}}</h2>
 
   <div class="services-bento__layout">
     <div class="svc-tile svc-tile--lift">
@@ -185,12 +185,9 @@ pageKey: home
       <span class="svc-tile__num">01</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Location de monte-meubles</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_1_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Élévateurs motorisés pour meubles et matériaux lourds — discrets,
-          efficaces, livrés chez vous.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_1_desc}}</p>
       </div>
     </div>
 
@@ -218,11 +215,9 @@ pageKey: home
       <span class="svc-tile__num">02</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Camions + chauffeur</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_2_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Véhicules avec chauffeur expérimenté — sûr, pratique, ponctuel.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_2_desc}}</p>
       </div>
     </div>
 
@@ -250,11 +245,9 @@ pageKey: home
       <span class="svc-tile__num">03</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Déménagement sur mesure</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_3_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          De A à Z, adapté à votre situation — sans surprise.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_3_desc}}</p>
       </div>
     </div>
 
@@ -282,19 +275,17 @@ pageKey: home
       <span class="svc-tile__num">04</span>
       <div class="svc-tile__bracket"></div>
       <div class="svc-tile__content">
-        <h3 class="svc-tile__title">Matériaux d' emballage</h3>
+        <h3 class="svc-tile__title">{{ t.section.services.svc_4_lbl}}</h3>
         <div class="svc-tile__divider"></div>
-        <p class="svc-tile__desc">
-          Boîtes, sangles, bulles et protections livrées à domicile.
-        </p>
+        <p class="svc-tile__desc">{{ t.section.services.svc_4_desc}}</p>
       </div>
     </div>
   </div>
 
   <div class="cta-services">
-    <p>Prêt à déménager ?</p>
+    <p>{{ t.section.services.question}}</p>
     <a href="#contact" class="cta-btn">
-      <p>Demander un devis</p>
+      <p>{{ t.section.services.cta}}</p>
       <svg
         class="arrow"
         viewBox="0 0 24 24"
@@ -316,8 +307,8 @@ pageKey: home
 
 <!-- Start testimonial section -->
 <section id="testimonials" class="testimonials-section">
-  <div class="eyebrow">Témoignages</div>
-  <h2>Votre satisfaction est notre mission</h2>
+  <div class="eyebrow">{{ t.section.testimonials.label}}</div>
+  <h2>{{ t.section.testimonials.heading}}</h2>
   <div class="testimonials__masonry" id="masonry">
     <div class="masonry-col">
       <div class="review-card review-card--lg review-card--featured">
@@ -850,7 +841,7 @@ pageKey: home
   </div>
   <div class="testimonials__footer">
     <p class="testimonials__footer-text">
-      Découvrez encore plus d'avis de nos clients sur Google et Pages d'Or.
+      {{ t.section.testimonials.suggestion}}
     </p>
     <div class="testimonials__platforms">
       <!-- Google pill -->
@@ -921,8 +912,8 @@ pageKey: home
 
 <!-- Start company section -->
 <section id="company" class="company-section">
-  <div class="eyebrow">À propos de nous</div>
-  <h2>Depuis plus de <em>dix ans</em>, nous facilitons votre déménagement.</h2>
+  <div class="eyebrow">{{ t.section.company.label}}</div>
+  <h2>{{ t.section.company.heading}}</h2>
 
   <div class="company-content">
     <div class="left">
@@ -943,7 +934,7 @@ pageKey: home
       </p>
       <p class="company-intro">Notre priorité est simple :</p>
       <p class="qtext">
-        Vous permettre de déménager en toute sérénité. Nous prenons le temps
+        Vous permettre de déménager en toute sérénité, nous prenons le temps
         d’écouter vos besoins, de vous conseiller sur la formule la plus adaptée
         et de vous accompagner à chaque étape, de la première visite au dernier
         meuble installé.
@@ -1156,9 +1147,7 @@ pageKey: home
         id="faq-panel-01"
         aria-labelledby="faq-trigger-01"
       >
-        <p class="faq__answer">
-          Oui, explication permis etc à écrire avec Ivan.
-        </p>
+        <p class="faq__answer">Oui.</p>
       </div>
     </li>
 
@@ -1272,6 +1261,29 @@ pageKey: home
           Oui. Chaque déménagement est différent, c’est pourquoi nous proposons
           des solutions personnalisées : horaires flexibles, matériel adapté,
           nombre d’intervenants ajusté, options de protection, etc.
+        </p>
+      </div>
+    </li>
+
+    <li class="faq__item">
+      <h3>
+        <button class="faq__trigger" aria-expanded="false">
+          <div class="faq__question-wrap">
+            <span class="faq__index">07</span>
+            <span class="faq__question"
+              >Dans quels pays pouvez-vous offrir une assistance ?
+            </span>
+          </div>
+          <div class="faq__icon" aria-hidden="true">
+            <span class="h-bar"></span>
+            <span class="v-bar"></span>
+          </div>
+        </button>
+      </h3>
+      <div class="faq__panel" role="region">
+        <p class="faq__answer">
+          Nous proposons nos services dans 6 pays : la Belgique, la France,
+          l'Espagne et le Royaume-Uni.
         </p>
       </div>
     </li>

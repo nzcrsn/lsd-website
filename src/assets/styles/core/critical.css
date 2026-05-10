@@ -173,19 +173,6 @@ Styles of hero section
   opacity: 1;
 }
 
-/*
-====================================================== 
-JS Queries
-====================================================== 
-*/
-.js-loading .hero-section .heading,
-.js-loading .hero-section .sub-heading,
-.js-loading .hero-section .hero-stats,
-.js-loading .hero-section .cta-heading,
-.js-loading .hero-section .badges {
-  opacity: 0;
-}
-
 @media screen and (min-width: 768px) {
   /*
 ====================================================== 
@@ -231,6 +218,19 @@ Styles of hero section
 
   .item.medium {
     grid-row: span 48;
+  }
+
+  /*
+====================================================== 
+JS Queries
+====================================================== 
+*/
+  .js-loading .hero-section .heading,
+  .js-loading .hero-section .sub-heading,
+  .js-loading .hero-section .hero-stats,
+  .js-loading .hero-section .cta-heading,
+  .js-loading .hero-section .badges {
+    opacity: 0;
   }
 }
 

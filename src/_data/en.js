@@ -28,11 +28,13 @@ export default {
     hero: {
       heading:
         "Treat yourself to a smooth, stress-free move, with complete peace of mind.",
-      subheading: "We make your move a pleasant experience",
-      cta: "Contact us",
+      subheading:
+        "Furniture lifts, equipped lorries and qualified personnel to make everything easier.",
+      cta: "Request a quote",
       year_experiencie_lbl: "years of experience",
       clientes_satisf_lbl: "satisfied customers",
       countries_cover_lbl: "countries covered",
+      badge_lbl: "Response within 24 hours",
     },
     company: {
       label: "About us",

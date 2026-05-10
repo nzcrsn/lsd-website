@@ -30,31 +30,42 @@ export default {
         "Offrez-vous un déménagement fuide, sans stress, et en toute confiance.",
       subheading:
         " Monte-meubles, camions équipés et personnel qualifié pour vous faciliter la tâche.",
-      cta: "Demander un devis",
       year_experiencie_lbl: "ans d'expérience",
       clientes_satisf_lbl: "clients satisfaits",
       countries_cover_lbl: "pays d’opération",
+      cta: "Demander un devis",
+      badge_lbl: "Réponse dans les 24 heures",
+    },
+    services: {
+      label: "Nous services",
+      heading: "Adaptés à vous, conçus pour vous.",
+      svc_1_lbl: "Location de monte-meubles",
+      svc_1_desc:
+        "Élévateurs motorisés pour meubles et matériaux lourds — discrets, efficaces, livrés chez vous.",
+      svc_2_lbl: "Camions + chauffeur",
+      svc_2_desc:
+        "Véhicules avec chauffeur expérimenté — sûr, pratique, ponctuel.",
+      svc_3_lbl: "Déménagement sur mesure",
+      svc_3_desc: "De A à Z, adapté à votre situation — sans surprise.",
+      svc_4_lbl: "Matériaux d' emballage",
+      svc_4_desc: "Boîtes, sangles, bulles et protections livrées à domicile.",
+      question: "Prêt à déménager ?",
+      cta: "Demander un devis",
+    },
+    testimonials: {
+      label: "Témoignages",
+      heading: "Votre satisfaction est notre mission",
+      suggestion:
+        "Découvrez encore plus d'avis de nos clients sur Google et Pages d'Or.",
     },
     company: {
       label: "À propos de nous",
-      heading: "Nous simplifions les déménagements depuis plus de dix ans.",
-      goalone:
-        "Nous veillons à ce que chaque déménagementsoit efficace, sûr et sans stress, en nous adaptant toujours aux besoins spécifiques de nos clients.",
-      goaltwo:
-        "   La confiance et la satisfaction de ceux qui nous ont fait confiance sont le reflet de notre engagement inébranlable en faveur de l'excellence dans toutes les actions que nous entreprenons.",
+      heading: "Depuis plus de dix ans, nous facilitons votre déménagement.",
       cta: "Apprenez-en davantage sur nous",
     },
     galery: {
       label: "Our work",
       heading: "Professional managed relocation",
-    },
-    testimonials: {
-      label: "Testimonials",
-      heading: "Your satisfaction is our mission",
-    },
-    services: {
-      label: "Servicesx",
-      heading: "Tailored to you, designed for you",
     },
   },
 };
