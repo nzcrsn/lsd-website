@@ -1,9 +1,7 @@
 import fs from "fs";
 import { buildCSS, writeCssOnAssetsDir } from "./utils/build-css.js";
-import { env } from "cloudflare:workers";
 
-// Access environment variables at the top level
-const isDev = env.NODE_ENV !== "production";
+const isDev = process.env.NODE_ENV !== "production";
 
 export default function (eleventyConfig) {
   eleventyConfig.addWatchTarget("src/assets/styles");
