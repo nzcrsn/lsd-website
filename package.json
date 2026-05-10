@@ -6,7 +6,8 @@
     "eleventy": "eleventy --serve",
     "vite": "vite",
     "dev": "concurrently \"eleventy --serve\" \"vite\"",
-    "build": "vite build && eleventy"
+    "build": "vite build && eleventy",
+    "deploy": "npm run build && wrangler deploy"
   },
   "keywords": [],
   "author": "",
