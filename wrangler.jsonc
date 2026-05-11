@@ -1,8 +1,10 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  // wrangler.jsonc
   "name": "lsd-website",
   // Set this to today's date
   "compatibility_date": "2026-05-08",
-  "main": "./src/index.js",
+  "assets": {
+    "directory": "./_site/",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash",
+  },
 }
