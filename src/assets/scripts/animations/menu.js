@@ -94,7 +94,7 @@ NavLinks Class
 ====================================================== 
 */
 const navLinks = document.querySelectorAll(
-  ".nav-bar a[href^='#'], .hero-section a[href^='#'], .services-section a[href^='#']",
+  ".nav-bar a[href^='#'], .hero-section a[href^='#'], .services-section a[href^='#'], .footer-links a[href^='#']",
 );
 
 navLinks.forEach((link) => {

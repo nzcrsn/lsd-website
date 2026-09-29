@@ -3,6 +3,9 @@ export default {
   routes: {
     services: "/services",
     our_work: "/notre-travail",
+    privacy_policy: "/politique-confidentialite",
+    cookie_policy: "/politique-cookies",
+    mentions_legales: "/mentions-legales",
     home: "/",
   },
   nav: {
@@ -27,7 +30,7 @@ export default {
   section: {
     hero: {
       heading:
-        "Offrez-vous un déménagement fuide, sans stress, et en toute confiance.",
+        "Offrez-vous un déménagement fluide, sans stress, et en toute confiance.",
       subheading:
         " Monte-meubles, camions équipés et personnel qualifié pour vous faciliter la tâche.",
       year_experiencie_lbl: "ans d'expérience",
@@ -63,9 +66,19 @@ export default {
       heading: "Depuis plus de dix ans, nous facilitons votre déménagement.",
       cta: "Apprenez-en davantage sur nous",
     },
-    galery: {
-      label: "Our work",
-      heading: "Professional managed relocation",
+    footer: {
+      slogan:
+        "À ton écoute, pour te conseiller et t'accompagner à chaque étape de ton déménagement.",
+      services: "Services",
+      contact: "Contact",
+      navigation: "Navigation",
+      phone: "Téléphone",
+      zone: "Zone d'opération",
+      zone_desc: "Belgique · France · Europe",
+      disclaimer: "Lift Service Déménagement. Tous droits réservés.",
+      privacy_policy: "Politique de confidentialité",
+      cookie_policy: "Politique de cookies",
+      mentions_legales: "Mentions légales",
     },
   },
 };

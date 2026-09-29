@@ -1,7 +1,7 @@
 {% set currentLang = lang %} {% set currentPage = pageKey %}
 <header id="header">
   <div class="left-header">
-    <a class="logo" href="{{ t.routes.home }}">
+    <a class="logo" href="/">
       <span class="brand">Lift Service</span><br />
       Demenagement
     </a>
@@ -76,6 +76,7 @@
     </div>
   </div>
 
+  {%if contentPage != "policy" %}
   <nav class="nav-bar">
     <ul>
       <li>
@@ -109,4 +110,5 @@
       <path class="line bottom" d="M6 18H12" />
     </svg>
   </button>
+  {% endif %}
 </header>

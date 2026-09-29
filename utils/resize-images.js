@@ -2,23 +2,23 @@
 import sharp from "sharp";
 
 const images = [
-  {
-    input: "originals/lifts.jpeg",
-    name: "lifts",
-    sizes: [600, 900, 1200, 1800],
-  },
+  // {
+  //   input: "originals/lifts.jpeg",
+  //   name: "lifts",
+  //   sizes: [600, 900, 1200, 1800],
+  // },
   {
     input: "originals/chofe.jpg",
     name: "chofe",
     sizes: [600, 900, 1200, 1800],
   },
+  // {
+  //   input: "originals/level.jpg",
+  //   name: "level",
+  //   sizes: [600, 900, 1200, 1800],
+  // },
   {
-    input: "originals/level.jpg",
-    name: "level",
-    sizes: [600, 900, 1200, 1800],
-  },
-  {
-    input: "originals/boxes.jpg",
+    input: "originals/boxes.jpeg",
     name: "boxes",
     sizes: [600, 900, 1200, 1800],
   },

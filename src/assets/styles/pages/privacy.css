@@ -1,0 +1,15 @@
+/*
+  ================================================================
+  page-confidentialite.css
+  Loaded only on /confidentialite/ via front matter cssPage var.
+  ================================================================
+*/
+@import url("legal-shared.css");
+
+/* RGPD badge next to section numbers */
+.legal-section-number[data-rgpd]::after {
+  content: " · RGPD";
+  font-size: 0.55rem;
+  letter-spacing: 0.12em;
+  color: var(--soft);
+}

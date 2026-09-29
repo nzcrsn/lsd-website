@@ -92,6 +92,10 @@ Styles of services section
   will-change: transform;
 }
 
+.svc-tile__photo.svc-tile_photo-supply {
+  object-position: 100% 100%;
+}
+
 .svc-tile__overlay {
   position: absolute;
   inset: 0;

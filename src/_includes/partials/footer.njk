@@ -1,3 +1,93 @@
-<footer>
-  <p>© <span id="year"></span> - Núñez and Associés.</p>
+{% set t = i18n[lang] %}
+
+<footer class="site-footer" aria-label="Pied de page">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <!-- ── Brand ── -->
+      <div class="footer-brand">
+        <span class="brand">Lift Service</span><br />
+        Demenagement
+        <p class="footer-tagline">{{ t.section.footer.slogan }}</p>
+      </div>
+
+      <!-- ── Services ── -->
+      <div>
+        <p class="footer-col-title">{{ t.section.footer.services }}</p>
+        <ul class="footer-links">
+          <li><a>{{ t.section.services.svc_1_lbl}}</a></li>
+          <li><a>{{ t.section.services.svc_2_lbl}}</a></li>
+          <li><a>{{ t.section.services.svc_3_lbl}}</a></li>
+          <li><a>{{ t.section.services.svc_4_lbl}}</a></li>
+        </ul>
+      </div>
+
+      <!-- ── Navigation ── -->
+
+      {% if pageKey %}
+      <div>
+        <p class="footer-col-title">{{ t.section.footer.navigation }}</p>
+        <ul class="footer-links">
+          <li><a href="#services">{{ t.nav.services }}</a></li>
+          <li><a href="#company">{{ t.nav.company }}</a></li>
+          <li><a href="#testimonials">{{ t.nav.testimonials }}</a></li>
+          <li><a href="#contact">{{ t.nav.contact }}</a></li>
+        </ul>
+      </div>
+      {% endif %}
+      <!-- ── Contact ── -->
+      <div>
+        <p class="footer-col-title">{{ t.section.footer.contact }}</p>
+        <div class="footer-contact-row">
+          <span class="footer-contact-label">{{ t.section.footer.phone }}</span>
+          <span class="footer-contact-val">(+32) 479 482 771</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-label">Email</span>
+          <span class="footer-contact-val">liftservicebel@gmail.com</span>
+        </div>
+        <div class="footer-contact-row">
+          <span class="footer-contact-label">{{ t.section.footer.zone }}</span>
+          <span class="footer-contact-val"
+            >{{ t.section.footer.zone_desc }}</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- /footer-top -->
+
+    <div class="footer-divider" aria-hidden="true"></div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; <span id="year"></span>&nbsp; {{ t.section.footer.disclaimer }}
+      </p>
+      <ul class="footer-legal" aria-label="Liens légaux">
+        <li>
+          <a
+            href="{{t.routes.privacy_policy}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t.section.footer.privacy_policy }}</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{t.routes.cookie_policy}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t.section.footer.cookie_policy }}</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{t.routes.mentions_legales}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ t.section.footer.mentions_legales }}</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
 </footer>

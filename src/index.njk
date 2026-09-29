@@ -253,7 +253,7 @@ pageKey: home
 
     <div class="svc-tile svc-tile--supply">
       <img
-        class="svc-tile__photo"
+        class="svc-tile__photo svc-tile_photo-supply"
         src="/assets/media/images/boxes-900w.webp"
         srcset="
           /assets/media/images/boxes-600w.webp   600w,
@@ -845,7 +845,12 @@ pageKey: home
     </p>
     <div class="testimonials__platforms">
       <!-- Google pill -->
-      <a href="https://nlink.at/JX3d" class="platform-pill">
+      <a
+        href="https://bit.ly/4eK1VW6"
+        class="platform-pill"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <svg class="platform-pill__logo" viewBox="0 0 18 18" fill="none">
           <path
             d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844c-.209 1.125-.843 2.078-1.796 2.717v2.258h2.908c1.702-1.567 2.684-3.875 2.684-6.615z"
@@ -866,7 +871,7 @@ pageKey: home
         </svg>
         <div class="platform-pill__info">
           <span class="platform-pill__score">
-            4.9
+            4.8
             <svg viewBox="0 0 12 12">
               <polygon
                 points="6,1 7.5,4.5 11,5 8.5,7.5 9,11 6,9.5 3,11 3.5,7.5 1,5 4.5,4.5"
@@ -1214,7 +1219,7 @@ pageKey: home
       </h3>
       <div class="faq__panel" role="region">
         <p class="faq__answer">
-          Non, nous ne proposons pad de la location seule de matériel,
+          Hélas non, nous ne proposons pas que la location du matériel.
         </p>
       </div>
     </li>
@@ -1282,8 +1287,7 @@ pageKey: home
       </h3>
       <div class="faq__panel" role="region">
         <p class="faq__answer">
-          Nous proposons nos services dans 6 pays : la Belgique, la France,
-          l'Espagne et le Royaume-Uni.
+          Service national et international partout en Europe
         </p>
       </div>
     </li>
@@ -1476,26 +1480,7 @@ pageKey: home
           Expliquez-nous votre besoin, nous nous occupons du reste.
         </p>
 
-        <!--
-          Netlify form attributes:
-          - name="contact" → Netlify identifies this form
-          - netlify → enables Netlify Forms
-          - netlify-honeypot="bot-field" → spam protection
-        -->
-        <form
-          class="contact-form"
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
-          id="contactForm"
-          novalidate
-        >
-          <!-- Honeypot (hidden from real users) -->
-          <p hidden>
-            <label>Ne pas remplir : <input name="bot-field" /></label>
-          </p>
-
+        <form class="contact-form" id="contactForm" novalidate>
           <!-- Row: name + email -->
           <div class="form-row">
             <div class="form-field">
@@ -1534,6 +1519,15 @@ pageKey: home
                 <input
                   type="radio"
                   name="service"
+                  value="demenagement-mesure"
+                />
+                <span class="pill">Déménagement</span>
+              </label>
+
+              <label class="pill-label">
+                <input
+                  type="radio"
+                  name="service"
                   value="monte-meubles"
                   required
                 />
@@ -1543,15 +1537,6 @@ pageKey: home
               <label class="pill-label">
                 <input type="radio" name="service" value="camion-chauffeur" />
                 <span class="pill">Camion + chauffeur</span>
-              </label>
-
-              <label class="pill-label">
-                <input
-                  type="radio"
-                  name="service"
-                  value="demenagement-mesure"
-                />
-                <span class="pill">Sur mesure</span>
               </label>
 
               <label class="pill-label">
@@ -1570,6 +1555,28 @@ pageKey: home
               placeholder="Décrivez votre déménagement — adresses, étages, date souhaitée…"
               required
             ></textarea>
+          </div>
+
+          <div class="badges">
+            <span class="badge">
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z" />
+                <path d="M9.5 12.5l1.5 1.5 3.5-3.5" />
+              </svg>
+              En envoyant ce formulaire, vous acceptez notre
+
+              <a href="/confidentialite">Politique de confidentialité</a>
+            </span>
           </div>
 
           <button class="cta-btn cta-form" type="submit">

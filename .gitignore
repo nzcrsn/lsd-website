@@ -16,3 +16,8 @@ dist/
  # Eleventy build output
 _site/
 dist/
+
+
+
+.dev.vars
+.wrangler/
